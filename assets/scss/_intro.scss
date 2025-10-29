@@ -31,7 +31,7 @@
         
         .intro-balloon-blue {
             position: absolute;
-            top: 125px;
+            top: 150px;
             left: 390px;
         }
         .intro-balloon-green {
@@ -51,26 +51,26 @@
     @media (max-width: $bp-desktop) {
         .intro-bg {
             .intro-balloon-blue {
-                top: 150px;
-                left: 70px;
+                top: responsive-pos(150, desktop);
+                left: responsive-pos(70, desktop);
 
                 img {
-                    width: 180px;
+                    width: $balloon-lg;
                 }
             }
             .intro-balloon-green {
-                top: 400px;
-                right: 70px;
+                top: responsive-pos(400, desktop);
+                right: responsive-pos(70, desktop);
                 
                 img {
-                    width: 180px;
+                    width: $balloon-lg;
                 }
             }
         }
 
         .logo-container{
             img {
-                width: 700px;
+                width: $logo-lg;
             }
         }
     }
@@ -79,26 +79,24 @@
         height: 700px;
         .intro-bg {
             .intro-balloon-blue {
-                top: 150px;
-                left: 50px;
+                left: responsive-pos(50, tablet);
 
                 img {
-                    width: 150px;
+                    width: $balloon-md;
                 }
             }
             .intro-balloon-green {
-                top: 400px;
-                right: 50px;
+                right: responsive-pos(50, tablet);
                 
                 img {
-                    width: 150px;
+                    width: $balloon-md;
                 }
             }
         }
 
         .logo-container{
             img {
-                width: 580px;
+                width: $logo-md;
             }
         }
     }
@@ -107,25 +105,28 @@
         height: 500px;
 
           .intro-bg {
+            .cloud {
+                width: 200%;
+            }
             .intro-balloon-blue {
-                top: 100px;
+                top: responsive-pos(50, mobile-md);
                 
                 img {
-                    width: 100px;
+                    width: $balloon-sm;
                 }
             }
             .intro-balloon-green {
-                top: 250px;
+                top: responsive-pos(250, mobile-md);
                 
                 img {
-                    width: 100px;
+                    width: $balloon-sm;
                 }
             }
         }
 
         .logo-container{
             img {
-                width: 350px;
+                width: $logo-sm;
             }
         }
     }
@@ -137,26 +138,26 @@
                 width: 300%;
             }
             .intro-balloon-blue {
-                top: 150px;
-                left: 30px;
+                top: responsive-pos(150, mobile-sm);
+                left: responsive-pos(30, mobile-sm);
 
                 img {
-                    width: 80px;
+                    width: $balloon-xs;
                 }
             }
             .intro-balloon-green {
-                top: 230px;
-                right: 30px;
+                top: responsive-pos(230, mobile-sm);
+                right: responsive-pos(30, mobile-sm);
                 
                 img {
-                    width: 80px;
+                    width: $balloon-xs;
                 }
             }
         }
 
         .logo-container{
             img {
-                width: 250px;
+                width: $logo-xs;
             }
         }
     }
