@@ -1,6 +1,6 @@
 header {
     position: fixed;
-    top: 0;
+    top: rem(950);
     left: 0;
     width: 100%;
     height: rem(100);
@@ -95,10 +95,25 @@ header {
     }
 
     @media (max-width: $bp-tablet) {
-        
+        .hamburger-btn {
+            width: rem(30);
+        }
+        .header-logo {
+            img {
+                width: rem(110);
+            }
+        }
     }
 
     @media (max-width: $bp-mobile-md) {
-        
+        .hamburger-btn {
+            width: rem(24);
+        }
+
+        .header-logo {
+            img {
+                width: rem(76);
+            }
+        }
     }
 }
