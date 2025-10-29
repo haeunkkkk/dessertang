@@ -1,0 +1,164 @@
+.intro-hero {
+    position: relative;
+    height: 950px;
+    overflow: hidden;
+    @include bg-cover("/assets/images/cloud-bg.png");
+    background-color: $color-bg;
+    margin: 0 auto;
+
+    
+    .intro-bg {
+        .cloud {
+            position: absolute;
+            bottom: 0;
+            opacity: 0.6;
+            z-index: 10;
+            
+            &.cloud-left {
+                left: 0;
+                transform: translateX(0);
+            }
+    
+            &.cloud-right {
+                right: 0;
+                transform: translateX(0);
+            }
+            
+            img {
+                width:100%;
+            }
+        }
+        
+        .intro-balloon-blue {
+            position: absolute;
+            top: 125px;
+            left: 390px;
+        }
+        .intro-balloon-green {
+            position: absolute;
+            top: 400px;
+            right: 390px;
+        }
+    }
+
+    .logo-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    @media (max-width: $bp-desktop) {
+        .intro-bg {
+            .intro-balloon-blue {
+                top: 150px;
+                left: 70px;
+
+                img {
+                    width: 180px;
+                }
+            }
+            .intro-balloon-green {
+                top: 400px;
+                right: 70px;
+                
+                img {
+                    width: 180px;
+                }
+            }
+        }
+
+        .logo-container{
+            img {
+                width: 700px;
+            }
+        }
+    }
+
+    @media (max-width: $bp-tablet) {
+        height: 700px;
+        .intro-bg {
+            .intro-balloon-blue {
+                top: 150px;
+                left: 50px;
+
+                img {
+                    width: 150px;
+                }
+            }
+            .intro-balloon-green {
+                top: 400px;
+                right: 50px;
+                
+                img {
+                    width: 150px;
+                }
+            }
+        }
+
+        .logo-container{
+            img {
+                width: 580px;
+            }
+        }
+    }
+
+    @media (max-width: $bp-mobile-md) {
+        height: 500px;
+
+          .intro-bg {
+            .intro-balloon-blue {
+                top: 100px;
+                
+                img {
+                    width: 100px;
+                }
+            }
+            .intro-balloon-green {
+                top: 250px;
+                
+                img {
+                    width: 100px;
+                }
+            }
+        }
+
+        .logo-container{
+            img {
+                width: 350px;
+            }
+        }
+    }
+
+    @media (max-width: $bp-mobile-sm) {
+
+          .intro-bg {
+            .cloud {
+                width: 300%;
+            }
+            .intro-balloon-blue {
+                top: 150px;
+                left: 30px;
+
+                img {
+                    width: 80px;
+                }
+            }
+            .intro-balloon-green {
+                top: 230px;
+                right: 30px;
+                
+                img {
+                    width: 80px;
+                }
+            }
+        }
+
+        .logo-container{
+            img {
+                width: 250px;
+            }
+        }
+    }
+        
+}
