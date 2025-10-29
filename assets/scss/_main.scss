@@ -1,0 +1,172 @@
+.intro-hero {
+    position: relative;
+    height: rem(950);
+    overflow: hidden;
+    @include bg-cover("/assets/images/cloud-bg.png");
+    background-color: $color-skyblue;
+    margin: 0 auto;
+
+
+    .intro-bg {
+        .cloud {
+            position: absolute;
+            bottom: 0;
+            opacity: 0.6;
+            z-index: 10;
+
+            &.cloud-left {
+                left: 0;
+                transform: translateX(0);
+            }
+
+            &.cloud-right {
+                right: 0;
+                transform: translateX(0);
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .intro-balloon-blue {
+            position: absolute;
+            top: rem(150);
+            left: rem(390);
+        }
+
+        .intro-balloon-green {
+            position: absolute;
+            top: rem(400);
+            right: rem(390);
+        }
+    }
+
+    .logo-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    @media (max-width: $bp-desktop) {
+        .intro-bg {
+            .intro-balloon-blue {
+                top: responsive-pos(150, desktop);
+                left: responsive-pos(70, desktop);
+
+                img {
+                    width: $balloon-lg;
+                }
+            }
+
+            .intro-balloon-green {
+                top: responsive-pos(400, desktop);
+                right: responsive-pos(70, desktop);
+
+                img {
+                    width: $balloon-lg;
+                }
+            }
+        }
+
+        .logo-container {
+            img {
+                width: $logo-lg;
+            }
+        }
+    }
+
+    @media (max-width: $bp-tablet) {
+        height: rem(700);
+
+        .intro-bg {
+            .intro-balloon-blue {
+                left: responsive-pos(50, tablet);
+
+                img {
+                    width: $balloon-md;
+                }
+            }
+
+            .intro-balloon-green {
+                right: responsive-pos(50, tablet);
+
+                img {
+                    width: $balloon-md;
+                }
+            }
+        }
+
+        .logo-container {
+            img {
+                width: $logo-md;
+            }
+        }
+    }
+
+    @media (max-width: $bp-mobile-md) {
+        height: rem(500);
+
+        .intro-bg {
+            .cloud {
+                width: 200%;
+            }
+
+            .intro-balloon-blue {
+                top: responsive-pos(50, mobile-md);
+
+                img {
+                    width: $balloon-sm;
+                }
+            }
+
+            .intro-balloon-green {
+                top: responsive-pos(250, mobile-md);
+
+                img {
+                    width: $balloon-sm;
+                }
+            }
+        }
+
+        .logo-container {
+            img {
+                width: $logo-sm;
+            }
+        }
+    }
+
+    @media (max-width: $bp-mobile-sm) {
+        .intro-bg {
+            .cloud {
+                width: 300%;
+            }
+
+            .intro-balloon-blue {
+                top: responsive-pos(150, mobile-sm);
+                left: responsive-pos(30, mobile-sm);
+
+                img {
+                    width: $balloon-xs;
+                }
+            }
+
+            .intro-balloon-green {
+                top: responsive-pos(230, mobile-sm);
+                right: responsive-pos(30, mobile-sm);
+
+                img {
+                    width: $balloon-xs;
+                }
+            }
+        }
+
+        .logo-container {
+            img {
+                width: $logo-xs;
+            }
+        }
+    }
+
+}

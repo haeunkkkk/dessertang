@@ -17,16 +17,17 @@ header {
 
     nav {
         z-index: 100;
+
         .menu-list {
             @include flex($gap: rem(120));
 
-        .menu a {
-            @include font-set($size:20, $weight: 600);
-            transition: color 0.3s ease;
+            .menu a {
+                @include font-set($size: 20, $weight: 600);
+                transition: color 0.3s ease;
 
-            &:hover {
-            color: $color-primary;
-            }
+                &:hover {
+                    color: $color-primary;
+                }
             }
         }
 
@@ -48,14 +49,15 @@ header {
     .header-overlay {
         display: none;
         position: fixed;
-        top: rem(100);
+        top: rem(1050);
         left: 0;
         width: 100%;
         height: rem(500);
         background-color: $color-bg;
     }
 
-    .hamburger-btn, .hamburger-close-btn {
+    .hamburger-btn,
+    .hamburger-close-btn {
         display: none;
     }
 
@@ -67,7 +69,8 @@ header {
                 width: rem(150);
             }
         }
-        nav{
+
+        nav {
             display: none;
             position: fixed;
             top: rem(70);
@@ -86,9 +89,10 @@ header {
         }
 
         .header-overlay {
-            top: rem(70);
+            top: rem(1050);
             height: rem(430);
         }
+
         .hamburger-btn {
             display: block;
         }
@@ -98,6 +102,7 @@ header {
         .hamburger-btn {
             width: rem(30);
         }
+
         .header-logo {
             img {
                 width: rem(110);
