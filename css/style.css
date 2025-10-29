@@ -1,3 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: "Pretendard";
+  color: #333333;
+  background-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+dl, ul, li {
+  list-style: none;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
 @font-face {
   font-family: "Pretendard";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Thin.woff2") format("woff2");
@@ -108,13 +136,107 @@
 }
 .container {
   width: 100%;
-  max-width: 1440px;
-  margin: 100px 20px;
+  max-width: 90rem;
+  margin: 6.25rem 1.25rem;
 }
 
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6.25rem;
+  background-color: #ffffff;
+  z-index: 10;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+header nav {
+  z-index: 100;
+}
+header nav .menu-list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 7.5rem;
+}
+header nav .menu-list .menu a {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.4;
+  transition: color 0.3s ease;
+}
+header nav .menu-list .menu a:hover {
+  color: #3475A8;
+}
+header nav .sub-menu-list {
+  display: none;
+  position: absolute;
+  top: 130px;
+}
+header nav .sub-menu-list .sub-menu {
+  padding-bottom: 1.875rem;
+}
+header nav .sub-menu-list .sub-menu a {
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.4;
+}
+header .header-overlay {
+  display: none;
+  position: fixed;
+  top: 6.25rem;
+  left: 0;
+  width: 100%;
+  height: 31.25rem;
+  background-color: #ffffff;
+}
+header .hamburger-btn, header .hamburger-close-btn {
+  display: none;
+}
+@media (max-width: 1023px) {
+  header {
+    height: 4.375rem;
+  }
+  header .header-logo img {
+    width: 9.375rem;
+  }
+  header nav {
+    display: none;
+    position: fixed;
+    top: 4.375rem;
+  }
+  header nav .sub-menu-list {
+    display: block;
+    top: 3.75rem;
+  }
+  header nav .sub-menu-list .sub-menu a {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.4;
+  }
+  header .header-overlay {
+    top: 4.375rem;
+    height: 26.875rem;
+  }
+  header .hamburger-btn {
+    display: block;
+  }
+}
 .intro-hero {
   position: relative;
-  height: 950px;
+  height: 59.375rem;
   overflow: hidden;
   background-image: url(/assets/images/cloud-bg.png);
   background-position: center;
@@ -142,13 +264,13 @@
 }
 .intro-hero .intro-bg .intro-balloon-blue {
   position: absolute;
-  top: 150px;
-  left: 390px;
+  top: 9.375rem;
+  left: 24.375rem;
 }
 .intro-hero .intro-bg .intro-balloon-green {
   position: absolute;
-  top: 400px;
-  right: 390px;
+  top: 25rem;
+  right: 24.375rem;
 }
 .intro-hero .logo-container {
   position: absolute;
@@ -177,7 +299,7 @@
 }
 @media (max-width: 768px) {
   .intro-hero {
-    height: 700px;
+    height: 43.75rem;
   }
   .intro-hero .intro-bg .intro-balloon-blue {
     left: 40px;
@@ -197,7 +319,7 @@
 }
 @media (max-width: 500px) {
   .intro-hero {
-    height: 500px;
+    height: 31.25rem;
   }
   .intro-hero .intro-bg .cloud {
     width: 200%;

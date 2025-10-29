@@ -1,9 +1,9 @@
 .intro-hero {
     position: relative;
-    height: 950px;
+    height: rem(950);
     overflow: hidden;
     @include bg-cover("/assets/images/cloud-bg.png");
-    background-color: $color-bg;
+    background-color: $color-skyblue;
     margin: 0 auto;
 
     
@@ -31,13 +31,13 @@
         
         .intro-balloon-blue {
             position: absolute;
-            top: 150px;
-            left: 390px;
+            top: rem(150);
+            left: rem(390);
         }
         .intro-balloon-green {
             position: absolute;
-            top: 400px;
-            right: 390px;
+            top: rem(400);
+            right: rem(390);
         }
     }
 
@@ -76,7 +76,7 @@
     }
 
     @media (max-width: $bp-tablet) {
-        height: 700px;
+        height: rem(700);
         .intro-bg {
             .intro-balloon-blue {
                 left: responsive-pos(50, tablet);
@@ -102,7 +102,7 @@
     }
 
     @media (max-width: $bp-mobile-md) {
-        height: 500px;
+        height: rem(500);
 
           .intro-bg {
             .cloud {
@@ -132,7 +132,6 @@
     }
 
     @media (max-width: $bp-mobile-sm) {
-
           .intro-bg {
             .cloud {
                 width: 300%;

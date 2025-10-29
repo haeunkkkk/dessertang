@@ -6,6 +6,10 @@
     background-repeat: $repeat;
 }
 
+// px → rem 변환 함수 -> rem(24)
+@function rem($px, $base: 16) {
+  @return ($px / $base) * 1rem;
+}
 
 // 반응형 위치 함수
 @function responsive-pos($value, $screen) {
@@ -18,4 +22,22 @@
   } @else {
     @return $value * 1px; 
   }
+}
+
+
+// 폰트
+@mixin font-set($size, $weight: 400, $line-height: 1.4) {
+  font-size: rem($size);
+  font-weight: $weight;
+  line-height: $line-height;
+}
+
+//flex
+@mixin flex($justify: flex-start, $align: center, $direction: row, $wrap: nowrap, $gap: 0) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+  gap: $gap;
 }

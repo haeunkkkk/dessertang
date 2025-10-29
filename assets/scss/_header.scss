@@ -1,0 +1,104 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: rem(100);
+    background-color: $color-bg;
+    z-index: 10;
+
+    .container {
+        @include flex($justify: space-between, $align: center);
+        height: 100%;
+        margin: 0 auto;
+        padding: 0 20px;
+
+    }
+
+    nav {
+        z-index: 100;
+        .menu-list {
+            @include flex($gap: rem(120));
+
+        .menu a {
+            @include font-set($size:20, $weight: 600);
+            transition: color 0.3s ease;
+
+            &:hover {
+            color: $color-primary;
+            }
+            }
+        }
+
+        .sub-menu-list {
+            display: none;
+            position: absolute;
+            top: 130px;
+
+            .sub-menu {
+                padding-bottom: rem(30);
+
+                a {
+                    @include font-set($size: 20)
+                }
+            }
+        }
+    }
+
+    .header-overlay {
+        display: none;
+        position: fixed;
+        top: rem(100);
+        left: 0;
+        width: 100%;
+        height: rem(500);
+        background-color: $color-bg;
+    }
+
+    .hamburger-btn, .hamburger-close-btn {
+        display: none;
+    }
+
+    @media (max-width: $bp-desktop) {
+        height: rem(70);
+
+        .header-logo {
+            img {
+                width: rem(150);
+            }
+        }
+        nav{
+            display: none;
+            position: fixed;
+            top: rem(70);
+
+            .sub-menu-list {
+                display: block;
+                top: rem(60);
+
+                .sub-menu {
+                    a {
+                        @include font-set($size: 16)
+                    }
+                }
+            }
+
+        }
+
+        .header-overlay {
+            top: rem(70);
+            height: rem(430);
+        }
+        .hamburger-btn {
+            display: block;
+        }
+    }
+
+    @media (max-width: $bp-tablet) {
+        
+    }
+
+    @media (max-width: $bp-mobile-md) {
+        
+    }
+}

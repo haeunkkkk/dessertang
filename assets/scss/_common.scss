@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Pretendard';
+    color: $color-text;
+    background-color: $color-bg;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+dl, ul, li {
+    list-style: none;
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-family: inherit;
+}
