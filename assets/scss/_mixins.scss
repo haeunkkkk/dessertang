@@ -26,10 +26,19 @@
 
 
 // 폰트
-@mixin font-set($size, $weight: 400, $line-height: 1.4) {
+@mixin font-set($size, $weight: 400, $line-height: 1.4, $family: $font-primary) {
+  font-family: $family;
   font-size: rem($size);
   font-weight: $weight;
   line-height: $line-height;
+}
+
+@mixin title-style($size, $weight: $weight-bold, $family: $font-accent) {
+  @include font-set($size, $weight, $lh-tight, $family);
+}
+
+@mixin subtitle-style($size, $weight: $weight-medium, $family: $font-primary) {
+  @include font-set($size, $weight, $lh-normal, $family);
 }
 
 //flex

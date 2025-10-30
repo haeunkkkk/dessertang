@@ -1,5 +1,5 @@
 
-//intro-hero
+//brnad
 $(window).on('scroll', function() {
   var scrollY = $(this).scrollTop();
 
@@ -69,6 +69,16 @@ $(window).on('scroll', function() {
     });
 
 });
+
+// intro
+$(function(){
+  $('#intro-video').on('ended', function() {
+    $('.intro-video-wrap').fadeOut(600, function(){
+      $('.main-content').fadeIn(600);
+    });
+  });
+});
+
 
 
 

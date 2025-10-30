@@ -1,6 +1,6 @@
 header {
     position: fixed;
-    top: rem(950);
+    top: 0;
     left: 0;
     width: 100%;
     height: rem(100);
@@ -49,7 +49,7 @@ header {
     .header-overlay {
         display: none;
         position: fixed;
-        top: rem(1050);
+        top: rem(100);
         left: 0;
         width: 100%;
         height: rem(500);
