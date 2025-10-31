@@ -7,19 +7,19 @@
     <title>dessertang</title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
 
-    <section class="intro-video">
+    <!-- <section class="intro-video">
         <div class="intro-video-wrap">
             <video autoplay muted playsinline id="intro-video">
                 <source src="./assets/images/intro.mp4" type="video/mp4">
             </video>
         </div>
-    </section>
+    </section> -->
 
     <header>
         <div class="container">
@@ -91,29 +91,194 @@
     </header>
 
     <main>
+        <!-- hero -->
         <section class="hero">
-            <div class="swiper mySwiper">
+            <div class="swiper mySwiper hero__swiper">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide hero-swiper">
-                        <div class="hero-content">
-                            <div class="hero-text">
-                                <p class="hero-subtitle">#DESSERTANG</p>
-                                <h2 class="hero-title">
+                    <div class="swiper-slide hero__swiper01">
+                        <div class="hero__content container">
+                            <div class="hero__text">
+                                <p class="hero__subtitle">#DESSERTANG</p>
+                                <h2 class="hero__title">
                                     디저탕이 <br>
                                     가맹점을 <br>
                                     모집합니다.
                                 </h2>
                             </div>
-                            <div class="hero-img">
+                            <div class="hero__img">
                                 <img src="./assets/images/hero-item.png" alt="히어로이미지">
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide">Slide 2</div>
-                    <div class="swiper-slide">Slide 3</div>
-                    <div class="swiper-slide">Slide 4</div>
+                    <div class="swiper-slide hero__swiper02">
+                        <div class="hero__content container">
+                            <div class="hero__text">
+                                <p class="hero__subtitle">#DESSERTANG</p>
+                                <h2 class="hero__title">
+                                    트렌드에 민감한
+                                    <br>
+                                    신메뉴 선정
+                                </h2>
+                            </div>
+                            <div class="hero__img">
+                                <img src="./assets/images/hero-item02.png" alt="히어로이미지">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide hero__swiper03">
+                        <div class="hero__content container">
+                            <div class="hero__text">
+                                <p class="hero__subtitle">#DESSERTANG</p>
+                                <h2 class="hero__title">
+                                    텀블러 EVENT
+                                    <br>
+                                    새로운 텀블러 출시
+                                </h2>
+                            </div>
+                            <div class="hero__img">
+                                <img src="./assets/images/hero-item03.png" alt="히어로이미지">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide hero__swiper04">
+                        <div class="hero__content container">
+                            <div class="hero__text">
+                                <p class="hero__subtitle">#DESSERTANG</p>
+                                <h2 class="hero__title">
+                                    여름 신메뉴 출시
+                                    <br>
+                                    수박이박수
+                                </h2>
+                            </div>
+                            <div class="hero__img">
+                                <img src="./assets/images/hero-item04.png" alt="히어로이미지">
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="swiper-pagination"></div>
+                <div class="swiper-pagination hero__pagination"></div>
+            </div>
+        </section>
+
+        <!-- point -->
+        <section class="point section">
+            <div class="point__container container">
+                <div class="point__text">
+                    <div class="point__title">
+                        <h2>차별화 포인트</h2>
+                    </div>
+                    <div class="point__subtitle">
+                        <p>맛, 가격, 환경, 건강을 생각한 디저트 카페</p>
+                    </div>
+                </div>
+
+                <div class="point__card__wrap">
+                    <div class="point__card point__trend__card">
+                        <div class="point__card__text">
+                            <h2>트렌드</h2>
+                            <p>
+                            MZ세대 취향을 반영한 비주얼 & 신메뉴 개발  
+                            </p>
+                            <span>
+                                Visual appeal and new menu creations inspired <br>  
+                                by the tastes of the MZ generation.
+                            </span>
+                            <a href="#">Trend</a>
+                        </div>
+                        <div class="point__card__img">
+                            <img src="./assets/images/point-trend.png" alt="차별화포인트">
+                        </div>
+                    </div>
+                    <div class="point__card point__accessibility__card">
+                        <div class="point__card__text point__accessibility__card__text">
+                            <h2>접근성</h2>
+                            <p>
+                            합리적인 가격  + 편리한  접근성  
+                            </p>
+                            <span>
+                                Affordable pricing and convenient <br>  
+                                access for everyone to enjoy.
+                            </span>
+                            <a href="#">Accessibility</a>
+                        </div>
+                        <div class="point__card__img point__accessibility__img">
+                            <img src="./assets/images/point-accessibility.png" alt="차별화포인트">
+                        </div>
+                    </div>
+                    <div class="point__card point__taste__card">
+                        <div class="point__card__text point__taste__card__text">
+                            <h2>맛</h2>
+                            <p>
+                            프리미엄 원재료 사용  
+                            </p>
+                            <span>
+                                Crafted with premium ingredients to deliver the finest flavors.
+                            </span>
+                            <a href="#">Taste</a>
+                        </div>
+                        <div class="point__card__img point__taste__img">
+                            <img src="./assets/images/point-taste.png" alt="차별화포인트">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- growth -->
+        <section class="section">
+            <div class="growth__swiper container">
+                <div class="point__text">
+                    <div class="point__title">
+                        <h2>성장비결</h2>
+                    </div>
+                    <div class="point__subtitle">
+                        <p>꾸준히 성장하는 브랜드</p>
+                    </div>
+                </div>
+                <div class="swiper-wrapper growth__wrapper">
+                    <div class="swiper-slide growth__slide">
+                        <div class="growth__card__img">
+                            <img src="./assets/images/growth-donut.png" alt="주기적신메뉴개발이미지">
+                        </div>
+                        <div class="growth__card">
+                            <div class="growth__card__text">
+                                <h3>
+                                    주기적 신메뉴 개발
+                                </h3>
+                                <ul>
+                                    <li>시그니처 디저트</li>
+                                    <li>기존 카페에서는 잘 없는 차별화 메뉴</li>
+                                    <li>SNS 친화적 비주얼 <span>“MZ세대 중심의 디저트”</span></li>
+                                </ul>
+                            </div>
+                            <div class="growth__card__keyword">
+                                <span>
+                                    Instagrammable
+                                </span>
+                                <span>
+                                    Trendy
+                                </span>
+                            </div>
+                            <button>
+                                지금 문의하러 가기
+                            </button>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </div>
         </section>
     </main>
@@ -131,10 +296,29 @@
             pagination: {
                 el: ".swiper-pagination",
             },
-            // autoplay: {
-            // delay: 3000,
-            // },
-            // speed: 1000,
+            autoplay: {
+            delay: 3000,
+            },
+            speed: 1000,
+        });
+
+        var swiper = new Swiper(".growth__swiper", {
+            slidesPerView: 3,
+            spaceBetween: 20,
+            centeredSlides: true,
+            slidesPerView: "1.3",
+            loop: true,
+            effect: 'coverflow',
+            coverflowEffect: {
+            rotate: 0,      
+            stretch: 200,     // 슬라이드 간 간격 조절
+            depth: 500,     // 입체감 (Z축 거리)
+            modifier: 1.2,  // 강도 (값 높을수록 확대 효과 커짐)
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
         });
     </script>
     <script src="./assets/script/jquery-3.7.1.min.js"></script>

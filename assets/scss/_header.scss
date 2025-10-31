@@ -99,6 +99,7 @@ header {
     }
 
     @media (max-width: $bp-tablet) {
+        height: rem(60);
         .hamburger-btn {
             width: rem(30);
         }
@@ -111,6 +112,7 @@ header {
     }
 
     @media (max-width: $bp-mobile-md) {
+        height: rem(55);
         .hamburger-btn {
             width: rem(24);
         }

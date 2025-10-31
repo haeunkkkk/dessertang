@@ -11,6 +11,13 @@
   @return ($px / $base) * 1rem;
 }
 
+// border-radius
+@mixin radius($radius: rem(4)) {
+  border-radius: $radius;
+}
+
+
+
 // 반응형 위치 함수
 @function responsive-pos($value, $screen) {
   @if $screen == desktop {
@@ -33,13 +40,20 @@
   line-height: $line-height;
 }
 
-@mixin title-style($size, $weight: $weight-bold, $family: $font-accent) {
-  @include font-set($size, $weight, $lh-tight, $family);
-}
+@mixin title-style($size, $weight: 700, $line-height: 1.4, $family: $font-accent) {
+  font-family: $family;
+  font-size: rem($size);
+  font-weight: $weight;
+  line-height: $line-height;
+};
 
-@mixin subtitle-style($size, $weight: $weight-medium, $family: $font-primary) {
-  @include font-set($size, $weight, $lh-normal, $family);
-}
+@mixin subtitle-style($size, $weight: 500, $line-height: 1.4, $family: $font-primary, $color: $color-primary) {
+  font-family: $family;
+  font-size: rem($size);
+  font-weight: $weight;
+  line-height: $line-height;
+  color: $color;
+};
 
 //flex
 @mixin flex($justify: flex-start, $align: center, $direction: row, $wrap: nowrap, $gap: 0) {
