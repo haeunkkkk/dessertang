@@ -135,10 +135,18 @@ button {
   font-weight: 900;
   font-display: swap;
 }
+.section {
+  padding-top: 6.25rem;
+  padding-bottom: 6.25rem;
+}
+
 .container {
   width: 100%;
+  height: 100%;
   max-width: 90rem;
-  margin: 6.25rem 1.25rem;
+  margin: 0 auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 
 header {
@@ -209,7 +217,7 @@ header .hamburger-btn,
 header .hamburger-close-btn {
   display: none;
 }
-@media (max-width: 1023px) {
+@media (max-width: 1024px) {
   header {
     height: 4.375rem;
   }
@@ -240,6 +248,9 @@ header .hamburger-close-btn {
   }
 }
 @media (max-width: 768px) {
+  header {
+    height: 3.75rem;
+  }
   header .hamburger-btn {
     width: 1.875rem;
   }
@@ -248,6 +259,9 @@ header .hamburger-close-btn {
   }
 }
 @media (max-width: 500px) {
+  header {
+    height: 3.4375rem;
+  }
   header .hamburger-btn {
     width: 1.5rem;
   }
@@ -272,13 +286,12 @@ header .hamburger-close-btn {
 .hero {
   width: 100%;
   height: 50rem;
-  margin: 6.25rem 0;
 }
-.hero .swiper {
+.hero .hero__swiper {
   width: 100%;
   height: 100%;
 }
-.hero .swiper .hero-swiper {
+.hero .hero__swiper .hero__swiper01 {
   width: 100%;
   height: 100%;
   background-image: url(/assets/images/hero-bg.jpg);
@@ -286,57 +299,610 @@ header .hamburger-close-btn {
   background-size: cover;
   background-repeat: no-repeat;
 }
-.hero .swiper .hero-swiper .hero-content {
+.hero .hero__swiper .hero__swiper02 {
+  width: 100%;
+  height: 100%;
+  background-image: url(/assets/images/hero-bg02.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.hero .hero__swiper .hero__swiper02 .hero-img img {
+  width: 62rem;
+}
+.hero .hero__swiper .hero__swiper03 {
+  width: 100%;
+  height: 100%;
+  background-image: url(/assets/images/hero-bg03.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.hero .hero__swiper .hero__swiper03 .hero-img img {
+  width: 62rem;
+}
+.hero .hero__swiper .hero__swiper04 {
+  width: 100%;
+  height: 100%;
+  background-image: url(/assets/images/hero-bg04.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.hero .hero__swiper .hero__swiper04 .hero-img img {
+  width: 42.5625rem;
+}
+.hero .hero__swiper .hero__content {
   height: 100%;
   position: relative;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   flex-direction: row;
   flex-wrap: nowrap;
   gap: 0;
 }
-.hero .swiper .hero-swiper .hero-content .hero-text {
-  position: absolute;
-  bottom: 11.6875rem;
-  left: 16.5rem;
+.hero .hero__swiper .hero__content .hero__text {
+  padding-top: 18.75rem;
 }
-.hero .swiper .hero-swiper .hero-content .hero-text .hero-subtitle {
+.hero .hero__swiper .hero__content .hero__text .hero__subtitle {
   color: #666666;
 }
-.hero .swiper .hero-swiper .hero-content .hero-text .hero-title {
+.hero .hero__swiper .hero__content .hero__text .hero__title {
   font-family: "Paperozi";
   font-size: 2.625rem;
   font-weight: 700;
   line-height: 1.2;
 }
-.hero .swiper .hero-swiper .hero-content .hero-img {
+.hero .hero__swiper .hero__content .hero__img {
   display: block;
-  margin-right: 16.125rem;
+  width: 43.75rem;
 }
-.hero .swiper .swiper-pagination {
+.hero .hero__swiper .hero__pagination {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-direction: row;
   flex-wrap: nowrap;
-  gap: 0;
+  gap: 1.875rem;
+  max-width: 90rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1.25rem;
 }
-.hero .swiper .swiper-horizontal > .swiper-pagination-bullets,
-.hero .swiper .swiper-pagination-bullets.swiper-pagination-horizontal,
-.hero .swiper .swiper-pagination-custom,
-.hero .swiper .swiper-pagination-fraction {
-  bottom: 7.9375rem;
-  left: 16.5625rem;
+.hero .hero__swiper .swiper-horizontal > .swiper-pagination-bullets,
+.hero .hero__swiper .swiper-pagination-bullets.swiper-pagination-horizontal,
+.hero .hero__swiper .swiper-pagination-custom,
+.hero .hero__swiper .swiper-pagination-fraction {
+  position: relative;
+  bottom: 9.375rem;
 }
-.hero .swiper .swiper-pagination-bullet-active {
+.hero .hero__swiper .swiper-pagination-bullet-active {
   border: 0.125rem solid #999999;
   background-color: rgba(153, 153, 153, 0.4039215686);
 }
-.hero .swiper .swiper-pagination-bullet {
+.hero .hero__swiper .swiper-pagination-bullet {
   width: 1.25rem;
   height: 1.25rem;
-  margin-right: 1.875rem;
+  margin: 0;
+}
+@media (max-width: 1024px) {
+  .hero {
+    height: 59.375rem;
+    margin-top: 4.375rem;
+  }
+  .hero .hero__swiper .hero__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 1.875rem;
+  }
+  .hero .hero__swiper .hero__content .hero__text {
+    padding: 0;
+    top: 9.375rem;
+    left: 18.25rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 10px;
+    text-align: center;
+  }
+  .hero .hero__swiper .hero__content .hero__text br {
+    display: none;
+  }
+  .hero .hero__swiper .hero__content .hero__text .hero-title {
+    font-family: "Paperozi";
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  .hero .hero__swiper .hero__content .hero__img {
+    text-align: center;
+  }
+  .hero .hero__swiper .hero__content .hero__img img {
+    width: 32.9375rem;
+  }
+  .hero .hero__swiper .hero__pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 1.5625rem;
+  }
+  .hero .hero__swiper .swiper-pagination-bullet {
+    width: 0.9375rem;
+    height: 0.9375rem;
+  }
+}
+@media (max-width: 768px) {
+  .hero {
+    margin-top: 3.75rem;
+  }
+  .hero .hero__swiper .hero__content .hero__text .hero__title {
+    font-family: "Paperozi";
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+}
+@media (max-width: 500px) {
+  .hero {
+    height: 47.25rem;
+    margin-top: 3.4375rem;
+  }
+  .hero .hero__swiper .hero__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 6.25rem;
+  }
+  .hero .hero__swiper .hero__content .hero__text .hero__title {
+    font-family: "Paperozi";
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  .hero .hero__swiper .hero__content .hero__img img {
+    width: 20.75rem;
+  }
+  .hero .hero__swiper .hero__pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 1.5625rem;
+  }
+  .hero .hero__swiper .swiper-pagination-bullet {
+    width: 0.625rem;
+    height: 0.625rem;
+  }
+}
+@media (max-width: 390px) {
+  .hero .hero__swiper .hero__content .hero__img img {
+    width: 17.5rem;
+  }
+}
+
+.point__title {
+  font-family: "Paperozi";
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 0.3125rem;
+}
+.point__subtitle {
+  font-family: "Pretendard";
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #3475A8;
+  margin-bottom: 2.5rem;
+}
+.point__card__wrap {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  grid-template-areas: "img1 img3" "img2 img3";
+}
+.point__card {
+  border-radius: 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0;
+}
+.point__card__text {
+  color: #ffffff;
+  padding-left: 3.75rem;
+}
+.point__card__text h2 {
+  font-family: "Pretendard";
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 0.625rem;
+}
+.point__card__text p {
+  font-family: "Pretendard";
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.4;
+}
+.point__card__text span {
+  display: block;
+  font-family: "Pretendard";
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.1;
+  margin-bottom: 1.875rem;
+}
+.point__card__text a {
+  display: block;
+  width: 6.25rem;
+  border: 1px solid #ffffff;
+  padding: 0.8125rem 1.5625rem;
+  border-radius: 2.5rem;
+  font-family: "Paperozi";
+  font-size: 1rem;
+  font-weight: 900;
+  line-height: 1.4;
+}
+.point__card__img {
+  margin-bottom: -0.1875rem;
+}
+.point__card__img img {
+  border-radius: 1.25rem;
+}
+.point__trend__card {
+  grid-area: img1;
+  background-color: #E4A9A9;
+}
+.point__accessibility__card {
+  height: 18.25rem;
+  grid-area: img2;
+  background-color: #FEC66B;
+}
+.point__accessibility__card a {
+  width: 9.375rem;
+}
+.point__accessibility__img {
+  margin-top: 3.75rem;
+  margin-bottom: -0.3125rem;
+}
+.point__taste__card {
+  grid-area: img3;
+  background-color: #BDCD96;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 0;
+}
+.point__taste__card__text {
+  padding-left: 3.75rem;
+  padding-top: 3.75rem;
+}
+.point__taste__img {
+  margin-bottom: -0.3125rem;
+}
+@media (max-width: 1024px) {
+  .point__title {
+    font-family: "Paperozi";
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.4;
+  }
+  .point__subtitle {
+    font-family: "Pretendard";
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 1.4;
+    color: #3475A8;
+  }
+  .point__card {
+    overflow: hidden;
+  }
+  .point__card__text {
+    padding-left: 1.875rem;
+  }
+  .point__card__text h2 {
+    font-family: "Pretendard";
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.1875rem;
+  }
+  .point__card__text span {
+    margin-bottom: 4.875rem;
+  }
+  .point__card__img {
+    margin-right: -3.125rem;
+  }
+  .point__card__img img {
+    margin-top: 0.8125rem;
+    width: 12.5rem;
+    height: 12.5rem;
+  }
+  .point__accessibility__img img {
+    width: 19.375rem;
+    height: 13.125rem;
+  }
+  .point__taste__img {
+    margin-right: 0;
+  }
+  .point__taste__img img {
+    width: 30.25rem;
+    height: 13.125rem;
+  }
+}
+@media (max-width: 768px) {
+  .point__title {
+    font-family: "Paperozi";
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: 1.4;
+  }
+  .point__card__wrap {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas: "img2" "img1" "img3";
+  }
+  .point__card {
+    height: 14.125rem;
+  }
+  .point__card__text h2 {
+    font-family: "Pretendard";
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.25rem;
+  }
+  .point__card__text p {
+    font-family: "Pretendard";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.4;
+  }
+  .point__card__text span {
+    font-family: "Pretendard";
+    font-size: 0.875rem;
+    font-weight: 300;
+    line-height: 1.1;
+    margin-top: 0.3125rem;
+    margin-bottom: 1.25rem;
+  }
+  .point__card__img {
+    margin-right: 1.875rem;
+    margin-bottom: -1.875rem;
+  }
+  .point__card__img img {
+    margin-top: 0;
+    width: 11.25rem;
+    height: 12.5rem;
+  }
+  .point__accessibility__card {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    gap: 0;
+    text-align: end;
+  }
+  .point__accessibility__card__text {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 0;
+    padding: 0 1.875rem 1.875rem 0;
+  }
+  .point__accessibility__img img {
+    width: 19.375rem;
+    height: 13.125rem;
+  }
+  .point__taste__card {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    gap: 0;
+    text-align: end;
+  }
+  .point__taste__card__text {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 0;
+    padding: 0 1.875rem 1.875rem 0;
+  }
+  .point__taste__img {
+    margin-right: 0;
+  }
+  .point__taste__img img {
+    width: 25rem;
+    height: 9.375rem;
+  }
+}
+@media (max-width: 500px) {
+  .point__title {
+    font-family: "Paperozi";
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.4;
+  }
+  .point__subtitle {
+    font-family: "Pretendard";
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.4;
+    color: #3475A8;
+  }
+  .point__card {
+    height: 11rem;
+  }
+  .point__card__text h2 {
+    font-family: "Pretendard";
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 0.625rem;
+  }
+  .point__card__text p {
+    font-family: "Pretendard";
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.4;
+  }
+  .point__card__text span {
+    font-family: "Pretendard";
+    font-size: 0.75rem;
+    font-weight: 300;
+    line-height: 1.1;
+    margin-bottom: 1.375rem;
+  }
+  .point__card__text a {
+    width: 4.625rem;
+    padding: 0.5625rem 0.9375rem;
+    font-family: "Paperozi";
+    font-size: 0.875rem;
+    font-weight: 900;
+    line-height: 1.4;
+  }
+  .point__card__img {
+    margin-right: 1.875rem;
+    margin-bottom: -1.875rem;
+  }
+  .point__card__img img {
+    margin-top: 0;
+    width: 7rem;
+    height: 8.4375rem;
+  }
+  .point__accessibility__card__text {
+    padding: 0 0.75rem 1.25rem 0;
+  }
+  .point__accessibility__card__text a {
+    width: 7.8125rem;
+  }
+  .point__accessibility__img img {
+    width: 14.375rem;
+    height: 11.25rem;
+  }
+  .point__taste__card__text {
+    padding: 0 0.75rem 1.25rem 0;
+  }
+  .point__taste__img {
+    margin-right: 0;
+  }
+  .point__taste__img img {
+    width: 12.5rem;
+    height: 6.25rem;
+  }
+}
+@media (max-width: 390px) {
+  .point__card__wrap {
+    gap: 0.75rem;
+  }
+  .point__card__text {
+    padding: 0.75rem;
+  }
+  .point__card span {
+    display: none;
+  }
+  .point__card p {
+    margin-bottom: 1.25rem;
+  }
+  .point__card__img {
+    margin-right: 0.625rem;
+    margin-bottom: -5rem;
+  }
+  .point__card__img img {
+    width: 5rem;
+    height: 6.25rem;
+  }
+  .point__accessibility__card__text {
+    padding: 0 0.75rem 1.25rem 0;
+  }
+  .point__accessibility__img {
+    margin-bottom: -0.625rem;
+  }
+  .point__accessibility__img img {
+    width: 9.375rem;
+    height: 6.25rem;
+  }
+  .point__taste__card__text {
+    padding: 0 0.75rem 1.25rem 0;
+  }
+  .point__taste__img {
+    margin-bottom: -0.625rem;
+  }
+  .point__taste__img img {
+    width: 11.25rem;
+    height: 5rem;
+  }
+}
+
+.growth__swiper {
+  overflow-x: hidden;
+}
+.growth__slide {
+  width: 28.5rem;
+  height: 41.875rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 0;
+  position: relative;
+}
+.growth__slide .growth__card__img {
+  position: relative;
+}
+
+.growth__card {
+  margin-top: -6.25rem;
+  background-color: #DDEEF5;
+  width: 28.5rem;
+  height: 35.1875rem;
+  border-radius: 1.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 0;
+}
+.growth__card__text h3 {
+  margin-bottom: 1.875rem;
+  font-family: "Pretendard";
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+.growth__card__text li {
+  list-style: disc;
+  font-family: "Pretendard";
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.4;
+}
+.growth__card__text li span {
+  font-weight: 600;
 }
 
 .intro-hero {
@@ -383,7 +949,7 @@ header .hamburger-close-btn {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-@media (max-width: 1023px) {
+@media (max-width: 1024px) {
   .intro-hero .intro-bg .intro-balloon-blue {
     top: 150px;
     left: 70px;
