@@ -1,9 +1,9 @@
 // bg
 @mixin bg-cover($img, $position: center, $size: cover, $repeat: no-repeat) {
-    background-image: url(#{$img});
-    background-position: $position;
-    background-size: $size;
-    background-repeat: $repeat;
+  background-image: url(#{$img});
+  background-position: $position;
+  background-size: $size;
+  background-repeat: $repeat;
 }
 
 // px → rem 변환 함수 -> rem(24)
@@ -20,14 +20,20 @@
 
 // 반응형 위치 함수
 @function responsive-pos($value, $screen) {
-  @if $screen == desktop {
+  @if $screen ==desktop {
     @return $value * 1px;
-  } @else if $screen == tablet {
+  }
+
+  @else if $screen ==tablet {
     @return $value * 0.8px;
-  } @else if $screen == mobile {
+  }
+
+  @else if $screen ==mobile {
     @return $value * 0.6px;
-  } @else {
-    @return $value * 1px; 
+  }
+
+  @else {
+    @return $value * 1px;
   }
 }
 
@@ -45,7 +51,9 @@
   font-size: rem($size);
   font-weight: $weight;
   line-height: $line-height;
-};
+}
+
+;
 
 @mixin subtitle-style($size, $weight: 500, $line-height: 1.4, $family: $font-primary, $color: $color-primary) {
   font-family: $family;
@@ -53,7 +61,9 @@
   font-weight: $weight;
   line-height: $line-height;
   color: $color;
-};
+}
+
+;
 
 //flex
 @mixin flex($justify: flex-start, $align: center, $direction: row, $wrap: nowrap, $gap: 0) {
@@ -63,4 +73,27 @@
   flex-direction: $direction;
   flex-wrap: $wrap;
   gap: $gap;
+}
+
+//버튼
+@mixin button-style($bg: $color-primary,
+  $color: $color-bg,
+  $radius: 40px,
+  $border: none,
+  $padding-y: 15px,
+  $padding-x: 106px) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $bg;
+  color: $color;
+  border-radius: $radius;
+  border: $border;
+  padding: $padding-y $padding-x;
+  transition: all 0.2 ease-in-out;
+
+  &:hover {
+    background-color: $color-bg;
+    color: $color-primary;
+  }
 }
