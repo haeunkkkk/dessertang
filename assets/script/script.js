@@ -1,4 +1,4 @@
-// intro
+// mainintro
 $(function(){ 
   $('#main__intro__video').on('ended', function() {
     $('.main__intro__video__wrap').fadeOut(600, function(){
@@ -6,17 +6,6 @@ $(function(){
       $('.main__content').fadeIn(600);
     });
   });
-});
-
-//brnad
-$(window).on('scroll', function() {
-  var scrollY = $(this).scrollTop();
-
-    $('.cloud-left').css('transform', 'translateX(' + (scrollY * 4) + 'px)');
-    $('.cloud-right').css('transform', 'translateX(' + (-scrollY * 4) + 'px)');
-
-    $('.intro-balloon-blue').css('transform', 'translateY(-' + (scrollY * 2) + 'px)');
-    $('.intro-balloon-green').css('transform', 'translateY(-' + (scrollY * 3) + 'px)');
 });
 
 
@@ -77,6 +66,19 @@ $(window).on('scroll', function() {
         desktopMenu();
     });
 
+});
+
+
+
+//about
+$(window).on('scroll', function() {
+  var scrollY = $(this).scrollTop();
+
+    $('.cloud__left').css('transform', 'translateX(' + (scrollY * 4) + 'px)');
+    $('.cloud__right').css('transform', 'translateX(' + (-scrollY * 4) + 'px)');
+
+    $('about__bg__balloon__blue').css('transform', 'translateY(-' + (scrollY * 2) + 'px)');
+    $('about__bg__balloon__green').css('transform', 'translateY(-' + (scrollY * 3) + 'px)');
 });
 
 
