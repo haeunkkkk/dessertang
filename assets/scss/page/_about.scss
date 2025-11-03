@@ -12,15 +12,29 @@
         .cloud {
             position: absolute;
             bottom: 0;
-            opacity: 0.6;
-            z-index: 10;
+            z-index: 2;
 
-            .cloud__left {
+            &__left {
+                z-index: 5;
+                left: 0;
+                transform: translateX(0);
+                opacity: 0.8;
+
+            }
+
+            &__left__sub {
                 left: 0;
                 transform: translateX(0);
             }
 
-            .cloud__right {
+            &__right {
+                z-index: 5;
+                right: 0;
+                transform: translateX(0);
+                opacity: 0.8;
+            }
+
+            &__right__sub {
                 right: 0;
                 transform: translateX(0);
             }
@@ -41,6 +55,16 @@
             top: rem(400);
             right: rem(390);
         }
+
+        &__balloon__yellow {
+            position: absolute;
+            top: rem(180);
+            right: rem(700);
+
+            img {
+                width: rem(220);
+            }
+        }
     }
 
     &__logo {
@@ -48,11 +72,12 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        z-index: 3;
     }
 
     @media (max-width: $bp-desktop) {
-        .intro-bg {
-            .intro-balloon-blue {
+        &__bg {
+            &__balloon__blue {
                 top: responsive-pos(150, desktop);
                 left: responsive-pos(70, desktop);
 
@@ -61,7 +86,7 @@
                 }
             }
 
-            .intro-balloon-green {
+            &__balloon__green {
                 top: responsive-pos(400, desktop);
                 right: responsive-pos(70, desktop);
 
@@ -71,7 +96,7 @@
             }
         }
 
-        .logo-container {
+        &__logo {
             img {
                 width: $logo-lg;
             }
@@ -81,8 +106,8 @@
     @media (max-width: $bp-tablet) {
         height: rem(700);
 
-        .intro-bg {
-            .intro-balloon-blue {
+        &__bg {
+            &__balloon__blue {
                 left: responsive-pos(50, tablet);
 
                 img {
@@ -90,7 +115,7 @@
                 }
             }
 
-            .intro-balloon-green {
+            &__balloon__green {
                 right: responsive-pos(50, tablet);
 
                 img {
@@ -99,7 +124,7 @@
             }
         }
 
-        .logo-container {
+        &__logo {
             img {
                 width: $logo-md;
             }
@@ -109,12 +134,12 @@
     @media (max-width: $bp-mobile-md) {
         height: rem(500);
 
-        .intro-bg {
+        &__bg {
             .cloud {
                 width: 200%;
             }
 
-            .intro-balloon-blue {
+            &__balloon__blue {
                 top: responsive-pos(50, mobile-md);
 
                 img {
@@ -122,7 +147,7 @@
                 }
             }
 
-            .intro-balloon-green {
+            &__balloon__green {
                 top: responsive-pos(250, mobile-md);
 
                 img {
@@ -131,7 +156,7 @@
             }
         }
 
-        .logo-container {
+        &__logo {
             img {
                 width: $logo-sm;
             }
@@ -139,12 +164,12 @@
     }
 
     @media (max-width: $bp-mobile-sm) {
-        .intro-bg {
+        &__bg {
             .cloud {
                 width: 300%;
             }
 
-            .intro-balloon-blue {
+            &__balloon__blue {
                 top: responsive-pos(150, mobile-sm);
                 left: responsive-pos(30, mobile-sm);
 
@@ -153,7 +178,7 @@
                 }
             }
 
-            .intro-balloon-green {
+            &__balloon__green {
                 top: responsive-pos(230, mobile-sm);
                 right: responsive-pos(30, mobile-sm);
 
@@ -163,7 +188,7 @@
             }
         }
 
-        .logo-container {
+        &__logo {
             img {
                 width: $logo-xs;
             }

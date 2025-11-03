@@ -148,7 +148,7 @@ button {
   padding-right: 1.25rem;
 }
 
-header {
+.header {
   position: sticky;
   top: 0;
   left: 0;
@@ -157,7 +157,7 @@ header {
   background-color: #ffffff;
   z-index: 10;
 }
-header .container {
+.header__container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -168,10 +168,7 @@ header .container {
   margin: 0 auto;
   padding: 0 20px;
 }
-header nav {
-  z-index: 100;
-}
-header nav .menu-list {
+.header__menu {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -179,31 +176,32 @@ header nav .menu-list {
   flex-wrap: nowrap;
   gap: 7.5rem;
 }
-header nav .menu-list .menu a {
+.header__menu__list a {
   font-family: "Pretendard";
   font-size: 1.25rem;
   font-weight: 600;
   line-height: 1.4;
   transition: color 0.3s ease;
 }
-header nav .menu-list .menu a:hover {
+.header__menu__list a:hover {
   color: #3475A8;
 }
-header nav .sub-menu-list {
+.header__menu__list__sub {
   display: none;
   position: absolute;
+  z-index: 20;
   top: 130px;
 }
-header nav .sub-menu-list .sub-menu {
+.header__menu__list__sub li {
   padding-bottom: 1.875rem;
 }
-header nav .sub-menu-list .sub-menu a {
+.header__menu__list__sub li a {
   font-family: "Pretendard";
   font-size: 1.25rem;
   font-weight: 400;
   line-height: 1.4;
 }
-header .header-overlay {
+.header__overlay {
   display: none;
   position: fixed;
   top: 6.25rem;
@@ -212,60 +210,59 @@ header .header-overlay {
   height: 31.25rem;
   background-color: #ffffff;
 }
-header .hamburger-btn,
-header .hamburger-close-btn {
+.header__hamburger__btn, .header__hamburger__close {
   display: none;
 }
 @media (max-width: 1024px) {
-  header {
+  .header {
     height: 4.375rem;
   }
-  header .header-logo img {
+  .header__logo img {
     width: 9.375rem;
   }
-  header nav {
+  .header nav {
     display: none;
     position: fixed;
     top: 4.375rem;
   }
-  header nav .sub-menu-list {
+  .header nav .header__menu__list__sub {
     display: block;
     top: 3.75rem;
   }
-  header nav .sub-menu-list .sub-menu a {
+  .header nav .header__menu__list__sub li a {
     font-family: "Pretendard";
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.4;
   }
-  header .header-overlay {
+  .header__overlay {
     top: 65.625rem;
     height: 26.875rem;
   }
-  header .hamburger-btn {
+  .header__hamburger__btn {
     display: block;
   }
 }
 @media (max-width: 768px) {
-  header {
+  .header {
     height: 3.75rem;
   }
-  header .hamburger-btn {
-    width: 1.875rem;
-  }
-  header .header-logo img {
+  .header__logo img {
     width: 6.875rem;
+  }
+  .header__hamburger__btn {
+    width: 1.875rem;
   }
 }
 @media (max-width: 500px) {
-  header {
+  .header {
     height: 3.4375rem;
   }
-  header .hamburger-btn {
-    width: 1.5rem;
-  }
-  header .header-logo img {
+  .header__logo img {
     width: 4.75rem;
+  }
+  .header__btn {
+    width: 1.5rem;
   }
 }
 
@@ -570,52 +567,48 @@ header .hamburger-close-btn {
   width: 100%;
   height: 50rem;
 }
-.hero .hero__swiper {
+.hero__swiper {
   width: 100%;
   height: 100%;
 }
-.hero .hero__swiper .hero__swiper01 {
+.hero__swiper__slide {
   width: 100%;
   height: 100%;
+}
+.hero__swiper__slide__01 {
   background-image: url(/assets/images/hero-bg.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
-.hero .hero__swiper .hero__swiper02 {
-  width: 100%;
-  height: 100%;
+.hero__swiper__slide__02 {
   background-image: url(/assets/images/hero-bg02.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
-.hero .hero__swiper .hero__swiper02 .hero-img img {
+.hero__swiper__slide__02__content__img img {
   width: 62rem;
 }
-.hero .hero__swiper .hero__swiper03 {
-  width: 100%;
-  height: 100%;
+.hero__swiper__slide__03 {
   background-image: url(/assets/images/hero-bg03.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
-.hero .hero__swiper .hero__swiper03 .hero-img img {
+.hero__swiper__slide__03__content__img img {
   width: 62rem;
 }
-.hero .hero__swiper .hero__swiper04 {
-  width: 100%;
-  height: 100%;
+.hero__swiper__slide__04 {
   background-image: url(/assets/images/hero-bg04.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
-.hero .hero__swiper .hero__swiper04 .hero-img img {
+.hero__swiper__slide__04__content__img img {
   width: 42.5625rem;
 }
-.hero .hero__swiper .hero__content {
+.hero__swiper__content {
   height: 100%;
   position: relative;
   display: flex;
@@ -625,40 +618,37 @@ header .hamburger-close-btn {
   flex-wrap: nowrap;
   gap: 0;
 }
-.hero .hero__swiper .hero__content .hero__text {
+.hero__swiper__content__text {
   padding-top: 18.75rem;
 }
-.hero .hero__swiper .hero__content .hero__text .hero__subtitle {
+.hero__swiper__content__text p {
   color: #666666;
 }
-.hero .hero__swiper .hero__content .hero__text .hero__title {
+.hero__swiper__content__text h2 {
   font-family: "Paperozi";
   font-size: 2.625rem;
   font-weight: 700;
   line-height: 1.2;
 }
-.hero .hero__swiper .hero__content .hero__img {
-  display: block;
-  width: 43.75rem;
-}
-.hero .hero__swiper .hero__swiper05 {
-  width: 100%;
-  height: 100%;
+.hero__swiper__slide__05 {
   background-image: url(/assets/images/hero-bg05.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
-.hero .hero__swiper .hero__swiper05 .hero__text {
+.hero__swiper__slide__05 .hero__swiper__content__text {
   color: #ffffff;
 }
-.hero .hero__swiper .hero__swiper05 .hero__text .hero__subtitle {
+.hero__swiper__slide__05 .hero__swiper__content__text p {
   color: #dadada;
 }
-.hero .hero__swiper .hero__swiper05 .hero-img img {
-  width: 31.25rem;
+.hero__swiper__slide__06 {
+  background-image: url(/assets/images/hero-bg06.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-.hero .hero__swiper .hero__pagination {
+.hero__pagination {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -670,18 +660,18 @@ header .hamburger-close-btn {
   margin-right: auto;
   padding: 0 1.25rem;
 }
-.hero .hero__swiper .swiper-horizontal > .swiper-pagination-bullets,
-.hero .hero__swiper .swiper-pagination-bullets.swiper-pagination-horizontal,
-.hero .hero__swiper .swiper-pagination-custom,
-.hero .hero__swiper .swiper-pagination-fraction {
+.hero .swiper-horizontal > .swiper-pagination-bullets,
+.hero .swiper-pagination-bullets.swiper-pagination-horizontal,
+.hero .swiper-pagination-custom,
+.hero .swiper-pagination-fraction {
   position: relative;
   bottom: 9.375rem;
 }
-.hero .hero__swiper .swiper-pagination-bullet-active {
+.hero .swiper-pagination-bullet-active {
   border: 0.125rem solid #999999;
   background-color: rgba(153, 153, 153, 0.4039215686);
 }
-.hero .hero__swiper .swiper-pagination-bullet {
+.hero .swiper-pagination-bullet {
   width: 0.9375rem;
   height: 0.9375rem;
   margin: 0;
@@ -690,7 +680,7 @@ header .hamburger-close-btn {
   .hero {
     height: 59.375rem;
   }
-  .hero .hero__swiper .hero__content {
+  .hero__swiper__content {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -698,7 +688,7 @@ header .hamburger-close-btn {
     flex-wrap: nowrap;
     gap: 1.875rem;
   }
-  .hero .hero__swiper .hero__content .hero__text {
+  .hero__swiper__content__text {
     padding: 0;
     top: 9.375rem;
     left: 18.25rem;
@@ -710,22 +700,26 @@ header .hamburger-close-btn {
     gap: 10px;
     text-align: center;
   }
-  .hero .hero__swiper .hero__content .hero__text br {
+  .hero__swiper__content__text br {
     display: none;
   }
-  .hero .hero__swiper .hero__content .hero__text .hero-title {
+  .hero__swiper__content__text h2 {
     font-family: "Paperozi";
     font-size: 2.25rem;
     font-weight: 700;
     line-height: 1.2;
   }
-  .hero .hero__swiper .hero__content .hero__img {
+  .hero__swiper__content__img {
     text-align: center;
   }
-  .hero .hero__swiper .hero__content .hero__img img {
+  .hero__swiper__content__img img {
     width: 32.9375rem;
   }
-  .hero .hero__swiper .hero__pagination {
+  .hero__swiper .swiper-pagination-bullet {
+    width: 0.75rem;
+    height: 0.75rem;
+  }
+  .hero__pagination {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -733,13 +727,9 @@ header .hamburger-close-btn {
     flex-wrap: nowrap;
     gap: 0.625rem;
   }
-  .hero .hero__swiper .swiper-pagination-bullet {
-    width: 0.75rem;
-    height: 0.75rem;
-  }
 }
 @media (max-width: 768px) {
-  .hero .hero__swiper .hero__content .hero__text .hero__title {
+  .hero__swiper__content__text h2 {
     font-family: "Paperozi";
     font-size: 2rem;
     font-weight: 700;
@@ -750,7 +740,7 @@ header .hamburger-close-btn {
   .hero {
     height: 47.25rem;
   }
-  .hero .hero__swiper .hero__content {
+  .hero__swiper__content {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -758,16 +748,20 @@ header .hamburger-close-btn {
     flex-wrap: nowrap;
     gap: 6.25rem;
   }
-  .hero .hero__swiper .hero__content .hero__text .hero__title {
+  .hero__swiper__content__text h2 {
     font-family: "Paperozi";
     font-size: 1.25rem;
     font-weight: 700;
     line-height: 1.2;
   }
-  .hero .hero__swiper .hero__content .hero__img img {
+  .hero__swiper__content__img img {
     width: 20.75rem;
   }
-  .hero .hero__swiper .hero__pagination {
+  .hero__swiper .swiper-pagination-bullet {
+    width: 0.625rem;
+    height: 0.625rem;
+  }
+  .hero__pagination {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -775,13 +769,9 @@ header .hamburger-close-btn {
     flex-wrap: nowrap;
     gap: 0.5rem;
   }
-  .hero .hero__swiper .swiper-pagination-bullet {
-    width: 0.625rem;
-    height: 0.625rem;
-  }
 }
 @media (max-width: 390px) {
-  .hero .hero__swiper .hero__content .hero__img img {
+  .hero__swiper__content__img img {
     width: 17.5rem;
   }
 }
@@ -1750,8 +1740,105 @@ header .hamburger-close-btn {
   background-color: #ffffff;
   color: #3475A8;
 }
+.contact__left .btn:hover {
+  background-color: #3475A8;
+  color: #ffffff;
+}
 .contact__img img {
   width: 25rem;
+}
+@media (max-width: 1024px) {
+  .contact .contact__img img {
+    width: 18.75rem;
+  }
+}
+@media (max-width: 768px) {
+  .contact .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 0;
+    padding: 1.875rem;
+  }
+  .contact .contact__left h2 {
+    font-family: "Paperozi";
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.4;
+  }
+  .contact .contact__img img {
+    width: 12.5rem;
+  }
+}
+@media (max-width: 500px) {
+  .contact .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 0;
+    padding: 1.25rem;
+  }
+  .contact .contact__left h2 {
+    font-family: "Paperozi";
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  .contact .contact__left .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    color: #3475A8;
+    border-radius: 40px;
+    border: 1px solid #3475A8;
+    padding: 10px 25px;
+    transition: all 0.2 ease-in-out;
+    font-family: "Pretendard";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+  .contact .contact__left .btn:hover {
+    background-color: #ffffff;
+    color: #3475A8;
+  }
+  .contact .contact__img img {
+    width: 9.375rem;
+  }
+}
+@media (max-width: 390px) {
+  .contact .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 0;
+    padding: 0.75rem;
+  }
+  .contact .contact__left .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    color: #3475A8;
+    border-radius: 40px;
+    border: 1px solid #3475A8;
+    padding: 8px 15px;
+    transition: all 0.2 ease-in-out;
+  }
+  .contact .contact__left .btn:hover {
+    background-color: #ffffff;
+    color: #3475A8;
+  }
+  .contact .contact__img img {
+    width: 6.25rem;
+  }
 }
 
 .about {
@@ -1768,14 +1855,25 @@ header .hamburger-close-btn {
 .about__bg .cloud {
   position: absolute;
   bottom: 0;
-  opacity: 0.6;
-  z-index: 10;
+  z-index: 2;
 }
-.about__bg .cloud .cloud__left {
+.about__bg .cloud__left {
+  z-index: 5;
+  left: 0;
+  transform: translateX(0);
+  opacity: 0.8;
+}
+.about__bg .cloud__left__sub {
   left: 0;
   transform: translateX(0);
 }
-.about__bg .cloud .cloud__right {
+.about__bg .cloud__right {
+  z-index: 5;
+  right: 0;
+  transform: translateX(0);
+  opacity: 0.8;
+}
+.about__bg .cloud__right__sub {
   right: 0;
   transform: translateX(0);
 }
@@ -1792,28 +1890,37 @@ header .hamburger-close-btn {
   top: 25rem;
   right: 24.375rem;
 }
+.about__bg__balloon__yellow {
+  position: absolute;
+  top: 11.25rem;
+  right: 43.75rem;
+}
+.about__bg__balloon__yellow img {
+  width: 13.75rem;
+}
 .about__logo {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 3;
 }
 @media (max-width: 1024px) {
-  .about .intro-bg .intro-balloon-blue {
+  .about__bg__balloon__blue {
     top: 150px;
     left: 70px;
   }
-  .about .intro-bg .intro-balloon-blue img {
+  .about__bg__balloon__blue img {
     width: 180px;
   }
-  .about .intro-bg .intro-balloon-green {
+  .about__bg__balloon__green {
     top: 400px;
     right: 70px;
   }
-  .about .intro-bg .intro-balloon-green img {
+  .about__bg__balloon__green img {
     width: 180px;
   }
-  .about .logo-container img {
+  .about__logo img {
     width: 700px;
   }
 }
@@ -1821,19 +1928,19 @@ header .hamburger-close-btn {
   .about {
     height: 43.75rem;
   }
-  .about .intro-bg .intro-balloon-blue {
+  .about__bg__balloon__blue {
     left: 40px;
   }
-  .about .intro-bg .intro-balloon-blue img {
+  .about__bg__balloon__blue img {
     width: 150px;
   }
-  .about .intro-bg .intro-balloon-green {
+  .about__bg__balloon__green {
     right: 40px;
   }
-  .about .intro-bg .intro-balloon-green img {
+  .about__bg__balloon__green img {
     width: 150px;
   }
-  .about .logo-container img {
+  .about__logo img {
     width: 580px;
   }
 }
@@ -1841,44 +1948,44 @@ header .hamburger-close-btn {
   .about {
     height: 31.25rem;
   }
-  .about .intro-bg .cloud {
+  .about__bg .cloud {
     width: 200%;
   }
-  .about .intro-bg .intro-balloon-blue {
+  .about__bg__balloon__blue {
     top: 50px;
   }
-  .about .intro-bg .intro-balloon-blue img {
+  .about__bg__balloon__blue img {
     width: 100px;
   }
-  .about .intro-bg .intro-balloon-green {
+  .about__bg__balloon__green {
     top: 250px;
   }
-  .about .intro-bg .intro-balloon-green img {
+  .about__bg__balloon__green img {
     width: 100px;
   }
-  .about .logo-container img {
+  .about__logo img {
     width: 350px;
   }
 }
 @media (max-width: 390px) {
-  .about .intro-bg .cloud {
+  .about__bg .cloud {
     width: 300%;
   }
-  .about .intro-bg .intro-balloon-blue {
+  .about__bg__balloon__blue {
     top: 150px;
     left: 30px;
   }
-  .about .intro-bg .intro-balloon-blue img {
+  .about__bg__balloon__blue img {
     width: 80px;
   }
-  .about .intro-bg .intro-balloon-green {
+  .about__bg__balloon__green {
     top: 230px;
     right: 30px;
   }
-  .about .intro-bg .intro-balloon-green img {
+  .about__bg__balloon__green img {
     width: 80px;
   }
-  .about .logo-container img {
+  .about__logo img {
     width: 250px;
   }
 }

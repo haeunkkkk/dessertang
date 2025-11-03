@@ -1,4 +1,4 @@
-header {
+.header {
     position: sticky;
     top: 0;
     left: 0;
@@ -7,46 +7,45 @@ header {
     background-color: $color-bg;
     z-index: 10;
 
-    .container {
+    &__container {
         @include flex($justify: space-between, $align: center);
         height: 100%;
         margin: 0 auto;
         padding: 0 20px;
-
     }
 
-    nav {
-        z-index: 100;
+    &__menu {
+        @include flex($gap: rem(120));
 
-        .menu-list {
-            @include flex($gap: rem(120));
-
-            .menu a {
+        &__list {
+            a {
                 @include font-set($size: 20, $weight: 600);
                 transition: color 0.3s ease;
 
                 &:hover {
                     color: $color-primary;
                 }
+
             }
-        }
 
-        .sub-menu-list {
-            display: none;
-            position: absolute;
-            top: 130px;
+            &__sub {
+                display: none;
+                position: absolute;
+                z-index: 20;
+                top: 130px;
 
-            .sub-menu {
-                padding-bottom: rem(30);
+                li {
+                    padding-bottom: rem(30);
 
-                a {
-                    @include font-set($size: 20)
+                    a {
+                        @include font-set($size: 20)
+                    }
                 }
             }
         }
     }
 
-    .header-overlay {
+    &__overlay {
         display: none;
         position: fixed;
         top: rem(100);
@@ -56,15 +55,15 @@ header {
         background-color: $color-bg;
     }
 
-    .hamburger-btn,
-    .hamburger-close-btn {
+    &__hamburger__btn,
+    &__hamburger__close {
         display: none;
     }
 
     @media (max-width: $bp-desktop) {
         height: rem(70);
 
-        .header-logo {
+        &__logo {
             img {
                 width: rem(150);
             }
@@ -75,11 +74,11 @@ header {
             position: fixed;
             top: rem(70);
 
-            .sub-menu-list {
+            .header__menu__list__sub {
                 display: block;
                 top: rem(60);
 
-                .sub-menu {
+                li {
                     a {
                         @include font-set($size: 16)
                     }
@@ -88,39 +87,43 @@ header {
 
         }
 
-        .header-overlay {
+        &__overlay {
             top: rem(1050);
             height: rem(430);
         }
 
-        .hamburger-btn {
+        &__hamburger__btn {
             display: block;
         }
     }
 
     @media (max-width: $bp-tablet) {
         height: rem(60);
-        .hamburger-btn {
-            width: rem(30);
-        }
 
-        .header-logo {
+        &__logo {
             img {
                 width: rem(110);
             }
         }
+
+        &__hamburger__btn {
+            width: rem(30);
+        }
+
     }
 
     @media (max-width: $bp-mobile-md) {
         height: rem(55);
-        .hamburger-btn {
-            width: rem(24);
-        }
 
-        .header-logo {
+        &__logo {
             img {
                 width: rem(76);
             }
         }
+
+        &__btn {
+            width: rem(24);
+        }
+
     }
 }

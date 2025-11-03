@@ -8,10 +8,12 @@
     z-index: 999;
     overflow: hidden;
     pointer-events: none;
-    &__video{
+
+    &__video {
         width: 100%;
         height: 100%;
         overflow: hidden;
+
         video {
             width: 100%;
             height: 100%;
@@ -30,122 +32,113 @@
     width: 100%;
     height: rem(800);
 
-    .hero__swiper {
+    &__swiper {
         width: 100%;
         height: 100%;
 
-        .hero__swiper01 {
+        &__slide {
             width: 100%;
             height: 100%;
+        }
+
+        &__slide__01 {
             @include bg-cover ("/assets/images/hero-bg.jpg");
         }
 
-        .hero__swiper02 {
-            width: 100%;
-            height: 100%;
+        &__slide__02 {
             @include bg-cover ("/assets/images/hero-bg02.jpg");
 
-            .hero-img img {
+            &__content__img img {
                 width: rem(992);
             }
         }
 
-        .hero__swiper03 {
-            width: 100%;
-            height: 100%;
+        &__slide__03 {
             @include bg-cover ("/assets/images/hero-bg03.jpg");
 
-            .hero-img img {
+            &__content__img img {
                 width: rem(992);
             }
         }
 
-        .hero__swiper04 {
-            width: 100%;
-            height: 100%;
+        &__slide__04 {
             @include bg-cover ("/assets/images/hero-bg04.jpg");
 
-            .hero-img img {
+            &__content__img img {
                 width: rem(681);
             }
         }
 
-        .hero__content {
+        &__content {
             height: 100%;
             position: relative;
             @include flex($justify: space-between);
 
-            .hero__text {
+            &__text {
                 padding-top: rem(300);
 
-                .hero__subtitle {
+                p {
                     color: $gray-400;
                 }
 
-                .hero__title {
+                h2 {
                     @include font-set ($size: 42, $weight: 700, $line-height: 1.2, $family: $font-accent)
                 }
             }
-
-            .hero__img {
-                display: block;
-                width: rem(700);
-            }
         }
 
-        .hero__swiper05 {
-            width: 100%;
-            height: 100%;
+        &__slide__05 {
             @include bg-cover ("/assets/images/hero-bg05.jpg");
-            .hero__text {
+
+            .hero__swiper__content__text {
                 color: $color-bg;
-                .hero__subtitle {
+
+                p {
                     color: #dadada;
                 }
             }
-            .hero-img img {
-                width: rem(500);
-            }
         }
 
-        
-
-        .hero__pagination {
-            @include flex($gap: rem(15));
-            max-width: rem(1440);
-            margin-left: auto;
-            margin-right: auto;
-            padding: 0 rem(20);
+        &__slide__06 {
+            @include bg-cover ("/assets/images/hero-bg06.jpg");
         }
+    }
 
-        .swiper-horizontal>.swiper-pagination-bullets,
-        .swiper-pagination-bullets.swiper-pagination-horizontal,
-        .swiper-pagination-custom,
-        .swiper-pagination-fraction {
-            position: relative;
-            bottom: rem(150)
-        }
+    &__pagination {
+        @include flex($gap: rem(15));
+        max-width: rem(1440);
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 rem(20);
+    }
 
-        .swiper-pagination-bullet-active {
-            border: rem(2) solid $gray-300;
-            background-color: #99999967;
-        }
+    .swiper-horizontal>.swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .swiper-pagination-custom,
+    .swiper-pagination-fraction {
+        position: relative;
+        bottom: rem(150)
+    }
 
-        .swiper-pagination-bullet {
-            width: rem(15);
-            height: rem(15);
-            margin: 0;
-        }
+    .swiper-pagination-bullet-active {
+        border: rem(2) solid $gray-300;
+        background-color: #99999967;
+    }
+
+    .swiper-pagination-bullet {
+        width: rem(15);
+        height: rem(15);
+        margin: 0;
     }
 
     @media (max-width: $bp-desktop) {
         height: rem(950);
 
-        .hero__swiper {
-            .hero__content {
+        &__swiper {
+            &__content {
                 @include flex ($justify: center, $direction: column, $gap: rem(30));
 
-                .hero__text {
+                &__text {
                     padding: 0;
                     top: rem(150);
                     left: rem(292);
@@ -157,12 +150,12 @@
                     @include flex ($direction: column, $wrap: nowrap, $gap: 10px);
                     text-align: center;
 
-                    .hero-title {
+                    h2 {
                         @include font-set ($size: 36, $weight: 700, $line-height: 1.2, $family: $font-accent)
                     }
                 }
 
-                .hero__img {
+                &__img {
                     text-align: center;
 
                     img {
@@ -172,23 +165,24 @@
                 }
             }
 
-            .hero__pagination {
-                @include flex($justify: center, $gap: rem(10));
-            }
 
             .swiper-pagination-bullet {
                 width: rem(12);
                 height: rem(12);
             }
         }
+
+        &__pagination {
+            @include flex($justify: center, $gap: rem(10));
+        }
     }
 
     @media (max-width: $bp-tablet) {
 
-        .hero__swiper {
-            .hero__content {
-                .hero__text {
-                    .hero__title {
+        &__swiper {
+            &__content {
+                &__text {
+                    h2 {
                         @include font-set ($size: 32, $weight: 700, $line-height: 1.2, $family: $font-accent)
                     }
                 }
@@ -199,26 +193,23 @@
     @media (max-width: $bp-mobile-md) {
         height: rem(756);
 
-        .hero__swiper {
-            .hero__content {
+        &__swiper {
+            &__content {
                 @include flex ($justify: center, $direction: column, $gap: rem(100));
 
-                .hero__text {
-                    .hero__title {
+                &__text {
+                    h2 {
                         @include font-set ($size: 20, $weight: 700, $line-height: 1.2, $family: $font-accent)
                     }
                 }
 
-                .hero__img {
+                &__img {
                     img {
                         width: rem(332);
                     }
                 }
             }
 
-            .hero__pagination {
-                @include flex($justify: center, $gap: rem(8));
-            }
 
             .swiper-pagination-bullet {
                 width: rem(10);
@@ -226,12 +217,16 @@
             }
 
         }
+
+        &__pagination {
+            @include flex($justify: center, $gap: rem(8));
+        }
     }
 
     @media (max-width: $bp-mobile-sm) {
-        .hero__swiper {
-            .hero__content {
-                .hero__img {
+        &__swiper {
+            &__content {
+                &__img {
                     img {
                         width: rem(280);
                     }
@@ -328,6 +323,7 @@
         a {
             width: rem(150);
         }
+
         img {
             margin-bottom: rem(-10);
         }
@@ -734,6 +730,7 @@
             @include font-set ($size: 24);
         }
     }
+
     .swiper-3d {
 
         .swiper-slide-shadow-left,
@@ -767,20 +764,20 @@
     }
 
     @media (max-width: $bp-desktop) {
-            &__wrapper {
-                // gap: 1000px;
+        &__wrapper {
+            // gap: 1000px;
+        }
+
+        .growth__swiper {
+            .swiper-button-next {
+                right: rem(230);
             }
 
-            .growth__swiper {
-                .swiper-button-next {
-                    right: rem(230);
-                }
-    
-                .swiper-button-prev {
-                    left: rem(230);
-                }
-
+            .swiper-button-prev {
+                left: rem(230);
             }
+
+        }
     }
 
     @media (max-width: $bp-tablet) {
@@ -792,11 +789,12 @@
             .swiper-button-next {
                 right: rem(100);
             }
-    
+
             .swiper-button-prev {
                 left: rem(100);
             }
         }
+
         .swiper-button-next::after,
         .swiper-button-prev::after {
             font-size: rem(32);
@@ -815,7 +813,7 @@
             .swiper-button-next {
                 right: rem(20);
             }
-    
+
             .swiper-button-prev {
                 left: rem(20);
             }
@@ -825,59 +823,61 @@
         .growth__card {
             margin-top: rem(-75);
             width: rem(366);
-                height: rem(384);
+            height: rem(384);
 
-                &__text {
-                    margin-top: rem(100);
+            &__text {
+                margin-top: rem(100);
 
-                    h3 {
-                        @include font-set($size: 20, $weight: 600, $line-height: 1.2, $family: $font-primary);
-                    }
-
-                    li {
-                        @include font-set($size: 14, $weight: 400, $line-height: 1.2, $family: $font-primary);
-
-                        span {
-                            @include font-set($size: 12, $weight: 300, $line-height: 1.2, $family: $font-primary);
-                        }
-                    }
+                h3 {
+                    @include font-set($size: 20, $weight: 600, $line-height: 1.2, $family: $font-primary);
                 }
 
-                &__keyword {
-                    @include font-set($size: 12, $weight: 700, $family: $font-accent);
-                    color: $color-primary
-                }
+                li {
+                    @include font-set($size: 14, $weight: 400, $line-height: 1.2, $family: $font-primary);
 
-                button {
-                    @include font-set ($size: 16);
+                    span {
+                        @include font-set($size: 12, $weight: 300, $line-height: 1.2, $family: $font-primary);
+                    }
                 }
             }
-            .swiper-button-next::after,
-            .swiper-button-prev::after {
-                font-size: rem(24);
+
+            &__keyword {
+                @include font-set($size: 12, $weight: 700, $family: $font-accent);
+                color: $color-primary
+            }
+
+            button {
+                @include font-set ($size: 16);
             }
         }
 
-        @media (max-width: $bp-mobile-sm) {
-            .growth__card {
-                margin-top: rem(-75);
-                width: rem(300);
-                height: rem(360);
+        .swiper-button-next::after,
+        .swiper-button-prev::after {
+            font-size: rem(24);
+        }
+    }
 
-                button {
-                    @include button-style($bg: $color-primary,
-                        $color: $color-bg,
-                        $radius: 40px,
-                        $border: none,
-                        $padding-y: 10px,
-                        $padding-x: 70px)
-                }
-            }
-            .swiper-button-next::after,
-            .swiper-button-prev::after {
-                font-size: 16px;
+    @media (max-width: $bp-mobile-sm) {
+        .growth__card {
+            margin-top: rem(-75);
+            width: rem(300);
+            height: rem(360);
+
+            button {
+                @include button-style($bg: $color-primary,
+                    $color: $color-bg,
+                    $radius: 40px,
+                    $border: none,
+                    $padding-y: 10px,
+                    $padding-x: 70px)
             }
         }
+
+        .swiper-button-next::after,
+        .swiper-button-prev::after {
+            font-size: 16px;
+        }
+    }
 }
 
 
@@ -1010,6 +1010,7 @@
         &__prev {
             top: rem(150);
         }
+
         .swiper-button-next::after,
         .swiper-button-prev::after {
             font-size: rem(32);
@@ -1019,6 +1020,7 @@
     }
 
     @media (max-width: $bp-mobile-md) {
+
         .swiper-button-next::after,
         .swiper-button-prev::after {
             font-size: rem(24);
@@ -1143,7 +1145,7 @@
                 "img1"
                 "img2"
                 "img3";
-            
+
             &__card {
                 width: rem(366);
                 margin: 0 auto;
@@ -1155,6 +1157,7 @@
         &__wrap {
             &__card {
                 width: 100%;
+
                 &__text {
                     h3 {
                         @include font-set($size: 18, $weight: 600, $line-height: 1.2)
@@ -1174,24 +1177,112 @@
 .contact {
     margin-top: rem(100);
     background-color: $color-skyblue;
-    .container{
+
+    .container {
         @include flex ($justify: space-between);
         padding: rem(50);
     }
+
     &__left {
         @include flex ($justify: flex-start, $align: flex-start, $direction: column, $wrap: nowrap, $gap: rem(30));
+
         h2 {
             @include font-set($size: 24, $weight: 700, $line-height: 1.4, $family: $font-accent);
         }
+
         .btn {
             @include button-style($bg: $color-bg,
-            $color: $color-primary,
-            $border: 1px solid $color-primary, $padding-y: 10px,
-            $padding-x: 30px);
+                $color: $color-primary,
+                $border: 1px solid $color-primary, $padding-y: 10px,
+                $padding-x: 30px);
             @include font-set($size: 20, $weight: 500, $line-height: 1.4, $family: $font-primary);
+
+            &:hover {
+                background-color: $color-primary;
+                color: $color-bg;
+            }
         }
     }
+
     &__img img {
         width: rem(400);
+    }
+
+    @media (max-width: $bp-desktop) {
+        .contact__img {
+            img {
+                width: rem(300);
+            }
+        }
+    }
+
+    @media (max-width: $bp-tablet) {
+        .container {
+            @include flex ($justify: space-between);
+            padding: rem(30);
+        }
+
+        .contact__left {
+            h2 {
+                @include font-set($size: 20, $weight: 700, $line-height: 1.4, $family: $font-accent);
+            }
+        }
+
+        .contact__img {
+            img {
+                width: rem(200);
+            }
+        }
+    }
+
+    @media (max-width: $bp-mobile-md) {
+        .container {
+            @include flex ($justify: space-between);
+            padding: rem(20);
+        }
+
+        .contact__left {
+            h2 {
+                @include font-set($size: 16, $weight: 600, $line-height: 1.2, $family: $font-accent);
+            }
+
+            .btn {
+                @include button-style($bg: $color-bg,
+                    $color: $color-primary,
+                    $border: 1px solid $color-primary, $padding-y: 10px,
+                    $padding-x: 25px);
+
+                @include font-set($size: 16, $weight: 400, $line-height: 1.2, $family: $font-primary);
+
+            }
+        }
+
+        .contact__img {
+            img {
+                width: rem(150);
+            }
+        }
+    }
+
+    @media (max-width: $bp-mobile-sm) {
+        .container {
+            @include flex ($justify: space-between);
+            padding: rem(12);
+        }
+
+        .contact__left {
+            .btn {
+                @include button-style($bg: $color-bg,
+                    $color: $color-primary,
+                    $border: 1px solid $color-primary, $padding-y: 8px,
+                    $padding-x: 15px);
+            }
+        }
+
+        .contact__img {
+            img {
+                width: rem(100);
+            }
+        }
     }
 }

@@ -1,19 +1,18 @@
+@import "base/variables";
+@import "base/mixins";
 
-@import "variables";
-@import "mixins";
-
-@import "common";
-@import "typography";
-
-
-@import "layout";
-@import "header";
-@import "footer";
+@import "base/common";
+@import "base/typography";
 
 
-@import "intro";
-@import "main";
-@import "about";
+@import "layout/layout";
+@import "layout/header";
+@import "layout/footer";
+
+
+@import "page/intro";
+@import "page/main";
+@import "page/about";
 
 @import "components/button";
 @import "components/card";
