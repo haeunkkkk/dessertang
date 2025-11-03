@@ -1,0 +1,221 @@
+//footer
+.footer {
+    background-color: $color-text;
+
+    &__inner {
+        padding: rem(55) 0;
+        @include flex($justify: space-between, $align: flex-start);
+    }
+
+    &__logo {
+        img {
+            width: rem(162);
+        }
+    }
+
+    &__center {
+        @include flex ($justify: flex-start, $align: flex-start, $direction: column, $wrap: nowrap, $gap: rem(20));
+
+        &__info {
+            @include flex ($justify: flex-start, $align: flex-start, $direction: row, $wrap: nowrap, $gap: 0);
+
+            p {
+                color: $color-bg;
+                padding-right: rem(20);
+                padding-left: rem(20);
+                border-right: 1px solid $color-bg;
+                @include font-set($size: 14, $weight: 400, $line-height: 1.2, $family: $font-primary);
+
+                &:last-child {
+                    border: none;
+                }
+            }
+        }
+
+        &__address {
+            @include flex ($justify: flex-start, $align: flex-start, $direction: row, $wrap: nowrap, $gap: 0);
+
+            p {
+                color: $color-bg;
+                padding-right: rem(20);
+                padding-left: rem(20);
+                border-right: 1px solid $color-bg;
+                @include font-set($size: 14, $weight: 400, $line-height: 1.2, $family: $font-primary);
+
+                &:last-child {
+                    border: none;
+                }
+            }
+        }
+
+        &__privacy {
+            a {
+                color: $color-bg;
+                padding-right: rem(20);
+                padding-left: rem(20);
+                border-right: 1px solid $color-bg;
+                @include font-set($size: 14, $weight: 400, $line-height: 1.2, $family: $font-primary);
+
+                &:last-child {
+                    border: none;
+                }
+            }
+        }
+
+        &__copyright {
+            p {
+                color: $color-bg;
+                @include font-set($size: 12, $weight: 700, $line-height: 1.2, $family: $font-primary);
+                padding-left: rem(20);
+            }
+        }
+    }
+
+    &__sns {
+        @include flex ($justify: flex-start, $align: flex-start, $direction: row, $wrap: nowrap, $gap: rem(30));
+    }
+
+    @media (max-width: $bp-desktop) {
+        &__inner {
+            padding: rem(60) 0;
+            
+        }
+
+        &__logo {
+            img {
+                width: rem(151);
+            }
+        }
+
+        &__center {
+            @include flex ($justify: flex-start, $align: flex-start, $direction: column, $wrap: nowrap, $gap: rem(15));
+        }
+
+        &__sns {
+            @include flex ($justify: flex-start, $align: flex-start, $direction: row, $wrap: nowrap, $gap: rem(20));
+            img {
+                width: rem(30);
+                height: rem(30);
+            }
+        }
+    }
+
+    @media (max-width: $bp-tablet) {
+       &__inner {
+            padding: rem(12) 0;
+            @include flex($justify: flex-start, $align: flex-start, $direction:column, $gap: rem(20));
+        }
+
+        &__logo {
+            padding-left: rem(20);
+            img {
+                width: rem(100);
+            }
+        }
+
+        &__center {
+            @include flex ($justify: flex-start, $align: flex-start, $direction: column, $wrap: nowrap, $gap: rem(10));
+            &__info {
+                p {
+                    @include font-set($size: 12, $weight: 400, $line-height: 1.2, $family: $font-primary);
+                }
+            }
+            &__address {
+                p {
+                    @include font-set($size: 12, $weight: 400, $line-height: 1.2, $family: $font-primary);
+                }
+            }
+            &__privacy {
+                a {
+                    @include font-set($size: 12, $weight: 400, $line-height: 1.2, $family: $font-primary);
+                }
+            }
+        }
+
+        &__sns {
+            padding-left: rem(20);
+            @include flex ($justify: flex-start, $align: flex-start, $direction: row, $wrap: nowrap, $gap: rem(20));
+            img {
+                width: rem(25);
+                height: rem(25);
+            }
+        }
+    }
+
+    @media (max-width: $bp-mobile-md) {
+       &__inner {
+        }
+
+        &__logo {
+            padding-left: rem(12);
+            img {
+                width: rem(70);
+            }
+        }
+
+        &__center {
+            @include flex ($justify: flex-start, $align: flex-start, $direction: column, $wrap: nowrap, $gap: rem(10));
+            &__info {
+                @include flex ($justify: flex-start, $align: flex-start, $direction: row, $wrap: nowrap, $gap: 0);
+
+                p {
+                    padding-right: rem(12);
+                    padding-left: rem(12);
+
+                    &:last-child {
+                        padding-right: 0;
+                    }
+                }
+            }
+
+            &__address {
+                @include flex ($justify: flex-start, $align: flex-start, $direction: column, $wrap: nowrap, $gap: rem(10));
+                p {
+                    padding-right: rem(12);
+                    padding-left: rem(12);
+                    border: none;
+
+                    &:last-child {
+                        padding-right: 0;
+                    }
+                }
+            }
+
+            &__privacy {
+                a {
+                    padding-right: rem(12);
+                    padding-left: rem(12);
+                }
+            }
+
+            &__copyright {
+                p {
+                    @include font-set($size: 10, $weight: 700, $line-height: 1.2, $family: $font-primary);
+                    padding-left: rem(12);
+                }
+            } 
+        }
+
+        &__sns {
+            padding-left: rem(12);
+            @include flex ($justify: flex-start, $align: flex-start, $direction: row, $wrap: nowrap, $gap: rem(10));
+            img {
+                width: rem(20);
+                height: rem(20);
+            }
+        }
+    }
+
+    @media (max-width: $bp-mobile-sm) {
+        &__center {
+            
+            &__info {
+                @include flex ($justify: flex-start, $align: flex-start, $direction: column, $wrap: nowrap, $gap: rem(10));
+
+                p {
+                    border: none;
+                }
+            }
+        }
+    }
+}

@@ -1,3 +1,12 @@
+// intro
+$(function(){ 
+  $('#main__intro__video').on('ended', function() {
+    $('.main__intro__video__wrap').fadeOut(600, function(){
+      $(this).remove();  
+      $('.main__content').fadeIn(600);
+    });
+  });
+});
 
 //brnad
 $(window).on('scroll', function() {
@@ -70,14 +79,7 @@ $(window).on('scroll', function() {
 
 });
 
-// intro
-$(function(){
-  $('#intro-video').on('ended', function() {
-    $('.intro-video-wrap').fadeOut(600, function(){
-      $('.main-content').fadeIn(600);
-    });
-  });
-});
+
 
 
 

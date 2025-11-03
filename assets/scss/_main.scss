@@ -1,3 +1,30 @@
+//intro
+.main__intro {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 999;
+    overflow: hidden;
+    pointer-events: none;
+    &__video{
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        video {
+            width: 100%;
+            height: 100%;
+            max-height: 100vh;
+            object-fit: cover;
+        }
+    }
+}
+
+// .main__content {
+//     display: none;
+// }
+
 //main
 .hero {
     width: 100%;
@@ -66,8 +93,25 @@
             }
         }
 
+        .hero__swiper05 {
+            width: 100%;
+            height: 100%;
+            @include bg-cover ("/assets/images/hero-bg05.jpg");
+            .hero__text {
+                color: $color-bg;
+                .hero__subtitle {
+                    color: #dadada;
+                }
+            }
+            .hero-img img {
+                width: rem(500);
+            }
+        }
+
+        
+
         .hero__pagination {
-            @include flex($gap: rem(30));
+            @include flex($gap: rem(15));
             max-width: rem(1440);
             margin-left: auto;
             margin-right: auto;
@@ -88,15 +132,14 @@
         }
 
         .swiper-pagination-bullet {
-            width: rem(20);
-            height: rem(20);
+            width: rem(15);
+            height: rem(15);
             margin: 0;
         }
     }
 
     @media (max-width: $bp-desktop) {
         height: rem(950);
-        margin-top: rem(70);
 
         .hero__swiper {
             .hero__content {
@@ -130,18 +173,17 @@
             }
 
             .hero__pagination {
-                @include flex($justify: center, $gap: rem(25));
+                @include flex($justify: center, $gap: rem(10));
             }
 
             .swiper-pagination-bullet {
-                width: rem(15);
-                height: rem(15);
+                width: rem(12);
+                height: rem(12);
             }
         }
     }
 
     @media (max-width: $bp-tablet) {
-        margin-top: rem(60);
 
         .hero__swiper {
             .hero__content {
@@ -156,7 +198,6 @@
 
     @media (max-width: $bp-mobile-md) {
         height: rem(756);
-        margin-top: rem(55);
 
         .hero__swiper {
             .hero__content {
@@ -176,7 +217,7 @@
             }
 
             .hero__pagination {
-                @include flex($justify: center, $gap: rem(25));
+                @include flex($justify: center, $gap: rem(8));
             }
 
             .swiper-pagination-bullet {
@@ -286,6 +327,9 @@
 
         a {
             width: rem(150);
+        }
+        img {
+            margin-bottom: rem(-10);
         }
     }
 
@@ -621,6 +665,7 @@
 
 //growth
 .growth {
+
     .growth__swiper {
         overflow-x: hidden;
 
@@ -636,91 +681,6 @@
 
         .swiper-button-prev {
             left: rem(420);
-        }
-
-        @media (max-width: $bp-desktop) {
-            .swiper-button-next {
-                right: rem(230);
-            }
-
-            .swiper-button-prev {
-                left: rem(230);
-            }
-        }
-
-        @media (max-width: $bp-tablet) {
-            .swiper-button-next {
-                right: rem(100);
-            }
-
-            .swiper-button-prev {
-                left: rem(100);
-            }
-        }
-
-        @media (max-width: $bp-mobile-md) {
-            .growth__card__img {
-                img {
-                    width: rem(150);
-                    height: rem(150);
-                }
-            }
-
-            .swiper-button-next {
-                right: rem(20);
-            }
-
-            .swiper-button-prev {
-                left: rem(20);
-            }
-
-            .growth__card {
-                margin-top: rem(-75);
-                width: rem(366);
-                height: rem(384);
-
-                &__text {
-                    margin-top: rem(100);
-
-                    h3 {
-                        @include font-set($size: 20, $weight: 600, $line-height: 1.2, $family: $font-primary);
-                    }
-
-                    li {
-                        @include font-set($size: 14, $weight: 400, $line-height: 1.2, $family: $font-primary);
-
-                        span {
-                            @include font-set($size: 12, $weight: 300, $line-height: 1.2, $family: $font-primary);
-                        }
-                    }
-                }
-
-                &__keyword {
-                    @include font-set($size: 12, $weight: 700, $family: $font-accent);
-                    color: $color-primary
-                }
-
-                button {
-                    @include font-set ($size: 16);
-                }
-            }
-        }
-
-        @media (max-width: $bp-mobile-sm) {
-            .growth__card {
-                margin-top: rem(-75);
-                width: rem(300);
-                height: rem(360);
-
-                button {
-                    @include button-style($bg: $color-primary,
-                        $color: $color-bg,
-                        $radius: 40px,
-                        $border: none,
-                        $padding-y: 10px,
-                        $padding-x: 70px)
-                }
-            }
         }
     }
 
@@ -774,7 +734,6 @@
             @include font-set ($size: 24);
         }
     }
-
     .swiper-3d {
 
         .swiper-slide-shadow-left,
@@ -806,7 +765,121 @@
             }
         }
     }
+
+    @media (max-width: $bp-desktop) {
+            &__wrapper {
+                // gap: 1000px;
+            }
+
+            .growth__swiper {
+                .swiper-button-next {
+                    right: rem(230);
+                }
+    
+                .swiper-button-prev {
+                    left: rem(230);
+                }
+
+            }
+    }
+
+    @media (max-width: $bp-tablet) {
+        &__wrapper {
+            gap: 0;
+        }
+
+        .growth__swiper {
+            .swiper-button-next {
+                right: rem(100);
+            }
+    
+            .swiper-button-prev {
+                left: rem(100);
+            }
+        }
+        .swiper-button-next::after,
+        .swiper-button-prev::after {
+            font-size: rem(32);
+        }
+    }
+
+    @media (max-width: $bp-mobile-md) {
+        .growth__card__img {
+            img {
+                width: rem(150);
+                height: rem(150);
+            }
+        }
+
+        .growth__swiper {
+            .swiper-button-next {
+                right: rem(20);
+            }
+    
+            .swiper-button-prev {
+                left: rem(20);
+            }
+
+        }
+
+        .growth__card {
+            margin-top: rem(-75);
+            width: rem(366);
+                height: rem(384);
+
+                &__text {
+                    margin-top: rem(100);
+
+                    h3 {
+                        @include font-set($size: 20, $weight: 600, $line-height: 1.2, $family: $font-primary);
+                    }
+
+                    li {
+                        @include font-set($size: 14, $weight: 400, $line-height: 1.2, $family: $font-primary);
+
+                        span {
+                            @include font-set($size: 12, $weight: 300, $line-height: 1.2, $family: $font-primary);
+                        }
+                    }
+                }
+
+                &__keyword {
+                    @include font-set($size: 12, $weight: 700, $family: $font-accent);
+                    color: $color-primary
+                }
+
+                button {
+                    @include font-set ($size: 16);
+                }
+            }
+            .swiper-button-next::after,
+            .swiper-button-prev::after {
+                font-size: rem(24);
+            }
+        }
+
+        @media (max-width: $bp-mobile-sm) {
+            .growth__card {
+                margin-top: rem(-75);
+                width: rem(300);
+                height: rem(360);
+
+                button {
+                    @include button-style($bg: $color-primary,
+                        $color: $color-bg,
+                        $radius: 40px,
+                        $border: none,
+                        $padding-y: 10px,
+                        $padding-x: 70px)
+                }
+            }
+            .swiper-button-next::after,
+            .swiper-button-prev::after {
+                font-size: 16px;
+            }
+        }
 }
+
 
 
 //best
@@ -937,11 +1010,20 @@
         &__prev {
             top: rem(150);
         }
+        .swiper-button-next::after,
+        .swiper-button-prev::after {
+            font-size: rem(32);
+        }
 
 
     }
 
-    @media (max-width: $bp-mobile-md) {}
+    @media (max-width: $bp-mobile-md) {
+        .swiper-button-next::after,
+        .swiper-button-prev::after {
+            font-size: rem(24);
+        }
+    }
 
     @media (max-width: $bp-mobile-sm) {
         &__swiper {
@@ -976,7 +1058,7 @@
 
         .swiper-button-next::after,
         .swiper-button-prev::after {
-            font-size: 16px;
+            font-size: rem(16);
         }
 
     }
@@ -1061,12 +1143,18 @@
                 "img1"
                 "img2"
                 "img3";
+            
+            &__card {
+                width: rem(366);
+                margin: 0 auto;
+            }
         }
     }
 
     @media (max-width: $bp-mobile-sm) {
         &__wrap {
             &__card {
+                width: 100%;
                 &__text {
                     h3 {
                         @include font-set($size: 18, $weight: 600, $line-height: 1.2)
@@ -1082,249 +1170,28 @@
     }
 }
 
-//footer
-.footer {
-    background-color: $gray-100;
+//contact
+.contact {
     margin-top: rem(100);
-
-    &__inner {
-        padding: rem(55) 0;
-        @include flex($justify: space-between, $align: flex-start);
-    }
-
-    &__logo {
-        img {
-            width: rem(162);
-        }
-    }
-
-    &__center {
-        @include flex ($justify: flex-start, $align: flex-start, $direction: column, $wrap: nowrap, $gap: rem(30));
-
-        &__info {
-            @include flex ($justify: flex-start, $align: flex-start, $direction: row, $wrap: nowrap, $gap: 0);
-
-            p {
-                padding-right: rem(20);
-                padding-left: rem(20);
-                border-right: 1px solid $color-text;
-                @include font-set($size: 14, $weight: 400, $line-height: 1.2, $family: $font-primary);
-
-                &:last-child {
-                    border: none;
-                }
-            }
-        }
-
-        &__address {
-            @include flex ($justify: flex-start, $align: flex-start, $direction: row, $wrap: nowrap, $gap: 0);
-
-            p {
-                padding-right: rem(20);
-                padding-left: rem(20);
-                border-right: 1px solid $color-text;
-
-                &:last-child {
-                    border: none;
-                }
-            }
-        }
-
-        &__privacy {
-            a {
-                padding-right: rem(20);
-                padding-left: rem(20);
-                border-right: 1px solid $color-text;
-
-                &:last-child {
-                    border: none;
-                }
-            }
-        }
-
-        &__copyright {
-            p {
-                @include font-set($size: 12, $weight: 700, $line-height: 1.2, $family: $font-primary);
-                padding-left: rem(20);
-            }
-        }
-    }
-
-    &__sns {
-        @include flex ($justify: flex-start, $align: flex-start, $direction: row, $wrap: nowrap, $gap: rem(30));
-    }
-}
-
-// about
-.intro-hero {
-    position: relative;
-    height: rem(950);
-    overflow: hidden;
-    @include bg-cover("/assets/images/cloud-bg.png");
     background-color: $color-skyblue;
-    margin: 0 auto;
-
-
-    .intro-bg {
-        .cloud {
-            position: absolute;
-            bottom: 0;
-            opacity: 0.6;
-            z-index: 10;
-
-            &.cloud-left {
-                left: 0;
-                transform: translateX(0);
-            }
-
-            &.cloud-right {
-                right: 0;
-                transform: translateX(0);
-            }
-
-            img {
-                width: 100%;
-            }
+    .container{
+        @include flex ($justify: space-between);
+        padding: rem(50);
+    }
+    &__left {
+        @include flex ($justify: flex-start, $align: flex-start, $direction: column, $wrap: nowrap, $gap: rem(30));
+        h2 {
+            @include font-set($size: 24, $weight: 700, $line-height: 1.4, $family: $font-accent);
         }
-
-        .intro-balloon-blue {
-            position: absolute;
-            top: rem(150);
-            left: rem(390);
-        }
-
-        .intro-balloon-green {
-            position: absolute;
-            top: rem(400);
-            right: rem(390);
+        .btn {
+            @include button-style($bg: $color-bg,
+            $color: $color-primary,
+            $border: 1px solid $color-primary, $padding-y: 10px,
+            $padding-x: 30px);
+            @include font-set($size: 20, $weight: 500, $line-height: 1.4, $family: $font-primary);
         }
     }
-
-    .logo-container {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+    &__img img {
+        width: rem(400);
     }
-
-    @media (max-width: $bp-desktop) {
-        .intro-bg {
-            .intro-balloon-blue {
-                top: responsive-pos(150, desktop);
-                left: responsive-pos(70, desktop);
-
-                img {
-                    width: $balloon-lg;
-                }
-            }
-
-            .intro-balloon-green {
-                top: responsive-pos(400, desktop);
-                right: responsive-pos(70, desktop);
-
-                img {
-                    width: $balloon-lg;
-                }
-            }
-        }
-
-        .logo-container {
-            img {
-                width: $logo-lg;
-            }
-        }
-    }
-
-    @media (max-width: $bp-tablet) {
-        height: rem(700);
-
-        .intro-bg {
-            .intro-balloon-blue {
-                left: responsive-pos(50, tablet);
-
-                img {
-                    width: $balloon-md;
-                }
-            }
-
-            .intro-balloon-green {
-                right: responsive-pos(50, tablet);
-
-                img {
-                    width: $balloon-md;
-                }
-            }
-        }
-
-        .logo-container {
-            img {
-                width: $logo-md;
-            }
-        }
-    }
-
-    @media (max-width: $bp-mobile-md) {
-        height: rem(500);
-
-        .intro-bg {
-            .cloud {
-                width: 200%;
-            }
-
-            .intro-balloon-blue {
-                top: responsive-pos(50, mobile-md);
-
-                img {
-                    width: $balloon-sm;
-                }
-            }
-
-            .intro-balloon-green {
-                top: responsive-pos(250, mobile-md);
-
-                img {
-                    width: $balloon-sm;
-                }
-            }
-        }
-
-        .logo-container {
-            img {
-                width: $logo-sm;
-            }
-        }
-    }
-
-    @media (max-width: $bp-mobile-sm) {
-        .intro-bg {
-            .cloud {
-                width: 300%;
-            }
-
-            .intro-balloon-blue {
-                top: responsive-pos(150, mobile-sm);
-                left: responsive-pos(30, mobile-sm);
-
-                img {
-                    width: $balloon-xs;
-                }
-            }
-
-            .intro-balloon-green {
-                top: responsive-pos(230, mobile-sm);
-                right: responsive-pos(30, mobile-sm);
-
-                img {
-                    width: $balloon-xs;
-                }
-            }
-        }
-
-        .logo-container {
-            img {
-                width: $logo-xs;
-            }
-        }
-    }
-
 }
