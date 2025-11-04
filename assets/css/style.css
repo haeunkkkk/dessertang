@@ -1850,72 +1850,47 @@ button {
   background-size: cover;
   background-repeat: no-repeat;
   background-color: #DDEEF5;
-  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 9.375rem;
+  text-align: center;
 }
-.about__bg .cloud {
+.about__bg {
   position: absolute;
   bottom: 0;
-  z-index: 2;
 }
-.about__bg .cloud__left {
-  z-index: 5;
-  left: 0;
-  transform: translateX(0);
-  opacity: 0.8;
-}
-.about__bg .cloud__left__sub {
-  left: 0;
-  transform: translateX(0);
-}
-.about__bg .cloud__right {
-  z-index: 5;
-  right: 0;
-  transform: translateX(0);
-  opacity: 0.8;
-}
-.about__bg .cloud__right__sub {
-  right: 0;
-  transform: translateX(0);
-}
-.about__bg .cloud img {
-  width: 100%;
-}
-.about__bg__balloon__blue {
+.about__bg__cloud {
   position: absolute;
-  top: 9.375rem;
-  left: 24.375rem;
+  bottom: 0;
 }
-.about__bg__balloon__green {
-  position: absolute;
-  top: 25rem;
-  right: 24.375rem;
+.about__logo img {
+  width: 46.25rem;
 }
-.about__bg__balloon__yellow {
-  position: absolute;
-  top: 11.25rem;
-  right: 43.75rem;
+.about__text h2 {
+  font-family: "Pretendard";
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.4;
 }
-.about__bg__balloon__yellow img {
-  width: 13.75rem;
+.about__text p {
+  font-family: "Pretendard";
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.4;
 }
-.about__logo {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 3;
+.about__text span {
+  font-family: "Paperozi";
+  font-size: 1.25rem;
+  font-weight: 900;
+  line-height: 1.4;
+  color: #3475A8;
 }
 @media (max-width: 1024px) {
-  .about__bg__balloon__blue {
-    top: 150px;
-    left: 70px;
-  }
   .about__bg__balloon__blue img {
     width: 180px;
-  }
-  .about__bg__balloon__green {
-    top: 400px;
-    right: 70px;
   }
   .about__bg__balloon__green img {
     width: 180px;
@@ -1928,14 +1903,8 @@ button {
   .about {
     height: 43.75rem;
   }
-  .about__bg__balloon__blue {
-    left: 40px;
-  }
   .about__bg__balloon__blue img {
     width: 150px;
-  }
-  .about__bg__balloon__green {
-    right: 40px;
   }
   .about__bg__balloon__green img {
     width: 150px;
@@ -1951,14 +1920,8 @@ button {
   .about__bg .cloud {
     width: 200%;
   }
-  .about__bg__balloon__blue {
-    top: 50px;
-  }
   .about__bg__balloon__blue img {
     width: 100px;
-  }
-  .about__bg__balloon__green {
-    top: 250px;
   }
   .about__bg__balloon__green img {
     width: 100px;
@@ -1971,16 +1934,8 @@ button {
   .about__bg .cloud {
     width: 300%;
   }
-  .about__bg__balloon__blue {
-    top: 150px;
-    left: 30px;
-  }
   .about__bg__balloon__blue img {
     width: 80px;
-  }
-  .about__bg__balloon__green {
-    top: 230px;
-    right: 30px;
   }
   .about__bg__balloon__green img {
     width: 80px;

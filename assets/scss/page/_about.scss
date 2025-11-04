@@ -5,81 +5,45 @@
     overflow: hidden;
     @include bg-cover("/assets/images/cloud-bg.png");
     background-color: $color-skyblue;
-    margin: 0 auto;
+    @include flex ($justify: center, $align: center, $direction: column, $wrap: nowrap, $gap: rem(150));
+    text-align: center;
 
 
     &__bg {
-        .cloud {
+        position: absolute;
+        bottom: 0;
+        &__cloud {
             position: absolute;
             bottom: 0;
-            z-index: 2;
-
-            &__left {
-                z-index: 5;
-                left: 0;
-                transform: translateX(0);
-                opacity: 0.8;
-
-            }
-
-            &__left__sub {
-                left: 0;
-                transform: translateX(0);
-            }
-
-            &__right {
-                z-index: 5;
-                right: 0;
-                transform: translateX(0);
-                opacity: 0.8;
-            }
-
-            &__right__sub {
-                right: 0;
-                transform: translateX(0);
-            }
-
-            img {
-                width: 100%;
-            }
         }
 
-        &__balloon__blue {
-            position: absolute;
-            top: rem(150);
-            left: rem(390);
-        }
+        &__balloon {
 
-        &__balloon__green {
-            position: absolute;
-            top: rem(400);
-            right: rem(390);
-        }
-
-        &__balloon__yellow {
-            position: absolute;
-            top: rem(180);
-            right: rem(700);
-
-            img {
-                width: rem(220);
-            }
         }
     }
 
     &__logo {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 3;
+        img {
+            width: rem(740);
+        }
+    }
+    &__text {
+        h2 {
+           @include font-set($size: 32, $weight: 500) 
+        }
+        p {
+           @include font-set($size: 24, $weight: 400) 
+        }
+        span {
+           @include font-set($size: 20, $weight: 900, $family: $font-accent);
+           color: $color-primary;
+        }
     }
 
     @media (max-width: $bp-desktop) {
         &__bg {
             &__balloon__blue {
-                top: responsive-pos(150, desktop);
-                left: responsive-pos(70, desktop);
+               
 
                 img {
                     width: $balloon-lg;
@@ -87,8 +51,7 @@
             }
 
             &__balloon__green {
-                top: responsive-pos(400, desktop);
-                right: responsive-pos(70, desktop);
+               
 
                 img {
                     width: $balloon-lg;
@@ -108,7 +71,6 @@
 
         &__bg {
             &__balloon__blue {
-                left: responsive-pos(50, tablet);
 
                 img {
                     width: $balloon-md;
@@ -116,7 +78,6 @@
             }
 
             &__balloon__green {
-                right: responsive-pos(50, tablet);
 
                 img {
                     width: $balloon-md;
@@ -140,7 +101,6 @@
             }
 
             &__balloon__blue {
-                top: responsive-pos(50, mobile-md);
 
                 img {
                     width: $balloon-sm;
@@ -148,7 +108,6 @@
             }
 
             &__balloon__green {
-                top: responsive-pos(250, mobile-md);
 
                 img {
                     width: $balloon-sm;
@@ -170,8 +129,6 @@
             }
 
             &__balloon__blue {
-                top: responsive-pos(150, mobile-sm);
-                left: responsive-pos(30, mobile-sm);
 
                 img {
                     width: $balloon-xs;
@@ -179,8 +136,6 @@
             }
 
             &__balloon__green {
-                top: responsive-pos(230, mobile-sm);
-                right: responsive-pos(30, mobile-sm);
 
                 img {
                     width: $balloon-xs;
