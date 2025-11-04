@@ -180,7 +180,7 @@ button {
   font-family: "Pretendard";
   font-size: 1.25rem;
   font-weight: 600;
-  line-height: 1.4;
+  line-height: 1.2;
   transition: color 0.3s ease;
 }
 .header__menu__list a:hover {
@@ -199,7 +199,7 @@ button {
   font-family: "Pretendard";
   font-size: 1.25rem;
   font-weight: 400;
-  line-height: 1.4;
+  line-height: 1.2;
 }
 .header__overlay {
   display: none;
@@ -233,7 +233,7 @@ button {
     font-family: "Pretendard";
     font-size: 1rem;
     font-weight: 400;
-    line-height: 1.4;
+    line-height: 1.2;
   }
   .header__overlay {
     top: 65.625rem;
@@ -787,7 +787,7 @@ button {
   font-family: "Pretendard";
   font-size: 1.25rem;
   font-weight: 500;
-  line-height: 1.4;
+  line-height: 1.2;
   color: #3475A8;
   margin-bottom: 2.5rem;
 }
@@ -854,7 +854,7 @@ button {
   font-family: "Paperozi";
   font-size: 1rem;
   font-weight: 900;
-  line-height: 1.4;
+  line-height: 1.2;
 }
 .point__card__img img {
   border-radius: 1.25rem;
@@ -901,7 +901,7 @@ button {
     font-family: "Pretendard";
     font-size: 1.125rem;
     font-weight: 500;
-    line-height: 1.4;
+    line-height: 1.2;
     color: #3475A8;
   }
   .point__card {
@@ -975,7 +975,7 @@ button {
     font-family: "Pretendard";
     font-size: 1rem;
     font-weight: 400;
-    line-height: 1.4;
+    line-height: 1.2;
   }
   .point__card__text span {
     font-family: "Pretendard";
@@ -1072,7 +1072,7 @@ button {
     font-family: "Pretendard";
     font-size: 1rem;
     font-weight: 500;
-    line-height: 1.4;
+    line-height: 1.2;
     color: #3475A8;
   }
   .point__card {
@@ -1089,7 +1089,7 @@ button {
     font-family: "Pretendard";
     font-size: 0.875rem;
     font-weight: 400;
-    line-height: 1.4;
+    line-height: 1.2;
   }
   .point__card__text span {
     font-family: "Pretendard";
@@ -1104,7 +1104,7 @@ button {
     font-family: "Paperozi";
     font-size: 0.875rem;
     font-weight: 900;
-    line-height: 1.4;
+    line-height: 1.2;
     margin-bottom: 1.25rem;
   }
   .point__card__img {
@@ -1260,7 +1260,7 @@ button {
   font-family: "Paperozi";
   font-size: 1.25rem;
   font-weight: 700;
-  line-height: 1.4;
+  line-height: 1.2;
   color: #3475A8;
 }
 .growth .growth__card button {
@@ -1268,7 +1268,7 @@ button {
   font-family: "Pretendard";
   font-size: 1.5rem;
   font-weight: 400;
-  line-height: 1.4;
+  line-height: 1.2;
 }
 .growth .swiper-3d .swiper-slide-shadow-left,
 .growth .swiper-3d .swiper-slide-shadow-right {
@@ -1354,14 +1354,14 @@ button {
     font-family: "Paperozi";
     font-size: 0.75rem;
     font-weight: 700;
-    line-height: 1.4;
+    line-height: 1.2;
     color: #3475A8;
   }
   .growth .growth__card button {
     font-family: "Pretendard";
     font-size: 1rem;
     font-weight: 400;
-    line-height: 1.4;
+    line-height: 1.2;
   }
   .growth .swiper-button-next::after,
   .growth .swiper-button-prev::after {
@@ -1427,7 +1427,7 @@ button {
   font-family: "Pretendard";
   font-size: 1.5rem;
   font-weight: 400;
-  line-height: 1.4;
+  line-height: 1.2;
 }
 .best .swiper-horizontal > .swiper-pagination-progressbar,
 .best .swiper-pagination-progressbar.swiper-pagination-horizontal,
@@ -1476,7 +1476,7 @@ button {
     font-family: "Pretendard";
     font-size: 1.25rem;
     font-weight: 400;
-    line-height: 1.4;
+    line-height: 1.2;
   }
   .best .swiper-horizontal > .swiper-pagination-progressbar,
   .best .swiper-pagination-progressbar.swiper-pagination-horizontal,
@@ -1560,7 +1560,7 @@ button {
     font-family: "Pretendard";
     font-size: 1rem;
     font-weight: 400;
-    line-height: 1.4;
+    line-height: 1.2;
   }
   .best .swiper-horizontal > .swiper-pagination-progressbar,
   .best .swiper-pagination-progressbar.swiper-pagination-horizontal,
@@ -1860,91 +1860,473 @@ button {
 }
 .about__bg {
   position: absolute;
+  left: 50%;
   bottom: 0;
+  transform: translate(-50%);
 }
 .about__bg__cloud {
   position: absolute;
   bottom: 0;
 }
+.about__bg__cloud__left, .about__bg__cloud__left__sub {
+  position: absolute;
+  left: -18.75rem;
+  bottom: 0;
+}
+.about__bg__cloud__right, .about__bg__cloud__right__sub {
+  position: absolute;
+  right: -31.25rem;
+  bottom: 0;
+}
+.about__bg__balloon__blue {
+  position: absolute;
+  right: 31.25rem;
+  top: -56.8125rem;
+}
+.about__bg__balloon__green {
+  position: absolute;
+  left: 25rem;
+  top: -56.25rem;
+}
+.about__bg__balloon__yellow {
+  position: absolute;
+  left: 18.75rem;
+  top: -37.5rem;
+}
 .about__logo img {
   width: 46.25rem;
+}
+.about__text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 1.25rem;
 }
 .about__text h2 {
   font-family: "Pretendard";
   font-size: 2rem;
   font-weight: 500;
-  line-height: 1.4;
+  line-height: 1.2;
 }
 .about__text p {
   font-family: "Pretendard";
   font-size: 1.5rem;
   font-weight: 400;
-  line-height: 1.4;
+  line-height: 1.2;
 }
 .about__text span {
   font-family: "Paperozi";
   font-size: 1.25rem;
   font-weight: 900;
-  line-height: 1.4;
+  line-height: 1.2;
   color: #3475A8;
 }
+.about__text .none__br {
+  display: none;
+}
 @media (max-width: 1024px) {
+  .about__bg__balloon__blue {
+    position: absolute;
+    right: 18.75rem;
+    top: -56.8125rem;
+  }
   .about__bg__balloon__blue img {
-    width: 180px;
+    width: 150px;
+  }
+  .about__bg__balloon__green {
+    position: absolute;
+    left: 18.75rem;
+    top: -56.25rem;
   }
   .about__bg__balloon__green img {
-    width: 180px;
+    width: 150px;
+  }
+  .about__bg__balloon__yellow {
+    position: absolute;
+    left: 12.5rem;
+    top: -37.5rem;
+  }
+  .about__bg__balloon__yellow img {
+    width: 150px;
   }
   .about__logo img {
-    width: 700px;
+    width: 600px;
+  }
+  .about__text h2 {
+    font-family: "Pretendard";
+    font-size: 1.75rem;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+  .about__text p {
+    font-family: "Pretendard";
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+  .about__text span {
+    font-family: "Paperozi";
+    font-size: 1.125rem;
+    font-weight: 900;
+    line-height: 1.2;
   }
 }
 @media (max-width: 768px) {
   .about {
     height: 43.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 4.375rem;
+  }
+  .about__bg__cloud__left, .about__bg__cloud__left__sub {
+    position: absolute;
+    left: -6.25rem;
+    bottom: 0;
+  }
+  .about__bg__cloud__right, .about__bg__cloud__right__sub {
+    position: absolute;
+    right: -6.25rem;
+    bottom: 0;
+  }
+  .about__bg__balloon__blue {
+    position: absolute;
+    right: 12.5rem;
+    top: -37.5rem;
   }
   .about__bg__balloon__blue img {
-    width: 150px;
+    width: 120px;
+  }
+  .about__bg__balloon__green {
+    position: absolute;
+    left: 12.5rem;
+    top: -43.75rem;
   }
   .about__bg__balloon__green img {
-    width: 150px;
+    width: 120px;
+  }
+  .about__bg__balloon__yellow {
+    position: absolute;
+    left: 11.25rem;
+    top: -31.25rem;
+  }
+  .about__bg__balloon__yellow img {
+    width: 120px;
   }
   .about__logo img {
-    width: 580px;
+    width: 480px;
+  }
+  .about__text {
+    padding: 0 1.25rem;
+  }
+  .about__text h2 {
+    font-family: "Pretendard";
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+  .about__text p {
+    font-family: "Pretendard";
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+  .about__text span {
+    font-family: "Paperozi";
+    font-size: 1.125rem;
+    font-weight: 900;
+    line-height: 1.2;
   }
 }
 @media (max-width: 500px) {
   .about {
     height: 31.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 3.125rem;
   }
-  .about__bg .cloud {
-    width: 200%;
+  .about__bg__balloon__blue {
+    right: 9.375rem;
+    top: -25rem;
   }
   .about__bg__balloon__blue img {
-    width: 100px;
+    width: 80px;
+  }
+  .about__bg__balloon__green {
+    left: 9.375rem;
+    top: -28.125rem;
   }
   .about__bg__balloon__green img {
-    width: 100px;
+    width: 80px;
+  }
+  .about__bg__balloon__yellow {
+    position: absolute;
+    left: 7.5rem;
+    top: -18.75rem;
+  }
+  .about__bg__balloon__yellow img {
+    width: 80px;
   }
   .about__logo img {
     width: 350px;
   }
+  .about__text h2 {
+    font-family: "Pretendard";
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+  .about__text p {
+    font-family: "Pretendard";
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+  .about__text span {
+    font-family: "Paperozi";
+    font-size: 0.75rem;
+    font-weight: 900;
+    line-height: 1.2;
+  }
 }
 @media (max-width: 390px) {
-  .about__bg .cloud {
-    width: 300%;
+  .about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 1.875rem;
+  }
+  .about__bg__balloon__blue {
+    right: 6.25rem;
+    top: -25rem;
   }
   .about__bg__balloon__blue img {
-    width: 80px;
+    width: 60px;
+  }
+  .about__bg__balloon__green {
+    left: 6.25rem;
+    top: -25rem;
   }
   .about__bg__balloon__green img {
-    width: 80px;
+    width: 60px;
+  }
+  .about__bg__balloon__yellow {
+    position: absolute;
+    left: 6.875rem;
+    top: -18.75rem;
+  }
+  .about__bg__balloon__yellow img {
+    width: 60px;
   }
   .about__logo img {
     width: 250px;
   }
+  .about__text {
+    padding: 0 0.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 0.625rem;
+  }
+  .about__text h2 {
+    font-family: "Pretendard";
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+  .about__text p {
+    font-family: "Pretendard";
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: 0.00625rem;
+  }
+  .about__text span {
+    font-family: "Paperozi";
+    font-size: 0.75rem;
+    font-weight: 900;
+    line-height: 1.2;
+  }
+  .about__text .none__br {
+    display: block;
+  }
 }
 
+.innovation {
+  margin-bottom: 6.25rem;
+  overflow-x: hidden;
+  background: linear-gradient(to bottom, #DDEEF5, #ffffff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 1.875rem;
+}
+.innovation__bg {
+  position: relative;
+  opacity: 0.9;
+}
+.innovation__bg__cloud__left {
+  position: absolute;
+  top: -18.75rem;
+  left: -43.75rem;
+}
+.innovation__bg__cloud__right {
+  position: absolute;
+  top: -18.75rem;
+  right: -43.75rem;
+}
+.innovation__img {
+  margin-top: 12.5rem;
+}
+.innovation__text {
+  text-align: center;
+}
+@media (max-width: 1024px) {
+  .innovation__bg__cloud__left img {
+    height: 56.25rem;
+  }
+  .innovation__bg__cloud__right img {
+    height: 56.25rem;
+  }
+  .innovation__img img {
+    width: 40.625rem;
+  }
+}
+@media (max-width: 768px) {
+  .innovation__bg__cloud__left img {
+    height: 43.75rem;
+  }
+  .innovation__bg__cloud__right img {
+    height: 43.75rem;
+  }
+  .innovation__img img {
+    width: 31.25rem;
+  }
+}
+@media (max-width: 500px) {
+  .innovation__img img {
+    width: 21.875rem;
+  }
+}
+@media (max-width: 390px) {
+  .innovation__img img {
+    width: 12.5rem;
+  }
+}
+
+.story {
+  background: linear-gradient(to top, #DDEEF5, #ffffff);
+}
+.story__wrap {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  grid-template-areas: "card1 card2" "card1 card3";
+}
+.story__wrap__card {
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  width: fit-content;
+}
+.story__wrap__card img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.story__wrap__card__text {
+  padding-left: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 1rem;
+}
+.story__wrap__card__text h3 {
+  font-family: "Pretendard";
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+.story__wrap__card01 {
+  grid-area: card1;
+}
+.story__wrap__card01 .story__wrap__card__text {
+  max-width: 550px;
+}
+.story__wrap__card02 {
+  grid-area: card2;
+}
+.story__wrap__card02 .story__wrap__card__text {
+  max-width: 410px;
+}
+.story__wrap__card03 {
+  grid-area: card3;
+  padding-left: 7.5rem;
+}
+.story__wrap__card03 .story__wrap__card__text {
+  max-width: 320px;
+}
+@media (max-width: 1024px) {
+  .story__wrap__card03 {
+    padding-left: 0;
+  }
+  .story__wrap__card03 img {
+    width: 28.5625rem;
+  }
+}
+@media (max-width: 768px) {
+  .story__wrap__card__text h3 {
+    font-family: "Pretendard";
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+  .story__wrap__card__text p {
+    font-family: "Pretendard";
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+  .story__wrap__card__card03 img {
+    height: 11.25rem;
+  }
+}
+@media (max-width: 768px) and (max-width: 500px) {
+  .story__wrap {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0.75rem;
+    grid-template-areas: "card1" "card2" "card3";
+  }
+  .story__wrap__card02 .story__wrap__card__text {
+    max-width: 500px;
+  }
+  .story__wrap__card03 .story__wrap__card__text {
+    max-width: 500px;
+  }
+  .story__wrap__card03 .story__wrap__card__text img {
+    height: 14.375rem;
+  }
+}
 .btn {
   display: inline-flex;
   align-items: center;

@@ -74,14 +74,27 @@ $(function () {
 $(window).on('scroll', function () {
   var scrollY = $(this).scrollTop();
 
-  $('.cloud__left').css('transform', 'translateX(' + (scrollY * 4) + 'px)');
-  $('.cloud__left__sub').css('transform', 'translateX(' + (scrollY * 6) + 'px)');
-  $('.cloud__right__sub').css('transform', 'translateX(' + (-scrollY * 6) + 'px)');
-  $('.cloud__right').css('transform', 'translateX(' + (-scrollY * 4) + 'px)');
+  $('.about__bg__cloud__left').css('transform', 'translateX(' + (scrollY * 4) + 'px)');
+  $('.about__bg__cloud__left__sub').css('transform', 'translateX(' + (scrollY * 6) + 'px)');
+  $('.about__bg__cloud__right__sub').css('transform', 'translateX(' + (-scrollY * 6) + 'px)');
+  $('.about__bg__cloud__right').css('transform', 'translateX(' + (-scrollY * 4) + 'px)');
 
   $('.about__bg__balloon__blue').css('transform', 'translateY(-' + (scrollY * 2) + 'px)');
   $('.about__bg__balloon__green').css('transform', 'translateY(-' + (scrollY * 3) + 'px)');
   $('.about__bg__balloon__yellow').css('transform', 'translateY(-' + (scrollY * 3) + 'px)');
+});
+
+$(window).on('scroll', function () {
+  var scrollY = $(this).scrollTop();
+  var startPoint = $('.innovation').offset().top;
+
+   if (scrollY > startPoint) {
+    var relativeY = scrollY - startPoint;
+    $('.innovation__bg__cloud__left').css('transform', 'translateX(' + (relativeY * 6) + 'px)');
+    $('.innovation__bg__cloud__right').css('transform', 'translateX(' + (-relativeY * 6) + 'px)');
+  } else {
+    $('.innovation__bg__cloud__left, .innovation__bg__cloud__right').css('transform', 'translateX(0)');
+  }
 });
 
 

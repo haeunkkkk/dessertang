@@ -1,4 +1,4 @@
-// about
+// about intro
 .about {
     position: relative;
     height: rem(950);
@@ -11,14 +11,40 @@
 
     &__bg {
         position: absolute;
+        left: 50%;
         bottom: 0;
+        transform: translate(-50%);
         &__cloud {
             position: absolute;
             bottom: 0;
+            &__left, &__left__sub {
+                position: absolute;
+                left: rem(-300);
+                bottom: 0;
+            }
+            &__right, &__right__sub {
+                position: absolute;
+                right: rem(-500);
+                bottom: 0;
+            }
         }
 
         &__balloon {
-
+            &__blue {
+                position: absolute;
+                right: rem(500);
+                top: rem(-909);
+            }
+            &__green {
+                position: absolute;
+                left: rem(400);
+                top: rem(-900);
+            }
+            &__yellow {
+                position: absolute;
+                left: rem(300);
+                top: rem(-600);
+            }
         }
     }
 
@@ -28,6 +54,7 @@
         }
     }
     &__text {
+        @include flex ($justify: center, $align: center, $direction: column, $wrap: nowrap, $gap: rem(20));
         h2 {
            @include font-set($size: 32, $weight: 500) 
         }
@@ -38,25 +65,40 @@
            @include font-set($size: 20, $weight: 900, $family: $font-accent);
            color: $color-primary;
         }
+        .none__br {
+            display: none;
+        }
     }
 
     @media (max-width: $bp-desktop) {
         &__bg {
-            &__balloon__blue {
-               
-
-                img {
-                    width: $balloon-lg;
+            &__balloon {
+                &__blue {
+                    position: absolute;
+                    right: rem(300);
+                    top: rem(-909);
+                    img {
+                        width: $balloon-lg;
+                    }
+                }
+                &__green {
+                    position: absolute;
+                    left: rem(300);
+                    top: rem(-900);
+                    img {
+                        width: $balloon-lg;
+                    }
+                }
+                &__yellow {
+                    position: absolute;
+                    left: rem(200);
+                    top: rem(-600);
+                    img {
+                        width: $balloon-lg;
+                    }
                 }
             }
-
-            &__balloon__green {
-               
-
-                img {
-                    width: $balloon-lg;
-                }
-            }
+           
         }
 
         &__logo {
@@ -64,25 +106,63 @@
                 width: $logo-lg;
             }
         }
+        &__text {
+            h2 {
+            @include font-set($size: 28, $weight: 500) 
+            }
+            p {
+            @include font-set($size: 20, $weight: 400) 
+            }
+            span {
+            @include font-set($size: 18, $weight: 900, $family: $font-accent);
+            }
+        }
     }
 
     @media (max-width: $bp-tablet) {
         height: rem(700);
+        @include flex ($justify: center, $align: center, $direction: column, $wrap: nowrap, $gap: rem(70));
 
         &__bg {
-            &__balloon__blue {
-
-                img {
-                    width: $balloon-md;
+            &__cloud {
+                &__left, &__left__sub {
+                    position: absolute;
+                    left: rem(-100);
+                    bottom: 0;
+                }
+                &__right, &__right__sub {
+                    position: absolute;
+                    right: rem(-100);
+                    bottom: 0;
                 }
             }
-
-            &__balloon__green {
-
-                img {
-                    width: $balloon-md;
+            &__balloon {
+                &__blue {
+                    position: absolute;
+                    right: rem(200);
+                    top: rem(-600);
+                    img {
+                        width: $balloon-md;
+                    }
+                }
+                &__green {
+                    position: absolute;
+                    left: rem(200);
+                    top: rem(-700);
+                    img {
+                        width: $balloon-md;
+                    }
+                }
+                &__yellow {
+                    position: absolute;
+                    left: rem(180);
+                    top: rem(-500);
+                    img {
+                        width: $balloon-md;
+                    }
                 }
             }
+           
         }
 
         &__logo {
@@ -90,29 +170,50 @@
                 width: $logo-md;
             }
         }
+        &__text {
+            padding: 0 rem(20);
+            h2 {
+            @include font-set($size: 24, $weight: 500) 
+            }
+            p {
+            @include font-set($size: 20, $weight: 400) 
+            }
+            span {
+            @include font-set($size: 18, $weight: 900, $family: $font-accent);
+            }
+        }
     }
 
     @media (max-width: $bp-mobile-md) {
         height: rem(500);
+        @include flex ($justify: center, $align: center, $direction: column, $wrap: nowrap, $gap: rem(50));
 
         &__bg {
-            .cloud {
-                width: 200%;
-            }
-
-            &__balloon__blue {
-
-                img {
-                    width: $balloon-sm;
+            &__balloon {
+                &__blue {
+                    right: rem(150);
+                    top: rem(-400);
+                    img {
+                        width: $balloon-sm;
+                    }
+                }
+                &__green {
+                    left: rem(150);
+                    top: rem(-450);
+                    img {
+                        width: $balloon-sm;
+                    }
+                }
+                &__yellow {
+                    position: absolute;
+                    left: rem(120);
+                    top: rem(-300);
+                    img {
+                        width: $balloon-sm;
+                    }
                 }
             }
-
-            &__balloon__green {
-
-                img {
-                    width: $balloon-sm;
-                }
-            }
+           
         }
 
         &__logo {
@@ -120,27 +221,48 @@
                 width: $logo-sm;
             }
         }
+        &__text {
+            h2 {
+            @include font-set($size: 18, $weight: 500) 
+            }
+            p {
+            @include font-set($size: 14, $weight: 400) 
+            }
+            span {
+            @include font-set($size: 12, $weight: 900, $family: $font-accent);
+            }
+        }
     }
 
     @media (max-width: $bp-mobile-sm) {
+        @include flex ($justify: center, $align: center, $direction: column, $wrap: nowrap, $gap: rem(30));
+
         &__bg {
-            .cloud {
-                width: 300%;
-            }
-
-            &__balloon__blue {
-
-                img {
-                    width: $balloon-xs;
+            &__balloon {
+                &__blue {
+                    right: rem(100);
+                    top: rem(-400);
+                    img {
+                        width: $balloon-xs;
+                    }
+                }
+                &__green {
+                    left: rem(100);
+                    top: rem(-400);
+                    img {
+                        width: $balloon-xs;
+                    }
+                }
+                &__yellow {
+                    position: absolute;
+                    left: rem(110);
+                    top: rem(-300);
+                    img {
+                        width: $balloon-xs;
+                    }
                 }
             }
-
-            &__balloon__green {
-
-                img {
-                    width: $balloon-xs;
-                }
-            }
+           
         }
 
         &__logo {
@@ -148,6 +270,220 @@
                 width: $logo-xs;
             }
         }
+        &__text {
+            padding: 0 rem(12);
+            @include flex ($justify: center, $align: center, $direction: column, $wrap: nowrap, $gap: rem(10));
+            h2 {
+            @include font-set($size: 16, $weight: 500) 
+            }
+            p {
+            @include font-set($size: 14, $weight: 400);
+            letter-spacing: rem(0.1); 
+            }
+            span {
+            @include font-set($size: 12, $weight: 900, $family: $font-accent);
+            }
+            .none__br {
+                display: block;
+            }
+        }
+    }
+}
+
+//innovation
+.innovation {
+    margin-bottom: rem(100);
+    overflow-x: hidden;
+    background: linear-gradient(to bottom,   $color-skyblue, $color-bg);
+    @include flex($justify: center, $align: center, $direction: column, $wrap: nowrap, $gap: rem(30));
+
+    &__bg {
+        position: relative;
+        opacity: 0.9;
+        &__cloud__left {
+            position: absolute;
+            top: rem(-300);
+            left: rem(-700);  
+        }
+        &__cloud__right {
+            position: absolute;
+            top: rem(-300);
+            right: rem(-700);
+        }
+    }
+    &__img {
+        margin-top: rem(200);
+    }
+    &__text {
+        text-align: center;
     }
 
+    @media (max-width: $bp-desktop) {
+        &__bg {
+            &__cloud__left {
+                img {
+                    height: rem(900);
+                }
+            }
+            &__cloud__right {
+                img {
+                    height: rem(900);
+                }
+            }
+        }
+        &__img {
+            img {
+                width: rem(650);
+            }
+        }
+    }
+
+    @media (max-width: $bp-tablet) {
+         &__bg {
+            &__cloud__left {
+                img {
+                    height: rem(700);
+                }
+            }
+            &__cloud__right {
+                img {
+                    height: rem(700);
+                }
+            }
+        }
+        &__img {
+            img {
+                width: rem(500);
+            }
+        }
+    }
+
+    @media (max-width: $bp-mobile-md) {
+        &__img {
+            img {
+                width: rem(350);
+            }
+        }
+    }
+
+    @media (max-width: $bp-mobile-sm) {
+        &__img {
+            img {
+                width: rem(200);
+            }
+        }
+    }
+}
+
+//story
+.story {
+    background: linear-gradient(to top,   $color-skyblue, $color-bg);
+    &__wrap {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: rem(16);
+        grid-template-areas:
+            "card1 card2"
+            "card1 card3";
+            &__card {
+            margin: 0 auto;
+            @include flex ($justify: flex-start, $align: flex-start, $direction: column, $wrap: nowrap, $gap: rem(16));
+            width: fit-content;
+            img {
+                display: block;
+                max-width: 100%;
+                height: auto;
+            }
+            &__text {
+                padding-left: rem(16);
+                width: 100%;
+                @include flex ($justify: flex-start, $align: flex-start, $direction: column, $wrap: nowrap, $gap: rem(16));
+                h3 {
+                    @include font-set ($size: 20, $weight: 500, $line-height: 1.2, $family: $font-primary);
+                }
+            }
+        }
+        &__card01 {
+            grid-area: card1;
+            .story__wrap__card__text {
+                max-width: 550px;
+            }
+        }
+        &__card02 {
+            grid-area: card2;
+            .story__wrap__card__text {
+                max-width: 410px;
+            }
+        }
+        &__card03 {
+            grid-area: card3;
+            .story__wrap__card__text {
+                max-width: 320px;
+            }
+            padding-left: rem(120);
+        }
+        
+    }
+
+    @media (max-width: $bp-desktop) {
+        &__wrap {
+            &__card03 {
+                padding-left: 0;
+                img {
+                    width: rem(457);
+                }
+
+            }
+        }
+    }
+
+    @media (max-width: $bp-tablet) {
+         &__wrap {
+            &__card {
+                &__text {
+                    h3 {
+                        @include font-set ($size: 16, $weight: 500, $line-height: 1.2, $family: $font-primary);
+                    }
+                    p {
+                        @include font-set ($size: 14, $weight: 500, $line-height: 1.2, $family: $font-primary);
+                    }
+                }
+            &__card03 {
+                img {
+                    height: rem(180);
+                }
+
+            }
+        }
+    }
+
+    @media (max-width: $bp-mobile-md) {
+        &__wrap {
+            grid-template-columns: repeat(1, 1fr);
+            gap: rem(12);
+            grid-template-areas:
+                "card1"
+                "card2"
+                "card3";
+            &__card02 {           
+                .story__wrap__card__text {
+                    max-width: 500px;
+                }
+            }
+            &__card03 {
+                .story__wrap__card__text {
+                    max-width: 500px;
+                    img {
+                        height: rem(230);
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: $bp-mobile-sm) {
+        
+    }
+
+    }
 }
