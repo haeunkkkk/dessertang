@@ -386,104 +386,215 @@
             "card1 card2"
             "card1 card3";
             &__card {
-            margin: 0 auto;
-            @include flex ($justify: flex-start, $align: flex-start, $direction: column, $wrap: nowrap, $gap: rem(16));
-            width: fit-content;
-            img {
-                display: block;
-                max-width: 100%;
-                height: auto;
-            }
-            &__text {
-                padding-left: rem(16);
-                width: 100%;
-                @include flex ($justify: flex-start, $align: flex-start, $direction: column, $wrap: nowrap, $gap: rem(16));
-                h3 {
-                    @include font-set ($size: 20, $weight: 500, $line-height: 1.2, $family: $font-primary);
+                position: relative;
+                @include radius($radius: rem(20));
+
+                &__overlay__full {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    @include radius($radius: rem(20));
+                    background: linear-gradient(to top,
+                        $color-primary 0%,
+                        transparent 70%
+                    );
+                    backdrop-filter: blur(10px);
+                    -webkit-backdrop-filter: blur(45px); //사파리
+                    width: 100%;
+                    height: 100%;
+                    visibility: hidden;
+                    transition: opacity 0.2s ease, visibility 0.2s ease;
                 }
-            }
-        }
+                &__text {
+                    height: 100%;
+                    width: 100%;
+                    color: $color-bg;
+
+                    &__inner {
+                        transform-style: preserve-3d;
+                        transition: transform 0.6s ease;
+                        width: 100%;
+                        height: 100%;
+                        position: relative;
+
+                        &__front {
+                            height: 100%;
+                            width: 100%;
+                            @include flex ($justify: flex-start, $align: flex-start, $direction: column, $wrap: nowrap, $gap: rem(555));
+
+                            &__top {
+                                padding: rem(30) rem(30);
+                                align-self: flex-end;
+                                text-align: end;
+                                @include flex ($justify: flex-end, $align: flex-end, $direction: column, $wrap: nowrap, $gap: rem(5));
+                                span {
+                                    @include font-set ($size: 16, $weight: 500, $line-height: 1.2, $family: $font-primary);
+                                }
+                                p {
+                                    @include font-set ($size: 60, $weight: 900, $line-height: 1.2, $family: $font-primary);
+                                }
+                            }
+
+                            &__bottom {
+                                position: relative;
+                                @include flex ($justify: flex-start, $align: flex-start, $direction: column, $wrap: nowrap, $gap: rem(20));
+                                border-radius: 0 0 rem(20) rem(20);
+                                background: linear-gradient(to top,  lab(47.64% -4.34 -32.85 / 0.8), lab(88.47% 0 -0.01 / 0.1));     
+                                width: 100%;
+                                height: 100%;
+                                padding: rem(30) rem(30);
+                                align-self: flex-start;
+                                
+                                .overlay__blur{
+                                    mask-image: linear-gradient(to top, lab(47.64% -4.34 -32.85) 0%, transparent 100%);
+                                    border-radius: 0 0 rem(20) rem(20);
+                                    backdrop-filter: blur(100px);
+                                    -webkit-backdrop-filter: blur(45px);
+                                    width: 100%;
+                                    height: 100%;
+                                    position: absolute;
+                                    bottom: 0;
+                                    left: 0;
+                                }
+
+                                &__content {
+                                    z-index: 1;
+                                    h3 {
+                                        @include font-set ($size: 42, $weight: 800, $line-height: 1.2, $family: $font-primary);
+                                    }
+                                }
+                                &__key {
+                                    z-index: 1;
+                                    @include flex ($justify: flex-start, $align: flex-start, $direction: row, $wrap: nowrap, $gap: rem(15));
+                                    span {
+                                        @include font-set ($size: 12, $weight: 500, $line-height: 1.2, $family: $font-primary);
+                                    }
+                                }
+                            } 
+                        }
+                        &__back {
+                            width: 100%;
+                            height: 100%;
+                            transform: rotateY(180deg);
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            @include flex ($justify: space-between, $align: center, $direction: column, $wrap: nowrap, $gap: rem(110));
+
+                            &__top {
+                                padding: rem(30) rem(30);
+                                align-self: flex-end;
+                                text-align: end;
+                                @include flex ($justify: flex-end, $align: flex-end, $direction: column, $wrap: nowrap, $gap: rem(5));
+                                span {
+                                    @include font-set ($size: 16, $weight: 500, $line-height: 1.2, $family: $font-primary);
+                                }
+                                p {
+                                    @include font-set ($size: 60, $weight: 900, $line-height: 1.2, $family: $font-primary);
+                                }
+                            }
+
+                            &__desc {
+                                p {
+                                    text-align: center;
+                                    @include font-set ($size: 28, $weight: 700, $line-height: 1.4, $family: $font-primary);
+                                }
+                            }
+                            &__bottom {
+                                @include flex ($justify: flex-start, $align: flex-start, $direction: column, $wrap: nowrap, $gap: rem(20));
+                                border-radius: 0 0 rem(20) rem(20);    
+                                padding: rem(30) rem(30);
+                                align-self: flex-start;
+
+                                &__content {
+                                    z-index: 1;
+                                    h3 {
+                                        @include font-set ($size: 42, $weight: 800, $line-height: 1.2, $family: $font-primary);
+                                    }
+                                }
+                                &__key {
+                                    z-index: 1;
+                                    @include flex ($justify: flex-start, $align: flex-start, $direction: row, $wrap: nowrap, $gap: rem(15));
+                                    span {
+                                        @include font-set ($size: 12, $weight: 500, $line-height: 1.2, $family: $font-primary);
+                                    }
+                                }
+                            } 
+                            
+                        }
+                    }
+                    &.is-flipped .story__wrap__card__text__inner {
+                        transform: rotateY(180deg);
+                    }
+                                   
+                }
+            } 
         &__card01 {
             grid-area: card1;
-            .story__wrap__card__text {
-                max-width: 550px;
-            }
+            @include bg-cover("/assets/images/story-store01.png");
         }
         &__card02 {
             grid-area: card2;
+            @include bg-cover("/assets/images/story-store02.png");
+            .story__wrap__card__text__inner__front {
+                        @include flex ($justify: flex-start, $align: flex-start, $direction: column, $wrap: nowrap, $gap: rem(110));
+            }
             .story__wrap__card__text {
-                max-width: 410px;
+                &__bottom {
+                    @include flex ($justify: flex-start, $align: flex-start, $direction: column, $wrap: nowrap, $gap: rem(10));
+                    &__content {
+                        h3 {
+                            @include font-set ($size: 36, $weight: 800, $line-height: 1.2, $family: $font-primary);
+                        }                       
+                    }
+                }
             }
         }
         &__card03 {
             grid-area: card3;
-            .story__wrap__card__text {
-                max-width: 320px;
+            @include bg-cover("/assets/images/story-store03.png");
+            margin-left: rem(120);
+            .story__wrap__card__text__inner__front {
+                        @include flex ($justify: flex-start, $align: flex-start, $direction: column, $wrap: nowrap, $gap: rem(155));
             }
-            padding-left: rem(120);
-        }
-        
+            .story__wrap__card__text {
+                &__bottom {
+                    @include flex ($justify: flex-start, $align: flex-start, $direction: column, $wrap: nowrap, $gap: rem(10));
+                    &__content {
+                        h3 {
+                            @include font-set ($size: 36, $weight: 800, $line-height: 1.2, $family: $font-primary);
+                        }                       
+                    }
+                }
+            }
+        }       
     }
 
     @media (max-width: $bp-desktop) {
-        &__wrap {
-            &__card03 {
-                padding-left: 0;
-                img {
-                    width: rem(457);
-                }
-
-            }
-        }
+        
     }
 
     @media (max-width: $bp-tablet) {
-         &__wrap {
-            &__card {
-                &__text {
-                    h3 {
-                        @include font-set ($size: 16, $weight: 500, $line-height: 1.2, $family: $font-primary);
-                    }
-                    p {
-                        @include font-set ($size: 14, $weight: 500, $line-height: 1.2, $family: $font-primary);
-                    }
-                }
-            &__card03 {
-                img {
-                    height: rem(180);
-                }
-
-            }
-        }
+         
     }
 
     @media (max-width: $bp-mobile-md) {
-        &__wrap {
-            grid-template-columns: repeat(1, 1fr);
-            gap: rem(12);
-            grid-template-areas:
-                "card1"
-                "card2"
-                "card3";
-            &__card02 {           
-                .story__wrap__card__text {
-                    max-width: 500px;
-                }
-            }
-            &__card03 {
-                .story__wrap__card__text {
-                    max-width: 500px;
-                    img {
-                        height: rem(230);
-                    }
-                }
-            }
-        }
+        
     }
 
     @media (max-width: $bp-mobile-sm) {
         
     }
+}
 
-    }
+.story__wrap__card.is-flipped .story__wrap__card__text__inner {
+  transform: rotateY(180deg);
+}
+
+.story__wrap__card__text__inner__back, .story__wrap__card__text__inner__front {
+  backface-visibility: hidden;
+}
+
+.story__wrap__card.is-flipped .story__wrap__card__overlay__full {
+  visibility: visible;
 }
