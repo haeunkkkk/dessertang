@@ -437,6 +437,7 @@
 
 //story
 .story {
+    padding-bottom: rem(150);
     background: linear-gradient(to top, $color-skyblue, $color-bg);
 
     &__wrap {
@@ -503,14 +504,14 @@
                             position: relative;
                             @include flex ($justify: flex-start, $align: flex-start, $direction: column, $wrap: nowrap, $gap: rem(20));
                             border-radius: 0 0 rem(20) rem(20);
-                            background: linear-gradient(to top, #3476a8 lab(88.47% 0 -0.01 / 0.1));
+                            background: linear-gradient(to top, #3476a8, transparent);
                             width: 100%;
                             height: 100%;
                             padding: rem(30) rem(30);
                             align-self: flex-start;
 
                             .overlay__blur {
-                                mask-image: linear-gradient(to top, lab(32.65% -1.5 -30.07) 0%, transparent 100%);
+                                mask-image: linear-gradient(to top, lab(32.65% -1.5 -30.07) 70%, transparent 100%);
                                 border-radius: 0 0 rem(20) rem(20);
                                 backdrop-filter: blur(100px);
                                 -webkit-backdrop-filter: blur(45px);
@@ -554,8 +555,9 @@
 
                         &__desc {
                             p {
+                                padding: rem(16);
                                 text-align: center;
-                                @include font-set ($size: 28, $weight: 400, $line-height: 1.4, $family: $font-primary);
+                                @include font-set ($size: 24, $weight: 400, $line-height: 1.4, $family: $font-primary);
                             }
                         }
 
@@ -625,11 +627,277 @@
         }
     }
 
-    @media (max-width: $bp-desktop) {}
+    @media (max-width: $bp-desktop) {
+        &__wrap {
+            &__card {
+                &__text {
+                    &__inner {
+                        &__front {
+                            @include flex ($justify: flex-start, $align: flex-start, $direction: column, $wrap: nowrap, $gap: rem(520));
 
-    @media (max-width: $bp-tablet) {}
+                            &__top {
+                                p {
+                                    @include font-set ($size: 44, $weight: 900, $line-height: 1.2, $family: $font-primary);
+                                }
+                            }
 
-    @media (max-width: $bp-mobile-md) {}
+                            &__bottom {
+                                @include flex ($justify: flex-start, $align: flex-start, $direction: column, $wrap: nowrap, $gap: rem(5));
+                                padding: rem(20) rem(20);
 
-    @media (max-width: $bp-mobile-sm) {}
+                                &__content {
+                                    h3 {
+                                        @include font-set ($size: 32, $weight: 900, $line-height: 1.2, $family: $font-primary);
+                                    }
+                                }
+                            }
+                        }
+
+                        &__back {
+                            &__desc {
+                                p {
+                                    @include font-set ($size: 20, $weight: 400, $line-height: 1.4, $family: $font-primary);
+                                    padding: rem(16);
+                                }
+                            }
+
+                        }
+                    }
+                }
+            }
+
+            &__card03 {
+                margin-left: 0;
+            }
+        }
+    }
+
+    // and (hover: hover) and (pointer: fine)
+    @media (max-width: $bp-tablet) {
+        &__wrap {
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-areas:
+                "card1"
+                "card2"
+                "card3";
+
+            &__card {
+                padding-bottom: rem(250);
+
+                &__overlay__full {
+                    background: linear-gradient(to top,
+                            $color-primary 0%,
+                            transparent 70%);
+                    backdrop-filter: blur(5px);
+                    -webkit-backdrop-filter: blur(5px); //사파리
+                    opacity: 1;
+                    transform: translateY(0);
+                    mask-image: linear-gradient(to top, lab(32.65% -1.5 -30.07) 20%, transparent 100%);
+                }
+
+                &__text {
+                    &__inner {
+                        &__front {
+                            @include flex ($justify: space-between, $align: flex-start, $direction: row, $wrap: nowrap, );
+
+                            &__top {
+                                padding: rem(20) 0 0 rem(20);
+                                align-self: auto;
+                                text-align: start;
+                                @include flex ($justify: flex-start, $align: flex-start, $direction: column, $wrap: nowrap, $gap: rem(5));
+
+                                span {
+                                    width: rem(120);
+                                    @include font-set ($size: 12, $weight: 500, $line-height: 1.2, $family: $font-primary);
+                                }
+
+                                p {
+                                    @include font-set ($size: 32, $weight: 900, $line-height: 1.2, $family: $font-primary);
+                                }
+                            }
+
+                            &__bottom {
+                                @include flex ($justify: flex-start, $align: flex-end, $direction: column, $wrap: nowrap, $gap: rem(5));
+                                background: transparent;
+                                padding: rem(20) rem(20) 0 0;
+                                align-self: flex-end;
+
+                                .overlay__blur {
+                                    display: none;
+                                }
+
+                                &__content {
+                                    z-index: 2;
+
+                                    h3 {
+                                        @include font-set ($size: 28, $weight: 800, $line-height: 1.2, $family: $font-primary);
+                                    }
+                                }
+                            }
+                        }
+
+                        &__back {
+                            display: block;
+                            top: rem(170);
+                            left: rem(20);
+                            padding-right: rem(50);
+
+                            br {
+                                display: none;
+                            }
+
+                            &__desc {
+                                transform: translateY(0);
+                                opacity: 1;
+                                @include flex ($justify: flex-start, $align: flex-start, $direction: column);
+
+                                p {
+                                    text-align: start;
+                                    @include font-set ($size: 20, $weight: 400, $line-height: 1.2, $family: $font-primary);
+                                    padding: 0;
+                                }
+                            }
+
+                        }
+                    }
+                }
+            }
+
+            &:hover {
+
+                .story__wrap__card__text__inner__front__bottom {
+                    background: none;
+                }
+
+                .story__wrap__card__text__inner__back,
+                .story__wrap__card__overlay__full {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+            }
+
+            &__card02 {
+                padding-bottom: rem(170);
+
+                .story__wrap__card__text__inner__front {
+                    @include flex ($justify: space-between, $align: flex-start, $direction: row, $wrap: nowrap);
+                }
+            }
+
+            &__card03 {
+                padding-bottom: rem(170);
+
+                .story__wrap__card__text__inner__front {
+                    @include flex ($justify: space-between, $align: flex-start, $direction: row, $wrap: nowrap);
+                }
+            }
+        }
+    }
+
+    @media (max-width: $bp-mobile-md) {
+        &__wrap {
+            &__card {
+                padding-bottom: rem(250);
+
+                &__overlay__full {
+                    mask-image: linear-gradient(to top, lab(32.65% -1.5 -30.07) 20%, transparent 100%);
+                }
+
+                &__text {
+                    &__inner {
+                        &__front {
+
+                            &__top {
+                                padding: rem(12) 0 0 rem(12);
+
+                                span {
+                                    width: rem(100);
+                                    @include font-set ($size: 10, $weight: 500, $line-height: 1.2, $family: $font-primary);
+                                }
+
+                                p {
+                                    @include font-set ($size: 24, $weight: 900, $line-height: 1.2, $family: $font-primary);
+                                }
+                            }
+
+                            &__bottom {
+                                padding: rem(12) rem(12) 0 0;
+
+
+                                &__content {
+
+
+                                    h3 {
+                                        @include font-set ($size: 24, $weight: 800, $line-height: 1.2, $family: $font-primary);
+                                    }
+                                }
+
+                                &__key {
+                                    span {
+                                        @include font-set ($size: 10, $weight: 500, $line-height: 1.2, $family: $font-primary);
+                                    }
+                                }
+                            }
+                        }
+
+                        &__back {
+                            left: rem(12);
+                            padding-right: rem(20);
+
+                            &__desc {
+                                p {
+                                    @include font-set ($size: 16, $weight: 400, $line-height: 1.2, $family: $font-primary);
+                                    padding: 0;
+                                }
+                            }
+
+                        }
+                    }
+                }
+            }
+
+            &__card02 {
+                padding-bottom: rem(170);
+            }
+
+            &__card03 {
+                padding-bottom: rem(190);
+            }
+        }
+    }
+
+    @media (max-width: $bp-mobile-sm) {
+        &__wrap {
+            &__card {
+                padding-bottom: rem(290);
+
+                &__text {
+                    &__inner {
+                        &__front {
+                            &__top {
+                                display: none;
+                            }
+
+                            &__bottom {
+                                &__content {
+                                    h3 {
+                                        @include font-set ($size: 20, $weight: 800, $line-height: 1.2, $family: $font-primary);
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+                }
+            }
+
+            &__card02 {
+                padding-bottom: rem(200);
+            }
+
+            &__card03 {
+                padding-bottom: rem(210);
+            }
+        }
+    }
 }
