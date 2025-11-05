@@ -14,15 +14,20 @@
         left: 50%;
         bottom: 0;
         transform: translate(-50%);
+
         &__cloud {
             position: absolute;
             bottom: 0;
-            &__left, &__left__sub {
+
+            &__left,
+            &__left__sub {
                 position: absolute;
                 left: rem(-300);
                 bottom: 0;
             }
-            &__right, &__right__sub {
+
+            &__right,
+            &__right__sub {
                 position: absolute;
                 right: rem(-500);
                 bottom: 0;
@@ -35,11 +40,13 @@
                 right: rem(500);
                 top: rem(-909);
             }
+
             &__green {
                 position: absolute;
                 left: rem(400);
                 top: rem(-900);
             }
+
             &__yellow {
                 position: absolute;
                 left: rem(300);
@@ -53,18 +60,23 @@
             width: rem(740);
         }
     }
+
     &__text {
         @include flex ($justify: center, $align: center, $direction: column, $wrap: nowrap, $gap: rem(20));
+
         h2 {
-           @include font-set($size: 32, $weight: 500) 
+            @include font-set($size: 32, $weight: 500)
         }
+
         p {
-           @include font-set($size: 24, $weight: 400) 
+            @include font-set($size: 24, $weight: 400)
         }
+
         span {
-           @include font-set($size: 20, $weight: 900, $family: $font-accent);
-           color: $color-primary;
+            @include font-set($size: 20, $weight: 900, $family: $font-accent);
+            color: $color-primary;
         }
+
         .none__br {
             display: none;
         }
@@ -77,28 +89,33 @@
                     position: absolute;
                     right: rem(300);
                     top: rem(-909);
+
                     img {
                         width: $balloon-lg;
                     }
                 }
+
                 &__green {
                     position: absolute;
                     left: rem(300);
                     top: rem(-900);
+
                     img {
                         width: $balloon-lg;
                     }
                 }
+
                 &__yellow {
                     position: absolute;
                     left: rem(200);
                     top: rem(-600);
+
                     img {
                         width: $balloon-lg;
                     }
                 }
             }
-           
+
         }
 
         &__logo {
@@ -106,15 +123,18 @@
                 width: $logo-lg;
             }
         }
+
         &__text {
             h2 {
-            @include font-set($size: 28, $weight: 500) 
+                @include font-set($size: 28, $weight: 500)
             }
+
             p {
-            @include font-set($size: 20, $weight: 400) 
+                @include font-set($size: 20, $weight: 400)
             }
+
             span {
-            @include font-set($size: 18, $weight: 900, $family: $font-accent);
+                @include font-set($size: 18, $weight: 900, $family: $font-accent);
             }
         }
     }
@@ -125,44 +145,54 @@
 
         &__bg {
             &__cloud {
-                &__left, &__left__sub {
+
+                &__left,
+                &__left__sub {
                     position: absolute;
                     left: rem(-100);
                     bottom: 0;
                 }
-                &__right, &__right__sub {
+
+                &__right,
+                &__right__sub {
                     position: absolute;
                     right: rem(-100);
                     bottom: 0;
                 }
             }
+
             &__balloon {
                 &__blue {
                     position: absolute;
                     right: rem(200);
                     top: rem(-600);
+
                     img {
                         width: $balloon-md;
                     }
                 }
+
                 &__green {
                     position: absolute;
                     left: rem(200);
                     top: rem(-700);
+
                     img {
                         width: $balloon-md;
                     }
                 }
+
                 &__yellow {
                     position: absolute;
                     left: rem(180);
                     top: rem(-500);
+
                     img {
                         width: $balloon-md;
                     }
                 }
             }
-           
+
         }
 
         &__logo {
@@ -170,16 +200,20 @@
                 width: $logo-md;
             }
         }
+
         &__text {
             padding: 0 rem(20);
+
             h2 {
-            @include font-set($size: 24, $weight: 500) 
+                @include font-set($size: 24, $weight: 500)
             }
+
             p {
-            @include font-set($size: 20, $weight: 400) 
+                @include font-set($size: 20, $weight: 400)
             }
+
             span {
-            @include font-set($size: 18, $weight: 900, $family: $font-accent);
+                @include font-set($size: 18, $weight: 900, $family: $font-accent);
             }
         }
     }
@@ -193,27 +227,32 @@
                 &__blue {
                     right: rem(150);
                     top: rem(-400);
+
                     img {
                         width: $balloon-sm;
                     }
                 }
+
                 &__green {
                     left: rem(150);
                     top: rem(-450);
+
                     img {
                         width: $balloon-sm;
                     }
                 }
+
                 &__yellow {
                     position: absolute;
                     left: rem(120);
                     top: rem(-300);
+
                     img {
                         width: $balloon-sm;
                     }
                 }
             }
-           
+
         }
 
         &__logo {
@@ -221,15 +260,18 @@
                 width: $logo-sm;
             }
         }
+
         &__text {
             h2 {
-            @include font-set($size: 18, $weight: 500) 
+                @include font-set($size: 18, $weight: 500)
             }
+
             p {
-            @include font-set($size: 14, $weight: 400) 
+                @include font-set($size: 14, $weight: 400)
             }
+
             span {
-            @include font-set($size: 12, $weight: 900, $family: $font-accent);
+                @include font-set($size: 12, $weight: 900, $family: $font-accent);
             }
         }
     }
@@ -242,27 +284,32 @@
                 &__blue {
                     right: rem(100);
                     top: rem(-400);
+
                     img {
                         width: $balloon-xs;
                     }
                 }
+
                 &__green {
                     left: rem(100);
                     top: rem(-400);
+
                     img {
                         width: $balloon-xs;
                     }
                 }
+
                 &__yellow {
                     position: absolute;
                     left: rem(110);
                     top: rem(-300);
+
                     img {
                         width: $balloon-xs;
                     }
                 }
             }
-           
+
         }
 
         &__logo {
@@ -270,19 +317,24 @@
                 width: $logo-xs;
             }
         }
+
         &__text {
             padding: 0 rem(12);
             @include flex ($justify: center, $align: center, $direction: column, $wrap: nowrap, $gap: rem(10));
+
             h2 {
-            @include font-set($size: 16, $weight: 500) 
+                @include font-set($size: 16, $weight: 500)
             }
+
             p {
-            @include font-set($size: 14, $weight: 400);
-            letter-spacing: rem(0.1); 
+                @include font-set($size: 14, $weight: 400);
+                letter-spacing: rem(0.1);
             }
+
             span {
-            @include font-set($size: 12, $weight: 900, $family: $font-accent);
+                @include font-set($size: 12, $weight: 900, $family: $font-accent);
             }
+
             .none__br {
                 display: block;
             }
@@ -294,26 +346,30 @@
 .innovation {
     margin-bottom: rem(100);
     overflow-x: hidden;
-    background: linear-gradient(to bottom,   $color-skyblue, $color-bg);
+    background: linear-gradient(to bottom, $color-skyblue, $color-bg);
     @include flex($justify: center, $align: center, $direction: column, $wrap: nowrap, $gap: rem(30));
 
     &__bg {
         position: relative;
         opacity: 0.9;
+
         &__cloud__left {
             position: absolute;
             top: rem(-300);
-            left: rem(-700);  
+            left: rem(-700);
         }
+
         &__cloud__right {
             position: absolute;
             top: rem(-300);
             right: rem(-700);
         }
     }
+
     &__img {
         margin-top: rem(200);
     }
+
     &__text {
         text-align: center;
     }
@@ -325,12 +381,14 @@
                     height: rem(900);
                 }
             }
+
             &__cloud__right {
                 img {
                     height: rem(900);
                 }
             }
         }
+
         &__img {
             img {
                 width: rem(650);
@@ -339,18 +397,20 @@
     }
 
     @media (max-width: $bp-tablet) {
-         &__bg {
+        &__bg {
             &__cloud__left {
                 img {
                     height: rem(700);
                 }
             }
+
             &__cloud__right {
                 img {
                     height: rem(700);
                 }
             }
         }
+
         &__img {
             img {
                 width: rem(500);
@@ -377,7 +437,8 @@
 
 //story
 .story {
-    background: linear-gradient(to top,   $color-skyblue, $color-bg);
+    background: linear-gradient(to top, $color-skyblue, $color-bg);
+
     &__wrap {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -385,216 +446,190 @@
         grid-template-areas:
             "card1 card2"
             "card1 card3";
-            &__card {
-                position: relative;
+
+        &__card {
+            position: relative;
+            @include radius($radius: rem(20));
+            overflow-y: hidden;
+
+            &__overlay__full {
+                position: absolute;
+                bottom: 0;
+                left: 0;
                 @include radius($radius: rem(20));
-
-                &__overlay__full {
-                    position: absolute;
-                    bottom: 0;
-                    left: 0;
-                    @include radius($radius: rem(20));
-                    background: linear-gradient(to top,
+                background: linear-gradient(to top,
                         $color-primary 0%,
-                        transparent 70%
-                    );
-                    backdrop-filter: blur(10px);
-                    -webkit-backdrop-filter: blur(45px); //사파리
-                    width: 100%;
-                    height: 100%;
-                    visibility: hidden;
-                    transition: opacity 0.2s ease, visibility 0.2s ease;
-                }
-                &__text {
-                    height: 100%;
-                    width: 100%;
-                    color: $color-bg;
+                        transparent 70%);
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(45px); //사파리
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                transform: translateY(100%);
+                transition: transform 0.6s ease, opacity 0.6s ease;
+            }
 
-                    &__inner {
-                        transform-style: preserve-3d;
-                        transition: transform 0.6s ease;
-                        width: 100%;
+            &__text {
+                height: 100%;
+                width: 100%;
+                color: $color-bg;
+
+                &__inner {
+                    width: 100%;
+                    height: 100%;
+                    position: relative;
+
+                    &__front {
                         height: 100%;
-                        position: relative;
+                        width: 100%;
+                        @include flex ($justify: flex-start, $align: flex-start, $direction: column, $wrap: nowrap, $gap: rem(555));
 
-                        &__front {
-                            height: 100%;
-                            width: 100%;
-                            @include flex ($justify: flex-start, $align: flex-start, $direction: column, $wrap: nowrap, $gap: rem(555));
+                        &__top {
+                            padding: rem(30) rem(30);
+                            align-self: flex-end;
+                            text-align: end;
+                            @include flex ($justify: flex-end, $align: flex-end, $direction: column, $wrap: nowrap, $gap: rem(5));
 
-                            &__top {
-                                padding: rem(30) rem(30);
-                                align-self: flex-end;
-                                text-align: end;
-                                @include flex ($justify: flex-end, $align: flex-end, $direction: column, $wrap: nowrap, $gap: rem(5));
-                                span {
-                                    @include font-set ($size: 16, $weight: 500, $line-height: 1.2, $family: $font-primary);
-                                }
-                                p {
-                                    @include font-set ($size: 60, $weight: 900, $line-height: 1.2, $family: $font-primary);
-                                }
+                            span {
+                                @include font-set ($size: 16, $weight: 500, $line-height: 1.2, $family: $font-primary);
                             }
 
-                            &__bottom {
-                                position: relative;
-                                @include flex ($justify: flex-start, $align: flex-start, $direction: column, $wrap: nowrap, $gap: rem(20));
+                            p {
+                                @include font-set ($size: 60, $weight: 900, $line-height: 1.2, $family: $font-primary);
+                            }
+                        }
+
+                        &__bottom {
+                            position: relative;
+                            @include flex ($justify: flex-start, $align: flex-start, $direction: column, $wrap: nowrap, $gap: rem(20));
+                            border-radius: 0 0 rem(20) rem(20);
+                            background: linear-gradient(to top, #3476a8 lab(88.47% 0 -0.01 / 0.1));
+                            width: 100%;
+                            height: 100%;
+                            padding: rem(30) rem(30);
+                            align-self: flex-start;
+
+                            .overlay__blur {
+                                mask-image: linear-gradient(to top, lab(32.65% -1.5 -30.07) 0%, transparent 100%);
                                 border-radius: 0 0 rem(20) rem(20);
-                                background: linear-gradient(to top,  lab(47.64% -4.34 -32.85 / 0.8), lab(88.47% 0 -0.01 / 0.1));     
+                                backdrop-filter: blur(100px);
+                                -webkit-backdrop-filter: blur(45px);
                                 width: 100%;
                                 height: 100%;
-                                padding: rem(30) rem(30);
-                                align-self: flex-start;
-                                
-                                .overlay__blur{
-                                    mask-image: linear-gradient(to top, lab(47.64% -4.34 -32.85) 0%, transparent 100%);
-                                    border-radius: 0 0 rem(20) rem(20);
-                                    backdrop-filter: blur(100px);
-                                    -webkit-backdrop-filter: blur(45px);
-                                    width: 100%;
-                                    height: 100%;
-                                    position: absolute;
-                                    bottom: 0;
-                                    left: 0;
-                                }
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                            }
 
-                                &__content {
-                                    z-index: 1;
-                                    h3 {
-                                        @include font-set ($size: 42, $weight: 800, $line-height: 1.2, $family: $font-primary);
-                                    }
-                                }
-                                &__key {
-                                    z-index: 1;
-                                    @include flex ($justify: flex-start, $align: flex-start, $direction: row, $wrap: nowrap, $gap: rem(15));
-                                    span {
-                                        @include font-set ($size: 12, $weight: 500, $line-height: 1.2, $family: $font-primary);
-                                    }
-                                }
-                            } 
-                        }
-                        &__back {
-                            width: 100%;
-                            height: 100%;
-                            transform: rotateY(180deg);
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            @include flex ($justify: space-between, $align: center, $direction: column, $wrap: nowrap, $gap: rem(110));
+                            &__content {
+                                z-index: 2;
 
-                            &__top {
-                                padding: rem(30) rem(30);
-                                align-self: flex-end;
-                                text-align: end;
-                                @include flex ($justify: flex-end, $align: flex-end, $direction: column, $wrap: nowrap, $gap: rem(5));
+                                h3 {
+                                    @include font-set ($size: 42, $weight: 800, $line-height: 1.2, $family: $font-primary);
+                                }
+                            }
+
+                            &__key {
+                                z-index: 2;
+                                @include flex ($justify: flex-start, $align: flex-start, $direction: row, $wrap: nowrap, $gap: rem(15));
+
                                 span {
-                                    @include font-set ($size: 16, $weight: 500, $line-height: 1.2, $family: $font-primary);
-                                }
-                                p {
-                                    @include font-set ($size: 60, $weight: 900, $line-height: 1.2, $family: $font-primary);
+                                    @include font-set ($size: 12, $weight: 500, $line-height: 1.2, $family: $font-primary);
                                 }
                             }
-
-                            &__desc {
-                                p {
-                                    text-align: center;
-                                    @include font-set ($size: 28, $weight: 700, $line-height: 1.4, $family: $font-primary);
-                                }
-                            }
-                            &__bottom {
-                                @include flex ($justify: flex-start, $align: flex-start, $direction: column, $wrap: nowrap, $gap: rem(20));
-                                border-radius: 0 0 rem(20) rem(20);    
-                                padding: rem(30) rem(30);
-                                align-self: flex-start;
-
-                                &__content {
-                                    z-index: 1;
-                                    h3 {
-                                        @include font-set ($size: 42, $weight: 800, $line-height: 1.2, $family: $font-primary);
-                                    }
-                                }
-                                &__key {
-                                    z-index: 1;
-                                    @include flex ($justify: flex-start, $align: flex-start, $direction: row, $wrap: nowrap, $gap: rem(15));
-                                    span {
-                                        @include font-set ($size: 12, $weight: 500, $line-height: 1.2, $family: $font-primary);
-                                    }
-                                }
-                            } 
-                            
                         }
                     }
-                    &.is-flipped .story__wrap__card__text__inner {
-                        transform: rotateY(180deg);
+
+                    &__back {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        transform: translateY(100%);
+                        opacity: 0;
+                        transition: transform 0.6s ease, opacity 0.6s ease;
+                        z-index: 10;
+                        width: 100%;
+                        height: 100%;
+                        @include flex ($justify: center, $align: center, $direction: column);
+
+                        &__desc {
+                            p {
+                                text-align: center;
+                                @include font-set ($size: 28, $weight: 400, $line-height: 1.4, $family: $font-primary);
+                            }
+                        }
+
                     }
-                                   
                 }
-            } 
+            }
+
+            &:hover {
+                .story__wrap__card__text__inner__front__bottom {
+                    background: none;
+                }
+
+                .story__wrap__card__text__inner__back,
+                .story__wrap__card__overlay__full {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+            }
+        }
+
         &__card01 {
             grid-area: card1;
             @include bg-cover("/assets/images/story-store01.png");
         }
+
         &__card02 {
             grid-area: card2;
             @include bg-cover("/assets/images/story-store02.png");
+
             .story__wrap__card__text__inner__front {
-                        @include flex ($justify: flex-start, $align: flex-start, $direction: column, $wrap: nowrap, $gap: rem(110));
+                @include flex ($justify: flex-start, $align: flex-start, $direction: column, $wrap: nowrap, $gap: rem(110));
             }
+
             .story__wrap__card__text {
                 &__bottom {
                     @include flex ($justify: flex-start, $align: flex-start, $direction: column, $wrap: nowrap, $gap: rem(10));
+
                     &__content {
                         h3 {
                             @include font-set ($size: 36, $weight: 800, $line-height: 1.2, $family: $font-primary);
-                        }                       
+                        }
                     }
                 }
             }
         }
+
         &__card03 {
             grid-area: card3;
             @include bg-cover("/assets/images/story-store03.png");
             margin-left: rem(120);
+
             .story__wrap__card__text__inner__front {
-                        @include flex ($justify: flex-start, $align: flex-start, $direction: column, $wrap: nowrap, $gap: rem(155));
+                @include flex ($justify: flex-start, $align: flex-start, $direction: column, $wrap: nowrap, $gap: rem(155));
             }
+
             .story__wrap__card__text {
                 &__bottom {
                     @include flex ($justify: flex-start, $align: flex-start, $direction: column, $wrap: nowrap, $gap: rem(10));
+
                     &__content {
                         h3 {
                             @include font-set ($size: 36, $weight: 800, $line-height: 1.2, $family: $font-primary);
-                        }                       
+                        }
                     }
                 }
             }
-        }       
+        }
     }
 
-    @media (max-width: $bp-desktop) {
-        
-    }
+    @media (max-width: $bp-desktop) {}
 
-    @media (max-width: $bp-tablet) {
-         
-    }
+    @media (max-width: $bp-tablet) {}
 
-    @media (max-width: $bp-mobile-md) {
-        
-    }
+    @media (max-width: $bp-mobile-md) {}
 
-    @media (max-width: $bp-mobile-sm) {
-        
-    }
-}
-
-.story__wrap__card.is-flipped .story__wrap__card__text__inner {
-  transform: rotateY(180deg);
-}
-
-.story__wrap__card__text__inner__back, .story__wrap__card__text__inner__front {
-  backface-visibility: hidden;
-}
-
-.story__wrap__card.is-flipped .story__wrap__card__overlay__full {
-  visibility: visible;
+    @media (max-width: $bp-mobile-sm) {}
 }

@@ -98,10 +98,6 @@ $(window).on('scroll', function () {
 });
 
 
-//about story
-$('.story__wrap__card').on('click', function() {
-  $(this).toggleClass('is-flipped');
-});
 
 
 
