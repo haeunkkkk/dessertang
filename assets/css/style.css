@@ -24,6 +24,7 @@ button {
   background: none;
   cursor: pointer;
   font-family: inherit;
+  transition: all 0.3s ease-in-out;
 }
 
 @font-face {
@@ -139,6 +140,10 @@ button {
   padding-bottom: 3.125rem;
 }
 
+.section__bottom {
+  margin-bottom: 9.375rem;
+}
+
 .container {
   width: 100%;
   height: 100%;
@@ -146,6 +151,10 @@ button {
   margin: 0 auto;
   padding-left: 1.25rem;
   padding-right: 1.25rem;
+}
+
+.ticomg {
+  margin-bottom: 2.5rem;
 }
 
 .header {
@@ -571,6 +580,9 @@ button {
   width: 100%;
   height: 100%;
 }
+.hero__swiper__content__img img {
+  width: 100%;
+}
 .hero__swiper__slide {
   width: 100%;
   height: 100%;
@@ -587,17 +599,11 @@ button {
   background-size: cover;
   background-repeat: no-repeat;
 }
-.hero__swiper__slide__02__content__img img {
-  width: 62rem;
-}
 .hero__swiper__slide__03 {
   background-image: url(/assets/images/hero-bg03.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-}
-.hero__swiper__slide__03__content__img img {
-  width: 62rem;
 }
 .hero__swiper__slide__04 {
   background-image: url(/assets/images/hero-bg04.jpg);
@@ -605,10 +611,8 @@ button {
   background-size: cover;
   background-repeat: no-repeat;
 }
-.hero__swiper__slide__04__content__img img {
-  width: 42.5625rem;
-}
 .hero__swiper__content {
+  width: 100%;
   height: 100%;
   position: relative;
   display: flex;
@@ -619,6 +623,7 @@ button {
   gap: 0;
 }
 .hero__swiper__content__text {
+  width: 100%;
   padding-top: 18.75rem;
 }
 .hero__swiper__content__text p {
@@ -626,7 +631,7 @@ button {
 }
 .hero__swiper__content__text h2 {
   font-family: "Paperozi";
-  font-size: 2.625rem;
+  font-size: 3.75rem;
   font-weight: 700;
   line-height: 1.2;
 }
@@ -719,6 +724,12 @@ button {
     width: 0.75rem;
     height: 0.75rem;
   }
+  .hero__swiper__slide__06 .hero__swiper__content__text {
+    color: #ffffff;
+  }
+  .hero__swiper__slide__06 .hero__swiper__content__text p {
+    color: #dadada;
+  }
   .hero__pagination {
     display: flex;
     justify-content: center;
@@ -780,7 +791,7 @@ button {
   font-family: "Paperozi";
   font-size: 2.5rem;
   font-weight: 700;
-  line-height: 1.4;
+  line-height: 1.2;
   margin-bottom: 0.3125rem;
 }
 .point__subtitle {
@@ -895,7 +906,7 @@ button {
     font-family: "Paperozi";
     font-size: 2rem;
     font-weight: 700;
-    line-height: 1.4;
+    line-height: 1.2;
   }
   .point__subtitle {
     font-family: "Pretendard";
@@ -956,7 +967,7 @@ button {
     font-family: "Paperozi";
     font-size: 1.75rem;
     font-weight: 700;
-    line-height: 1.4;
+    line-height: 1.2;
   }
   .point__card__wrap {
     grid-template-columns: repeat(1, 1fr);
@@ -1066,7 +1077,7 @@ button {
     font-family: "Paperozi";
     font-size: 1.5rem;
     font-weight: 700;
-    line-height: 1.4;
+    line-height: 1.2;
   }
   .point__subtitle {
     font-family: "Pretendard";
@@ -1269,6 +1280,25 @@ button {
   font-size: 1.5rem;
   font-weight: 400;
   line-height: 1.2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3475A8;
+  color: #ffffff;
+  border-radius: 40px;
+  border: 1px solid #3475A8;
+  padding: 15px 106px;
+  transition: all 0.2 ease-in-out;
+}
+.growth .growth__card button:hover {
+  background-color: #ffffff;
+  color: #3475A8;
+  border: 1px solid #3475A8;
+}
+.growth .growth__card button:hover {
+  background-color: #ffffff;
+  color: #3475A8;
+  border: 1px solid #3475A8;
 }
 .growth .swiper-3d .swiper-slide-shadow-left,
 .growth .swiper-3d .swiper-slide-shadow-right {
@@ -1388,6 +1418,7 @@ button {
   .growth .growth__card button:hover {
     background-color: #ffffff;
     color: #3475A8;
+    border: 1px solid #3475A8;
   }
   .growth .swiper-button-next::after,
   .growth .swiper-button-prev::after {
@@ -1739,6 +1770,7 @@ button {
 .contact__left .btn:hover {
   background-color: #ffffff;
   color: #3475A8;
+  border: 1px solid #3475A8;
 }
 .contact__left .btn:hover {
   background-color: #3475A8;
@@ -1806,6 +1838,7 @@ button {
   .contact .contact__left .btn:hover {
     background-color: #ffffff;
     color: #3475A8;
+    border: 1px solid #3475A8;
   }
   .contact .contact__img img {
     width: 9.375rem;
@@ -1835,6 +1868,7 @@ button {
   .contact .contact__left .btn:hover {
     background-color: #ffffff;
     color: #3475A8;
+    border: 1px solid #3475A8;
   }
   .contact .contact__img img {
     width: 6.25rem;
@@ -2232,6 +2266,7 @@ button {
   background: linear-gradient(to top, #DDEEF5, #ffffff);
 }
 .story__wrap {
+  padding: 0 8.625rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
@@ -2241,6 +2276,18 @@ button {
   position: relative;
   border-radius: 1.25rem;
   overflow-y: hidden;
+  animation: float 3s ease-in-out infinite;
+}
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 .story__wrap__card__overlay__full {
   position: absolute;
@@ -2329,10 +2376,8 @@ button {
   z-index: 2;
 }
 .story__wrap__card__text__inner__front__bottom__content h3 {
-  font-family: "Pretendard";
-  font-size: 2.625rem;
+  font-size: clamp(1.25rem, 1.0417rem + 1.1111vw, 2.375rem);
   font-weight: 800;
-  line-height: 1.2;
 }
 .story__wrap__card__text__inner__front__bottom__key {
   z-index: 2;
@@ -2351,7 +2396,7 @@ button {
 }
 .story__wrap__card__text__inner__back {
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
   transform: translateY(100%);
   opacity: 0;
@@ -2367,12 +2412,10 @@ button {
   gap: 0;
 }
 .story__wrap__card__text__inner__back__desc p {
-  padding: 1rem;
+  padding: 1.25rem;
   text-align: center;
-  font-family: "Pretendard";
-  font-size: 1.5rem;
-  font-weight: 400;
   line-height: 1.4;
+  font-size: clamp(1rem, 0.9074rem + 0.4938vw, 1.5rem);
 }
 .story__wrap__card:hover .story__wrap__card__text__inner__front__bottom {
   background: none;
@@ -2412,12 +2455,6 @@ button {
   flex-wrap: nowrap;
   gap: 0.625rem;
 }
-.story__wrap__card02 .story__wrap__card__text__bottom__content h3 {
-  font-family: "Pretendard";
-  font-size: 2.25rem;
-  font-weight: 800;
-  line-height: 1.2;
-}
 .story__wrap__card03 {
   grid-area: card3;
   background-image: url(/assets/images/story-store03.png);
@@ -2442,13 +2479,10 @@ button {
   flex-wrap: nowrap;
   gap: 0.625rem;
 }
-.story__wrap__card03 .story__wrap__card__text__bottom__content h3 {
-  font-family: "Pretendard";
-  font-size: 2.25rem;
-  font-weight: 800;
-  line-height: 1.2;
-}
 @media (max-width: 1024px) {
+  .story__wrap {
+    padding: 0 1.25rem;
+  }
   .story__wrap__card__text__inner__front {
     display: flex;
     justify-content: flex-start;
@@ -2472,12 +2506,6 @@ button {
     gap: 0.3125rem;
     padding: 1.25rem 1.25rem;
   }
-  .story__wrap__card__text__inner__front__bottom__content h3 {
-    font-family: "Pretendard";
-    font-size: 2rem;
-    font-weight: 900;
-    line-height: 1.2;
-  }
   .story__wrap__card__text__inner__back__desc p {
     font-family: "Pretendard";
     font-size: 1.25rem;
@@ -2489,13 +2517,14 @@ button {
     margin-left: 0;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 768px) and (hover: none) {
   .story__wrap {
     grid-template-columns: repeat(1, 1fr);
     grid-template-areas: "card1" "card2" "card3";
   }
   .story__wrap__card {
-    padding-bottom: 15.625rem;
+    padding-bottom: 16.25rem;
+    overflow: hidden;
   }
   .story__wrap__card__overlay__full {
     background: linear-gradient(to top, #3475A8 0%, transparent 70%);
@@ -2503,7 +2532,7 @@ button {
     -webkit-backdrop-filter: blur(5px);
     opacity: 1;
     transform: translateY(0);
-    mask-image: linear-gradient(to top, lab(32.65% -1.5 -30.07) 20%, transparent 100%);
+    mask-image: linear-gradient(to top, lab(32.65% -1.5 -30.07) 10%, transparent 100%);
   }
   .story__wrap__card__text__inner__front {
     display: flex;
@@ -2554,17 +2583,15 @@ button {
   .story__wrap__card__text__inner__front__bottom__content {
     z-index: 2;
   }
-  .story__wrap__card__text__inner__front__bottom__content h3 {
-    font-family: "Pretendard";
-    font-size: 1.75rem;
-    font-weight: 800;
-    line-height: 1.2;
-  }
   .story__wrap__card__text__inner__back {
-    display: block;
-    top: 10.625rem;
-    left: 1.25rem;
-    padding-right: 3.125rem;
+    position: relative;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 0;
   }
   .story__wrap__card__text__inner__back br {
     display: none;
@@ -2620,7 +2647,7 @@ button {
 }
 @media (max-width: 500px) {
   .story__wrap__card {
-    padding-bottom: 15.625rem;
+    padding-bottom: 14.375rem;
   }
   .story__wrap__card__overlay__full {
     mask-image: linear-gradient(to top, lab(32.65% -1.5 -30.07) 20%, transparent 100%);
@@ -2644,21 +2671,11 @@ button {
   .story__wrap__card__text__inner__front__bottom {
     padding: 0.75rem 0.75rem 0 0;
   }
-  .story__wrap__card__text__inner__front__bottom__content h3 {
-    font-family: "Pretendard";
-    font-size: 1.5rem;
-    font-weight: 800;
-    line-height: 1.2;
-  }
   .story__wrap__card__text__inner__front__bottom__key span {
     font-family: "Pretendard";
     font-size: 0.625rem;
     font-weight: 500;
     line-height: 1.2;
-  }
-  .story__wrap__card__text__inner__back {
-    left: 0.75rem;
-    padding-right: 1.25rem;
   }
   .story__wrap__card__text__inner__back__desc p {
     font-family: "Pretendard";
@@ -2681,18 +2698,194 @@ button {
   .story__wrap__card__text__inner__front__top {
     display: none;
   }
-  .story__wrap__card__text__inner__front__bottom__content h3 {
-    font-family: "Pretendard";
-    font-size: 1.25rem;
-    font-weight: 800;
-    line-height: 1.2;
-  }
   .story__wrap__card02 {
     padding-bottom: 12.5rem;
   }
   .story__wrap__card03 {
     padding-bottom: 13.125rem;
   }
+}
+
+.identity__wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 3.125rem;
+}
+.identity__wrap__card {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0;
+  text-align: center;
+}
+.identity__wrap__card__icon {
+  margin-bottom: 3.125rem;
+}
+.identity__wrap__card__text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 1.25rem;
+}
+.identity__wrap__card__text h3 {
+  font-family: "Pretendard";
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+.identity__wrap__card__text p {
+  font-family: "Pretendard";
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
+.identity__wrap__card01, .identity__wrap__card02, .identity__wrap__card03 {
+  border-right: 1px solid #cccccc;
+  width: 100%;
+  padding: 3.125rem 1.25rem;
+}
+.identity__wrap__card03 {
+  border: none;
+}
+.identity__wrap .btn {
+  font-size: 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3475A8;
+  color: #ffffff;
+  border-radius: 40px;
+  border: 1px solid #3475A8;
+  padding: 15px 106px;
+  transition: all 0.2 ease-in-out;
+}
+.identity__wrap .btn:hover {
+  background-color: #ffffff;
+  color: #3475A8;
+  border: 1px solid #3475A8;
+}
+.identity__wrap .btn:hover {
+  background-color: #ffffff;
+  color: #3475A8;
+  border: 1px solid #3475A8;
+}
+@media (max-width: 1024px) {
+  .identity__wrap__card__icon {
+    margin-bottom: 2.3125rem;
+  }
+  .identity__wrap__card__text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 1.25rem;
+  }
+  .identity__wrap__card__text p {
+    font-family: "Pretendard";
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+  .identity__wrap__card01, .identity__wrap__card02, .identity__wrap__card03 {
+    padding: 3.125rem 1.25rem;
+  }
+  .identity__wrap__card03 {
+    border: none;
+  }
+}
+@media (max-width: 768px) {
+  .identity__wrap__card {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+    grid-template-areas: "card1" "card2" "card3";
+  }
+  .identity__wrap__card__icon {
+    margin-bottom: 2.3125rem;
+  }
+  .identity__wrap__card__text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 1.25rem;
+    width: 100%;
+  }
+  .identity__wrap__card__text p {
+    font-family: "Pretendard";
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+  .identity__wrap__card01, .identity__wrap__card02, .identity__wrap__card03 {
+    border-bottom: 1px solid #cccccc;
+    border-right: none;
+    width: 100%;
+    padding: 3.125rem 1.25rem;
+  }
+  .identity__wrap__card01 br, .identity__wrap__card02 br, .identity__wrap__card03 br {
+    display: none;
+  }
+  .identity__wrap__card03 {
+    border: none;
+  }
+}
+@media (max-width: 500px) {
+  .identity__wrap__card br {
+    display: block;
+  }
+  .identity .btn {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 390px) {
+  .identity .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3475A8;
+    color: #ffffff;
+    border-radius: 40px;
+    border: 1px solid #3475A8;
+    padding: 15px 50px;
+    transition: all 0.2 ease-in-out;
+  }
+  .identity .btn:hover {
+    background-color: #ffffff;
+    color: #3475A8;
+    border: 1px solid #3475A8;
+  }
+}
+
+.dessert__title {
+  font-family: "Paperozi";
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.dessert__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.dessert__list__card p {
+  font-family: "Pretendard";
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.2;
 }
 
 .btn {
@@ -2702,13 +2895,14 @@ button {
   background-color: #3475A8;
   color: #ffffff;
   border-radius: 40px;
-  border: none;
+  border: 1px solid #3475A8;
   padding: 15px 106px;
   transition: all 0.2 ease-in-out;
 }
 .btn:hover {
   background-color: #ffffff;
   color: #3475A8;
+  border: 1px solid #3475A8;
 }
 .btn__secondary {
   display: inline-flex;
@@ -2724,8 +2918,103 @@ button {
 .btn__secondary:hover {
   background-color: #ffffff;
   color: #3475A8;
+  border: 1px solid #3475A8;
 }
 .btn:hover {
   background-color: #3475A8;
   color: #ffffff;
+}
+
+.card {
+  width: calc((100% - 48px) / 4);
+  height: 100%;
+  border-radius: 1.25rem;
+  border: 1px solid #DEDEDE;
+  padding: 4.5rem 0 4.5rem 0;
+  text-align: center;
+}
+.card div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 1rem;
+}
+.card .btn {
+  display: none;
+}
+@media (max-width: 1024px) {
+  .card {
+    width: calc((100% - 16px) / 2);
+    padding: 0 0 1.875rem 0;
+  }
+  .card div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 0.625rem;
+  }
+  .card img {
+    width: 12.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 1.25rem;
+    padding: 0.625rem 0 1.25rem 0;
+  }
+  .card img {
+    width: 9.375rem;
+  }
+  .card .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3475A8;
+    color: #ffffff;
+    border-radius: 40px;
+    border: 1px solid #3475A8;
+    padding: 0.375rem 1.125rem;
+    transition: all 0.2 ease-in-out;
+  }
+  .card .btn:hover {
+    background-color: #ffffff;
+    color: #3475A8;
+    border: 1px solid #3475A8;
+  }
+  .card .btn:hover {
+    background-color: #ffffff;
+    color: #3475A8;
+    border: 1px solid #3475A8;
+  }
+}
+@media (max-width: 500px) {
+  .card {
+    padding: 1rem 0 1rem 0;
+  }
+  .card img {
+    width: 7.5rem;
+  }
+  .card p {
+    font-family: "Pretendard";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+}
+@media (max-width: 390px) {
+  .card {
+    padding: 0.75rem 0 0.75rem 0;
+  }
+  .card img {
+    width: 5rem;
+  }
 }

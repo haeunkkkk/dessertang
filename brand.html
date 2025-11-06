@@ -7,13 +7,79 @@
     <title>Brand</title>
 
     <link rel="stylesheet" href="./assets/css/reset.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
-    <header>
+    <header class="header">
+            <div class="container header__container">
+                <div class="header__logo">
+                    <a href="/index.html">
+                        <img src="./assets/images/header-logo.png" alt="디저탕">
+                    </a>
+                </div>
 
-    </header>
+                <nav>
+                    <ul class="header__menu">
+                        <li class="header__menu__list">
+                            <a href="./brand.html">
+                                BRAND
+                            </a>
+                        </li>
+                        <li class="header__menu__list">
+                            <a href="./menu.html">
+                                MENU
+                            </a>
+                        </li>
+                        <li class="header__menu__list">
+                            <a href="#">
+                                COMMUNITY
+                            </a>
+                            <ul class="header__menu__list__sub">
+                                <li>
+                                    <a href="#">이벤트</a>
+                                </li>
+                                <li>
+                                    <a href="#">고객문의</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="header__menu__list">
+                            <a href="#">
+                                FRANCHISE
+                            </a>
+                            <ul class="header__menu__list__sub">
+                                <li>
+                                    <a href="#">가맹절차</a>
+                                </li>
+                                <li>
+                                    <a href="#">가맹 예상 비용</a>
+                                </li>
+                                <li>
+                                    <a href="#">FAQ</a>
+                                </li>
+                                <li>
+                                    <a href="#">가맹 문의</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header__overlay"></div>
+
+                <div class="header__hamburger__btn">
+                    <a href="#">
+                        <img src="./assets/images/hamburger-btn.png" alt="햄버거 버튼">
+                    </a>
+                </div>
+                <div class="header__hamburger__close">
+                    <a href="#">
+                        <img src="./assets/images/hamburger-close-btn.png" alt="햄버거 닫힘 버튼">
+                    </a>
+                </div>
+            </div>
+        </header>
     <main>
         <section class="about">
             <div class="about__bg">
@@ -76,7 +142,7 @@
 
         <section class="story section">
             <div class="story__wrap container">
-                <div class="story__wrap__card story__wrap__card01">
+                <div class="story__wrap__card story__wrap__card01"  data-aos="zoom-in-right" data-aos-delay="500" data-aos-duration="1000" data-aos-offset="200">
                     <div class="story__wrap__card__overlay__full"></div>
                     <div class="story__wrap__card__text">
                         <div class="story__wrap__card__text__inner">
@@ -109,8 +175,8 @@
                             <div class="story__wrap__card__text__inner__back">
                                 <div class="story__wrap__card__text__inner__back__desc">
                                     <p> 디저탕은 작은 아이디어에서 시작해 <br>
-                                        달콤한 경험을 전하는 브랜드로
-                                        성장했습니다.<br>
+                                        달콤한 경험을 전하는 
+                                        브랜드로 <br> 성장했습니다.<br>
                                         하나의 작은 아이디어가 <br>
                                         달콤한 경험으로 피어났습니다. <br>
                                         디저탕은 단순한 디저트를 넘어, <br>
@@ -122,7 +188,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="story__wrap__card story__wrap__card02">
+                <div class="story__wrap__card story__wrap__card02"  data-aos="fade-up-left" data-aos-delay="500" data-aos-offset="200">
                     <div class="story__wrap__card__overlay__full"></div>
                     <div class="story__wrap__card__text">
                         <div class="story__wrap__card__text__inner">
@@ -162,7 +228,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="story__wrap__card story__wrap__card03">
+                <div class="story__wrap__card story__wrap__card03"  data-aos="fade-up-left" data-aos-delay="500" data-aos-offset="200">
                     <div class="story__wrap__card__overlay__full"></div>
                     <div class="story__wrap__card__text">
                         <div class="story__wrap__card__text__inner">
@@ -195,10 +261,11 @@
                             <div class="story__wrap__card__text__inner__back">
 
                                 <div class="story__wrap__card__text__inner__back__desc">
-                                    <p> 창업 지원과 운영 효율로 점주, 고객 모두 <br>
-                                        만족하는 디저탕만의 경쟁력! <br>
+                                    <p>효율적 운영으로 <br>
+                                        점주와 고객 모두<br>
+                                        만족하는 디저탕의 경쟁력! <br>
                                         맛 뿐만 아니라 <br>
-                                        운영 효율을 함께 생각합니다.</p>
+                                        효율을 함께 생각합니다.</p>
                                 </div>
 
                             </div>
@@ -211,19 +278,103 @@
         <section class="identity section">
             <div class="identity__wrap container">
                 <div class="identity__wrap__card">
-                    <div class="identity__wrap__card__icon">
-                        <img src="./assets/images/identity-trend.png" alt="트렌드">
+                    <div class="identity__wrap__card01">
+                        <div class="identity__wrap__card__icon">
+                            <img src="./assets/images/identity-trend.png" alt="트렌드">
+                        </div>
+                        <div class="identity__wrap__card__text">
+                            <h3>트렌드</h3>
+                            <p>MZ세대 취향을 반영한 <br>비주얼 & 신메뉴 개발</p>
+                        </div>
+                    </div>
+                    <div class="identity__wrap__card02">
+                        <div class="identity__wrap__card__icon">
+                            <img src="./assets/images/identity-taste.png" alt="트렌드">
+                        </div>
+                        <div class="identity__wrap__card__text">
+                            <h3>맛</h3>
+                            <p>프리미엄 원재료 사용</p>
+                        </div>
+                    </div>
+                    <div class="identity__wrap__card03">
+                        <div class="identity__wrap__card__icon">
+                            <img src="./assets/images/identity-accessibility.png" alt="트렌드">
+                        </div>
+                        <div class="identity__wrap__card__text">
+                            <h3>접근성</h3>
+                            <p>합리적인 가격, <br> 편리한 접근성</p>
+                        </div>
                     </div>
                 </div>
+                <button class="btn">가맹 문의하러 가기 > </button>
             </div>
         </section>
     </main>
 
-    <footer>
+    <footer class="footer">
+            <div class="footer__inner container">
+                <div class="footer__logo">
+                    <a href="#">
+                        <img src="./assets/images/logo.png" alt="디저탕">
+                    </a>
+                </div>
 
-    </footer>
+                <div class="footer__center">
+                    <div class="footer__center__info">
+                        <p>DESSERTANG</p>
+                        <p>대표자 홍길동</p>
+                        <p>사업자 등록번호00-3248723-42342</p>
+                    </div>
+                    <div class="footer__center__address">
+                        <p>
+                            주소 인천광역시 남동구 인주대로 593 디저트빌딩 12층
+                        </p>
+                        <p>고객센터 1588-1234</p>
+                    </div>
+                    <div class="footer__center__privacy">
+                        <a href="#">이용약관</a>
+                        <a href="#">개인정보처리방침</a>
+                        <a href="#">정보보호현황</a>
+                    </div>
+                    <div class="footer__center__copyright">
+                        <p>
+                            © 2025 DESSERTANG. All Rights Reserved.
+                        </p>
+                    </div>
+                </div>
 
+                <div class="footer__right">
+                    <ul class="footer__sns">
+                        <li>
+                            <a href="#" class="footer__sns__link">
+                                <img src="./assets/images/footer-kakao.png" alt="카카오톡">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__sns__link">
+                                <img src="./assets/images/footer-insta.png" alt="인스타그램">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__sns__link">
+                                <img src="./assets/images/footer-facebook.png" alt="페이스북">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__sns__link">
+                                <img src="./assets/images/footer-blog.png" alt="블로그">
+                            </a>
+                        </li>
 
+                    </ul>
+                </div>
+            </div>
+        </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <script src="./assets/script/jquery-3.7.1.min.js"></script>
     <script src="./assets/script/script.js"></script>
 </body>

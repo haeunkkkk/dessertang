@@ -46,7 +46,7 @@
   line-height: $line-height;
 }
 
-@mixin title-style($size, $weight: 700, $line-height: 1.4, $family: $font-accent) {
+@mixin title-style($size, $weight: 700, $line-height: 1.2, $family: $font-accent) {
   font-family: $family;
   font-size: rem($size);
   font-weight: $weight;
@@ -79,7 +79,7 @@
 @mixin button-style($bg: $color-primary,
   $color: $color-bg,
   $radius: 40px,
-  $border: none,
+  $border: 1px solid $color-primary,
   $padding-y: 15px,
   $padding-x: 106px) {
   display: inline-flex;
@@ -95,5 +95,6 @@
   &:hover {
     background-color: $color-bg;
     color: $color-primary;
+    border: 1px solid $color-primary;
   }
 }

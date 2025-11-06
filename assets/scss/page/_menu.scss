@@ -1,0 +1,15 @@
+//dessert
+
+.dessert {
+    &__title {
+        @include title-style($size: 40)
+    }
+    &__list {
+        @include flex ($justify: center, $align: center, $direction: row, $wrap: wrap, $gap: rem(16));
+        &__card {
+            p {
+                @include font-set ($size: 20)
+            }
+        }
+    }
+}
