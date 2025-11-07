@@ -3087,6 +3087,216 @@ button {
   }
 }
 
+.event__container__title h2 {
+  font-family: "Paperozi";
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 0.3125rem;
+}
+.event__container__title p {
+  font-family: "Pretendard";
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #3475A8;
+}
+.event__container__content__card {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 1rem;
+}
+.event__container__content__card__desc {
+  width: 100%;
+  border-radius: 1.25rem;
+  border: 1px solid #DEDEDE;
+}
+.event__container__content__card__desc a {
+  position: relative;
+  padding: 1.75rem 1.875rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 1.875rem;
+}
+.event__container__content__card__desc a .card__text {
+  width: 100%;
+}
+.event__container__content__card__desc a .card__text__left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 1.25rem;
+}
+.event__container__content__card__desc a .card__text__left h4 {
+  font-family: "Pretendard";
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+.event__container__content__card__desc a .card__text__left p {
+  font-family: "Pretendard";
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
+.event__container__content__card__desc a .card__text .href__text {
+  display: none;
+}
+.event__container__content__card__desc a .card__text span {
+  position: absolute;
+  bottom: 1.875rem;
+  right: 1.875rem;
+}
+@media (max-width: 1024px) {
+  .event__container__title h2 {
+    font-family: "Paperozi";
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 0.3125rem;
+  }
+  .event__container__title p {
+    font-family: "Pretendard";
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 1.2;
+    color: #3475A8;
+  }
+  .event__container__content__card__desc a {
+    padding: 2rem 1.875rem;
+  }
+  .event__container__content__card__desc a img {
+    width: 11.25rem;
+  }
+  .event__container__content__card__desc a .card__text__left h4 {
+    font-family: "Pretendard";
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  .event__container__content__card__desc a .card__text__left p {
+    font-family: "Pretendard";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+}
+@media (max-width: 768px) {
+  .event__container__title h2 {
+    font-family: "Paperozi";
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  .event__container__content__card__desc a {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 1.25rem;
+    padding: 1rem 1rem;
+  }
+  .event__container__content__card__desc a img {
+    width: 9.375rem;
+  }
+  .event__container__content__card__desc a .card__text__left h4 {
+    font-family: "Pretendard";
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  .event__container__content__card__desc a .card__text span {
+    font-family: "Pretendard";
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 1.2;
+    bottom: 1rem;
+    right: 1rem;
+  }
+}
+@media (max-width: 500px) {
+  .event__container__title h2 {
+    font-family: "Paperozi";
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  .event__container__title p {
+    font-family: "Pretendard";
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.2;
+    color: #3475A8;
+  }
+  .event__container__content__card__desc a img {
+    width: 7.5rem;
+  }
+  .event__container__content__card__desc a .card__text__left {
+    margin-bottom: 0.625rem;
+  }
+  .event__container__content__card__desc a .card__text__left h4 {
+    font-family: "Pretendard";
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  .event__container__content__card__desc a .card__text__left p {
+    display: none;
+  }
+  .event__container__content__card__desc a .card__text .href__text {
+    display: block;
+    color: #999999;
+    text-decoration: underline solid #999999;
+  }
+  .event__container__content__card__desc a .card__text span {
+    font-family: "Pretendard";
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 1.2;
+    bottom: 1rem;
+    right: 1rem;
+  }
+}
+@media (max-width: 390px) {
+  .event__container__content__card__desc a {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 0.75rem;
+    padding: 0.75rem 0.75rem;
+  }
+  .event__container__content__card__desc a img {
+    width: 6.25rem;
+  }
+  .event__container__content__card__desc a .card__text__left h4 {
+    font-family: "Pretendard";
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  .event__container__content__card__desc a .card__text .href__text {
+    font-family: "Pretendard";
+    font-size: 0.8125rem;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+  .event__container__content__card__desc a .card__text span {
+    bottom: 0.75rem;
+    right: 0.75rem;
+  }
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
