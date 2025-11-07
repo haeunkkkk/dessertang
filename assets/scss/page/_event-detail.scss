@@ -1,0 +1,57 @@
+.event__sub {
+    &__wrap {
+        @include flex ($justify: center, $align: center, $direction: column, $wrap: nowrap, $gap: rem(100));
+    }
+    &__content {
+        width: 100%;
+        padding: rem(30);
+        @include radius($radius: rem(20));
+        border: 1px solid $gray-100;
+        @include flex ($justify: space-between, $align: flex-start, $direction: row, $wrap: nowrap, $gap: rem(100));
+        &__title {
+            @include flex ($justify: flex-start, $align: flex-start, $direction: column, $wrap: nowrap, $gap: rem(33));
+            h3 {
+                @include font-set ($size: 28, $weight: 600)
+            }
+            p {
+                @include font-set ($size: 20, $weight: 600)
+            }
+        }
+        &__desc {
+            align-self: end;
+            color: $gray-400;
+            @include flex ($justify: end, $align: end, $direction: row, $wrap: nowrap, $gap: rem(20));
+        }
+    }
+    &__nav {
+        width: 100%;
+        @include radius($radius: rem(20));
+        border: 1px solid $gray-100;
+        padding: rem(35) rem(40);
+        margin-bottom: rem(40);
+        @include flex ($justify: flex-start, $align: flex-start, $direction: column, $wrap: nowrap, $gap: rem(35));
+
+        &__next {
+            a {
+                @include flex ($justify: flex-start, $align: flex-start, $direction: row, $wrap: nowrap, $gap: rem(40));
+                h4, p {
+                    @include font-set ($size: 24);
+                    color: $gray-400;
+                }
+            }
+        }
+        
+        &__prev {
+            a {
+                @include flex ($justify: flex-start, $align: flex-start, $direction: row, $wrap: nowrap, $gap: rem(40));
+                h4, p {
+                    @include font-set ($size: 24);
+                    color: $gray-400;
+                }
+            }
+        }
+    }
+    button {
+        @include font-set ($size: 24);
+    }
+}
