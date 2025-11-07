@@ -1,9 +1,9 @@
 .card {
     width: calc((100% - (16px * 3)) / 4);
-    height: 100%;
+    height: rem(407);
     @include radius($radius: rem(20));
     border: 1px solid $gray-100;
-    padding: rem(72) 0 rem(72) 0;
+    @include flex ($justify: center, $align: center, $direction: column);
     text-align: center;
     div {
         @include flex ($justify: center, $align: center, $direction: column, $wrap: nowrap, $gap: rem(16));
@@ -13,6 +13,7 @@
     }
     
     @media (max-width: $bp-desktop) {
+        height: rem(267);
         width: calc((100% - (16px)) / 2);
         padding: 0 0 rem(30) 0;
         div {
@@ -23,6 +24,7 @@
         }
     }
     @media (max-width: $bp-tablet) {
+        height: rem(292);
         @include flex ($justify: center, $align: center, $direction: column, $wrap: nowrap, $gap: rem(20));
         padding: rem(10) 0 rem(20) 0;
         img {
@@ -41,6 +43,7 @@
         }
     }
     @media (max-width: $bp-mobile-md) {
+        height: rem(234);
         padding: rem(16) 0 rem(16) 0;
         img {
             width: rem(120);

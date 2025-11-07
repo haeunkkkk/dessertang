@@ -97,6 +97,40 @@ $(window).on('scroll', function () {
   }
 });
 
+$(document).ready(function () {
+  function bindDessertCardEvents() {
+    if ($(window).width() <= 768) {
+      $('.dessert__list__card .btn').off('click').on('click', function () {
+        const card = $(this).closest('.dessert__list__card');
+        const overlay = card.find('.card__overlay');
+        const title = card.find('.menu-title');
+        const btn = $(this);
+
+        $('.card__overlay').fadeOut(200);
+        $('.menu-title, .btn').fadeIn(200);
+
+        overlay.delay(200).fadeIn(200);
+        title.fadeOut(200);
+        btn.fadeOut(200);
+      });
+
+      $('.dessert__list__card .overlay__close').off('click').on('click', function () {
+        const card = $(this).closest('.dessert__list__card');
+        card.find('.card__overlay').fadeOut(200);
+        card.find('.menu-title, .btn').delay(300).fadeIn(200);
+      });
+    } else {
+      $('.dessert__list__card .btn, .overlay__close').off('click');
+      $('.card__overlay').removeAttr('style');
+      $('.menu-title, .btn').removeAttr('style');
+    }
+  }
+
+  bindDessertCardEvents();
+  $(window).on('resize', bindDessertCardEvents);
+});
+
+
 
 
 

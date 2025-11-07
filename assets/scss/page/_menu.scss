@@ -7,8 +7,166 @@
     &__list {
         @include flex ($justify: center, $align: center, $direction: row, $wrap: wrap, $gap: rem(16));
         &__card {
+            overflow: hidden;
+            position: relative;
+            img {
+                transition: transform 0.3s ease-in-out;
+            }
             p {
-                @include font-set ($size: 20)
+                @include font-set ($size: 20);
+                transition: transform 0.2s ease-in-out;
+            }
+            .card__overlay{
+                &__bg {
+                    transform: translateY(100%);
+                    transition: transform 1s ease, opacity 1s ease;
+                    width: 100%;
+                    height: 100%;
+                    background-color: $color-text;
+                    @include radius($radius: rem(20));
+                    opacity: 0.95;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 5;
+                }
+                &__inner {
+                    
+                    width: 100%;
+                    padding: 0 rem(20);
+                    @include flex ($justify: flex-start, $align: center, $direction: column, $wrap: nowrap, $gap: rem(20));
+                    color: $color-bg;
+                    z-index: 10;
+                    position: absolute;
+                    transform: translateY(100%);
+                    transition: transform 1s ease, opacity 1s ease;
+                    .overlay__close {
+                        display: none;
+                    }
+                    h3 {
+                        @include radius($radius: rem(20));
+                        @include font-set ($size:20, $weight: 600);
+                        border: 1px solid $color-bg;
+                        padding: rem(10) rem(36);
+                    }
+                    &__span {
+                        @include flex ($justify: flex-start, $align: center, $direction: column, $wrap: nowrap, $gap: rem(10));
+                    }
+                }
+                
+            }
+           &:hover .card__overlay__bg {
+                transform: translateY(0);
+           }
+           &:hover .card__overlay__inner {
+                transform: translateY(-50%);
+           }
+           &:hover .dessert__list__card__content img {
+                transform: scale(1.05);
+           }
+        }
+    }
+
+    @media (max-width: $bp-desktop) {
+        
+    }
+    @media (max-width: $bp-tablet) {
+        &__list {
+            .card__overlay{
+                display: none;
+                &__bg {
+                    transform: translateY(0);
+                    transition: transform 1s ease, opacity 1s ease;
+                }
+                &__inner {
+                        padding: 0 rem(16);
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        transition: transform 1s ease, opacity 1s ease;
+                    .overlay__close {
+                        display: block;
+                        position: absolute;
+                        right: rem(10);
+                        top: rem(-45);
+                        z-index: 10;
+                        img {
+                            width: rem(40);
+                        }
+                    }
+                    h3 {
+                        @include radius($radius: rem(20));
+                        @include font-set ($size:16, $weight: 600);
+                        border: 1px solid $color-bg;
+                        padding: rem(10) rem(20);
+                    }
+                    p{
+                        @include font-set ($size:16, $weight: 400);
+                        font-size: clamp(0.875rem, 0.8519rem + 0.1235vw, 1rem);
+                    }
+                    &__span {
+                        @include flex ($justify: flex-start, $align: center, $direction: row, $wrap: nowrap, $gap: rem(20));
+                    }
+                }   
+            }
+        }
+        .card:hover .card__overlay__bg {
+            transform: none;
+        }
+        .card:hover .card__overlay__inner {
+           
+            transform: translate(-50%, -50%);
+        }
+    }
+    @media (max-width: $bp-mobile-md) {
+        &__list {
+            @include flex ($justify: center, $align: center, $direction: row, $wrap: wrap, $gap: rem(12));
+            .card__overlay{
+                &__inner {
+                        padding: 0 rem(12);
+                        @include flex ($justify: flex-start, $align: center, $direction: column, $wrap: nowrap, $gap: rem(10));
+                    .overlay__close {
+                        top: rem(-28);
+                        right: rem(5);
+                        z-index: 10;
+                        img {
+                            width: rem(35);
+                        }
+                    }
+                    h3 {
+                        @include font-set ($size:14, $weight: 600);
+                        padding: rem(5) rem(15);
+                    }
+                    &__span {
+                        @include font-set ($size:14, $weight: 400);
+                        @include flex ($justify: flex-start, $align: center, $direction: row, $wrap: nowrap, $gap: rem(10));
+                    }
+                }   
+            }
+        }
+    }
+
+    @media (max-width: $bp-mobile-sm) {
+        &__list {
+            .card__overlay{
+                &__inner {
+                    padding: 0 rem(10);
+                    .overlay__close {
+                        top: rem(-10);
+                        right: rem(5);
+                        z-index: 10;
+                        img {
+                            width: rem(25);
+                        }
+                    }
+                    h3 {
+                        padding: rem(5) rem(10);
+                    }
+                    &__span {
+                        @include font-set ($size:12, $weight: 400);
+                        @include flex ($justify: flex-start, $align: center, $direction: row, $wrap: nowrap, $gap: rem(5));
+                    }
+                }   
             }
         }
     }

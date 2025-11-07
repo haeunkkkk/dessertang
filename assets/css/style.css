@@ -580,8 +580,12 @@ button {
   width: 100%;
   height: 100%;
 }
+.hero__swiper__content__img {
+  width: 100%;
+}
 .hero__swiper__content__img img {
   width: 100%;
+  height: 100%;
 }
 .hero__swiper__slide {
   width: 100%;
@@ -2881,11 +2885,206 @@ button {
   flex-wrap: wrap;
   gap: 1rem;
 }
+.dessert__list__card {
+  overflow: hidden;
+  position: relative;
+}
+.dessert__list__card img {
+  transition: transform 0.3s ease-in-out;
+}
 .dessert__list__card p {
   font-family: "Pretendard";
   font-size: 1.25rem;
   font-weight: 400;
   line-height: 1.2;
+  transition: transform 0.2s ease-in-out;
+}
+.dessert__list__card .card__overlay__bg {
+  transform: translateY(100%);
+  transition: transform 1s ease, opacity 1s ease;
+  width: 100%;
+  height: 100%;
+  background-color: #333333;
+  border-radius: 1.25rem;
+  opacity: 0.95;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+.dessert__list__card .card__overlay__inner {
+  width: 100%;
+  padding: 0 1.25rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 1.25rem;
+  color: #ffffff;
+  z-index: 10;
+  position: absolute;
+  transform: translateY(100%);
+  transition: transform 1s ease, opacity 1s ease;
+}
+.dessert__list__card .card__overlay__inner .overlay__close {
+  display: none;
+}
+.dessert__list__card .card__overlay__inner h3 {
+  border-radius: 1.25rem;
+  font-family: "Pretendard";
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.2;
+  border: 1px solid #ffffff;
+  padding: 0.625rem 2.25rem;
+}
+.dessert__list__card .card__overlay__inner__span {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 0.625rem;
+}
+.dessert__list__card:hover .card__overlay__bg {
+  transform: translateY(0);
+}
+.dessert__list__card:hover .card__overlay__inner {
+  transform: translateY(-50%);
+}
+.dessert__list__card:hover .dessert__list__card__content img {
+  transform: scale(1.05);
+}
+@media (max-width: 768px) {
+  .dessert__list .card__overlay {
+    display: none;
+  }
+  .dessert__list .card__overlay__bg {
+    transform: translateY(0);
+    transition: transform 1s ease, opacity 1s ease;
+  }
+  .dessert__list .card__overlay__inner {
+    padding: 0 1rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 1s ease, opacity 1s ease;
+  }
+  .dessert__list .card__overlay__inner .overlay__close {
+    display: block;
+    position: absolute;
+    right: 0.625rem;
+    top: -2.8125rem;
+    z-index: 10;
+  }
+  .dessert__list .card__overlay__inner .overlay__close img {
+    width: 2.5rem;
+  }
+  .dessert__list .card__overlay__inner h3 {
+    border-radius: 1.25rem;
+    font-family: "Pretendard";
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.2;
+    border: 1px solid #ffffff;
+    padding: 0.625rem 1.25rem;
+  }
+  .dessert__list .card__overlay__inner p {
+    font-family: "Pretendard";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.2;
+    font-size: clamp(0.875rem, 0.8519rem + 0.1235vw, 1rem);
+  }
+  .dessert__list .card__overlay__inner__span {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 1.25rem;
+  }
+  .dessert .card:hover .card__overlay__bg {
+    transform: none;
+  }
+  .dessert .card:hover .card__overlay__inner {
+    transform: translate(-50%, -50%);
+  }
+}
+@media (max-width: 500px) {
+  .dessert__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+  .dessert__list .card__overlay__inner {
+    padding: 0 0.75rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 0.625rem;
+  }
+  .dessert__list .card__overlay__inner .overlay__close {
+    top: -1.75rem;
+    right: 0.3125rem;
+    z-index: 10;
+  }
+  .dessert__list .card__overlay__inner .overlay__close img {
+    width: 2.1875rem;
+  }
+  .dessert__list .card__overlay__inner h3 {
+    font-family: "Pretendard";
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.2;
+    padding: 0.3125rem 0.9375rem;
+  }
+  .dessert__list .card__overlay__inner__span {
+    font-family: "Pretendard";
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.2;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 0.625rem;
+  }
+}
+@media (max-width: 390px) {
+  .dessert__list .card__overlay__inner {
+    padding: 0 0.625rem;
+  }
+  .dessert__list .card__overlay__inner .overlay__close {
+    top: -0.625rem;
+    right: 0.3125rem;
+    z-index: 10;
+  }
+  .dessert__list .card__overlay__inner .overlay__close img {
+    width: 1.5625rem;
+  }
+  .dessert__list .card__overlay__inner h3 {
+    padding: 0.3125rem 0.625rem;
+  }
+  .dessert__list .card__overlay__inner__span {
+    font-family: "Pretendard";
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 1.2;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 0.3125rem;
+  }
 }
 
 .btn {
@@ -2927,10 +3126,15 @@ button {
 
 .card {
   width: calc((100% - 48px) / 4);
-  height: 100%;
+  height: 25.4375rem;
   border-radius: 1.25rem;
   border: 1px solid #DEDEDE;
-  padding: 4.5rem 0 4.5rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 0;
   text-align: center;
 }
 .card div {
@@ -2946,6 +3150,7 @@ button {
 }
 @media (max-width: 1024px) {
   .card {
+    height: 16.6875rem;
     width: calc((100% - 16px) / 2);
     padding: 0 0 1.875rem 0;
   }
@@ -2963,6 +3168,7 @@ button {
 }
 @media (max-width: 768px) {
   .card {
+    height: 18.25rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -2998,6 +3204,7 @@ button {
 }
 @media (max-width: 500px) {
   .card {
+    height: 14.625rem;
     padding: 1rem 0 1rem 0;
   }
   .card img {
