@@ -3315,7 +3315,7 @@ button {
   align-items: flex-start;
   flex-direction: row;
   flex-wrap: nowrap;
-  gap: 6.25rem;
+  gap: 0;
 }
 .event__sub__content__title {
   display: flex;
@@ -3346,6 +3346,13 @@ button {
   flex-direction: row;
   flex-wrap: nowrap;
   gap: 1.25rem;
+}
+.event__sub__banner {
+  width: 80%;
+}
+.event__sub__banner img {
+  width: 100%;
+  height: 80%;
 }
 .event__sub__nav {
   width: 100%;
@@ -3395,6 +3402,631 @@ button {
   font-size: 1.5rem;
   font-weight: 400;
   line-height: 1.2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3475A8;
+  color: #ffffff;
+  border-radius: 40px;
+  border: 1px solid #3475A8;
+  padding: 10px 27px;
+  transition: all 0.2 ease-in-out;
+}
+.event__sub button:hover {
+  background-color: #ffffff;
+  color: #3475A8;
+  border: 1px solid #3475A8;
+}
+@media (max-width: 1024px) {
+  .event__sub__content__title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 3.875rem;
+  }
+  .event__sub__content__title h3 {
+    font-family: "Pretendard";
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  .event__sub__content__title p {
+    font-family: "Pretendard";
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  .event__sub button {
+    font-family: "Pretendard";
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+}
+@media (max-width: 768px) {
+  .event__sub__content {
+    padding: 0.625rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 0;
+  }
+  .event__sub__content__title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 0.625rem;
+  }
+  .event__sub__content__title h3 {
+    font-family: "Pretendard";
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  .event__sub__content__title p {
+    font-family: "Pretendard";
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  .event__sub__content__desc {
+    align-self: start;
+    margin-top: 0.3125rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 1.25rem;
+    font-family: "Pretendard";
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+  .event__sub__nav {
+    padding: 1rem 1.4375rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 2rem;
+  }
+  .event__sub__nav__next a {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 2.8125rem;
+  }
+  .event__sub__nav__next a h4, .event__sub__nav__next a p {
+    font-family: "Pretendard";
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+  .event__sub__nav__prev a {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 2.8125rem;
+  }
+  .event__sub__nav__prev a h4, .event__sub__nav__prev a p {
+    font-family: "Pretendard";
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+  .event__sub button {
+    font-family: "Pretendard";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+}
+@media (max-width: 390px) {
+  .event__sub__wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 3.125rem;
+  }
+  .event__sub__content__title p {
+    font-family: "Pretendard";
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+  .event__sub__content__desc {
+    font-family: "Pretendard";
+    font-size: 0.625rem;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+  .event__sub__nav {
+    padding: 1rem 1rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 1.5625rem;
+  }
+  .event__sub__nav__next a {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 1.25rem;
+  }
+  .event__sub__nav__prev a {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 1.25rem;
+  }
+}
+
+.inquiry {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 2.5rem;
+}
+.inquiry__tab ul {
+  position: relative;
+  border-radius: 2.5rem;
+  overflow: hidden;
+  background: #DEDEDE;
+}
+.inquiry__tab ul:after {
+  content: "";
+  width: 50%;
+  background: #3475A8;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 250ms ease-in-out;
+  border-radius: 2.5rem;
+}
+.inquiry__tab ul.slide:after {
+  left: 50%;
+}
+.inquiry__tab ul li {
+  text-transform: uppercase;
+  padding: 0.875rem 3.125rem;
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  transition: color 250ms ease-in-out;
+  user-select: none;
+}
+.inquiry__tab ul li a {
+  font-family: "Paperozi";
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #ffffff;
+}
+.inquiry__form {
+  width: 100%;
+  padding: 0 7.3125rem;
+}
+.inquiry__form .tab-slider--body {
+  background-color: #DEDEDE;
+  border-radius: 1.25rem;
+  padding: 2.5rem;
+}
+.inquiry__form form {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 1.875rem;
+}
+.inquiry__form label {
+  font-family: "Pretendard";
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
+.inquiry__form input {
+  border: 1px solid #ffffff;
+  background-color: #ffffff;
+  border-radius: 0.625rem;
+  padding: 0.6875rem 0.75rem;
+  width: 100%;
+}
+.inquiry__form input::placeholder {
+  font-family: "Pretendard";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #666666;
+}
+.inquiry__form .form__group {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 0.625rem;
+}
+.inquiry__form__group {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 1rem;
+}
+.inquiry__form__group .form__group {
+  width: calc((100% - 16px) / 2);
+}
+.inquiry__form__group .form__group input {
+  text-align: start;
+}
+.inquiry__form__message textarea {
+  resize: none;
+  border: 2px solid #ffffff;
+  background-color: #ffffff;
+  border-radius: 0.625rem;
+  padding: 0.6875rem 0.75rem;
+  width: 100% !important;
+  max-width: 100%;
+  height: 10rem;
+}
+.inquiry__form__message textarea::placeholder {
+  font-family: "Pretendard";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #666666;
+}
+.inquiry__form__franchise .region {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 1rem;
+}
+.inquiry__form__franchise .region__select {
+  width: calc((100% - 16px) / 2);
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 1rem;
+}
+.inquiry__form__franchise .region__select select {
+  display: none;
+}
+.inquiry__form__franchise .custom__select {
+  width: 100%;
+  position: relative;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  border-radius: 0.625rem;
+  padding: 0.6875rem 0.75rem;
+  border: 1px solid #ffffff;
+  font-family: "Pretendard";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #666666;
+}
+.inquiry__form__franchise .custom__select .arrow {
+  background-color: #3475A8;
+  opacity: 0.8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 20%;
+  height: 100%;
+  border-radius: 0 0.625rem 0.625rem 0;
+}
+.inquiry__form__franchise .custom__select .arrow img {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+.inquiry__form__franchise .custom__select .options {
+  display: none;
+  font-family: "Pretendard";
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #666666;
+  position: absolute;
+  top: 2.5625rem;
+  left: 0;
+  width: 100%;
+}
+.inquiry__form__franchise .custom__select .options li {
+  background-color: rgba(52, 118, 168, 0.8);
+  padding: 0.625rem;
+  color: #DEDEDE;
+  cursor: pointer;
+}
+.inquiry__form__franchise .custom__select .options li:hover {
+  background-color: #3475A8;
+  color: #ffffff;
+}
+.inquiry__form__franchise .custom__select.open .options {
+  display: block;
+}
+.inquiry__form__franchise .custom__select.open {
+  border-radius: 0.625rem 0.625rem 0 0;
+  border: 1px solid #999999;
+}
+.inquiry__form__franchise .custom__select.open .arrow {
+  transform: rotate(180deg);
+  border-radius: 0 0 0 0.625rem;
+}
+.inquiry__form__privacy {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0.625rem;
+  margin-left: 1rem;
+}
+.inquiry__form__privacy .checkbox__wrap input {
+  display: none;
+}
+.inquiry__form__privacy .checkbox__wrap .checkbox {
+  width: 0.9375rem;
+  height: 0.9375rem;
+  background-color: #ffffff;
+  border: 2px solid #666666;
+  border-radius: 0.1875rem;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.inquiry__form__privacy .checkbox__wrap .checkbox::before {
+  content: "";
+  position: absolute;
+  width: 0.9375rem;
+  height: 0.9375rem;
+  border-radius: 0.1875rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.inquiry__form__privacy .checkbox__wrap input:checked + .checkbox {
+  background-color: #666666;
+  border: 2px solid #666666;
+}
+.inquiry__form__privacy label {
+  font-family: "Pretendard";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #999999;
+}
+.inquiry__form__privacy a {
+  font-family: "Pretendard";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #666666;
+  text-decoration: underline;
+}
+.inquiry button {
+  font-family: "Pretendard";
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3475A8;
+  color: #ffffff;
+  border-radius: 40px;
+  border: 1px solid #3475A8;
+  padding: 10px 25px;
+  transition: all 0.2 ease-in-out;
+}
+.inquiry button:hover {
+  background-color: #ffffff;
+  color: #3475A8;
+  border: 1px solid #3475A8;
+}
+.inquiry input:focus,
+.inquiry textarea:focus,
+.inquiry select:focus {
+  outline: none;
+  border: 1px solid #999999;
+}
+@media (max-width: 1024px) {
+  .inquiry__form {
+    padding: 0;
+  }
+  .inquiry__form form {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 1.25rem;
+  }
+  .inquiry__form input::placeholder {
+    font-family: "Pretendard";
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+  .inquiry__form__franchise .region {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 0.625rem;
+  }
+  .inquiry__form__franchise .custom__select {
+    padding: 0.5625rem 0.75rem;
+    border: 1px solid #ffffff;
+    font-family: "Pretendard";
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+  .inquiry__form__franchise .custom__select .options {
+    top: 2.25rem;
+  }
+  .inquiry__form__franchise .custom__select .arrow img {
+    width: 0.9375rem;
+    height: 0.9375rem;
+  }
+}
+@media (max-width: 768px) {
+  .inquiry__form label {
+    font-family: "Pretendard";
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+  .inquiry__form input::placeholder {
+    font-family: "Pretendard";
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+  .inquiry__form__group {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 1.25rem;
+  }
+  .inquiry__form__group .form__group {
+    width: 100%;
+  }
+  .inquiry__form__message textarea::placeholder {
+    font-family: "Pretendard";
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+  .inquiry__form__franchise .custom__select .options {
+    top: 2.1875rem;
+  }
+  .inquiry__form__franchise .custom__select .options li {
+    font-family: "Pretendard";
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+}
+@media (max-width: 500px) {
+  .inquiry__form label {
+    font-family: "Pretendard";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+  .inquiry__form input::placeholder {
+    font-family: "Pretendard";
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+  .inquiry__form__group {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 1.25rem;
+  }
+  .inquiry__form__group .form__group {
+    width: 100%;
+  }
+  .inquiry__form__message textarea::placeholder {
+    font-family: "Pretendard";
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+  .inquiry__form__franchise .custom__select {
+    font-family: "Pretendard";
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+  .inquiry__form__franchise .custom__select .options {
+    top: 2.0625rem;
+  }
+  .inquiry__form__franchise .custom__select .options li {
+    font-family: "Pretendard";
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+  .inquiry__form__privacy {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 0;
+  }
+  .inquiry__form__privacy a {
+    margin-left: 1.25rem;
+  }
+}
+@media (max-width: 390px) {
+  .inquiry__tab ul li {
+    padding: 0.8125rem 1.875rem;
+  }
+  .inquiry__form .tab-slider--body {
+    padding: 1.875rem 1.25rem;
+  }
+  .inquiry button {
+    font-family: "Pretendard";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.2;
+  }
 }
 
 .btn {

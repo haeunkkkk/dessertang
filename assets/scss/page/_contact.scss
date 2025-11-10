@@ -1,1 +1,365 @@
 // contact 
+.inquiry {
+    @include flex ($justify: center, $align: center, $direction: column, $wrap: nowrap, $gap: rem(40));
+    &__tab {
+        ul {
+            position: relative;
+            border-radius: rem(40);
+            overflow: hidden;
+            background: $gray-100;
+            &:after{
+                content: "";
+                width: 50%;
+                background: $color-primary;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                transition: all 250ms ease-in-out;
+                border-radius: rem(40);
+            }
+            &.slide:after{
+                left: 50%;
+            }
+            li {
+                text-transform: uppercase;
+                padding: rem(14) rem(50);
+                position: relative;
+                z-index: 2;
+                display: inline-block;
+                transition: color 250ms ease-in-out;
+                user-select: none;
+                a {
+                    @include font-set($size: 16, $weight: 700, $line-height: 1, $family: $font-accent);
+                    color: $color-bg;
+                }
+            }
+        }
+    }
+
+    &__form {
+        width: 100%;
+        padding: 0 rem(117);
+        .tab-slider--body {
+            background-color: $gray-100;
+            @include radius($radius: rem(20));
+            padding: rem(40);
+        }
+        form {
+                @include flex ($justify: flex-start, $align: flex-start, $direction: column, $wrap: nowrap, $gap: rem(30));
+        }
+        label {
+            @include font-set($size: 20);
+        }
+        input {
+            border: 1px solid $color-bg;
+            background-color: $color-bg;
+            @include radius($radius: rem(10));
+            padding: rem(11) rem(12);
+            width: 100%;
+            &::placeholder {
+                @include font-set($size: 16);
+                color: $gray-400;
+            }
+        }
+        .form__group {
+            width: 100%;
+            @include flex ($justify: flex-start, $align: flex-start, $direction: column, $wrap: nowrap, $gap: rem(10));
+        }
+        &__group {
+            width: 100%;
+            @include flex ($justify: flex-start, $align: flex-start, $direction: row, $wrap: nowrap, $gap: rem(16)); 
+            .form__group {
+                width: calc((100% - 16px ) / 2);
+                input {
+                    text-align: start;
+                }
+            }
+        }
+        &__message {
+            textarea {
+                resize: none;
+                border: 2px solid $color-bg;
+                background-color: $color-bg;
+                @include radius($radius: rem(10));
+                padding: rem(11) rem(12);
+                width: 100% !important;
+                max-width: 100%;
+                height: rem(160);
+                &::placeholder {
+                    @include font-set($size: 16);
+                    color: $gray-400;
+                }
+            }
+        }
+
+        &__franchise {
+            .region {
+                width: 100%;
+                @include flex ($justify: center, $align: center, $direction: row, $wrap: nowrap, $gap: rem(16)); 
+            }
+            .region__select {
+                width: calc((100% - 16px ) / 2);
+                @include flex ($justify: flex-start, $align: flex-start, $direction: row, $wrap: nowrap, $gap: rem(16)); 
+                
+                select {
+                    display: none;
+                }
+            }
+            .custom__select {
+                width: 100%;
+                position: relative;
+                background-color: $color-bg;
+                @include flex ($justify: flex-start, $align: flex-start, $direction: row, $wrap: nowrap, $gap: rem(16));
+                @include radius($radius: rem(10));
+                padding: rem(11) rem(12); 
+                border: 1px solid $color-bg;  
+                @include font-set($size: 16);
+                color: $gray-400;
+                
+                .arrow {
+                    background-color: $color-primary;
+                    opacity: 0.8;
+                    @include flex ($justify: center, $align: center);
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    width: 20%;
+                    height: 100%;
+                    border-radius: 0 rem(10) rem(10) 0;
+                    img {
+                        width: rem(20);
+                        height: rem(20);
+                    }
+                }
+                .options {
+                    display: none;
+                    @include font-set($size: 14);
+                    color: $gray-400;
+                    position: absolute;
+                    top: rem(41);
+                    left: 0;
+                    width: 100%;
+                    
+                    li {
+                        background-color: rgba(52, 118, 168, 0.8);
+                        padding: rem(10);
+                        color: $gray-100;
+                        cursor: pointer;
+
+                        &:hover {
+                            background-color: $color-primary;
+                            color: $color-bg;
+                        }
+                    }
+                }
+                &.open .options {
+                    display: block;
+                }
+                &.open {
+                    border-radius: rem(10) rem(10) 0 0;
+                    border: 1px solid $gray-300;
+                }
+
+                &.open .arrow {
+                    transform: rotate(180deg);
+                    border-radius: 0 0 0 rem(10);
+                }
+            }
+        }
+        &__privacy {
+            width: 100%;
+            @include flex ($justify: flex-start, $align: flex-start, $direction: row, $wrap: nowrap, $gap: rem(10));
+            margin-left: rem(16);
+            
+            .checkbox__wrap{
+                input {
+                    display: none;
+                }
+                .checkbox {
+                    width: rem(15);
+                    height: rem(15);
+                    background-color: $color-bg;
+                    border: 2px solid $gray-400;
+                    @include radius($radius: rem(3));
+                    display: inline-block;
+                    position: relative;
+                    cursor: pointer;
+                    transition: background-color 0.3s ease;
+    
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        width: rem(15);
+                        height: rem(15);
+                        @include radius($radius: rem(3));
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+                input:checked + .checkbox {
+                    background-color: $gray-400;
+                    border: 2px solid $gray-400;
+                }
+            } 
+            label {
+                @include font-set($size: 16);
+                color: $gray-300;
+            }
+            a {
+                @include font-set($size: 16);
+                color: $gray-400;
+                text-decoration: underline;
+            }
+        }
+    }
+    button {
+        @include font-set($size: 20);
+        @include  button-style(
+                    $padding-y: 10px,
+                    $padding-x: 25px);
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+        outline: none;
+        border: 1px solid $gray-300;
+    }
+
+    @media (max-width: $bp-desktop) {
+        &__form {
+            padding: 0;
+            form {
+                @include flex ($justify: flex-start, $align: flex-start, $direction: column, $wrap: nowrap, $gap: rem(20));
+            }
+            input {
+                &::placeholder {
+                    @include font-set($size: 14);
+                }
+            }
+
+            &__franchise {
+                .region {
+                    @include flex ($justify: center, $align: center, $direction: row, $wrap: nowrap, $gap: rem(10)); 
+                }
+                .custom__select {
+                    padding: rem(9) rem(12);
+                    border: 1px solid $color-bg;  
+                    @include font-set($size: 14);
+                    .options {
+                        top: rem(36);
+                    }
+                    .arrow {
+                        img {
+                            width: rem(15);
+                            height: rem(15);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: $bp-tablet) {
+        &__form {
+            label {
+                @include font-set($size: 18);
+            }
+            input {
+                &::placeholder {
+                    @include font-set($size: 14);
+                }
+            }
+            &__group {
+                @include flex ($justify: flex-start, $align: flex-start, $direction: column, $wrap: nowrap, $gap: rem(20)); 
+                .form__group {
+                    width: 100%;
+                }
+            }
+            &__message {
+                textarea {
+                    &::placeholder {
+                        @include font-set($size: 14);
+                    }
+                }
+            }
+
+            &__franchise {
+                .custom__select {
+                    .options {
+                        top: rem(35);
+                       
+                        li {
+                            @include font-set($size: 14);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width: $bp-mobile-md) {
+        &__form {
+            label {
+                @include font-set($size: 16);
+            }
+            input {
+                &::placeholder {
+                    @include font-set($size: 12);
+                }
+            }
+            &__group {
+                @include flex ($justify: flex-start, $align: flex-start, $direction: column, $wrap: nowrap, $gap: rem(20)); 
+                .form__group {
+                    width: 100%;
+                }
+            }
+            &__message {
+                textarea {
+                    &::placeholder {
+                        @include font-set($size: 12);
+                    }
+                }
+            }
+
+            &__franchise {
+                .custom__select {
+                    @include font-set($size: 12);
+                    .options {
+                        top: rem(33);
+                       
+                        li {
+                            @include font-set($size: 12);
+                        }
+                    }
+                }
+            }
+
+            &__privacy {
+                @include flex ($justify: flex-start, $align: flex-start, $direction: column);
+                a {
+                    margin-left: rem(20);
+                }
+            }
+        }
+    }
+    @media (max-width: $bp-mobile-sm) {
+        &__tab {
+            ul {
+                li {
+                    padding: rem(13) rem(30);
+                }
+            }
+        }
+
+        &__form {
+            .tab-slider--body {
+                padding: rem(30) rem(20);
+            }
+        }
+        button {
+            @include font-set($size: 16);
+        }
+    }
+}

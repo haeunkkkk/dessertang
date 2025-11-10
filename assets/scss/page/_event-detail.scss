@@ -7,7 +7,7 @@
         padding: rem(30);
         @include radius($radius: rem(20));
         border: 1px solid $gray-100;
-        @include flex ($justify: space-between, $align: flex-start, $direction: row, $wrap: nowrap, $gap: rem(100));
+        @include flex ($justify: space-between, $align: flex-start, $direction: row, $wrap: nowrap);
         &__title {
             @include flex ($justify: flex-start, $align: flex-start, $direction: column, $wrap: nowrap, $gap: rem(33));
             h3 {
@@ -21,6 +21,13 @@
             align-self: end;
             color: $gray-400;
             @include flex ($justify: end, $align: end, $direction: row, $wrap: nowrap, $gap: rem(20));
+        }
+    }
+    &__banner {
+        width: 80%;
+        img {
+            width: 100%;
+            height: 80%;
         }
     }
     &__nav {
@@ -53,5 +60,100 @@
     }
     button {
         @include font-set ($size: 24);
+        @include button-style($padding-y: 10px,$padding-x: 27px);
+    }
+
+    @media (max-width: $bp-desktop) {
+        &__content {
+            &__title {
+                @include flex ($justify: flex-start, $align: flex-start, $direction: column, $wrap: nowrap, $gap: rem(62));
+                h3 {
+                    @include font-set ($size: 24, $weight: 600)
+                }
+                p {
+                    @include font-set ($size: 16, $weight: 600)
+                }
+            }
+        }
+        button {
+            @include font-set ($size: 20);
+        }
+    }
+    @media (max-width: $bp-tablet) {
+        &__content {
+            padding: rem(10);
+            @include flex ($justify: flex-start, $align: flex-start, $direction: column, $wrap: nowrap);
+            &__title {
+                @include flex ($justify: flex-start, $align: flex-start, $direction: column, $wrap: nowrap, $gap: rem(10));
+                h3 {
+                    @include font-set ($size: 16, $weight: 600);
+                }
+                p {
+                    @include font-set ($size: 14, $weight: 600);
+                }
+            }
+            &__desc {
+                align-self: start;
+                margin-top: rem(5);
+                @include flex ($justify: flex-start, $align: flex-start, $direction: row, $wrap: nowrap, $gap: rem(20));
+                @include font-set ($size: 12);
+            }
+        }
+        &__nav {
+            padding: rem(16) rem(23);
+            @include flex ($justify: flex-start, $align: flex-start, $direction: column, $wrap: nowrap, $gap: rem(32));
+
+            &__next {
+                a {
+                    @include flex ($justify: flex-start, $align: flex-start, $direction: row, $wrap: nowrap, $gap: rem(45));
+                    h4, p {
+                        @include font-set ($size: 14);
+                    }
+                }
+            }
+            
+            &__prev {
+                a {
+                    @include flex ($justify: flex-start, $align: flex-start, $direction: row, $wrap: nowrap, $gap: rem(45));
+                    h4, p {
+                        @include font-set ($size: 14);
+                    }
+                }
+            }
+        }
+        button {
+            @include font-set ($size: 16);
+        }
+    }
+    @media (max-width: $bp-mobile-sm) {
+        &__wrap {
+            @include flex ($justify: center, $align: center, $direction: column, $wrap: nowrap, $gap: rem(50));
+        }
+        &__content {
+            &__title {
+                p {
+                    @include font-set ($size: 12, $weight: 500);
+                }
+            }
+            &__desc {
+                @include font-set ($size: 10);
+            }
+        }
+        &__nav {
+            padding: rem(16) rem(16);
+            @include flex ($justify: flex-start, $align: flex-start, $direction: column, $wrap: nowrap, $gap: rem(25));
+
+            &__next {
+                a {
+                    @include flex ($justify: flex-start, $align: flex-start, $direction: row, $wrap: nowrap, $gap: rem(20));  
+                }
+            }
+            
+            &__prev {
+                a {
+                    @include flex ($justify: flex-start, $align: flex-start, $direction: row, $wrap: nowrap, $gap: rem(20));
+                }
+            }
+        }
     }
 }

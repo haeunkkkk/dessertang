@@ -81,48 +81,145 @@
     </header>
 
     <main>
-        <section class="section section__bottom inquiry">
-            <div class="container">
-                <div class="inquiry__tab">
-                    <button>고객문의</button>
-                    <button>가맹문의</button>
+        <section class="section section__bottom">
+            <div class="container inquiry">
+                <div class="inquiry__tab tab-slider--nav">
+                    <ul class="tab-slider--tabs">
+                        <li class="tab-slider--trigger active" rel="tab1">
+                            <a href="#">고객문의</a>
+                        </li>
+                        <li class="tab-slider--trigger" rel="tab2">
+                            <a href="#">가맹문의</a>
+                        </li>
+                    </ul>
                 </div>
-                <div class="inquiry__form">
-                    <form>
-                        <div class="form__group">
-                            <label for="customer-name">이름</label>
-                            <input type="text" id="customer-name" required placeholder="이름을 입력해 주세요.">
-                        </div>
-                        <div class="form__group">
-                            <label for="customer-phone">연락처</label>
-                            <input type="tell" id="customer-phone" required placeholder="연락처를 입력해 주세요.">
-                        </div>
-                        <div class="form__group">
-                            <label for="customer-message">문의내용</label>
-                            <input id="customer-message" required placeholder="이메일을 입력해 주세요.">
-                        </div>
-                    </form>
+                <div class="tab-slider--container inquiry__form">
+                    <div class="inquiry__form__customer tab-slider--body" id="tab1">
+                        <form>
+                            <div class="inquiry__form__group">
+                                <div class="form__group">
+                                    <label for="customer-name">이름</label>
+                                    <input type="text" id="customer-name" required placeholder="이름을 입력해 주세요.">
+                                </div>
+                                <div class="form__group">
+                                    <label for="customer-phone">연락처</label>
+                                    <input type="tell" id="customer-phone" required placeholder="연락처를 입력해 주세요.">
+                                </div>
+                            </div>
+                            <div class="form__group inquiry__form__message">
+                                <label for="customer-message">문의내용</label>
+                                <textarea name="message" id="customer-message" placeholder="문의 내용을 입력해주세요" required></textarea>
+                            </div>
+                            <div class="inquiry__form__privacy">
+                                <div class="inquiry__form__privacy__top">
+                                    <label class="checkbox__wrap">
+                                        <input type="checkbox" id="privacy" required>
+                                        <span class="checkbox"></span>
+                                    </label>
+                                    <label for="privacy">
+                                        개인정보 취급에 동의합니다.
+                                    </label>
+                                </div>
+                                <a href="#">
+                                    자세히보기
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="inquiry__form__franchise tab-slider--body" id="tab2">
+                        <form>
+                            <div class="inquiry__form__group">
+                                <div class="form__group">
+                                    <label for="franchise-name">이름</label>
+                                    <input type="text" id="franchise-name" required placeholder="이름을 입력해주세요.">
+                                </div>
+                                <div class="form__group">
+                                    <label for="franchise-email">이메일</label>
+                                    <input type="email" id="franchise-email" required placeholder="이메일을 입력해주세요">
+                                </div>
+                            </div>
+                            <div class="inquiry__form__group">
+                                <div class="form__group">
+                                        <label for="franchise-phone">연락처</label>
+                                        <input type="tel" id="franchise-phone" required placeholder="연락처를 입력해주세요">
+                                </div>
+                                <div class="form__group">
+                                    <label for="franchise-region">가맹 희망 지역</label>
+                                    <div class="region">
+                                        <div class="region__select">
+                                            <select required>
+                                                <option value="">지역 선택</option>
+                                                <option value="서울">서울</option>
+                                                <option value="경기">경기</option>
+                                                <option value="인천">인천</option>
+                                            </select>
+                                            <div class="custom__select">
+                                                <span class="selected">지역 선택</span>
+                                                <span class="arrow">
+                                                    <a href="#">
+                                                        <img src="./assets/images/select-btn.png" alt="화살표">
+                                                    </a>
+                                                </span>
+                                                <ul class="options">
+                                                    <li data-value="서울">서울</li>
+                                                    <li data-value="경기">경기</li>
+                                                    <li data-value="인천">인천</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="region__select">
+                                            <select required>
+                                                <option value="">시/군/구 선택</option>
+                                                <option value="강남구">강남구</option>
+                                                <option value="서구">서구</option>
+                                                <option value="광명시">광명시</option>
+                                                <option value="남동구">남동구</option>
+                                                <option value="부평구">부평구</option>
+                                            </select>
+                                            <div class="custom__select">
+                                                <span class="selected">구/군 선택</span>
+                                                <span class="arrow">
+                                                    <a href="#">
+                                                        <img src="./assets/images/select-btn.png" alt="화살표">
+                                                    </a>
+                                                </span>
+                                                <ul class="options">
+                                                    <li data-value="강남구">강남구</li>
+                                                    <li data-value="서구">서구</li>
+                                                    <li data-value="광명시">광명시</li>
+                                                    <li data-value="남동구">남동구</li>
+                                                    <li data-value="부평구">부평구</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>      
+                                </div>
+                            </div>
+                            <div class="form__group inquiry__form__message">
+                                <label for="franchise-message" >기타 문의내용</label>
+                                <textarea name="message" id="franchise-message" placeholder="문의 내용을 입력해주세요" required></textarea>
+                            </div>
+                            <div class="inquiry__form__privacy">
+                                <div class="inquiry__form__privacy__top">
+                                    <label class="checkbox__wrap">
+                                        <input type="checkbox" id="privacy" required>
+                                        <span class="checkbox"></span>
+                                    </label>
+                                    <label for="privacy">
+                                        개인정보 취급에 동의합니다.
+                                    </label>
+                                </div>
+                                <a href="#">
+                                    자세히보기
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+
                 </div>
-                <div class="inquiry__form">
-                    <form>
-                        <div class="form__group">
-                            <label for="franchise-name">이름</label>
-                            <input type="text" id="franchise-name" required placeholder="이름을 입력해주세요.">
-                        </div>
-                        <div class="form__group">
-                            <label for="franchise-phone">연락처</label>
-                            <input type="tel" id="franchise-phone" required placeholder="연락처를 입력해주세요">
-                        </div>
-                        <div class="form__group">
-                            <label for="franchise-region">가맹 희망 지역</label>
-                            <select required>
-                                <option value="">시/군</option>
-                                <option value="서울"></option>
-                            </select>
-                        </div>
-                    </form>
-                </div>
+                <button type="submit" class="btn">문의 요청 남기기 ></button>
             </div>
+            
         </section>
 
     </main>
