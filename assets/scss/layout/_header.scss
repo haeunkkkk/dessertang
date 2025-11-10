@@ -14,6 +14,12 @@
         padding: 0 20px;
     }
 
+    nav {
+        width: 100%;
+        height: 100%;
+        @include flex($justify: flex-end, $align: center);
+    }
+
     &__menu {
         @include flex($gap: rem(120));
 
@@ -31,14 +37,17 @@
             &__sub {
                 display: none;
                 position: absolute;
+                top: rem(100);
                 z-index: 20;
-                top: 130px;
+                width: 100%;
+                background-color: $color-bg;
 
                 li {
-                    padding-bottom: rem(30);
+                    padding-top: rem(30);
 
                     a {
-                        @include font-set($size: 20)
+                        font-size: clamp(0.875rem, 0.8056rem + 0.3704vw, 1.25rem);
+                        font-weight: 400;
                     }
                 }
             }
@@ -47,7 +56,7 @@
 
     &__overlay {
         display: none;
-        position: fixed;
+        position: absolute;
         top: rem(100);
         left: 0;
         width: 100%;
@@ -73,23 +82,29 @@
             display: none;
             position: fixed;
             top: rem(70);
+            left: 0;
+            z-index: 30;
 
-            .header__menu__list__sub {
-                display: block;
-                top: rem(60);
+            .header__menu {
+                width: 100%;
+                @include flex ($justify: space-around);
 
-                li {
-                    a {
-                        @include font-set($size: 16)
+                &__list {
+                    &__sub {
+                        display: block;
+                        top: rem(30);
+                        z-index: 100;
                     }
+
                 }
             }
+
 
         }
 
         &__overlay {
-            top: rem(1050);
             height: rem(430);
+            top: rem(70);
         }
 
         &__hamburger__btn {
@@ -106,8 +121,18 @@
             }
         }
 
-        &__hamburger__btn {
-            width: rem(30);
+        &__overlay {
+            top: rem(60);
+        }
+
+        &__hamburger__btn,
+        &__hamburger__close {
+            a {
+                img {
+
+                    width: rem(30);
+                }
+            }
         }
 
     }
@@ -121,8 +146,55 @@
             }
         }
 
-        &__btn {
-            width: rem(24);
+        &__menu {
+            width: 100%;
+
+            &__list {
+                a {
+                    @include font-set($size: 16, $weight: 600);
+                }
+            }
+        }
+
+        &__overlay {
+            top: rem(55);
+        }
+
+        &__hamburger__btn,
+        &__hamburger__close {
+            a {
+                img {
+
+                    width: rem(24);
+                }
+            }
+        }
+
+    }
+
+    @media (max-width: $bp-mobile-sm) {
+        &__menu {
+
+
+            &__list {
+                a {
+                    @include font-set($size: 15, $weight: 600);
+                }
+            }
+        }
+
+        &__overlay {
+            top: rem(55);
+        }
+
+        &__hamburger__btn,
+        &__hamburger__close {
+            a {
+                img {
+
+                    width: rem(20);
+                }
+            }
         }
 
     }

@@ -1,4 +1,4 @@
-// mainintro
+// main-intro
 $(function () {
   $('#main__intro__video').on('ended', function () {
     $('.main__intro__video__wrap').fadeOut(600, function () {
@@ -12,14 +12,18 @@ $(function () {
 //header 
 $(function () {
   function desktopMenu() {
-    if ($(window).width() > 1023) {
+    if ($(window).width() > 1024) {
       // hover 이벤트
-      $('.header__menu').off('mouseenter mouseleave click').on('mouseenter', function () {
+      $('.header__menu, .header__menu__list__sub, .header__overlay').off('mouseenter mouseleave click').on('mouseenter', function () {
         $('.header__menu__list__sub').stop(true, true).slideDown(200);
         $('.header__overlay').stop(true, true).fadeIn(200);
-      }).on('mouseleave', function () {
-        $('.header__menu__list__sub').stop(true, true).slideUp(200);
-        $('.header__overlay').stop(true, true).fadeOut(200);
+      }).on('mouseleave', function (e) {
+        if (
+          !$(e.relatedTarget).closest('.header__menu, .header__menu__list__sub, .header__overlay').length
+        ) {
+          $('.header__menu__list__sub').stop(true, true).slideUp(400);
+          $('.header__overlay').stop(true, true).fadeOut(400);
+        }
       });
 
       // 메뉴 클릭 시 닫기
@@ -35,8 +39,8 @@ $(function () {
   function mobileMenu() {
     // hover/desktop 이벤트 제거
     $('.header__menu__list').off('mouseenter mouseleave click');
-    $('.header__menu__list__sub').off('click');
-    $('.header__overlay').off('click');
+    $('.header__menu__list__sub').off('mouseenter mouseleave click');
+    $('.header__overlay').off('mouseenter mouseleave click');
 
     // 햄버거 버튼 클릭
     $('.header__hamburger__btn').off('click').on('click', function (e) {
@@ -88,7 +92,7 @@ $(window).on('scroll', function () {
   var scrollY = $(this).scrollTop();
   var startPoint = $('.innovation').offset().top;
 
-   if (scrollY > startPoint) {
+  if (scrollY > startPoint) {
     var relativeY = scrollY - startPoint;
     $('.innovation__bg__cloud__left').css('transform', 'translateX(' + (relativeY * 6) + 'px)');
     $('.innovation__bg__cloud__right').css('transform', 'translateX(' + (-relativeY * 6) + 'px)');
@@ -133,26 +137,26 @@ $(document).ready(function () {
 
 
 //contact
-$(function(){
+$(function () {
   $(".tab-slider--body").hide();
   $(".tab-slider--body:first").show();
 });
 
-$(".tab-slider--nav li").click(function() {
+$(".tab-slider--nav li").click(function () {
   $(".tab-slider--body").hide();
   var activeTab = $(this).attr("rel");
-  $("#"+activeTab).fadeIn();
-	if($(this).attr("rel") == "tab2"){
-		$('.tab-slider--tabs').addClass('slide');
-	}else{
-		$('.tab-slider--tabs').removeClass('slide');
-	}
+  $("#" + activeTab).fadeIn();
+  if ($(this).attr("rel") == "tab2") {
+    $('.tab-slider--tabs').addClass('slide');
+  } else {
+    $('.tab-slider--tabs').removeClass('slide');
+  }
   $(".tab-slider--nav li").removeClass("active");
   $(this).addClass("active");
 });
 
-$(function() {
-  $('.region__select').each(function() {
+$(function () {
+  $('.region__select').each(function () {
     const $wrapper = $(this);
     const $select = $wrapper.find('select');
     const $custom = $wrapper.find('.custom__select');
@@ -160,24 +164,24 @@ $(function() {
     const $options = $custom.find('li');
     const $optionList = $custom.find('.options');
 
-    $custom.on('click', function(e) {
+    $custom.on('click', function (e) {
       e.stopPropagation();
       $custom.toggleClass('open');
     });
 
-    $options.on('click', function(e) {
+    $options.on('click', function (e) {
       e.stopPropagation();
       const value = $(this).data('value');
       const text = $(this).text();
 
-      $selected.text(text);   
-      $select.val(value).change(); 
+      $selected.text(text);
+      $select.val(value).change();
       $custom.removeClass('open');
-      $optionList.slideUp(150); 
+      $optionList.slideUp(150);
     });
   });
 
-  $(document).on('click', function() {
+  $(document).on('click', function () {
     $('.custom__select').removeClass('open');
     $('.custom__select .options').slideUp(150);
   });
