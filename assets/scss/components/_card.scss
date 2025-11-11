@@ -60,3 +60,11 @@
         }
     }
 }
+
+.card02 {
+    @include radius($radius: rem(20));
+    @include flex($justify: center, $align: center, $direction: column, $wrap: nowrap, $gap: rem(30));
+    border: 1px solid $gray-100;
+    text-align: center;
+    padding: rem(50);
+}

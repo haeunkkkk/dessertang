@@ -1,12 +1,9 @@
 // main-intro
 $(function () {
-  // $('body').css('overflow', 'hidden');
-
   $('#main__intro__video').on('ended', function () {
-    $('.main__intro__video__wrap').fadeOut(600, function () {
-      $(this).remove();
+    $('.main__intro').fadeOut(800, function () {
+      $(this).remove(); 
       $('.main__content').fadeIn(600);
-      $('body').css('overflow', '');
     });
   });
 });

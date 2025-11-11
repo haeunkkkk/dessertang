@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>event-detail</title>
+    <title>Costlist</title>
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
@@ -75,63 +75,99 @@
                     </a>
                 </div>
             </div>
-        </header>
+    </header>
     
     <main>
-        <section class="section section__bottom event__sub">
+        <section class="section section__bottom costlist">
             <div class="container">
-                <div class="event__container__title">
-                    <h2>이벤트</h2>
-                    <p class="ticomg">
-                        디저탕에서만 즐길 수 있는 혜택
+                <div class="point__text">
+                    <div class="point__title">
+                        <h2>가맹 예상 비용</h2>
+                    </div>
+                    <div class="point__subtitle ticomg">
+                        <p>내가 가맹하면 얼마들까 미리 계산해보기</p>
+                    </div>
+                </div>
+                <div class="costlist__card__wrap ticomg">
+                    <div class="costlist__card costlist__card01 card02">
+                        <div class="costlist__card__img">
+                            <img src="./assets/images/costlist01.png" alt="기기 및 집기류">
+                        </div>
+                        <div class="costlist__card__text">
+                            <h3>기기 및 집기류</h3>
+                            <p>1,000만원</p>
+                        </div>
+                    </div>
+                    <div class="costlist__card costlist__card02 card02">
+                        <div class="costlist__card__img">
+                            <img src="./assets/images/costlist02.png" alt="보증금">
+                        </div>
+                        <div class="costlist__card__text">
+                            <h3>보증금</h3>
+                            <p>1,000만원</p>
+                        </div>
+                    </div>
+                    <div class="costlist__card costlist__card03 card02">
+                        <div class="costlist__card__img">
+                            <img src="./assets/images/costlist03.png" alt="인테리어">
+                        </div>
+                        <div class="costlist__card__text">
+                            <h3>인테리어</h3>
+                            <p>3,000만원</p>
+                            <span>점포 크기에 따라 변동 가능</span>
+                        </div>
+                    </div>
+                    <div class="costlist__card costlist__card04 card02">
+                        <div class="costlist__card__img">
+                            <img src="./assets/images/costlist04.png" alt="초도 물품비">
+                        </div>
+                        <div class="costlist__card__text">
+                            <h3>초도 물품비</h3>
+                            <p>300만원</p>
+                        </div>
+                    </div>
+                    <div class="costlist__card costlist__card05 card02">
+                        <div class="costlist__card__img">
+                            <img src="./assets/images/costlist05.png" alt="교육비">
+                        </div>
+                        <div class="costlist__card__text">
+                            <h3>교육비</h3>
+                            <p>200만원</p>
+                        </div>
+                    </div>
+                    <div class="costlist__card costlist__card06 card02">
+                        <div class="costlist__card__img">
+                            <img src="./assets/images/costlist06.png" alt="기기 및 집기류">
+                        </div>
+                        <div class="costlist__card__text">
+                            <h3>가맹비</h3>
+                            <p>500만원</p>
+                            <span>초기 가맹시에만 지불 <br>
+                            월별 로얄티 없음</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="costlist__text ticomg">
+                    <p class="costlist__text__desc">
+                        상권 및 점포 크기에 따라 변동 가능 <br>
+                        운영비(임대료, 인건비 등)는 별도
+                    </p>
+                    <p class="costlist__text__total">
+                        총 6,000만원
                     </p>
                 </div>
-                <div class="event__sub__wrap">
-                    <div class="event__sub__content">
-                        <div class="event__sub__content__title">
-                            <h3>
-                                [New]  여름시즌 신메뉴 출시
-                            </h3>
-                            <p>올여름, 입안 가득 시원한 신메뉴 나왔습니다.</p>
-                        </div>
-                        <div class="event__sub__content__desc">
-                            <p>작성자 DESSERTANG</p>
-                            <p>작성일 2025-10-02</p>
-                        </div>
-                    </div>
-                    <div class="event__sub__banner">
-                        <img src="./assets/images/event_banner01.jpg" alt="이벤트 배너">
-                    </div>
-                    <div class="event__sub__nav">
-                        <div class="event__sub__nav__next">
-                            <a href="#">
-                                <h4>다음글</h4>
-                                <p>[New]  여름시즌 신메뉴 출시</p>
-                            </a>
-                        </div>
-                        <div class="event__sub__nav__prev">
-                            <a href="#">
-                                <h4>이전글</h4>
-                                <p>[New]  여름시즌 신메뉴 출시</p>
-                            </a>
-                        </div>
-                    </div>
+                <div class="costlist__btn">
+                    <button class="btn">가맹문의 바로가기 ></button>
+                    <button class="btn btn__secondary">실시간 채팅 상담 바로가기 ></button>
                 </div>
-                <button class="btn">
-                    <a href="./event.html">목록으로 ></a>
-                </button>
             </div>
         </section>
     </main>
 
-
-
-
-
     <footer class="footer">
             <div class="footer__inner container">
                 <div class="footer__logo">
-                    <a href="./index.html">
+                    <a href="#">
                         <img src="./assets/images/logo.png" alt="디저탕">
                     </a>
                 </div>
@@ -187,7 +223,6 @@
                 </div>
             </div>
     </footer>
-
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>

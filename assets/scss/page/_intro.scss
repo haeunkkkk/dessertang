@@ -3,14 +3,31 @@
     inset: 0;
     z-index: 9999;
     overflow: hidden;
+    background: linear-gradient(
+        to bottom,    
+        #DDEEF5 0%,              
+        #ffffff 75%,            
+        #ffffff 100%            
+    );
     &__video__wrap {
-        width: 100%;
-        height: 100vh;
+        position: relative;
+        width: 100vw;
+        // height: 100%;
+        overflow: hidden;
         video {
             width: 100%;
             height: 110%;
-            object-fit: cover;
+            object-fit: contain;
             max-width: rem(1920);
+        }
+        img {
+            width: 100%;
+            height: rem(100);
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%);
+            opacity: 0.8;
         }
     }
 }
