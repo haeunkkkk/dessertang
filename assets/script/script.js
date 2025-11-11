@@ -1,9 +1,12 @@
 // main-intro
 $(function () {
+  // $('body').css('overflow', 'hidden');
+
   $('#main__intro__video').on('ended', function () {
     $('.main__intro__video__wrap').fadeOut(600, function () {
       $(this).remove();
       $('.main__content').fadeIn(600);
+      $('body').css('overflow', '');
     });
   });
 });
@@ -13,50 +16,56 @@ $(function () {
 $(function () {
   function desktopMenu() {
     if ($(window).width() > 1024) {
-      // hover 이벤트
-      $('.header__menu, .header__menu__list__sub, .header__overlay').off('mouseenter mouseleave click').on('mouseenter', function () {
-        $('.header__menu__list__sub').stop(true, true).slideDown(200);
-        $('.header__overlay').stop(true, true).fadeIn(200);
-      }).on('mouseleave', function (e) {
-        if (
-          !$(e.relatedTarget).closest('.header__menu, .header__menu__list__sub, .header__overlay').length
-        ) {
-          $('.header__menu__list__sub').stop(true, true).slideUp(400);
-          $('.header__overlay').stop(true, true).fadeOut(400);
-        }
+      // 이벤트 초기화
+      $('.header__menu__list, .header__menu__list__sub').off();
+
+      // 마우스 호버로 서브 메뉴 열기
+      $('.header__menu__list').on('mouseenter', function () {
+        $('.header__menu__list__sub').stop(true, true).slideUp(300);
+        $(this).children('.header__menu__list__sub').stop(true, true).slideDown(300);
       });
 
-      // 메뉴 클릭 시 닫기
-      $('.header__menu__list').on('click', function () {
-        $(this).children('.header__menu__list__sub').slideUp(200);
-        $('.header__overlay').fadeOut(200);
+      $('.header__menu__list').on('mouseleave', function (e) {
+        const $this = $(this);
+        const $submenu = $this.children('.header__menu__list__sub');
+        setTimeout(function () {
+          if (!$this.is(':hover') && !$submenu.is(':hover')) {
+            $submenu.stop(true, true).slideUp(300);
+          }
+        }, 100);
+      });
+
+      $('.header__menu__list__sub a').on('click', function () {
+        $('.header__menu__list__sub').slideUp(300);
       });
 
     } else {
       mobileMenu();
     }
   }
-  function mobileMenu() {
-    // hover/desktop 이벤트 제거
-    $('.header__menu__list').off('mouseenter mouseleave click');
-    $('.header__menu__list__sub').off('mouseenter mouseleave click');
-    $('.header__overlay').off('mouseenter mouseleave click');
 
-    // 햄버거 버튼 클릭
-    $('.header__hamburger__btn').off('click').on('click', function (e) {
+  function mobileMenu() {
+    // 이벤트 초기화
+    $('.header__hamburger__btn, .header__hamburger__close').off();
+
+    // 햄버거 클릭 → nav에 'on' 클래스 토글
+    $('.header__hamburger__btn').on('click', function(e){
       e.preventDefault();
-      $('nav').fadeIn(300);
-      $('header__menu__list__sub').show();
-      $('.header__overlay').fadeIn(200);
+      $('nav').addClass('on');           // 메뉴 열기
       $(this).hide();
       $('.header__hamburger__close').show();
     });
 
-    // 클로즈 버튼 또는 오버레이 클릭
-    $('.header__hamburger__close, .header__overlay, nav>a').off('click').on('click', function () {
-      $('nav').fadeOut(300);
-      $('.header__menu__list__sub').hide();
-      $('.header__overlay').fadeOut(200);
+    // 닫기 버튼 클릭 → nav에서 'on' 제거
+    $('.header__hamburger__close').on('click', function(){
+      $('nav').removeClass('on');       // 메뉴 닫기
+      $(this).hide();
+      $('.header__hamburger__btn').show();
+    });
+
+    // 메뉴 항목 클릭 → nav 닫기
+    $('nav').on('click', '.header__menu__list a, .header__menu__list__sub a', function(){
+      $('nav').removeClass('on');
       $('.header__hamburger__close').hide();
       $('.header__hamburger__btn').show();
     });
@@ -65,12 +74,14 @@ $(function () {
   // 초기 실행
   desktopMenu();
 
-  // 창 크기 변경 시
+  // 창 크기 변경 시 다시 실행
   $(window).on('resize', function () {
     desktopMenu();
   });
-
 });
+
+
+
 
 
 
@@ -186,6 +197,22 @@ $(function () {
     $('.custom__select .options').slideUp(150);
   });
 });
+
+
+//process
+var circles = $('.progress .circle'); 
+var bars = $('.progress .bar');       
+var i = 0;
+
+var interval = setInterval(function() {
+
+  $(circles[i]).addClass('active');
+
+  if(i > 0){
+    $(circles[i-1]).removeClass('active').addClass('done');
+  }
+  i++;
+}, 500);
 
 
 

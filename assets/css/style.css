@@ -188,19 +188,31 @@ button {
   gap: 0;
 }
 .header__menu {
+  height: 100%;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   flex-direction: row;
   flex-wrap: nowrap;
   gap: 7.5rem;
+}
+.header__menu__list {
+  height: 100%;
 }
 .header__menu__list a {
   font-family: "Pretendard";
   font-size: 1.25rem;
   font-weight: 600;
   line-height: 1.2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0;
   transition: color 0.3s ease;
+  width: 100%;
+  height: 100%;
 }
 .header__menu__list a:hover {
   color: #3475A8;
@@ -210,8 +222,11 @@ button {
   position: absolute;
   top: 6.25rem;
   z-index: 20;
-  width: 100%;
-  background-color: #ffffff;
+  background-color: lab(100% 0.01 -0.01 / 0.788);
+  padding: 0 1.875rem 1.875rem 1.875rem;
+}
+.header__menu__list__sub.on {
+  display: block;
 }
 .header__menu__list__sub li {
   padding-top: 1.875rem;
@@ -219,15 +234,8 @@ button {
 .header__menu__list__sub li a {
   font-size: clamp(0.875rem, 0.8056rem + 0.3704vw, 1.25rem);
   font-weight: 400;
-}
-.header__overlay {
-  display: none;
-  position: absolute;
-  top: 6.25rem;
-  left: 0;
-  width: 100%;
-  height: 31.25rem;
-  background-color: #ffffff;
+  text-align: left;
+  justify-content: flex-start;
 }
 .header__hamburger__btn, .header__hamburger__close {
   display: none;
@@ -240,11 +248,17 @@ button {
     width: 9.375rem;
   }
   .header nav {
-    display: none;
     position: fixed;
     top: 4.375rem;
     left: 0;
     z-index: 30;
+    height: auto;
+    background-color: lab(100% 0.01 -0.01 / 0.788);
+    padding: 1.25rem 0 18.75rem 0;
+    display: none;
+  }
+  .header nav.on {
+    display: block;
   }
   .header nav .header__menu {
     width: 100%;
@@ -256,13 +270,11 @@ button {
     gap: 0;
   }
   .header nav .header__menu__list__sub {
+    padding: 0;
+    background-color: transparent;
     display: block;
-    top: 1.875rem;
+    top: 3.125rem;
     z-index: 100;
-  }
-  .header__overlay {
-    height: 26.875rem;
-    top: 4.375rem;
   }
   .header__hamburger__btn {
     display: block;
@@ -275,7 +287,7 @@ button {
   .header__logo img {
     width: 6.875rem;
   }
-  .header__overlay {
+  .header nav {
     top: 3.75rem;
   }
   .header__hamburger__btn a img, .header__hamburger__close a img {
@@ -289,6 +301,9 @@ button {
   .header__logo img {
     width: 4.75rem;
   }
+  .header nav {
+    top: 3.4375rem;
+  }
   .header__menu {
     width: 100%;
   }
@@ -297,9 +312,6 @@ button {
     font-size: 1rem;
     font-weight: 600;
     line-height: 1.2;
-  }
-  .header__overlay {
-    top: 3.4375rem;
   }
   .header__hamburger__btn a img, .header__hamburger__close a img {
     width: 1.5rem;
@@ -311,9 +323,6 @@ button {
     font-size: 0.9375rem;
     font-weight: 600;
     line-height: 1.2;
-  }
-  .header__overlay {
-    top: 3.4375rem;
   }
   .header__hamburger__btn a img, .header__hamburger__close a img {
     width: 1.25rem;
@@ -583,16 +592,21 @@ button {
   }
 }
 
-.intro-video-wrap {
+.main__intro {
   position: fixed;
   inset: 0;
   z-index: 9999;
   overflow: hidden;
 }
-.intro-video-wrap .intro-video-wrap video {
+.main__intro__video__wrap {
   width: 100%;
-  height: 100%;
+  height: 100vh;
+}
+.main__intro__video__wrap video {
+  width: 100%;
+  height: 110%;
   object-fit: cover;
+  max-width: 120rem;
 }
 
 .main__intro {
@@ -4071,6 +4085,159 @@ button {
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.2;
+  }
+}
+
+.process .progress {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 3fr);
+  gap: 1rem;
+}
+.process .progress .circle {
+  background: #DEDEDE;
+  width: 6.25rem;
+  height: 6.25rem;
+  border-radius: 50%;
+}
+.process .progress .circle .label {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.process .progress .circle.done .label {
+  background: #DDEEF5;
+}
+.process .progress .circle.active .label {
+  background: #3475A8;
+}
+.process .progress .circle.active .title {
+  color: #3475A8;
+}
+.process__card {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  padding: 1.875rem 0;
+}
+.process__card__img {
+  position: relative;
+}
+.process__card__img img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 4.0625rem;
+  height: 4.0625rem;
+}
+.process__card__text .title {
+  font-family: "Pretendard";
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.2;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+.process__card__text h2 {
+  font-family: "Pretendard";
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 1.25rem;
+}
+.process__card__text p {
+  font-size: clamp(0.75rem, 0.7037rem + 0.2469vw, 1rem);
+}
+@media (max-width: 1024px) {
+  .process__card {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  .process__card__text .title {
+    font-family: "Pretendard";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+  .process__card__text h2 {
+    font-family: "Pretendard";
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+}
+@media (max-width: 500px) {
+  .process .progress .circle {
+    width: 5rem;
+    height: 5rem;
+  }
+  .process .progress .circle .label {
+    width: 5rem;
+    height: 5rem;
+  }
+  .process__card {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 0.75rem;
+    padding: 0;
+  }
+  .process__card__img img {
+    width: 3.125rem;
+    height: 3.125rem;
+  }
+  .process__card__text h2 {
+    font-family: "Pretendard";
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+}
+@media (max-width: 390px) {
+  .process .progress {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 3.125rem;
+  }
+  .process .progress .circle {
+    width: 3.75rem;
+    height: 3.75rem;
+  }
+  .process .progress .circle .label {
+    width: 3.75rem;
+    height: 3.75rem;
+  }
+  .process__card {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 0.75rem;
+    text-align: start;
+  }
+  .process__card__img img {
+    width: 2.1875rem;
+    height: 2.1875rem;
+  }
+  .process__card__text .title {
+    margin-bottom: 0.3125rem;
+  }
+  .process__card__text h2 {
+    margin-bottom: 0.625rem;
   }
 }
 

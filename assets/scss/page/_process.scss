@@ -1,1 +1,140 @@
 //pocess
+.process {
+    .progress {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 3fr);
+        gap: rem(16);
+      
+       .circle {
+            background: $gray-100;
+            width: rem(100); 
+            height: rem(100);
+            border-radius: 50%;
+        }
+        .circle .label {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+        .circle.done .label {
+            background: $color-skyblue ;
+        }
+        .circle.active .label {
+            background: $color-primary;
+        }
+        .circle.active .title {
+            color: $color-primary;
+        }
+    }
+
+    &__card {
+        @include flex ($justify: flex-start, $align: center, $direction: row, $wrap: nowrap, $gap: rem(16));
+        padding: rem(30) 0;
+        &__img {
+            position: relative;
+            img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: rem(65);
+                height: rem(65);
+            }
+        }
+        &__text {
+            .title {
+                @include font-set ($size: 20);
+                display: inline-block;
+                margin-bottom: rem(8);
+            }
+            h2 {
+                @include font-set ($size: 20, $weight: 600);
+                margin-bottom: rem(20);
+            }
+            p {
+                font-size: clamp(0.75rem, 0.7037rem + 0.2469vw, 1rem);
+            }
+        }
+    }
+
+
+    @media (max-width: $bp-desktop){
+        &__card {
+            @include flex ($justify: flex-start, $align: center, $direction: column, $wrap: nowrap, $gap: rem(16));
+            text-align: center;
+        }
+    }
+    @media (max-width: $bp-tablet){
+        &__card {
+            &__text {
+                .title {
+                    @include font-set ($size: 16);
+                }
+                h2 {
+                    @include font-set ($size: 18, $weight: 600);
+                }
+            }
+        }
+    }
+    @media (max-width: $bp-mobile-md){
+        .progress {
+            .circle {
+                width: rem(80); 
+                height: rem(80);
+            }
+            .circle .label {
+                width: rem(80); 
+                height: rem(80);
+            }
+        }
+        &__card {
+            @include flex ($justify: flex-start, $align: center, $direction: column, $wrap: nowrap, $gap: rem(12));
+            padding: 0;
+            &__img {
+                img {
+                    width: rem(50);
+                    height: rem(50);
+                }
+            }
+            &__text {
+                h2 {
+                    @include font-set ($size: 16, $weight: 600);
+                }
+            }
+        }
+    }
+    @media (max-width: $bp-mobile-sm){
+        .progress {
+            grid-template-columns: repeat(1, 1fr);
+            gap: rem(50);
+            .circle {
+                width: rem(60); 
+                height: rem(60);
+            }
+            .circle .label {
+                width: rem(60); 
+                height: rem(60);
+            }
+        }
+        &__card {
+            @include flex ($justify: flex-start, $align: center, $direction: row, $wrap: nowrap, $gap: rem(12));
+            text-align: start;
+            &__img {
+                img {
+                    width: rem(35);
+                    height: rem(35);
+                }
+            }
+            &__text {
+                .title {
+                    margin-bottom: rem(5);
+                }
+                h2 {
+                    margin-bottom: rem(10);
+                }
+            }
+        }
+    }
+}
