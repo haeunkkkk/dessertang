@@ -195,6 +195,9 @@ $(function () {
   });
 });
 
+//event
+
+
 
 //process
 var circles = $('.progress .circle'); 

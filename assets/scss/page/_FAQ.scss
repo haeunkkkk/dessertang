@@ -1,0 +1,160 @@
+.faq {
+    &__list {
+        margin-bottom: rem(16);
+        width: 100%;
+        height: 100%;
+        &__item {
+            border: 1px solid $gray-100;
+            border-radius: rem(20);
+            input[type="checkbox"] {
+                display: none;
+            }
+            &__title {
+                cursor: pointer;
+                display: block;
+                padding: rem(23) rem(40);
+                position: relative;
+                transition: all 0.4s ease-out;
+
+                &::after {
+                    border-style: solid;
+                    border-width: rem(1) rem(1) 0 0;
+                    content: " ";
+                    display: inline-block;
+                    float: right;
+                    width: rem(16);
+                    height: rem(16);
+                    position: relative;
+                    right: rem(10);
+                    top: rem(-30);
+                    transform: rotate(135deg);
+                    transition: 0.35s ease-in-out;
+                    vertical-align: top;
+                }
+                h3 {
+                    @include font-set ($size:20, $weight: 600);
+                    span {
+                        @include font-set ($size:32, $weight: 600);
+                        margin-right: rem(20);
+                    }
+                }
+                
+            }
+            &__wrapper {
+                max-height: 0px;
+                overflow: hidden;
+                transition: 0.25s ease-in-out;
+                &__content {
+                    margin-left: rem(40);
+                    @include flex ($justify: flex-start, $align: flex-start, $direction: row, $wrap: nowrap, $gap: rem(20));
+                    span {
+                        @include font-set ($size:32, $weight: 600);
+                    }
+                    p {
+                        @include font-set ($size:20);
+                        padding-bottom: rem(30);
+                    }
+                }
+            }
+        }
+    }
+    .faq__list__item__trigger:checked + .faq__list__item__title::after {
+      transform: rotate(-45deg); 
+    }
+    
+    .faq__list__item__trigger:checked
+      + .faq__list__item__title
+      + .faq__list__item__wrapper {
+      max-height: 350px;
+    }
+
+
+    @media (max-width: $bp-tablet) {
+        &__list {
+            &__item {
+                &__wrapper {
+                    &__content {
+                        span {
+                            @include font-set ($size:32, $weight: 600);
+                        }
+                        p {
+                            @include font-set ($size:20);
+                            padding: 0 rem(16) rem(30) 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width: $bp-mobile-md) {
+        &__list {
+            margin-bottom: rem(12);
+            &__item {
+                &__title {
+                    padding: rem(20) rem(20);
+                    &::after {
+                        width: rem(10);
+                        height: rem(10);
+                        right: 0;
+                        top: rem(-40);
+                    }
+                    h3 {
+                        @include font-set ($size:16, $weight: 600);
+                        span {
+                            @include font-set ($size:28, $weight: 600);
+                            margin-right: rem(12);
+                        }
+                    }
+                    
+                }
+                &__wrapper {
+                    &__content {
+                        margin-left: rem(20);
+                        @include flex ($justify: flex-start, $align: flex-start, $direction: row, $wrap: nowrap, $gap: rem(12));
+                        span {
+                            @include font-set ($size:28, $weight: 600);
+                        }
+                        p {
+                            @include font-set ($size:14);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width: $bp-mobile-sm) {
+        &__list {
+            &__item {
+                &__title {
+                    padding: rem(12) rem(12);
+                    &::after {
+                        top: rem(-30);
+                    }
+                    h3 {
+                        @include font-set ($size:14, $weight: 600);
+                        span {
+                            @include font-set ($size:24, $weight: 600);
+                            margin-right: rem(5);
+                        }
+                    }
+                    
+                }
+                &__wrapper {
+                    &__content {
+                        margin-left: rem(12);
+                        @include flex ($justify: flex-start, $align: flex-start, $direction: row, $wrap: nowrap, $gap: rem(10));
+                        span {
+                            @include font-set ($size:24, $weight: 600);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+
+
+
