@@ -4388,6 +4388,329 @@ button {
   background-color: #3475A8;
   color: #ffffff;
 }
+@media (max-width: 1024px) {
+  .costlist .costlist__card__wrap {
+    grid-template-columns: repeat(3, 3fr);
+    grid-template-areas: "card1 card3 card4" "card2 card3 card5" "card6 card6 card5";
+  }
+  .costlist .costlist__card__wrap .costlist__card {
+    padding: 1.875rem;
+  }
+  .costlist .costlist__card__wrap .costlist__card03 img {
+    width: 9.375rem;
+  }
+  .costlist .costlist__card__wrap .costlist__card05 img {
+    width: 9.375rem;
+  }
+  .costlist .costlist__card__wrap .costlist__card06 img {
+    width: 9.375rem;
+  }
+  .costlist .costlist__text__desc {
+    font-family: "Pretendard";
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+  .costlist .costlist__text__total {
+    font-family: "Pretendard";
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  .costlist .costlist__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 1.25rem;
+  }
+}
+@media (max-width: 768px) {
+  .costlist .costlist__card__wrap {
+    grid-template-columns: repeat(2, 4fr);
+    grid-template-areas: "card1 card3" "card2 card3" "card6 card6" "card4 card5";
+  }
+  .costlist .costlist__card__wrap .costlist__card {
+    padding: 1.25rem;
+  }
+  .costlist .costlist__card__wrap .costlist__card__text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 0.625rem;
+  }
+  .costlist .costlist__card__wrap .costlist__card__text h3 {
+    font-family: "Pretendard";
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+  .costlist .costlist__card__wrap .costlist__card__text p {
+    font-family: "Pretendard";
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  .costlist .costlist__card__wrap .costlist__card__text span {
+    font-family: "Pretendard";
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+  .costlist .costlist__card__wrap .costlist__card03 img {
+    width: 8.125rem;
+  }
+  .costlist .costlist__card__wrap .costlist__card05 img {
+    width: 6.25rem;
+  }
+  .costlist .costlist__card__wrap .costlist__card06 {
+    height: 15.125rem;
+  }
+  .costlist .costlist__card__wrap .costlist__card06 img {
+    width: 8.125rem;
+  }
+  .costlist .costlist__text__desc {
+    font-family: "Pretendard";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+  .costlist .costlist__text__total {
+    font-family: "Pretendard";
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  .costlist .costlist__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 0.625rem;
+  }
+  .costlist .costlist__btn .btn {
+    font-family: "Pretendard";
+    font-size: 1.0625rem;
+    font-weight: 400;
+    line-height: 1.2;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3475A8;
+    color: #ffffff;
+    border-radius: 40px;
+    border: 1px solid #3475A8;
+    padding: 10px 30px;
+    transition: all 0.2 ease-in-out;
+  }
+  .costlist .costlist__btn .btn:hover {
+    background-color: #ffffff;
+    color: #3475A8;
+    border: 1px solid #3475A8;
+  }
+  .costlist .costlist__btn .btn__secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    color: #3475A8;
+    border-radius: 40px;
+    border: 1px solid #3475A8;
+    padding: 10px 30px;
+    transition: all 0.2 ease-in-out;
+  }
+  .costlist .costlist__btn .btn__secondary:hover {
+    background-color: #ffffff;
+    color: #3475A8;
+    border: 1px solid #3475A8;
+  }
+}
+@media (max-width: 500px) {
+  .costlist .costlist__card__wrap {
+    grid-template-columns: repeat(2, 3fr);
+    grid-template-areas: "card1 card3" "card2 card6" "card4 card5";
+  }
+  .costlist .costlist__card__wrap .costlist__card {
+    height: 100%;
+    padding: 1.25rem;
+  }
+  .costlist .costlist__card__wrap .costlist__card img {
+    width: 5rem;
+  }
+  .costlist .costlist__card__wrap .costlist__card__text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 0.625rem;
+  }
+  .costlist .costlist__card__wrap .costlist__card__text h3 {
+    font-family: "Pretendard";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+  .costlist .costlist__card__wrap .costlist__card__text p {
+    font-family: "Pretendard";
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  .costlist .costlist__card__wrap .costlist__card__text span {
+    font-family: "Pretendard";
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+  .costlist .costlist__card__wrap .costlist__card03 .costlist__card__text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 0.3125rem;
+  }
+  .costlist .costlist__card__wrap .costlist__card06 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 1.25rem;
+  }
+  .costlist .costlist__card__wrap .costlist__card06 img {
+    width: 5rem;
+  }
+  .costlist .costlist__card__wrap .costlist__card06 .costlist__card__text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 0.3125rem;
+  }
+  .costlist .costlist__text__desc {
+    font-family: "Pretendard";
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+  .costlist .costlist__text__total {
+    font-family: "Pretendard";
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  .costlist .costlist__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 1.25rem;
+  }
+  .costlist .costlist__btn .btn {
+    font-family: "Pretendard";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+}
+@media (max-width: 390px) {
+  .costlist .costlist__card__wrap .costlist__card {
+    padding: 0.625rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 0.625rem;
+  }
+  .costlist .costlist__card__wrap .costlist__card img {
+    width: 3.125rem;
+  }
+  .costlist .costlist__card__wrap .costlist__card__text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 0.3125rem;
+  }
+  .costlist .costlist__card__wrap .costlist__card__text h3 {
+    font-family: "Pretendard";
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+  .costlist .costlist__card__wrap .costlist__card__text p {
+    font-family: "Pretendard";
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  .costlist .costlist__card__wrap .costlist__card__text span {
+    font-family: "Pretendard";
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+  .costlist .costlist__card__wrap .costlist__card03 .costlist__card__text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 0.125rem;
+  }
+  .costlist .costlist__card__wrap .costlist__card06 .costlist__card__text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 0.125rem;
+  }
+  .costlist .costlist__text {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 0.625rem;
+  }
+  .costlist .costlist__text__desc {
+    font-family: "Pretendard";
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+  .costlist .costlist__text__total {
+    font-family: "Pretendard";
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  .costlist .costlist__btn {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 1.25rem;
+  }
+  .costlist .costlist__btn .btn {
+    font-family: "Pretendard";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+}
 
 .btn {
   display: inline-flex;

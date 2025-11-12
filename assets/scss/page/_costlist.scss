@@ -64,9 +64,6 @@
                 background-color: $color-bg;
                 color: $color-primary;
             }
-        }
-
-        .btn {
             &__secondary {
                 @include font-set ($size: 20);
                 @include button-style($bg: $color-bg, $color: $color-primary, $border: 1px solid $color-primary, $padding-y: 13px, $padding-x: 40px);
@@ -74,6 +71,214 @@
                     background-color: $color-primary;
                     color: $color-bg;
                 }
+            }
+        }
+    }
+
+    @media (max-width: $bp-desktop) {
+        .costlist__card__wrap {
+            grid-template-columns: repeat(3, 3fr);
+            grid-template-areas:
+                "card1 card3 card4"
+                "card2 card3 card5"
+                "card6 card6 card5";
+            .costlist__card {
+                padding: rem(30);
+            }
+            .costlist__card03 {
+                img {
+                    width: rem(150);
+                }
+            }
+            .costlist__card05 {
+                img {
+                    width: rem(150);
+                }
+            }
+            .costlist__card06 {
+                img {
+                    width: rem(150);
+                }
+            }
+        }
+        
+        .costlist__text {
+            &__desc {
+                @include font-set ($size: 20);
+            }
+            &__total {
+                @include font-set ($size: 28, $weight: 600);
+            }
+        }
+        .costlist__btn {
+            @include flex($justify: center, $align: center, $gap: rem(20));
+        }
+    }
+    @media (max-width: $bp-tablet) {
+        .costlist__card__wrap {
+            grid-template-columns: repeat(2, 4fr);
+            grid-template-areas:
+                "card1 card3"
+                "card2 card3"
+                "card6 card6"
+                "card4 card5";
+            .costlist__card {
+                padding: rem(20);
+                &__text {
+                @include flex($justify: center, $align: center, $direction: column, $wrap: nowrap, $gap: rem(10));
+                h3 {
+                    @include font-set ($size: 18);
+                }
+                p {
+                    @include font-set ($size: 20, $weight: 600);
+                }
+                span {
+                    @include font-set ($size: 18);
+                }
+            }
+            }
+            .costlist__card03 {
+                img {
+                    width: rem(130);
+                }
+            }
+            .costlist__card05 {
+                img {
+                    width: rem(100);
+                }
+            }
+            .costlist__card06 {
+                height: rem(242);
+                img {
+                    width: rem(130);
+                }
+            }
+        }
+        
+        .costlist__text {
+            &__desc {
+                @include font-set ($size: 16);
+            }
+            &__total {
+                @include font-set ($size: 24, $weight: 600);
+            }
+        }
+        .costlist__btn {
+            @include flex($justify: center, $align: center, $gap: rem(10));
+            .btn {
+                @include font-set ($size: 17);
+                @include button-style($padding-y: 10px, $padding-x: 30px);
+                &__secondary {
+                    @include button-style($bg: $color-bg, $color: $color-primary, $border: 1px solid $color-primary, $padding-y: 10px, $padding-x: 30px);
+                }
+            }
+        }
+    }
+    @media (max-width: $bp-mobile-md) {
+        .costlist__card__wrap {
+            grid-template-columns: repeat(2, 3fr);
+            grid-template-areas:
+                "card1 card3"
+                "card2 card6"
+                "card4 card5";
+            .costlist__card {
+                height: 100%;
+                padding: rem(20);
+                img {
+                    width: rem(80);
+                }
+                &__text {
+                    @include flex($justify: center, $align: center, $direction: column, $wrap: nowrap, $gap: rem(10));
+                    h3 {
+                        @include font-set ($size: 16);
+                    }
+                    p {
+                        @include font-set ($size: 16, $weight: 600);
+                    }
+                    span {
+                        @include font-set ($size: 12);
+                    }
+
+                }
+            }
+            .costlist__card03 {
+                .costlist__card__text {
+                    @include flex($justify: center, $align: center, $direction: column, $wrap: nowrap, $gap: rem(5));
+                }
+            }
+            .costlist__card06 {
+                @include flex($justify: center, $align: center, $direction: column, $wrap: nowrap, $gap: rem(20));
+                img {
+                    width: rem(80);
+                }
+                .costlist__card__text {
+                    @include flex($justify: center, $align: center, $direction: column, $wrap: nowrap, $gap: rem(5));
+                }
+            }
+        }
+        
+        .costlist__text {
+            &__desc {
+                @include font-set ($size: 14);
+            }
+            &__total {
+                @include font-set ($size: 20, $weight: 600);
+            }
+        }
+        .costlist__btn {
+            @include flex($justify: center, $align: center, $direction: column, $gap: rem(20));
+            .btn {
+                @include font-set ($size: 16);
+            }
+        }
+    }
+    @media (max-width: $bp-mobile-sm) {
+        .costlist__card__wrap {
+            .costlist__card {
+                padding: rem(10);
+                @include flex($justify: center, $align: center, $direction: column, $wrap: nowrap, $gap: rem(10));
+                img {
+                    width: rem(50);
+                }
+                &__text {
+                    @include flex($justify: center, $align: center, $direction: column, $wrap: nowrap, $gap: rem(5));
+                    h3 {
+                        @include font-set ($size: 14);
+                    }
+                    p {
+                        @include font-set ($size: 14, $weight: 600);
+                    }
+                    span {
+                        @include font-set ($size: 12);
+                    }
+
+                }
+            }
+            .costlist__card03 {
+                .costlist__card__text {
+                    @include flex($justify: center, $align: center, $direction: column, $wrap: nowrap, $gap: rem(2));
+                }
+            }
+            .costlist__card06 {
+                .costlist__card__text {
+                    @include flex($justify: center, $align: center, $direction: column, $wrap: nowrap, $gap: rem(2));
+                }
+            }
+        }
+        
+        .costlist__text {
+            @include flex($justify: flex-start, $align: flex-start, $direction: column, $gap: rem(10));
+            &__desc {
+                @include font-set ($size: 14);
+            }
+            &__total {
+                @include font-set ($size: 20, $weight: 600);
+            }
+        }
+        .costlist__btn {
+            @include flex($justify: flex-start, $align: flex-start, $direction: column, $gap: rem(20));
+            .btn {
+                @include font-set ($size: 16);
             }
         }
     }
