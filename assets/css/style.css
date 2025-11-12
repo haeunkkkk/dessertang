@@ -428,7 +428,7 @@ button {
     padding: 3.75rem 0;
   }
   .footer__logo img {
-    width: 9.4375rem;
+    width: 8.75rem;
   }
   .footer__center {
     display: flex;
@@ -438,13 +438,34 @@ button {
     flex-wrap: nowrap;
     gap: 0.9375rem;
   }
+  .footer__center__info p {
+    padding-right: 0.625rem;
+    padding-left: 0.625rem;
+  }
+  .footer__center__address p {
+    padding-right: 0.625rem;
+    padding-left: 0.625rem;
+  }
+  .footer__center__address p:last-child {
+    padding-right: 0;
+  }
+  .footer__center__privacy a {
+    padding-right: 0.625rem;
+    padding-left: 0.625rem;
+  }
+  .footer__center__privacy a:last-child {
+    padding-right: 0;
+  }
+  .footer__center__copyright p {
+    padding-left: 0.625rem;
+  }
   .footer__sns {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: row;
     flex-wrap: nowrap;
-    gap: 1.25rem;
+    gap: 0.9375rem;
   }
   .footer__sns img {
     width: 1.875rem;
@@ -608,7 +629,6 @@ button {
   width: 100%;
   height: 110%;
   object-fit: contain;
-  max-width: 120rem;
 }
 .main__intro__video__wrap img {
   width: 100%;
@@ -5104,4 +5124,57 @@ button {
   border: 1px solid #DEDEDE;
   text-align: center;
   padding: 3.125rem;
+}
+
+.modal__terms, .modal__privacy {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+}
+.modal__content {
+  background-color: var(--white-color);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  border: 1px solid #646464;
+  border-radius: 1.875rem;
+  width: 43.75rem;
+  height: 80vh;
+  padding: 2.5rem 2.5rem;
+  overflow: hidden;
+}
+.modal__content .close__btn {
+  float: right;
+}
+.modal__content h2 {
+  font-family: "Pretendard";
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 1.875rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid #333333;
+}
+.modal__scroll {
+  max-height: calc(80vh - 200px);
+  overflow-y: scroll;
+}
+.modal__scroll p {
+  font-family: "Pretendard";
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.2;
+  padding-left: 1.875rem;
+}
+.modal .no-scroll {
+  overflow: hidden;
+  width: 100%;
 }

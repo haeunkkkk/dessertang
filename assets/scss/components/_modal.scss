@@ -1,0 +1,51 @@
+.modal {
+    &__terms,
+    &__privacy {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 1000;
+    }
+    &__content {
+        background-color: var(--white-color);
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: $color-bg;
+        border: 1px solid #646464;
+        border-radius: rem(30);
+        width: rem(700);
+        height: 80vh;
+        padding: rem(40) rem(40);
+        overflow: hidden;
+        .close__btn {
+            float: right;
+        }
+        h2 {
+            @include font-set ($size: 32, $weight: 600);
+            margin-bottom: rem(30);
+            padding-bottom: rem(20);
+            border-bottom: 1px solid $color-text;
+        }
+    }
+    &__scroll {
+        max-height: calc(80vh - 200px);
+        overflow-y: scroll;
+        p {
+            @include font-set ($size: 24);
+            padding-left: rem(30);
+        }
+    }
+
+    .no-scroll {
+        overflow: hidden;
+        width: 100%;
+    }
+}
+

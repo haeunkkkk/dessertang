@@ -83,16 +83,45 @@
 
         &__logo {
             img {
-                width: rem(151);
+                width: rem(140);
             }
         }
 
         &__center {
             @include flex ($justify: flex-start, $align: flex-start, $direction: column, $wrap: nowrap, $gap: rem(15));
+            &__info {
+                p {
+                    padding-right: rem(10);
+                    padding-left: rem(10);
+                }
+            }
+            &__address {
+                p {
+                    padding-right: rem(10);
+                    padding-left: rem(10);
+                    &:last-child {
+                        padding-right: 0;
+                    }
+                }
+            }
+            &__privacy {
+                a {
+                    padding-right: rem(10);
+                    padding-left: rem(10);
+                    &:last-child {
+                        padding-right: 0;
+                    }
+                }
+            }
+            &__copyright {
+                p {
+                    padding-left: rem(10);
+                }
+            }
         }
 
         &__sns {
-            @include flex ($justify: flex-start, $align: flex-start, $direction: row, $wrap: nowrap, $gap: rem(20));
+            @include flex ($justify: flex-start, $align: flex-start, $direction: row, $wrap: nowrap, $gap: rem(15));
             img {
                 width: rem(30);
                 height: rem(30);

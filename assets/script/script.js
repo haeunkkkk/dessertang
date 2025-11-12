@@ -215,6 +215,52 @@ var interval = setInterval(function() {
 }, 500);
 
 
+// modal
+$(document).ready(function () {
+  const modalConfigs = [
+    {
+      modal: $(".modal__terms"),
+      openBtns: $(".open__terms"),
+      closeBtns: $(".close__terms")
+    },
+    {
+      modal: $(".modal__privacy"),
+      openBtns: $(".open__privacy"),
+      closeBtns: $(".close__privacy")
+    }
+  ];
+
+  let scrollPosition = 0;
+
+  modalConfigs.forEach(({ modal, openBtns, closeBtns }) => {
+    if (modal.length === 0) return;
+
+    openBtns.on("click", function () {
+      scrollPosition = $(window).scrollTop();
+      $("body").css("top", `-${scrollPosition}px`).addClass("no-scroll");
+      modal.show();
+    });
+
+    const closeModal = () => {
+      modal.hide();
+      $("body").removeClass("no-scroll").css("top", "");
+      $(window).scrollTop(scrollPosition);
+    };
+
+ 
+    closeBtns.on("click", closeModal);
+
+  
+    modal.on("click", function (e) {
+      if (e.target === this) closeModal();
+    });
+
+    modal.find(".modal__content").on("click", function (e) {
+      e.stopPropagation();
+    });
+  });
+});
+
 
 
 
