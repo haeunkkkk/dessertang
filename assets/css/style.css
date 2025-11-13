@@ -333,7 +333,7 @@ button {
   background-color: #333333;
 }
 .footer__inner {
-  padding: 3.4375rem 0;
+  padding: 3.4375rem 1.25rem;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -425,7 +425,7 @@ button {
 }
 @media (max-width: 1024px) {
   .footer__inner {
-    padding: 3.75rem 0;
+    padding: 3.75rem 0.625rem;
   }
   .footer__logo img {
     width: 8.75rem;
@@ -442,12 +442,18 @@ button {
     padding-right: 0.625rem;
     padding-left: 0.625rem;
   }
+  .footer__center__info p:first-child {
+    padding-left: 0;
+  }
   .footer__center__address p {
     padding-right: 0.625rem;
     padding-left: 0.625rem;
   }
   .footer__center__address p:last-child {
     padding-right: 0;
+  }
+  .footer__center__address p:first-child {
+    padding-left: 0;
   }
   .footer__center__privacy a {
     padding-right: 0.625rem;
@@ -456,8 +462,14 @@ button {
   .footer__center__privacy a:last-child {
     padding-right: 0;
   }
+  .footer__center__privacy a:first-child {
+    padding-left: 0;
+  }
   .footer__center__copyright p {
     padding-left: 0.625rem;
+  }
+  .footer__center__copyright p:first-child {
+    padding-left: 0;
   }
   .footer__sns {
     display: flex;
@@ -465,7 +477,7 @@ button {
     align-items: flex-start;
     flex-direction: row;
     flex-wrap: nowrap;
-    gap: 0.9375rem;
+    gap: 0.625rem;
   }
   .footer__sns img {
     width: 1.875rem;
@@ -474,16 +486,13 @@ button {
 }
 @media (max-width: 768px) {
   .footer__inner {
-    padding: 0.75rem 0;
+    padding: 0.75rem 1.25rem;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
     flex-wrap: nowrap;
     gap: 1.25rem;
-  }
-  .footer__logo {
-    padding-left: 1.25rem;
   }
   .footer__logo img {
     width: 6.25rem;
@@ -515,7 +524,6 @@ button {
     line-height: 1.2;
   }
   .footer__sns {
-    padding-left: 1.25rem;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -529,8 +537,8 @@ button {
   }
 }
 @media (max-width: 500px) {
-  .footer__logo {
-    padding-left: 0.75rem;
+  .footer__inner {
+    padding: 0.75rem 0.625rem;
   }
   .footer__logo img {
     width: 4.375rem;
@@ -541,7 +549,7 @@ button {
     align-items: flex-start;
     flex-direction: column;
     flex-wrap: nowrap;
-    gap: 0.625rem;
+    gap: 0.3125rem;
   }
   .footer__center__info {
     display: flex;
@@ -552,8 +560,8 @@ button {
     gap: 0;
   }
   .footer__center__info p {
-    padding-right: 0.75rem;
-    padding-left: 0.75rem;
+    padding-right: 0.625rem;
+    padding-left: 0.625rem;
   }
   .footer__center__info p:last-child {
     padding-right: 0;
@@ -572,7 +580,7 @@ button {
     border: none;
   }
   .footer__center__address p:last-child {
-    padding-right: 0;
+    padding: 0;
   }
   .footer__center__privacy a {
     padding-right: 0.75rem;
@@ -586,7 +594,6 @@ button {
     padding-left: 0.75rem;
   }
   .footer__sns {
-    padding-left: 0.75rem;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -606,60 +613,36 @@ button {
     align-items: flex-start;
     flex-direction: column;
     flex-wrap: nowrap;
-    gap: 0.625rem;
+    gap: 0.3125rem;
   }
   .footer__center__info p {
     border: none;
+    padding: 0;
   }
 }
 
 .main__intro {
-  position: fixed;
+  position: relative;
+  width: 100%;
+  height: 100vh;
   inset: 0;
   z-index: 9999;
   overflow: hidden;
-  background: linear-gradient(to bottom, #DDEEF5 0%, #ffffff 75%, #ffffff 100%);
+  background: linear-gradient(to bottom, #DDEEF5 40%, #ffffff 100%);
 }
 .main__intro__video__wrap {
-  position: relative;
-  width: 100vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
   overflow: hidden;
 }
 .main__intro__video__wrap video {
   width: 100%;
   height: 110%;
   object-fit: contain;
-}
-.main__intro__video__wrap img {
-  width: 100%;
-  height: 6.25rem;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translate(-50%);
-  opacity: 0.8;
-}
-
-.main__intro {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  z-index: 999;
-  overflow: hidden;
-  pointer-events: none;
-}
-.main__intro__video {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-.main__intro__video video {
-  width: 100%;
-  height: 100%;
-  max-height: 100vh;
-  object-fit: cover;
 }
 
 .hero {
@@ -799,9 +782,6 @@ button {
     gap: 10px;
     text-align: center;
   }
-  .hero__swiper__content__text br {
-    display: none;
-  }
   .hero__swiper__content__text h2 {
     font-family: "Paperozi";
     font-size: 2.25rem;
@@ -894,7 +874,6 @@ button {
   font-weight: 500;
   line-height: 1.2;
   color: #3475A8;
-  margin-bottom: 2.5rem;
 }
 .point__card__wrap {
   display: grid;
@@ -905,6 +884,7 @@ button {
 .point__card {
   overflow: hidden;
   height: 18.25rem;
+  width: 100%;
   border-radius: 1.25rem;
   display: flex;
   justify-content: space-between;
@@ -912,10 +892,14 @@ button {
   flex-direction: row;
   flex-wrap: nowrap;
   gap: 0;
-  padding: 3.375rem 0 0 3.75rem;
+  padding-top: 3.375rem;
+  padding-left: clamp(0.75rem, 0.1944rem + 2.963vw, 3.75rem);
 }
 .point__card__text {
   color: #ffffff;
+  width: 100%;
+  position: relative;
+  z-index: 10;
 }
 .point__card__text__title {
   display: flex;
@@ -932,22 +916,15 @@ button {
   line-height: 1.2;
 }
 .point__card__text__title p {
-  font-family: "Pretendard";
-  font-size: 1.25rem;
-  font-weight: 400;
-  line-height: 1.2;
+  font-size: clamp(0.875rem, 0.8056rem + 0.3704vw, 1.25rem);
   word-break: keep-all;
   white-space: normal;
 }
 .point__card__text span {
   display: block;
-  font-family: "Pretendard";
-  font-size: 1rem;
+  font-size: clamp(0.875rem, 0.8519rem + 0.1235vw, 1rem);
   font-weight: 200;
-  line-height: 1;
   margin-bottom: 1.875rem;
-  word-break: keep-all;
-  white-space: normal;
 }
 .point__card__text a {
   display: block;
@@ -961,9 +938,11 @@ button {
   font-weight: 900;
   line-height: 1.2;
 }
+.point__card__img {
+  width: 50%;
+}
 .point__card__img img {
   border-radius: 1.25rem;
-  display: block;
 }
 .point__trend__card {
   grid-area: img1;
@@ -992,8 +971,11 @@ button {
   padding: 3.375rem 0 0 0;
 }
 .point__taste__card__text {
-  margin-left: 3.75rem;
+  margin-left: clamp(0.75rem, 0.1944rem + 2.963vw, 3.75rem);
   margin-right: 3.75rem;
+}
+.point__taste__img {
+  margin-bottom: -0.625rem;
 }
 @media (max-width: 1024px) {
   .point__title {
@@ -1010,7 +992,7 @@ button {
     color: #3475A8;
   }
   .point__card {
-    padding: 1.875rem 0 0 1.875rem;
+    padding-top: 1.875rem;
   }
   .point__card__text__title {
     display: flex;
@@ -1033,8 +1015,7 @@ button {
     margin-bottom: 1.875rem;
   }
   .point__card__img {
-    margin-right: -3.125rem;
-    margin-bottom: -3.75rem;
+    margin-bottom: -4.0625rem;
   }
   .point__card__img img {
     width: 12.5rem;
@@ -1045,15 +1026,16 @@ button {
     height: 13.125rem;
   }
   .point__taste__card {
-    padding: 1.875rem 0 0 0;
+    padding: 1.875rem 1.875rem 0 0;
   }
   .point__taste__card__text {
+    padding-right: 1.875rem;
     margin-left: 1.875rem;
     margin-right: 1.875rem;
   }
   .point__taste__img img {
-    width: 30.25rem;
-    height: 13.125rem;
+    width: 43.25rem;
+    height: 18.75rem;
   }
 }
 @media (max-width: 768px) {
@@ -1076,17 +1058,7 @@ button {
     font-weight: 700;
     line-height: 1.2;
   }
-  .point__card__text__title p {
-    font-family: "Pretendard";
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.2;
-  }
   .point__card__text span {
-    font-family: "Pretendard";
-    font-size: 0.875rem;
-    font-weight: 300;
-    line-height: 1;
     margin-top: 0.3125rem;
     margin-bottom: 1.25rem;
   }
@@ -1103,7 +1075,8 @@ button {
     height: 12.5rem;
   }
   .point__accessibility__card {
-    padding: 1.875rem 1.875rem 0 0;
+    padding: 1.875rem 0 0 0;
+    padding-right: clamp(0.75rem, 0.1944rem + 2.963vw, 3.75rem);
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -1126,7 +1099,7 @@ button {
     align-items: flex-end;
     flex-direction: column;
     flex-wrap: nowrap;
-    gap: 1.25rem;
+    gap: 0.625rem;
   }
   .point__accessibility__img img {
     width: 19.375rem;
@@ -1140,8 +1113,10 @@ button {
     flex-wrap: nowrap;
     gap: 0;
     text-align: end;
+    padding-right: clamp(0.75rem, 0.1944rem + 2.963vw, 3.75rem);
   }
   .point__taste__card__text {
+    padding-right: 0;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
@@ -1181,8 +1156,11 @@ button {
     color: #3475A8;
   }
   .point__card {
-    padding: 1.25rem 0 0 0.75rem;
+    padding-top: 1.25rem;
     height: 11rem;
+  }
+  .point__card__text__title {
+    gap: 0.3125rem;
   }
   .point__card__text__title h2 {
     font-family: "Pretendard";
@@ -1190,18 +1168,8 @@ button {
     font-weight: 700;
     line-height: 1.2;
   }
-  .point__card__text__title p {
-    font-family: "Pretendard";
-    font-size: 0.875rem;
-    font-weight: 400;
-    line-height: 1.2;
-  }
   .point__card__text span {
-    font-family: "Pretendard";
-    font-size: 0.75rem;
-    font-weight: 300;
-    line-height: 1;
-    margin-bottom: 1.375rem;
+    margin-bottom: 0.625rem;
   }
   .point__card__text a {
     width: 4.625rem;
@@ -1218,11 +1186,14 @@ button {
   }
   .point__card__img img {
     margin-top: 0;
-    width: 7rem;
+    width: 8.4375rem;
     height: 8.4375rem;
   }
   .point__accessibility__card {
     padding: 1.25rem 0.75rem 0 0;
+  }
+  .point__accessibility__card__text__title {
+    gap: 1.25rem;
   }
   .point__accessibility__card__text a {
     width: 7.8125rem;
@@ -1238,6 +1209,9 @@ button {
   .point__taste__card {
     padding: 1.25rem 0.75rem 0 0;
   }
+  .point__taste__card__text__title {
+    gap: 1.25rem;
+  }
   .point__taste__card__text a {
     margin-bottom: 0.625rem;
   }
@@ -1245,13 +1219,16 @@ button {
     margin-right: 0;
   }
   .point__taste__img img {
-    width: 12.5rem;
-    height: 6.25rem;
+    width: 25rem;
+    height: 9.375rem;
   }
 }
 @media (max-width: 390px) {
   .point__card__wrap {
     gap: 0.75rem;
+  }
+  .point__card {
+    height: 9.375rem;
   }
   .point__card span {
     display: none;
@@ -1264,7 +1241,7 @@ button {
     margin-bottom: -5rem;
   }
   .point__card__img img {
-    width: 5rem;
+    width: 6.25rem;
     height: 6.25rem;
   }
   .point__accessibility__card__text a {
@@ -1294,14 +1271,17 @@ button {
 }
 .growth .growth__swiper .swiper-button-next,
 .growth .growth__swiper .swiper-button-prev {
-  top: 31.25rem;
+  top: 60%;
+  transform: translate(-60%);
   color: #3475A8;
 }
-.growth .growth__swiper .swiper-button-next {
-  right: 26.25rem;
-}
 .growth .growth__swiper .swiper-button-prev {
-  left: 26.25rem;
+  left: 50%;
+  transform: translateX(calc(50% - 270px));
+}
+.growth .growth__swiper .swiper-button-next {
+  right: 50%;
+  transform: translateX(calc(50% + 245px));
 }
 .growth .growth__slide {
   width: 28.5rem;
@@ -1414,39 +1394,33 @@ button {
 .growth .swiper-3d .swiper-slide-prev .btn {
   display: none;
 }
-@media (max-width: 1024px) {
-  .growth .growth__swiper .swiper-button-next {
-    right: 14.375rem;
-  }
-  .growth .growth__swiper .swiper-button-prev {
-    left: 14.375rem;
-  }
-}
 @media (max-width: 768px) {
-  .growth__wrapper {
-    gap: 0;
+  .growth__card__img img {
+    width: 12.5rem;
+    height: 12.5rem;
   }
-  .growth .growth__swiper .swiper-button-next {
-    right: 6.25rem;
+  .growth .growth__swiper .swiper-button-next,
+  .growth .growth__swiper .swiper-button-prev {
+    top: 3.125rem;
+    right: 1.25rem;
+    transform: translateX(10%);
+  }
+  .growth .growth__swiper .swiper-button-next::after,
+  .growth .growth__swiper .swiper-button-prev::after {
+    font-size: 32px;
   }
   .growth .growth__swiper .swiper-button-prev {
-    left: 6.25rem;
-  }
-  .growth .swiper-button-next::after,
-  .growth .swiper-button-prev::after {
-    font-size: 2rem;
+    left: 90%;
+    transform: translateX(calc(90% - 50px));
   }
 }
 @media (max-width: 500px) {
-  .growth .growth__card__img img {
+  .growth__card__img img {
     width: 9.375rem;
     height: 9.375rem;
   }
-  .growth .growth__swiper .swiper-button-next {
-    right: 1.25rem;
-  }
-  .growth .growth__swiper .swiper-button-prev {
-    left: 1.25rem;
+  .growth .growth__slide {
+    height: 100%;
   }
   .growth .growth__card {
     margin-top: -4.6875rem;
@@ -1486,6 +1460,20 @@ button {
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.2;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3475A8;
+    color: #ffffff;
+    border-radius: 40px;
+    border: none;
+    padding: 10px 70px;
+    transition: all 0.2 ease-in-out;
+  }
+  .growth .growth__card button:hover {
+    background-color: #ffffff;
+    color: #3475A8;
+    border: 1px solid #3475A8;
   }
   .growth .swiper-button-next::after,
   .growth .swiper-button-prev::after {
@@ -1642,7 +1630,7 @@ button {
   }
   .best__slide__img img {
     width: 9.375rem;
-    height: 9.375rem;
+    height: 8.75rem;
   }
   .best .swiper-horizontal > .swiper-pagination-progressbar,
   .best .swiper-pagination-progressbar.swiper-pagination-horizontal,
@@ -1869,6 +1857,27 @@ button {
 .contact__left .btn:hover {
   background-color: #3475A8;
   color: #ffffff;
+}
+.contact__img {
+  will-change: transform;
+  animation: wobble 7s ease-in-out infinite;
+}
+@keyframes wobble {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate3d(-12px, -10px, 0) rotate(-2deg);
+  }
+  50% {
+    transform: translate3d(0, -20px, 0) rotate(0deg);
+  }
+  75% {
+    transform: translate3d(12px, -10px, 0) rotate(2deg);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
 }
 .contact__img img {
   width: 25rem;
@@ -5126,7 +5135,7 @@ button {
   padding: 3.125rem;
 }
 
-.modal__terms, .modal__privacy {
+.modal__terms, .modal__privacy, .modal__popup {
   display: none;
   position: fixed;
   top: 50%;
@@ -5147,7 +5156,7 @@ button {
   border: 1px solid #646464;
   border-radius: 1.875rem;
   width: 43.75rem;
-  height: 80vh;
+  height: 60vh;
   padding: 2.5rem 2.5rem;
   overflow: hidden;
 }
@@ -5163,8 +5172,11 @@ button {
   padding-bottom: 1.25rem;
   border-bottom: 1px solid #333333;
 }
+.modal__content h2 br {
+  display: none;
+}
 .modal__scroll {
-  max-height: calc(80vh - 200px);
+  max-height: calc(60vh - 200px);
   overflow-y: scroll;
 }
 .modal__scroll p {
@@ -5174,7 +5186,204 @@ button {
   line-height: 1.2;
   padding-left: 1.875rem;
 }
-.modal .no-scroll {
+.modal .popup__desc {
+  overflow-y: scroll;
+  max-height: calc(60vh - 200px);
+}
+.modal .popup__desc h3 {
+  font-family: "Pretendard";
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+  padding-left: 1.25rem;
+  margin-bottom: 0.625rem;
+}
+.modal .popup__desc h4 {
+  font-family: "Pretendard";
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+  padding-left: 1.875rem;
+  margin-bottom: 0.3125rem;
+}
+.modal .popup__desc p {
+  font-family: "Pretendard";
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.2;
+  padding-left: 2.5rem;
+  margin-bottom: 0.3125rem;
+}
+@media (max-width: 1024px) {
+  .modal__content {
+    width: 31.25rem;
+  }
+  .modal__content h2 {
+    font-family: "Pretendard";
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  .modal__scroll p {
+    font-family: "Pretendard";
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.2;
+    padding-left: 1.25rem;
+  }
+  .modal .popup__desc h3 {
+    font-family: "Pretendard";
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    padding-left: 0.625rem;
+  }
+  .modal .popup__desc h4 {
+    font-family: "Pretendard";
+    font-size: 1.375rem;
+    font-weight: 500;
+    line-height: 1.2;
+    padding-left: 1.25rem;
+  }
+  .modal .popup__desc p {
+    font-family: "Pretendard";
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.2;
+    padding-left: 1.875rem;
+  }
+}
+@media (max-width: 768px) {
+  .modal__content {
+    width: 18.75rem;
+  }
+  .modal__content .close__btn img {
+    width: 1.75rem;
+  }
+  .modal__content h2 {
+    font-family: "Pretendard";
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  .modal__content h2 br {
+    display: block;
+  }
+  .modal .popup__desc h3 {
+    font-family: "Pretendard";
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.2;
+    padding-left: 0.3125rem;
+  }
+  .modal .popup__desc h4 {
+    font-family: "Pretendard";
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 1.2;
+    padding-left: 0.625rem;
+  }
+  .modal .popup__desc p {
+    font-family: "Pretendard";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.2;
+    padding-left: 0.9375rem;
+  }
+}
+@media (max-width: 500px) {
+  .modal__content {
+    width: 12.5rem;
+    padding: 1.25rem 1.25rem;
+  }
+  .modal__content h2 {
+    font-family: "Pretendard";
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  .modal__scroll {
+    max-height: calc(60vh - 100px);
+  }
+  .modal__scroll p {
+    font-family: "Pretendard";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.2;
+    padding-left: 0.625rem;
+  }
+  .modal .popup__desc {
+    max-height: calc(60vh - 150px);
+  }
+  .modal .popup__desc h3 {
+    font-family: "Pretendard";
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.2;
+    padding-left: 0;
+  }
+  .modal .popup__desc h4 {
+    font-family: "Pretendard";
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.2;
+    padding-left: 0.3125rem;
+  }
+  .modal .popup__desc p {
+    font-family: "Pretendard";
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.2;
+    padding-left: 0.625rem;
+  }
+}
+@media (max-width: 390px) {
+  .modal__content h2 {
+    font-family: "Pretendard";
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.625rem;
+  }
+  .modal__scroll {
+    max-height: calc(60vh - 120px);
+  }
+  .modal__scroll p {
+    padding-left: 0.5rem;
+  }
+  .modal .popup__desc {
+    max-height: calc(60vh - 120px);
+  }
+  .modal .popup__desc h3 {
+    font-family: "Pretendard";
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.2;
+    padding-left: 0;
+  }
+  .modal .popup__desc h4 {
+    font-family: "Pretendard";
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.2;
+    padding-left: 0.3125rem;
+  }
+  .modal .popup__desc p {
+    font-family: "Pretendard";
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 1.2;
+    padding-left: 0.625rem;
+  }
+}
+
+html.no-scroll,
+body.no-scroll {
   overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   width: 100%;
 }

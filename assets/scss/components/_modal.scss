@@ -1,6 +1,7 @@
 .modal {
     &__terms,
-    &__privacy {
+    &__privacy,
+    &__popup {
         display: none;
         position: fixed;
         top: 50%;
@@ -21,7 +22,7 @@
         border: 1px solid #646464;
         border-radius: rem(30);
         width: rem(700);
-        height: 80vh;
+        height: 60vh;
         padding: rem(40) rem(40);
         overflow: hidden;
         .close__btn {
@@ -32,20 +33,172 @@
             margin-bottom: rem(30);
             padding-bottom: rem(20);
             border-bottom: 1px solid $color-text;
+            br {
+                display: none;
+            }
         }
     }
     &__scroll {
-        max-height: calc(80vh - 200px);
+        max-height: calc(60vh - 200px);
         overflow-y: scroll;
         p {
             @include font-set ($size: 24);
             padding-left: rem(30);
         }
+        
     }
 
-    .no-scroll {
-        overflow: hidden;
-        width: 100%;
+    .popup__desc {
+        overflow-y: scroll;
+        max-height: calc(60vh - 200px);
+        h3 {
+            @include font-set ($size: 24, $weight: 500);
+            padding-left: rem(20);
+            margin-bottom: rem(10);
+        }
+        h4 {
+            @include font-set ($size: 24, $weight: 500);
+            padding-left: rem(30);
+            margin-bottom: rem(5);
+        }
+        p {
+            @include font-set ($size: 24);
+            padding-left: rem(40);
+            margin-bottom: rem(5);
+        }
     }
+
+    @media (max-width: $bp-desktop) {
+        &__content {
+            width: rem(500);
+            
+            h2 {
+                @include font-set ($size: 28, $weight: 600);
+            }
+        }
+        &__scroll {
+            p {
+                @include font-set ($size: 20);
+                padding-left: rem(20);
+            }
+        }
+        .popup__desc {
+            h3 {
+                @include font-set ($size: 24, $weight: 500);
+                padding-left: rem(10);
+            }
+            h4 {
+                @include font-set ($size: 22, $weight: 500);
+                padding-left: rem(20); 
+            }
+            p {
+                @include font-set ($size: 18);
+                padding-left: rem(30);
+            }
+        }
+    }
+    @media (max-width: $bp-tablet) {
+        &__content {
+            width: rem(300);
+            .close__btn {
+                img {
+                    width: rem(28);
+                }
+            }
+            h2 {
+                @include font-set ($size: 24, $weight: 600);
+                br {
+                    display: block;
+                }
+            }
+        }
+        .popup__desc {
+            h3 {
+                @include font-set ($size: 20, $weight: 500);
+                padding-left: rem(5);
+            }
+            h4 {
+                @include font-set ($size: 18, $weight: 500);
+                padding-left: rem(10); 
+            }
+            p {
+                @include font-set ($size: 16);
+                padding-left: rem(15);
+            }
+        }
+    }
+    @media (max-width: $bp-mobile-md) {
+        &__content {
+            width: rem(200);
+            padding: rem(20) rem(20);
+            
+            h2 {
+                @include font-set ($size: 20, $weight: 600);
+            }
+        }
+        &__scroll {
+            max-height: calc(60vh - 100px);
+            p {
+                @include font-set ($size: 16);
+                padding-left: rem(10);
+            }
+        }
+        .popup__desc {
+            max-height: calc(60vh - 150px);
+            h3 {
+                @include font-set ($size: 16, $weight: 500);
+                padding-left: 0;
+            }
+            h4 {
+                @include font-set ($size: 16, $weight: 500);
+                padding-left: rem(5); 
+            }
+            p {
+                @include font-set ($size: 14);
+                padding-left: rem(10);
+            }
+        }
+    }
+    @media (max-width: $bp-mobile-sm) {
+        &__content {
+            
+            h2 {
+                @include font-set ($size: 16, $weight: 600);
+                margin-bottom: rem(20);
+                padding-bottom: rem(10);
+            }
+        }
+        &__scroll {
+            max-height: calc(60vh - 120px);
+            p {
+                padding-left: rem(8);
+            }
+        }
+        .popup__desc {
+            max-height: calc(60vh - 120px);
+            h3 {
+                @include font-set ($size: 14, $weight: 500);
+                padding-left: 0;
+            }
+            h4 {
+                @include font-set ($size: 14, $weight: 500);
+                padding-left: rem(5); 
+            }
+            p {
+                @include font-set ($size: 12);
+                padding-left: rem(10);
+            }
+        }
+    }
+}
+
+html.no-scroll,
+body.no-scroll {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
 }
 

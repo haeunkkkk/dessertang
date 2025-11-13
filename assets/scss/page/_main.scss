@@ -1,31 +1,4 @@
-//intro
-.main__intro {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    z-index: 999;
-    overflow: hidden;
-    pointer-events: none;
 
-    &__video {
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-
-        video {
-            width: 100%;
-            height: 100%;
-            max-height: 100vh;
-            object-fit: cover;
-        }
-    }
-}
-
-// .main__content {
-//     display: none;
-// }
 
 //main
 .hero {
@@ -141,10 +114,6 @@
                     top: rem(150);
                     left: rem(292);
 
-                    br {
-                        display: none;
-                    }
-
                     @include flex ($direction: column, $wrap: nowrap, $gap: 10px);
                     text-align: center;
 
@@ -252,7 +221,6 @@
 
     &__subtitle {
         @include subtitle-style(20);
-        margin-bottom: rem(40);
     }
 
     &__card__wrap {
@@ -267,22 +235,28 @@
     &__card {
         overflow: hidden;
         height: rem(292);
+        width: 100%;
         @include radius(rem(20));
         @include flex($justify: space-between, $align: center);
-        padding: rem(54) 0 0 rem(60);
+        padding-top: rem(54);
+        padding-left: clamp(0.75rem, 0.1944rem + 2.963vw, 3.75rem);
 
         &__text {
             color: $color-bg;
+            width: 100%;
+            position: relative;
+            z-index: 10;
 
             &__title {
                 @include flex($align: flex-start, $direction: column, $gap: rem(10));
+                
 
                 h2 {
                     @include font-set($size: 32, $weight: 700, $line-height: 1.2);
                 }
 
                 p {
-                    @include font-set($size: 20, $line-height: 1.2);
+                    font-size: clamp(0.875rem, 0.8056rem + 0.3704vw, 1.25rem);
                     word-break: keep-all;
                     white-space: normal;
                 }
@@ -290,10 +264,9 @@
 
             span {
                 display: block;
-                @include font-set($size: 16, $weight: 200, $line-height: 1);
+                font-size: clamp(0.875rem, 0.8519rem + 0.1235vw, 1rem);
+                font-weight: 200;
                 margin-bottom: rem(30);
-                word-break: keep-all;
-                white-space: normal;
             }
 
             a {
@@ -308,11 +281,9 @@
         }
 
         &__img {
-
-
+            width: calc(100% / 2);
             img {
                 @include radius(rem(20));
-                display: block;
             }
         }
     }
@@ -341,11 +312,13 @@
         background-color: $color-green;
         @include flex($justify: space-between, $align: flex-start, $direction: column);
         padding: rem(54) 0 0 0;
-
         &__text {
-            margin-left: rem(60);
+            margin-left: clamp(0.75rem, 0.1944rem + 2.963vw, 3.75rem);
             margin-right: rem(60);
         }
+    }
+    &__taste__img {
+        margin-bottom: rem(-10);
     }
 
 
@@ -359,7 +332,7 @@
         }
 
         &__card {
-            padding: rem(30) 0 0 rem(30);
+            padding-top: rem(30);
 
             &__text {
                 &__title {
@@ -369,7 +342,6 @@
                         @include font-set($size: 24, $weight: 700, $line-height: 1.2);
                     }
                 }
-
 
                 span {
                     margin-bottom: rem(40);
@@ -381,8 +353,7 @@
             }
 
             &__img {
-                margin-right: rem(-50);
-                margin-bottom: rem(-60);
+                margin-bottom: rem(-65);
 
                 img {
                     width: rem(200);
@@ -399,9 +370,10 @@
         }
 
         &__taste__card {
-            padding: rem(30) 0 0 0;
+            padding: rem(30) rem(30) 0 0;
 
             &__text {
+                padding-right: rem(30);
                 margin-left: rem(30);
                 margin-right: rem(30);
             }
@@ -409,10 +381,9 @@
         }
 
         &__taste__img {
-
             img {
-                width: rem(484);
-                height: rem(210);
+                width: rem(692);
+                height: rem(300);
             }
         }
     }
@@ -438,14 +409,9 @@
                     h2 {
                         @include font-set($size: 20, $weight: 700, $line-height: 1.2);
                     }
-
-                    p {
-                        @include font-set($size: 16);
-                    }
                 }
 
                 span {
-                    @include font-set($size: 14, $weight: 300, $line-height: 1);
                     margin-top: rem(5);
                     margin-bottom: rem(20);
                 }
@@ -468,7 +434,8 @@
         }
 
         &__accessibility__card {
-            padding: rem(30) rem(30) 0 0;
+            padding: rem(30) 0 0 0;
+            padding-right: clamp(0.75rem, 0.1944rem + 2.963vw, 3.75rem);
             @include flex($justify: space-between, $align: flex-end, $direction: row-reverse);
             text-align: end;
 
@@ -476,7 +443,7 @@
                 @include flex($justify: flex-end, $align: flex-end, $direction: column);
 
                 &__title {
-                    @include flex($justify: flex-end, $align: flex-end, $direction: column, $gap: rem(20));
+                    @include flex($justify: flex-end, $align: flex-end, $direction: column, $gap: rem(10));
                 }
             }
         }
@@ -492,8 +459,10 @@
         &__taste__card {
             @include flex($justify: space-between, $align: flex-end, $direction: row-reverse);
             text-align: end;
+            padding-right: clamp(0.75rem, 0.1944rem + 2.963vw, 3.75rem);
 
             &__text {
+                padding-right: 0;
                 @include flex($justify: flex-end, $align: flex-end, $direction: column);
                 margin: 0;
 
@@ -523,24 +492,19 @@
         }
 
         &__card {
-            padding: rem(20) 0 0 rem(12);
+            padding-top: rem(20);
             height: rem(176);
 
             &__text {
                 &__title {
-
+                    gap: rem(5);
                     h2 {
                         @include font-set($size: 16, $weight: 700, $line-height: 1.2);
-                    }
-
-                    p {
-                        @include font-set($size: 14);
                     }
                 }
 
                 span {
-                    @include font-set($size: 12, $weight: 300, $line-height: 1);
-                    margin-bottom: rem(22);
+                    margin-bottom: rem(10);
                 }
 
                 a {
@@ -557,7 +521,7 @@
 
                 img {
                     margin-top: 0;
-                    width: rem(112);
+                    width: rem(135);
                     height: rem(135);
                 }
             }
@@ -567,6 +531,9 @@
             padding: rem(20) rem(12) 0 0;
 
             &__text {
+                &__title {
+                    gap: rem(20);
+                }
                 a {
                     width: rem(125);
                     margin-bottom: rem(10);
@@ -585,8 +552,11 @@
 
         &__taste__card {
             padding: rem(20) rem(12) 0 0;
-
+            
             &__text {
+                &__title {
+                    gap: rem(20);
+                }
                 a {
                     margin-bottom: rem(10);
                 }
@@ -597,8 +567,8 @@
             margin-right: 0;
 
             img {
-                width: rem(200);
-                height: rem(100);
+                width: rem(400);
+                height: rem(150);
             }
         }
     }
@@ -609,7 +579,7 @@
         }
 
         &__card {
-
+            height: rem(150);
             span {
                 display: none;
             }
@@ -623,7 +593,7 @@
                 margin-bottom: rem(-80);
 
                 img {
-                    width: rem(80);
+                    width: rem(100);
                     height: rem(100);
                 }
             }
@@ -667,23 +637,23 @@
 
 //growth
 .growth {
-
     .growth__swiper {
         overflow-x: hidden;
+            .swiper-button-next,
+            .swiper-button-prev {
+                top: 60%;
+                transform: translate(-60%);
+                color: $color-primary;
+            }
+            .swiper-button-prev {
+                left: 50%;
+                transform: translateX(calc(50% - 270px)); 
+            }
 
-        .swiper-button-next,
-        .swiper-button-prev {
-            top: rem(500);
-            color: $color-primary;
-        }
-
-        .swiper-button-next {
-            right: rem(420);
-        }
-
-        .swiper-button-prev {
-            left: rem(420);
-        }
+            .swiper-button-next {
+                right: 50%;
+                transform: translateX(calc(50% + 245px)); 
+            }    
     }
 
     .growth__slide {
@@ -777,62 +747,42 @@
     }
 
     @media (max-width: $bp-desktop) {
-        &__wrapper {
-            // gap: 1000px;
-        }
-
-        .growth__swiper {
-            .swiper-button-next {
-                right: rem(230);
-            }
-
-            .swiper-button-prev {
-                left: rem(230);
-            }
-
-        }
     }
 
     @media (max-width: $bp-tablet) {
-        &__wrapper {
-            gap: 0;
+        &__card__img {
+            img {
+                width: rem(200);
+                height: rem(200);
+            }
         }
-
         .growth__swiper {
-            .swiper-button-next {
-                right: rem(100);
-            }
-
+            .swiper-button-next,
             .swiper-button-prev {
-                left: rem(100);
+                top: rem(50);
+                right: rem(20);
+                transform: translateX(10%); 
+                &::after {
+                    font-size: 32px;
+                }
             }
-        }
-
-        .swiper-button-next::after,
-        .swiper-button-prev::after {
-            font-size: rem(32);
+            .swiper-button-prev {
+                left: 90%;
+                transform: translateX(calc(90% - 50px)); 
+            }
         }
     }
 
     @media (max-width: $bp-mobile-md) {
-        .growth__card__img {
+        &__card__img {
             img {
                 width: rem(150);
                 height: rem(150);
             }
         }
-
-        .growth__swiper {
-            .swiper-button-next {
-                right: rem(20);
-            }
-
-            .swiper-button-prev {
-                left: rem(20);
-            }
-
+        .growth__slide {
+            height: 100%;
         }
-
         .growth__card {
             margin-top: rem(-75);
             width: rem(366);
@@ -849,7 +799,7 @@
                     @include font-set($size: 14, $weight: 400, $line-height: 1.2, $family: $font-primary);
 
                     span {
-                        @include font-set($size: 12, $weight: 300, $line-height: 1.2, $family: $font-primary);
+                        @include font-set($size: 12, $weight: 300, $family: $font-primary);
                     }
                 }
             }
@@ -861,6 +811,12 @@
 
             button {
                 @include font-set ($size: 16);
+                @include button-style($bg: $color-primary,
+                    $color: $color-bg,
+                    $radius: 40px,
+                    $border: none,
+                    $padding-y: 10px,
+                    $padding-x: 70px)
             }
         }
 
@@ -1008,7 +964,7 @@
 
             &__img img {
                 width: rem(150);
-                height: rem(150);
+                height: rem(140);
             }
         }
 
@@ -1216,8 +1172,20 @@
         }
     }
 
-    &__img img {
-        width: rem(400);
+    &__img {
+        will-change: transform;
+        animation: wobble 7s ease-in-out infinite;
+        
+        @keyframes wobble {
+        0%   { transform: translate3d(0,0,0) rotate(0deg); }
+        25%  { transform: translate3d(-12px, -10px, 0) rotate(-2deg); }
+        50%  { transform: translate3d(0, -20px, 0) rotate(0deg); }
+        75%  { transform: translate3d(12px, -10px, 0) rotate(2deg); }
+        100% { transform: translate3d(0,0,0) rotate(0deg); }
+        }
+        img {
+            width: rem(400);
+        }
     }
 
     @media (max-width: $bp-desktop) {
