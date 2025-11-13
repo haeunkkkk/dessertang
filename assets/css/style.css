@@ -644,6 +644,11 @@ button {
   height: 110%;
   object-fit: contain;
 }
+@media (max-width: 1024px) {
+  .main__intro {
+    display: none;
+  }
+}
 
 .hero {
   width: 100%;

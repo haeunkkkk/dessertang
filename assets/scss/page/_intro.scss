@@ -24,4 +24,7 @@
             object-fit: contain;
         }
     }
+    @media (max-width: $bp-desktop){
+        display: none;
+    }
 }
