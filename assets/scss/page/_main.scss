@@ -302,7 +302,7 @@
         }
 
         img {
-            margin-bottom: rem(-10);
+            margin-bottom: rem(-20);
         }
     }
 
@@ -658,7 +658,7 @@
 
     .growth__slide {
         width: rem(456);
-        height: rem(670);
+        height: 100%;
         @include flex($justify: center, $align: center, $direction: column, $wrap: nowrap);
         position: relative;
 
@@ -671,7 +671,7 @@
         margin-top: rem(-111);
         background-color: $color-skyblue;
         width: rem(456);
-        height: rem(559);
+        height: 100%;
         @include radius($radius: rem(20));
         @include flex ($align: center, $direction: column, $wrap: nowrap);
 
@@ -681,13 +681,14 @@
 
             h3 {
                 text-align: center;
-                margin-bottom: rem(20);
+                margin-bottom: rem(40);
                 @include font-set($size: 32, $weight: 600, $line-height: 1.2, $family: $font-primary);
             }
 
             li {
                 list-style: disc;
                 @include font-set($size: 20, $weight: 400, $line-height: 1.2, $family: $font-primary);
+                margin-bottom: rem(20);
 
                 span {
                     @include font-set($size: 16, $weight: 300, $line-height: 1.2, $family: $font-primary);
@@ -697,12 +698,12 @@
 
         &__keyword {
             @include flex($justify: space-between, $gap: rem(108));
-            @include font-set($size: 20, $weight: 700, $family: $font-accent);
+            @include font-set($size: 20, $weight: 300, $family: $font-accent);
             color: $color-primary
         }
 
         button {
-            margin-top: rem(20);
+            margin: rem(20) 0;
             @include font-set ($size: 24);
             @include button-style(); 
             
@@ -722,9 +723,15 @@
         }
 
         .swiper-slide-next {
+            .growth__card__img {
+                margin-top: rem(200);
+                img {
+                    width: rem(150);
+                }
+            }
             .growth__card {
                 background-color: #f3f3f3;
-                height: rem(400);
+                height: 100%;
             }
 
             .growth__card__keyword,
@@ -734,9 +741,15 @@
         }
 
         .swiper-slide-prev {
+            .growth__card__img {
+                margin-top: rem(200);
+                img {
+                    width: rem(150);
+                }
+            }
             .growth__card {
                 background-color: #f3f3f3;
-                height: rem(400);
+                height: 100%;
             }
 
             .growth__card__keyword,

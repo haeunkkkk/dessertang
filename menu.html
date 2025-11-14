@@ -4,49 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu</title>
+
+    <link rel="icon" href="./assets/images/favicon_io/favicon.ico" type="image/x-icon">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon_io/favicon-16x16.png">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/favicon_io/apple-touch-icon.png">
+
+    <link rel="manifest" href="./assets/images/favicon_io/manifest.json">
+
+    <meta property="og:title" content="디저탕 - 달콤한 디저트의 향연" />
+    <meta property="og:description" content="당신의 하루를 달콤하게, 디저탕과 함께해요 🍰" />
+    <meta property="og:image" content="https://dessertang.netlify.app/assets/images/og-img.jpg" />
+    <meta property="og:url" content="https://dessertang.netlify.app/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
     <header class="header">
-            <div class="container header__container">
-                <div class="header__logo">
-                    <a href="index.html">
-                        <img src="./assets/images/header-logo.png" alt="디저탕">
-                    </a>
-                </div>
-
-                <nav>
-                    <ul class="header__menu">
-                        <li class="header__menu__list">
+            <div class="container">
+                <div class="header__wrapper">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="./assets/images/header-logo.png" alt="디저탕">
+                        </a>
+                    </div>
+                    <nav class="nav">
+                    <ul>
+                        <li class="nav__link">
                             <a href="./brand.html">
                                 BRAND
                             </a>
                         </li>
-                        <li class="header__menu__list">
+                        <li class="nav__link">
                             <a href="./menu.html">
                                 MENU
                             </a>
                         </li>
-                        <li class="header__menu__list">
+                        <li class="nav__link">
                             <a href="./event.html">
                                 COMMUNITY
                             </a>
-                            <ul class="header__menu__list__sub">
-                                <li>
-                                    <a href="./event.html">이벤트</a>
-                                </li>
-                                <li>
-                                    <a href="./contact.html">고객문의</a>
-                                </li>
+                        <div class="menu__icon"></div>
+                        <div class="sub__menu">
+                            <ul>
+                                <li><a href="./event.html">이벤트</a></li>
+                                <li><a href="./contact.html?tab=1">고객문의</a></li>
                             </ul>
+                        </div>
                         </li>
-                        <li class="header__menu__list">
+                        <li class="nav__link">
                             <a href="./process.html">
                                 FRANCHISE
                             </a>
-                            <ul class="header__menu__list__sub">
+                            <div class="menu__icon"></div>
+                            <div class="sub__menu">
+                            <ul>
                                 <li>
                                     <a href="./process.html">가맹절차</a>
                                 </li>
@@ -57,25 +76,21 @@
                                     <a href="./FAQ.html">FAQ</a>
                                 </li>
                                 <li>
-                                    <a href="./contact.html">가맹 문의</a>
+                                    <a href="./contact.html?tab=2">가맹 문의</a>
                                 </li>
                             </ul>
+                            </div>
                         </li>
                     </ul>
-                </nav>
-
-                <div class="header__hamburger__btn">
-                    <a href="#">
-                        <img src="./assets/images/hamburger-btn.png" alt="햄버거 버튼">
-                    </a>
-                </div>
-                <div class="header__hamburger__close">
-                    <a href="#">
-                        <img src="./assets/images/hamburger-close-btn.png" alt="햄버거 닫힘 버튼">
-                    </a>
+                    </nav>
+                    <div class="hamburger__menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                 </div>
             </div>
-        </header>
+    </header>
 
     <main>
         <section class="section">
@@ -120,16 +135,16 @@
                                     <button class="overlay__close">
                                         <img src="./assets/images/close-btn.png" alt="닫기 버튼">
                                     </button>
-                                    <h3>명란 소금빵</h3>
+                                    <h3>말차 큐브</h3>
                                     <p>
-                                        진한 일본산 말차를 사용해 만든 <br>
-                                        부드러운 큐브형 디저트 <br> 
-                                        말차 특유의 쌉쌀하면서도 <br>
-                                        달콤한 풍미가 입안 가득 퍼집니다 
+                                        진한 일본산 말차를 사용하여 만든 <br>
+                                        부드러운 큐브형 디저트 <br>
+                                        말차의 쌉쌀함과 달콤함이 <br>
+                                        입안 가득 퍼집니다
                                     </p>
                                     <div class="card__overlay__inner__span">
-                                        <span>약 95 kcal</span>
-                                        <span>2,500원</span>
+                                        <span>약 90 kcal</span>
+                                        <span>2,800원</span>
                                     </div>
                                 </div>
                             </div>
@@ -146,16 +161,16 @@
                                     <button class="overlay__close">
                                         <img src="./assets/images/close-btn.png" alt="닫기 버튼">
                                     </button>
-                                    <h3>명란 소금빵</h3>
+                                    <h3>딸기 생크림 케이크</h3>
                                     <p>
-                                        진한 일본산 말차를 사용해 만든 <br>
-                                        부드러운 큐브형 디저트 <br> 
-                                        말차 특유의 쌉쌀하면서도 <br>
-                                        달콤한 풍미가 입안 가득 퍼집니다 
+                                        신선한 딸기와 부드러운 생크림이 어우러진 <br>
+                                        달콤하고 상큼한 케이크 <br>
+                                        한 입만 먹어도 행복한 <br>
+                                        달콤함이 입안에 퍼집니다
                                     </p>
                                     <div class="card__overlay__inner__span">
-                                        <span>약 95 kcal</span>
-                                        <span>2,500원</span>
+                                        <span>약 250 kcal</span>
+                                        <span>4,500원</span>
                                     </div>
                                 </div>
                             </div>
@@ -172,16 +187,16 @@
                                     <button class="overlay__close">
                                         <img src="./assets/images/close-btn.png" alt="닫기 버튼">
                                     </button>
-                                    <h3>명란 소금빵</h3>
+                                    <h3>아사이볼</h3>
                                     <p>
-                                        진한 일본산 말차를 사용해 만든 <br>
-                                        부드러운 큐브형 디저트 <br> 
-                                        말차 특유의 쌉쌀하면서도 <br>
-                                        달콤한 풍미가 입안 가득 퍼집니다 
+                                        건강한 아사이베리와 <br>
+                                        신선한 과일, 그래놀라가 조화를 이루는 <br>
+                                        상큼하고 달콤한 한 그릇 <br>
+                                        아침 식사나 간식으로도 최고입니다
                                     </p>
                                     <div class="card__overlay__inner__span">
-                                        <span>약 95 kcal</span>
-                                        <span>2,500원</span>
+                                        <span>약 180 kcal</span>
+                                        <span>5,000원</span>
                                     </div>
                                 </div>
                             </div>
@@ -198,16 +213,16 @@
                                     <button class="overlay__close">
                                         <img src="./assets/images/close-btn.png" alt="닫기 버튼">
                                     </button>
-                                    <h3>명란 소금빵</h3>
+                                    <h3>에그타르트</h3>
                                     <p>
-                                        진한 일본산 말차를 사용해 만든 <br>
-                                        부드러운 큐브형 디저트 <br> 
-                                        말차 특유의 쌉쌀하면서도 <br>
-                                        달콤한 풍미가 입안 가득 퍼집니다 
+                                        바삭한 파이와 부드러운 커스터드가 <br>
+                                        완벽하게 조화를 이루는 디저트 <br>
+                                        한 입 베어물면 달콤하고 고소한 맛이 <br>
+                                        입안에 퍼집니다
                                     </p>
                                     <div class="card__overlay__inner__span">
-                                        <span>약 95 kcal</span>
-                                        <span>2,500원</span>
+                                        <span>약 220 kcal</span>
+                                        <span>2,800원</span>
                                     </div>
                                 </div>
                             </div>
@@ -224,17 +239,18 @@
                                     <button class="overlay__close">
                                         <img src="./assets/images/close-btn.png" alt="닫기 버튼">
                                     </button>
-                                    <h3>명란 소금빵</h3>
+                                    <h3>초코칩 쿠키</h3>
                                     <p>
-                                        진한 일본산 말차를 사용해 만든 <br>
-                                        부드러운 큐브형 디저트 <br> 
-                                        말차 특유의 쌉쌀하면서도 <br>
-                                        달콤한 풍미가 입안 가득 퍼집니다 
+                                        겉은 바삭, 속은 촉촉한 <br>
+                                        초코칩 가득 쿠키 <br>
+                                        달콤하고 진한 초콜릿 맛이 <br>
+                                        기분까지 달콤하게 해줍니다
                                     </p>
                                     <div class="card__overlay__inner__span">
-                                        <span>약 95 kcal</span>
-                                        <span>2,500원</span>
+                                        <span>약 150 kcal</span>
+                                        <span>1,800원</span>
                                     </div>
+
                                 </div>
                             </div>
                         </div>
@@ -250,16 +266,15 @@
                                     <button class="overlay__close">
                                         <img src="./assets/images/close-btn.png" alt="닫기 버튼">
                                     </button>
-                                    <h3>명란 소금빵</h3>
+                                    <h3>마들렌</h3>
                                     <p>
-                                        진한 일본산 말차를 사용해 만든 <br>
-                                        부드러운 큐브형 디저트 <br> 
-                                        말차 특유의 쌉쌀하면서도 <br>
-                                        달콤한 풍미가 입안 가득 퍼집니다 
+                                        부드럽고 촉촉한 프랑스 전통 디저트 <br>
+                                        달콤한 버터향과 함께 <br>
+                                        아침 티타임이나 간식으로 즐기기 좋습니다
                                     </p>
                                     <div class="card__overlay__inner__span">
-                                        <span>약 95 kcal</span>
-                                        <span>2,500원</span>
+                                        <span>약 120 kcal</span>
+                                        <span>1,500원</span>
                                     </div>
                                 </div>
                             </div>
@@ -276,16 +291,16 @@
                                     <button class="overlay__close">
                                         <img src="./assets/images/close-btn.png" alt="닫기 버튼">
                                     </button>
-                                    <h3>명란 소금빵</h3>
+                                    <h3>후르츠 산도</h3>
                                     <p>
-                                        진한 일본산 말차를 사용해 만든 <br>
-                                        부드러운 큐브형 디저트 <br> 
-                                        말차 특유의 쌉쌀하면서도 <br>
-                                        달콤한 풍미가 입안 가득 퍼집니다 
+                                        신선한 과일과 달콤한 생크림이 <br>
+                                        촉촉한 빵 사이에 가득한 <br>
+                                        보기만 해도 즐거운 디저트 <br>
+                                        상큼함과 달콤함을 동시에 즐길 수 있습니다
                                     </p>
                                     <div class="card__overlay__inner__span">
-                                        <span>약 95 kcal</span>
-                                        <span>2,500원</span>
+                                        <span>약 230 kcal</span>
+                                        <span>5,200원</span>
                                     </div>
                                 </div>
                             </div>
@@ -311,16 +326,15 @@
                                     <button class="overlay__close">
                                         <img src="./assets/images/close-btn.png" alt="닫기 버튼">
                                     </button>
-                                    <h3>명란 소금빵</h3>
+                                    <h3>아이스 아메리카노</h3>
                                     <p>
-                                        진한 일본산 말차를 사용해 만든 <br>
-                                        부드러운 큐브형 디저트 <br> 
-                                        말차 특유의 쌉쌀하면서도 <br>
-                                        달콤한 풍미가 입안 가득 퍼집니다 
+                                        깔끔하고 시원한 아메리카노 <br>
+                                        진한 원두의 풍미가 살아있어 <br>
+                                        언제 마셔도 상쾌하게 즐길 수 있습니다
                                     </p>
                                     <div class="card__overlay__inner__span">
-                                        <span>약 95 kcal</span>
-                                        <span>2,500원</span>
+                                        <span>약 5 kcal</span>
+                                        <span>3,000원</span>
                                     </div>
                                 </div>
                             </div>
@@ -338,16 +352,15 @@
                                     <button class="overlay__close">
                                         <img src="./assets/images/close-btn.png" alt="닫기 버튼">
                                     </button>
-                                    <h3>명란 소금빵</h3>
+                                    <h3>아이스 라떼</h3>
                                     <p>
-                                        진한 일본산 말차를 사용해 만든 <br>
-                                        부드러운 큐브형 디저트 <br> 
-                                        말차 특유의 쌉쌀하면서도 <br>
-                                        달콤한 풍미가 입안 가득 퍼집니다 
+                                        진한 에스프레소와 신선한 우유의 조화 <br>
+                                        부드럽고 시원하게 즐길 수 있는 <br>
+                                        대표 아이스 커피
                                     </p>
                                     <div class="card__overlay__inner__span">
-                                        <span>약 95 kcal</span>
-                                        <span>2,500원</span>
+                                        <span>약 120 kcal</span>
+                                        <span>3,800원</span>
                                     </div>
                                 </div>
                             </div>
@@ -365,16 +378,15 @@
                                     <button class="overlay__close">
                                         <img src="./assets/images/close-btn.png" alt="닫기 버튼">
                                     </button>
-                                    <h3>명란 소금빵</h3>
+                                    <h3>바닐라 라떼</h3>
                                     <p>
-                                        진한 일본산 말차를 사용해 만든 <br>
-                                        부드러운 큐브형 디저트 <br> 
-                                        말차 특유의 쌉쌀하면서도 <br>
-                                        달콤한 풍미가 입안 가득 퍼집니다 
+                                        달콤한 바닐라 시럽과 에스프레소가 만나 <br>
+                                        부드럽고 향긋한 라떼 <br>
+                                        달콤한 음료를 좋아하는 분께 추천
                                     </p>
                                     <div class="card__overlay__inner__span">
-                                        <span>약 95 kcal</span>
-                                        <span>2,500원</span>
+                                        <span>약 180 kcal</span>
+                                        <span>4,200원</span>
                                     </div>
                                 </div>
                             </div>
@@ -392,16 +404,15 @@
                                     <button class="overlay__close">
                                         <img src="./assets/images/close-btn.png" alt="닫기 버튼">
                                     </button>
-                                    <h3>명란 소금빵</h3>
+                                    <h3>아이스티 샷추가</h3>
                                     <p>
-                                        진한 일본산 말차를 사용해 만든 <br>
-                                        부드러운 큐브형 디저트 <br> 
-                                        말차 특유의 쌉쌀하면서도 <br>
-                                        달콤한 풍미가 입안 가득 퍼집니다 
+                                        상큼한 홍차 아이스티에 <br>
+                                        에스프레소 샷을 더해 <br>
+                                        달콤쌉쌀한 색다른 풍미를 즐길 수 있습니다
                                     </p>
                                     <div class="card__overlay__inner__span">
-                                        <span>약 95 kcal</span>
-                                        <span>2,500원</span>
+                                        <span>약 80 kcal</span>
+                                        <span>4,000원</span>
                                     </div>
                                 </div>
                             </div>
@@ -419,16 +430,15 @@
                                     <button class="overlay__close">
                                         <img src="./assets/images/close-btn.png" alt="닫기 버튼">
                                     </button>
-                                    <h3>명란 소금빵</h3>
+                                    <h3>연유 라떼</h3>
                                     <p>
-                                        진한 일본산 말차를 사용해 만든 <br>
-                                        부드러운 큐브형 디저트 <br> 
-                                        말차 특유의 쌉쌀하면서도 <br>
-                                        달콤한 풍미가 입안 가득 퍼집니다 
+                                        진한 에스프레소와 연유의 달콤함 <br>
+                                        부드럽고 고소한 풍미가 <br>
+                                        달콤한 커피를 좋아하는 분께 안성맞춤
                                     </p>
                                     <div class="card__overlay__inner__span">
-                                        <span>약 95 kcal</span>
-                                        <span>2,500원</span>
+                                        <span>약 220 kcal</span>
+                                        <span>4,500원</span>
                                     </div>
                                 </div>
                             </div>
@@ -446,16 +456,15 @@
                                     <button class="overlay__close">
                                         <img src="./assets/images/close-btn.png" alt="닫기 버튼">
                                     </button>
-                                    <h3>명란 소금빵</h3>
+                                    <h3>카페 모카</h3>
                                     <p>
-                                        진한 일본산 말차를 사용해 만든 <br>
-                                        부드러운 큐브형 디저트 <br> 
-                                        말차 특유의 쌉쌀하면서도 <br>
-                                        달콤한 풍미가 입안 가득 퍼집니다 
+                                        달콤한 초콜릿과 진한 에스프레소가 <br>
+                                        부드럽게 어우러진 모카 <br>
+                                        달콤하고 쌉싸름한 맛이 매력적
                                     </p>
                                     <div class="card__overlay__inner__span">
-                                        <span>약 95 kcal</span>
-                                        <span>2,500원</span>
+                                        <span>약 250 kcal</span>
+                                        <span>4,800원</span>
                                     </div>
                                 </div>
                             </div>
@@ -472,16 +481,15 @@
                                     <button class="overlay__close">
                                         <img src="./assets/images/close-btn.png" alt="닫기 버튼">
                                     </button>
-                                    <h3>명란 소금빵</h3>
+                                    <h3>커피 쉐이크</h3>
                                     <p>
-                                        진한 일본산 말차를 사용해 만든 <br>
-                                        부드러운 큐브형 디저트 <br> 
-                                        말차 특유의 쌉쌀하면서도 <br>
-                                        달콤한 풍미가 입안 가득 퍼집니다 
+                                        아이스커피와 우유, 얼음을 함께 블렌딩 <br>
+                                        부드럽고 시원한 쉐이크 스타일 <br>
+                                        더운 날 즐기기 좋은 음료
                                     </p>
                                     <div class="card__overlay__inner__span">
-                                        <span>약 95 kcal</span>
-                                        <span>2,500원</span>
+                                        <span>약 300 kcal</span>
+                                        <span>5,000원</span>
                                     </div>
                                 </div>
                             </div>
@@ -498,16 +506,15 @@
                                     <button class="overlay__close">
                                         <img src="./assets/images/close-btn.png" alt="닫기 버튼">
                                     </button>
-                                    <h3>명란 소금빵</h3>
-                                    <p class="menu-title">
-                                        진한 일본산 말차를 사용해 만든 <br>
-                                        부드러운 큐브형 디저트 <br> 
-                                        말차 특유의 쌉쌀하면서도 <br>
-                                        달콤한 풍미가 입안 가득 퍼집니다 
+                                    <h3>디카페인 아메리카노</h3>
+                                    <p>
+                                        카페인 걱정 없이 즐기는 <br>
+                                        깔끔한 디카페인 아메리카노 <br>
+                                        진한 원두 맛 그대로 즐길 수 있습니다
                                     </p>
                                     <div class="card__overlay__inner__span">
-                                        <span>약 95 kcal</span>
-                                        <span>2,500원</span>
+                                        <span>약 5 kcal</span>
+                                        <span>3,500원</span>
                                     </div>
                                 </div>
                             </div>
@@ -533,16 +540,15 @@
                                     <button class="overlay__close">
                                         <img src="./assets/images/close-btn.png" alt="닫기 버튼">
                                     </button>
-                                    <h3>명란 소금빵</h3>
+                                    <h3>수박쥬스</h3>
                                     <p>
-                                        진한 일본산 말차를 사용해 만든 <br>
-                                        부드러운 큐브형 디저트 <br> 
-                                        말차 특유의 쌉쌀하면서도 <br>
-                                        달콤한 풍미가 입안 가득 퍼집니다 
+                                        신선한 수박을 그대로 착즙한 주스 <br>
+                                        달콤하고 시원하게 <br>
+                                        여름철 갈증 해소에 안성맞춤
                                     </p>
                                     <div class="card__overlay__inner__span">
-                                        <span>약 95 kcal</span>
-                                        <span>2,500원</span>
+                                        <span>약 90 kcal</span>
+                                        <span>4,500원</span>
                                     </div>
                                 </div>
                             </div>
@@ -560,16 +566,15 @@
                                     <button class="overlay__close">
                                         <img src="./assets/images/close-btn.png" alt="닫기 버튼">
                                     </button>
-                                    <h3>명란 소금빵</h3>
+                                    <h3>녹차 라떼</h3>
                                     <p>
-                                        진한 일본산 말차를 사용해 만든 <br>
-                                        부드러운 큐브형 디저트 <br> 
-                                        말차 특유의 쌉쌀하면서도 <br>
-                                        달콤한 풍미가 입안 가득 퍼집니다 
+                                        진한 일본산 말차와 부드러운 우유가 <br>
+                                        어우러진 녹차 라떼 <br>
+                                        쌉싸름하면서도 달콤한 풍미
                                     </p>
                                     <div class="card__overlay__inner__span">
-                                        <span>약 95 kcal</span>
-                                        <span>2,500원</span>
+                                        <span>약 180 kcal</span>
+                                        <span>4,500원</span>
                                     </div>
                                 </div>
                             </div>
@@ -587,16 +592,15 @@
                                     <button class="overlay__close">
                                         <img src="./assets/images/close-btn.png" alt="닫기 버튼">
                                     </button>
-                                    <h3>명란 소금빵</h3>
+                                    <h3>딸기 쉐이크</h3>
                                     <p>
-                                        진한 일본산 말차를 사용해 만든 <br>
-                                        부드러운 큐브형 디저트 <br> 
-                                        말차 특유의 쌉쌀하면서도 <br>
-                                        달콤한 풍미가 입안 가득 퍼집니다 
+                                        신선한 딸기와 얼음, 우유를 블렌딩한 <br>
+                                        부드럽고 달콤한 딸기 쉐이크 <br>
+                                        시원하게 즐기기 좋아요
                                     </p>
                                     <div class="card__overlay__inner__span">
-                                        <span>약 95 kcal</span>
-                                        <span>2,500원</span>
+                                        <span>약 220 kcal</span>
+                                        <span>5,000원</span>
                                     </div>
                                 </div>
                             </div>
@@ -614,16 +618,15 @@
                                     <button class="overlay__close">
                                         <img src="./assets/images/close-btn.png" alt="닫기 버튼">
                                     </button>
-                                    <h3>명란 소금빵</h3>
+                                    <h3>딸기 초코 쉐이크</h3>
                                     <p>
-                                        진한 일본산 말차를 사용해 만든 <br>
-                                        부드러운 큐브형 디저트 <br> 
-                                        말차 특유의 쌉쌀하면서도 <br>
-                                        달콤한 풍미가 입안 가득 퍼집니다 
+                                        딸기와 초콜릿을 함께 블렌딩한 <br>
+                                        달콤하고 진한 맛의 쉐이크 <br>
+                                        디저트처럼 즐기기 좋은 음료
                                     </p>
                                     <div class="card__overlay__inner__span">
-                                        <span>약 95 kcal</span>
-                                        <span>2,500원</span>
+                                        <span>약 250 kcal</span>
+                                        <span>5,200원</span>
                                     </div>
                                 </div>
                             </div>
@@ -641,16 +644,15 @@
                                     <button class="overlay__close">
                                         <img src="./assets/images/close-btn.png" alt="닫기 버튼">
                                     </button>
-                                    <h3>명란 소금빵</h3>
+                                    <h3>민트 초코 쉐이크</h3>
                                     <p>
-                                        진한 일본산 말차를 사용해 만든 <br>
-                                        부드러운 큐브형 디저트 <br> 
-                                        말차 특유의 쌉쌀하면서도 <br>
-                                        달콤한 풍미가 입안 가득 퍼집니다 
+                                        상큼한 민트와 달콤한 초콜릿이 만나 <br>
+                                        시원하고 풍부한 맛의 쉐이크 <br>
+                                        민트 초코 마니아 추천
                                     </p>
                                     <div class="card__overlay__inner__span">
-                                        <span>약 95 kcal</span>
-                                        <span>2,500원</span>
+                                        <span>약 260 kcal</span>
+                                        <span>5,200원</span>
                                     </div>
                                 </div>
                             </div>
@@ -668,20 +670,20 @@
                                     <button class="overlay__close">
                                         <img src="./assets/images/close-btn.png" alt="닫기 버튼">
                                     </button>
-                                    <h3>명란 소금빵</h3>
+                                    <h3>초코 쉐이크</h3>
                                     <p>
-                                        진한 일본산 말차를 사용해 만든 <br>
-                                        부드러운 큐브형 디저트 <br> 
-                                        말차 특유의 쌉쌀하면서도 <br>
-                                        달콤한 풍미가 입안 가득 퍼집니다 
+                                        진한 초콜릿과 우유, 얼음을 블렌딩한 <br>
+                                        부드럽고 달콤한 쉐이크 <br>
+                                        달콤함이 필요한 순간 완벽
                                     </p>
                                     <div class="card__overlay__inner__span">
-                                        <span>약 95 kcal</span>
-                                        <span>2,500원</span>
+                                        <span>약 240 kcal</span>
+                                        <span>5,000원</span>
                                     </div>
                                 </div>
                             </div>
-                        </div>     
+                        </div> 
+                        <button class="btn">더보기 ></button>    
                     </div>
                     <div class="dessert__list__card card">
                         <div class="dessert__list__card__content">
@@ -693,16 +695,15 @@
                                     <button class="overlay__close">
                                         <img src="./assets/images/close-btn.png" alt="닫기 버튼">
                                     </button>
-                                    <h3>명란 소금빵</h3>
+                                    <h3>딸기 라떼</h3>
                                     <p>
-                                        진한 일본산 말차를 사용해 만든 <br>
-                                        부드러운 큐브형 디저트 <br> 
-                                        말차 특유의 쌉쌀하면서도 <br>
-                                        달콤한 풍미가 입안 가득 퍼집니다 
+                                        신선한 딸기와 우유, 에스프레소가 <br>
+                                        어우러진 달콤한 라떼 <br>
+                                        부드럽게 즐길 수 있는 음료
                                     </p>
                                     <div class="card__overlay__inner__span">
-                                        <span>약 95 kcal</span>
-                                        <span>2,500원</span>
+                                        <span>약 200 kcal</span>
+                                        <span>4,800원</span>
                                     </div>
                                 </div>
                             </div>
@@ -720,16 +721,15 @@
                                     <button class="overlay__close">
                                         <img src="./assets/images/close-btn.png" alt="닫기 버튼">
                                     </button>
-                                    <h3>명란 소금빵</h3>
+                                    <h3>자몽 에이드</h3>
                                     <p>
-                                        진한 일본산 말차를 사용해 만든 <br>
-                                        부드러운 큐브형 디저트 <br> 
-                                        말차 특유의 쌉쌀하면서도 <br>
-                                        달콤한 풍미가 입안 가득 퍼집니다 
+                                        상큼한 자몽 과즙과 탄산수의 조화 <br>
+                                        시원하고 상큼하게 즐기는 <br>
+                                        달콤쌉싸름한 에이드
                                     </p>
                                     <div class="card__overlay__inner__span">
-                                        <span>약 95 kcal</span>
-                                        <span>2,500원</span>
+                                        <span>약 90 kcal</span>
+                                        <span>4,500원</span>
                                     </div>
                                 </div>
                             </div>

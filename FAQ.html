@@ -4,49 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAQ</title>
+
+    <link rel="icon" href="./assets/images/favicon_io/favicon.ico" type="image/x-icon">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon_io/favicon-16x16.png">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/favicon_io/apple-touch-icon.png">
+
+    <link rel="manifest" href="./assets/images/favicon_io/manifest.json">
+
+    <meta property="og:title" content="디저탕 - 달콤한 디저트의 향연" />
+    <meta property="og:description" content="당신의 하루를 달콤하게, 디저탕과 함께해요 🍰" />
+    <meta property="og:image" content="https://dessertang.netlify.app/assets/images/og-img.jpg" />
+    <meta property="og:url" content="https://dessertang.netlify.app/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
     <header class="header">
-            <div class="container header__container">
-                <div class="header__logo">
-                    <a href="index.html">
-                        <img src="./assets/images/header-logo.png" alt="디저탕">
-                    </a>
-                </div>
-
-                <nav>
-                    <ul class="header__menu">
-                        <li class="header__menu__list">
+            <div class="container">
+                <div class="header__wrapper">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="./assets/images/header-logo.png" alt="디저탕">
+                        </a>
+                    </div>
+                    <nav class="nav">
+                    <ul>
+                        <li class="nav__link">
                             <a href="./brand.html">
                                 BRAND
                             </a>
                         </li>
-                        <li class="header__menu__list">
+                        <li class="nav__link">
                             <a href="./menu.html">
                                 MENU
                             </a>
                         </li>
-                        <li class="header__menu__list">
+                        <li class="nav__link">
                             <a href="./event.html">
                                 COMMUNITY
                             </a>
-                            <ul class="header__menu__list__sub">
-                                <li>
-                                    <a href="./event.html">이벤트</a>
-                                </li>
-                                <li>
-                                    <a href="./contact.html">고객문의</a>
-                                </li>
+                        <div class="menu__icon"></div>
+                        <div class="sub__menu">
+                            <ul>
+                                <li><a href="./event.html">이벤트</a></li>
+                                <li><a href="./contact.html?tab=1">고객문의</a></li>
                             </ul>
+                        </div>
                         </li>
-                        <li class="header__menu__list">
+                        <li class="nav__link">
                             <a href="./process.html">
                                 FRANCHISE
                             </a>
-                            <ul class="header__menu__list__sub">
+                            <div class="menu__icon"></div>
+                            <div class="sub__menu">
+                            <ul>
                                 <li>
                                     <a href="./process.html">가맹절차</a>
                                 </li>
@@ -57,22 +76,18 @@
                                     <a href="./FAQ.html">FAQ</a>
                                 </li>
                                 <li>
-                                    <a href="./contact.html">가맹 문의</a>
+                                    <a href="./contact.html?tab=2">가맹 문의</a>
                                 </li>
                             </ul>
+                            </div>
                         </li>
                     </ul>
-                </nav>
-
-                <div class="header__hamburger__btn">
-                    <a href="#">
-                        <img src="./assets/images/hamburger-btn.png" alt="햄버거 버튼">
-                    </a>
-                </div>
-                <div class="header__hamburger__close">
-                    <a href="#">
-                        <img src="./assets/images/hamburger-close-btn.png" alt="햄버거 닫힘 버튼">
-                    </a>
+                    </nav>
+                    <div class="hamburger__menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                 </div>
             </div>
     </header>

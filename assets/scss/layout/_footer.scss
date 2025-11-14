@@ -10,6 +10,20 @@
     &__logo {
         img {
             width: rem(162);
+            height: rem(82);
+            will-change: transform;
+            animation: wobble 7s ease-in-out infinite;
+            
+            @keyframes wobble {
+            0%   { transform: translate3d(0,10px,0) rotate(0deg); }
+            25%  { transform: translate3d(-5px, -10px, 0) rotate(-2deg); }
+            50%  { transform: translate3d(0, -20px, 0) rotate(0deg); }
+            75%  { transform: translate3d(20px, -10px, 0) rotate(2deg); }
+            100% { transform: translate3d(0,0,0) rotate(0deg); }
+            }
+            img {
+                width: rem(400);
+            }
         }
     }
 
@@ -150,6 +164,7 @@
         &__logo {
             img {
                 width: rem(100);
+                height: rem(52);
             }
         }
 
@@ -188,6 +203,7 @@
         &__logo {
             img {
                 width: rem(70);
+                height: rem(36);
             }
         }
 

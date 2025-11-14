@@ -3,7 +3,6 @@
     position: relative;
     height: rem(950);
     overflow: hidden;
-    @include bg-cover("/assets/images/cloud-bg.png");
     background-color: $color-skyblue;
     @include flex ($justify: center, $align: center, $direction: column, $wrap: nowrap, $gap: rem(150));
     text-align: center;
@@ -12,7 +11,7 @@
     &__bg {
         position: absolute;
         left: 50%;
-        bottom: 0;
+        bottom: rem(-10);
         transform: translate(-50%);
 
         &__cloud {
@@ -346,12 +345,14 @@
 .innovation {
     margin-bottom: rem(100);
     overflow-x: hidden;
-    background: linear-gradient(to bottom, $color-skyblue, $color-bg);
+    background: 
+    linear-gradient(to bottom, $color-skyblue, $color-bg);
     @include flex($justify: center, $align: center, $direction: column, $wrap: nowrap, $gap: rem(30));
 
     &__bg {
         position: relative;
         opacity: 0.9;
+        
 
         &__cloud__left {
             position: absolute;
@@ -479,7 +480,6 @@
                 width: 100%;
                 height: 100%;
                 opacity: 0;
-                transform: translateY(100%);
                 transition: transform 0.6s ease, opacity 0.6s ease;
             }
 
@@ -559,9 +559,8 @@
                         position: absolute;
                         bottom: 0;
                         left: 0;
-                        transform: translateY(100%);
                         opacity: 0;
-                        transition: transform 0.6s ease, opacity 0.6s ease;
+                        transition: transform 0.6s ease;
                         z-index: 10;
                         width: 100%;
                         height: 100%;
@@ -588,7 +587,6 @@
 
                 .story__wrap__card__text__inner__back,
                 .story__wrap__card__overlay__full {
-                    transform: translateY(0);
                     opacity: 1;
                 }
             }
@@ -672,8 +670,7 @@
         }
     }
 
-    // and (hover: hover) and (pointer: fine)
-    @media (max-width: $bp-tablet) and (hover: none) {
+    @media (max-width: $bp-tablet) {
         &__wrap {
             grid-template-columns: repeat(1, 1fr);
             grid-template-areas:
@@ -690,9 +687,7 @@
                             $color-primary 0%,
                             transparent 70%);
                     backdrop-filter: blur(5px);
-                    -webkit-backdrop-filter: blur(5px); //사파리
                     opacity: 1;
-                    transform: translateY(0);
                     mask-image: linear-gradient(to top, lab(32.65% -1.5 -30.07) 10%, transparent 100%);
                 }
 
@@ -737,16 +732,18 @@
                             position: relative;
                             padding: rem(20);
                             @include flex($justify: flex-end, $align: flex-end, $direction: row, $wrap: nowrap, $gap: 0);
+                            
                             br {
                                 display: none;
                             }
 
                             &__desc {
-                                transform: translateY(0);
                                 opacity: 1;
+                                
                                 @include flex ($justify: flex-start, $align: flex-start, $direction: column);
 
                                 p {
+                                    z-index: 100;
                                     text-align: start;
                                     @include font-set ($size: 20, $weight: 400, $line-height: 1.2, $family: $font-primary);
                                     padding: 0;
@@ -756,20 +753,17 @@
                         }
                     }
                 }
+                
+            }
+            .story__wrap__card__overlay__full,
+            .story__wrap__card__text__inner__back {
+                opacity: 1 !important;
+                transform: translateY(0) !important;
+            }
+            .story__wrap__card__text__inner__front__bottom {
+                background: none !important;
             }
 
-            &:hover {
-
-                .story__wrap__card__text__inner__front__bottom {
-                    background: none;
-                }
-
-                .story__wrap__card__text__inner__back,
-                .story__wrap__card__overlay__full {
-                    transform: translateY(0);
-                    opacity: 1;
-                }
-            }
 
             &__card02 {
                 padding-bottom: rem(170);
@@ -891,7 +885,7 @@
             &__text {
                 @include flex ($justify: center, $align: center, $direction: column, $wrap: nowrap, $gap: rem(20));
                 h3 {
-                    @include font-set($size: 24, $weight: 500, $line-height: 1.2, $family: $font-primary)
+                    @include font-set($size: 32, $weight: 500, $line-height: 1.2, $family: $font-primary)
                 }
                 p {
                     @include font-set($size: 20, $weight: 400, $line-height: 1.2, $family: $font-primary)
@@ -925,9 +919,11 @@
                 }
                 &__text {
                     @include flex ($justify: center, $align: center, $direction: column, $wrap: nowrap, $gap: rem(20));
-                
+                    h3 {
+                        @include font-set($size: 28, $weight: 500, $line-height: 1.2, $family: $font-primary)
+                    }
                     p {
-                        @include font-set($size: 18, $weight: 400, $line-height: 1.2, $family: $font-primary)
+                        @include font-set($size: 20, $weight: 400, $line-height: 1.2, $family: $font-primary)
                     }
                 }
             } 
@@ -956,9 +952,11 @@
                 &__text {
                     @include flex ($justify: center, $align: center, $direction: column, $wrap: nowrap, $gap: rem(20));
                     width: 100%;
-                
+                    h3 {
+                        @include font-set($size: 24, $weight: 500, $line-height: 1.2, $family: $font-primary)
+                    }
                     p {
-                        @include font-set($size: 18, $weight: 400, $line-height: 1.2, $family: $font-primary)
+                        @include font-set($size: 20, $weight: 400, $line-height: 1.2, $family: $font-primary)
                     }
                 }
             }
@@ -983,6 +981,14 @@
                 br {
                     display: block;
                 }
+                &__text {
+                    h3 {
+                        @include font-set($size: 18, $weight: 500, $line-height: 1.2, $family: $font-primary)
+                    }
+                    p {
+                        @include font-set($size: 14, $weight: 400, $line-height: 1.2, $family: $font-primary)
+                    }
+                }
             }       
         }
         .btn {
@@ -991,6 +997,16 @@
     }
 
     @media (max-width: $bp-mobile-sm) {
+        &__wrap {
+            &__card {
+                
+                &__text {
+                    h3 {
+                        @include font-set($size: 16, $weight: 500, $line-height: 1.2, $family: $font-primary)
+                    }
+                }
+            }       
+        }
         .btn {
             @include button-style($padding-x: 50px) 
         }
