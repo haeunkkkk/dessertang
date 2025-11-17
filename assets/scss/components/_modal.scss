@@ -99,7 +99,7 @@
     }
     @media (max-width: $bp-tablet) {
         &__content {
-            width: rem(300);
+            width: rem(450);
             .close__btn {
                 img {
                     width: rem(28);
@@ -129,7 +129,7 @@
     }
     @media (max-width: $bp-mobile-md) {
         &__content {
-            width: rem(200);
+            width: rem(370);
             padding: rem(20) rem(20);
             
             h2 {
@@ -161,7 +161,7 @@
     }
     @media (max-width: $bp-mobile-sm) {
         &__content {
-            
+            width: rem(290);
             h2 {
                 @include font-set ($size: 16, $weight: 600);
                 margin-bottom: rem(20);

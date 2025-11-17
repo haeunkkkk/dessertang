@@ -216,6 +216,10 @@ header {
 }
 .header__wrapper .logo a img {
   width: 15.9375rem;
+  transition: transform 0.3s ease;
+}
+.header__wrapper .logo a img:hover {
+  transform: scale(1.05);
 }
 
 .header__wrapper nav ul {
@@ -349,6 +353,9 @@ header {
     position: relative;
     z-index: 13;
   }
+  .hamburger__menu:hover > span {
+    background-color: #3475A8;
+  }
   .open-menu .header__wrapper nav {
     transform: translate(0%);
   }
@@ -445,6 +452,12 @@ header {
   }
   .header__wrapper .logo a img {
     width: 8.125rem;
+  }
+  .header__wrapper nav {
+    width: 15rem;
+  }
+  .header__wrapper nav ul li .menu__icon {
+    right: 3.125rem;
   }
   .hamburger__menu span {
     height: 0.1875rem;
@@ -582,6 +595,9 @@ header {
 }
 .footer__center__privacy a:last-child {
   border: none;
+}
+.footer__center__privacy a:hover {
+  color: #FEC66B;
 }
 .footer__center__copyright p {
   color: #ffffff;
@@ -940,6 +956,10 @@ header {
   width: 0.9375rem;
   height: 0.9375rem;
   margin: 0;
+}
+.hero .swiper-pagination-bullet:hover {
+  border: 0.125rem solid #333333;
+  background-color: rgba(0, 0, 0, 0.4039215686);
 }
 @media (max-width: 1024px) {
   .hero {
@@ -1456,6 +1476,10 @@ header {
 .growth .growth__swiper .swiper-button-prev {
   top: 60%;
   transform: translate(-60%);
+  color: #cccccc;
+}
+.growth .growth__swiper .swiper-button-next:hover,
+.growth .growth__swiper .swiper-button-prev:hover {
   color: #3475A8;
 }
 .growth .growth__swiper .swiper-button-prev {
@@ -1521,11 +1545,11 @@ header {
 }
 .growth .growth__card__keyword {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: row;
   flex-wrap: nowrap;
-  gap: 6.75rem;
+  gap: 0.625rem;
   font-family: "Paperozi";
   font-size: 1.25rem;
   font-weight: 300;
@@ -1621,7 +1645,7 @@ header {
   .growth .growth__card {
     margin-top: -4.6875rem;
     width: 22.875rem;
-    height: 24rem;
+    height: 100%;
   }
   .growth .growth__card__text {
     margin-top: 6.25rem;
@@ -1646,12 +1670,13 @@ header {
   }
   .growth .growth__card__keyword {
     font-family: "Paperozi";
-    font-size: 0.75rem;
-    font-weight: 700;
+    font-size: 1rem;
+    font-weight: 300;
     line-height: 1.2;
     color: #3475A8;
   }
   .growth .growth__card button {
+    width: 80%;
     font-family: "Pretendard";
     font-size: 1rem;
     font-weight: 400;
@@ -1671,18 +1696,32 @@ header {
     color: #3475A8;
     border: 1px solid #3475A8;
   }
-  .growth .swiper-button-next::after,
-  .growth .swiper-button-prev::after {
+  .growth .growth__swiper .swiper-button-next::after,
+  .growth .growth__swiper .swiper-button-prev::after {
     font-size: 1.5rem;
+  }
+  .growth .growth__swiper .swiper-button-prev {
+    left: 85%;
+    transform: translateX(calc(90% - 30px));
   }
 }
 @media (max-width: 390px) {
   .growth .growth__card {
     margin-top: -4.6875rem;
-    width: 18.75rem;
-    height: 22.5rem;
+    width: 16.875rem;
+  }
+  .growth .growth__card__keyword {
+    font-family: "Paperozi";
+    font-size: 0.875rem;
+    font-weight: 300;
+    line-height: 1.2;
+    gap: 20px;
   }
   .growth .growth__card button {
+    font-family: "Pretendard";
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.2;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -1690,7 +1729,7 @@ header {
     color: #ffffff;
     border-radius: 40px;
     border: none;
-    padding: 10px 70px;
+    padding: 10px 50px;
     transition: all 0.2 ease-in-out;
   }
   .growth .growth__card button:hover {
@@ -1698,8 +1737,14 @@ header {
     color: #3475A8;
     border: 1px solid #3475A8;
   }
-  .growth .swiper-button-next::after,
-  .growth .swiper-button-prev::after {
+  .growth .growth__swiper .swiper-button-next,
+  .growth .growth__swiper .swiper-button-prev {
+    top: 3.125rem;
+    right: 0rem;
+    transform: translateX(0);
+  }
+  .growth .growth__swiper .swiper-button-next::after,
+  .growth .growth__swiper .swiper-button-prev::after {
     font-size: 16px;
   }
 }
@@ -1728,9 +1773,13 @@ header {
   flex-wrap: nowrap;
   gap: 0.625rem;
 }
+.best__slide__content:hover .best__slide__img {
+  transform: scale(1.05);
+}
 .best__slide__img {
   margin-bottom: 0.625rem;
   display: block;
+  transition: transform 0.3s ease;
 }
 .best__slide__text {
   font-family: "Pretendard";
@@ -1762,8 +1811,11 @@ header {
   border-radius: 1.25rem;
 }
 .best__next, .best__prev {
-  color: #3475A8;
   top: 11.25rem;
+  color: #cccccc;
+}
+.best__next:hover, .best__prev:hover {
+  color: #3475A8;
 }
 @media (max-width: 1024px) {
   .best__swiper {
@@ -1807,7 +1859,6 @@ header {
     border-radius: 1.25rem;
   }
   .best__next, .best__prev {
-    color: #3475A8;
     top: 11.25rem;
   }
 }
@@ -4005,6 +4056,9 @@ header {
   line-height: 1;
   color: #ffffff;
 }
+.inquiry__tab ul li a:hover {
+  color: #3475A8;
+}
 .inquiry__form {
   width: 100%;
   padding: 0 7.3125rem;
@@ -4221,6 +4275,10 @@ header {
   line-height: 1.2;
   color: #999999;
 }
+.inquiry__form__privacy label:hover {
+  color: #333333;
+  font-weight: 600;
+}
 .inquiry__form__privacy a {
   font-family: "Pretendard";
   font-size: 1rem;
@@ -4228,6 +4286,10 @@ header {
   line-height: 1.2;
   color: #666666;
   text-decoration: underline;
+}
+.inquiry__form__privacy a:hover {
+  font-weight: 600;
+  color: #333333;
 }
 .inquiry button {
   font-family: "Pretendard";
@@ -5474,7 +5536,7 @@ header {
 }
 @media (max-width: 768px) {
   .modal__content {
-    width: 18.75rem;
+    width: 28.125rem;
   }
   .modal__content .close__btn img {
     width: 1.75rem;
@@ -5512,7 +5574,7 @@ header {
 }
 @media (max-width: 500px) {
   .modal__content {
-    width: 12.5rem;
+    width: 23.125rem;
     padding: 1.25rem 1.25rem;
   }
   .modal__content h2 {
@@ -5557,6 +5619,9 @@ header {
   }
 }
 @media (max-width: 390px) {
+  .modal__content {
+    width: 18.125rem;
+  }
   .modal__content h2 {
     font-family: "Pretendard";
     font-size: 1rem;

@@ -21,6 +21,10 @@ header {
         a{
             img {
                 width: rem(255);
+                transition: transform 0.3s ease;
+                &:hover {
+                    transform: scale(1.05);
+                }
             }
         }
     }
@@ -137,6 +141,9 @@ header {
         display: block;
         position: relative;
         z-index: 13;
+        &:hover > span {
+            background-color: $color-primary;
+        }
     }
     .open-menu .header__wrapper nav{
         transform: translate(0%);
@@ -164,7 +171,6 @@ header {
         position: relative;
         visibility: visible;
         opacity: 1;
-        
         display: none;
         width: 100%;
         height: 100%;
@@ -244,6 +250,12 @@ header {
                 }
             }
         } 
+    }
+    .header__wrapper nav{
+        width: rem(240);  
+    }
+    .header__wrapper nav ul li .menu__icon{
+        right: rem(50); 
     }
     .hamburger__menu span{
         height: rem(3);

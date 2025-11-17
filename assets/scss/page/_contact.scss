@@ -32,6 +32,9 @@
                 a {
                     @include font-set($size: 16, $weight: 700, $line-height: 1, $family: $font-accent);
                     color: $color-bg;
+                    &:hover {
+                        color: $color-primary;
+                    }
                 }
             }
         }
@@ -172,6 +175,7 @@
             @include flex ($justify: flex-start, $align: flex-start, $direction: row, $wrap: nowrap, $gap: rem(10));
             margin-left: rem(16);
             
+            
             .checkbox__wrap{
                 input {
                     display: none;
@@ -206,11 +210,19 @@
             label {
                 @include font-set($size: 16);
                 color: $gray-300;
+                &:hover {
+                    color: $color-text;
+                    font-weight: 600;
+                }
             }
             a {
                 @include font-set($size: 16);
                 color: $gray-400;
                 text-decoration: underline;
+                &:hover {
+                    font-weight: 600;
+                    color: $color-text;
+                }
             }
         }
     }

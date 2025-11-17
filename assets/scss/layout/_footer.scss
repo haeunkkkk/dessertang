@@ -73,6 +73,9 @@
                 &:last-child {
                     border: none;
                 }
+                &:hover {
+                    color: $color-orange;
+                }
             }
         }
 

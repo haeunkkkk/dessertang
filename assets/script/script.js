@@ -62,7 +62,7 @@ $(window).on('scroll', function () {
 
 $(window).on('scroll', function () {
   var scrollY = $(this).scrollTop();
-  var startPoint = $('.innovation').offset().top - 800;
+  var startPoint = $('.innovation').offset().top - 500;
 
   if (scrollY > startPoint) {
     var relativeY = scrollY - startPoint;

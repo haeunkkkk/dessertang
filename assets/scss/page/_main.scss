@@ -100,6 +100,10 @@
         width: rem(15);
         height: rem(15);
         margin: 0;
+        &:hover {
+            border: rem(2) solid $color-text;
+            background-color: #00000067; 
+        }
     }
 
     @media (max-width: $bp-desktop) {
@@ -643,7 +647,10 @@
             .swiper-button-prev {
                 top: 60%;
                 transform: translate(-60%);
-                color: $color-primary;
+                color: $gray-200;
+                &:hover {
+                    color: $color-primary;
+                }
             }
             .swiper-button-prev {
                 left: 50%;
@@ -697,7 +704,7 @@
         }
 
         &__keyword {
-            @include flex($justify: space-between, $gap: rem(108));
+            @include flex($gap: rem(10));
             @include font-set($size: 20, $weight: 300, $family: $font-accent);
             color: $color-primary
         }
@@ -799,7 +806,7 @@
         .growth__card {
             margin-top: rem(-75);
             width: rem(366);
-            height: rem(384);
+            height: 100%;
 
             &__text {
                 margin-top: rem(100);
@@ -818,11 +825,12 @@
             }
 
             &__keyword {
-                @include font-set($size: 12, $weight: 700, $family: $font-accent);
+                @include font-set($size: 16, $weight: 300, $family: $font-accent);
                 color: $color-primary
             }
 
             button {
+                width: 80%;
                 @include font-set ($size: 16);
                 @include button-style($bg: $color-primary,
                     $color: $color-bg,
@@ -833,31 +841,51 @@
             }
         }
 
-        .swiper-button-next::after,
-        .swiper-button-prev::after {
-            font-size: rem(24);
+        .growth__swiper {
+            .swiper-button-next,
+            .swiper-button-prev {
+                &::after {
+                    font-size:rem(24);
+                }
+            }
+            .swiper-button-prev {
+                left: 85%;
+                transform: translateX(calc(90% - 30px)); 
+            }
         }
     }
 
     @media (max-width: $bp-mobile-sm) {
         .growth__card {
             margin-top: rem(-75);
-            width: rem(300);
-            height: rem(360);
+            width: rem(270);
+
+            &__keyword {
+                @include font-set($size: 14, $weight: 300, $family: $font-accent);
+                gap: 20px;
+            }
 
             button {
+                @include font-set ($size: 14);
                 @include button-style($bg: $color-primary,
                     $color: $color-bg,
                     $radius: 40px,
                     $border: none,
                     $padding-y: 10px,
-                    $padding-x: 70px)
+                    $padding-x: 50px)
             }
         }
 
-        .swiper-button-next::after,
-        .swiper-button-prev::after {
-            font-size: 16px;
+       .growth__swiper {
+            .swiper-button-next,
+            .swiper-button-prev {
+                top: rem(50);
+                right: rem(0);
+                transform: translateX(0); 
+                &::after {
+                    font-size: 16px;
+                }
+            }
         }
     }
 }
@@ -875,11 +903,17 @@
 
         &__content {
             @include flex ($justify: center, $align: center, $direction: column, $wrap: nowrap, $gap: rem(10));
+            &:hover .best__slide__img {
+                transform: scale(1.05);
+            }
         }
 
         &__img {
             margin-bottom: rem(10);
             display: block;
+           
+                transition: transform 0.3s ease;
+            
         }
 
         &__text {
@@ -915,8 +949,11 @@
 
     &__next,
     &__prev {
-        color: $color-primary;
         top: rem(180);
+        color: $gray-200;
+            &:hover {
+                color: $color-primary;
+            }
     }
 
     @media (max-width: $bp-desktop) {
@@ -961,7 +998,6 @@
 
         &__next,
         &__prev {
-            color: $color-primary;
             top: rem(180);
         }
     }
@@ -1067,6 +1103,7 @@
             height: rem(466);
             @include flex ($justify: flex-end, $align: flex-end, $direction: column, $gap: rem(50));
             @include radius($radius: rem(20));
+            
 
             &__text {
                 width: 100%;
