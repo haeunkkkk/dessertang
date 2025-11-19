@@ -1,3 +1,171 @@
+//floating
+.floating-menu {
+    position: fixed;
+    bottom: rem(50);
+    right: rem(20);
+    z-index: 20;
+}
+
+.wrapper {
+  width: $color-bg;
+  height: rem(50);
+  position: relative;
+  @include radius($radius: 100%);
+  @include flex($justify: center, $align: center);
+  margin-top: rem(6);
+  
+  .fab {
+    background: $color-primary;
+    width: rem(80);
+    height: rem(80);
+    position: relative;
+    @include radius($radius: 100%);
+    @include flex($justify: center, $align: center);
+    animation: fab-animation-reverse 0.4s ease-out forwards;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    z-index: 3;
+    
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      @include radius($radius: rem(4));
+      background: $color-skyblue;
+    }
+    
+    &::before {
+      width: rem(6);
+      height: rem(50);
+    }
+    
+    &::after {
+      width: rem(50);
+      height: rem(6);
+    }
+  }
+
+  .fac {
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    opacity: 0;
+    @include flex($justify: space-around, $align: center, $direction: column);
+    transition: opacity 0.3s ease-in, top 0.3s ease-in, width 0.3s ease-in;
+
+    
+    a {
+        opacity: 0.9;
+        width: rem(80);
+        height: rem(80);
+        border-radius: 100%;
+        background-color: $color-bg;
+        padding: rem(0.5);
+        margin: rem(5);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+        text-align: center;
+        @include flex($justify: center, $align: center, $direction: column);
+      
+      &:hover {
+        transition: 0.3s;
+        opacity: 1;
+        color: $color-primary;
+      }
+
+      span {
+        @include font-set($size: 12, $weight: 300);
+        color: $gray-400;
+      }
+      p {
+        @include font-set($size: 16, $weight: 900);
+      }
+    }
+  }
+  
+  
+  input {
+    height: 100%;
+    width: 100%;
+    @include radius($radius: 100%);
+    cursor: pointer;
+    position: absolute;
+    z-index: 5;
+    opacity: 0;
+    
+    &:checked {
+      ~ .fab {
+        animation: fab-animation 0.4s ease-out forwards;
+      }
+      
+      ~ .fac {
+        width: rem(60);
+        height: rem(270);
+        animation: fac-animation 0.4s ease-out forwards 0.2s;
+        top: rem(-300);
+        opacity: 1;
+      }
+    }
+    &:not(:checked) ~ .fac {
+        animation: fac-animation-reverse 0.5s ease forwards;
+    }
+  }
+}
+
+@keyframes fac-animation-reverse {
+  0% { top: rem(-300); opacity: 1; }
+  100% { top: rem(0); opacity: 0; }
+}
+
+@keyframes fab-animation {
+  0% {
+    transform: rotate(0) scale(1);
+  }
+  20% {
+    transform: rotate(60deg) scale(0.93);
+  }
+  55% {
+    transform: rotate(35deg) scale(0.97);
+  }
+  80% {
+    transform: rotate(48deg) scale(0.94);
+  }
+  100% {
+    transform: rotate(45deg) scale(0.95);
+  }
+}
+
+@keyframes fab-animation-reverse {
+  0% {
+    transform: rotate(45deg) scale(0.95);
+  }
+  20% {
+    transform: rotate(-15deg);
+  }
+  55% {
+    transform: rotate(10deg);
+  }
+  80% {
+    transform: rotate(-3deg);
+  }
+  100% {
+    transform: rotate(0) scale(1);
+  }
+}
+
+@keyframes fac-animation {
+  0% {
+    transform: scale(1, 1);
+  }
+  33% {
+    transform: scale(0.95, 1.05);
+  }
+  66% {
+    transform: scale(1.05, 0.95);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
 
 
 //main

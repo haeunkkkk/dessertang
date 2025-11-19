@@ -11,15 +11,12 @@ $(function () {
                 $('.main__intro').fadeOut(800, function () {
                     $(this).remove();
                     $('body').css('overflow', 'auto'); 
-                    $('.main__content').fadeIn(600);
+                    $('.main__content').fadeIn(300);
                 });
             });
         }
     }
 });
-
-
-
 
 
 //header
