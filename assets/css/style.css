@@ -888,12 +888,12 @@ header {
   background: #DDEEF5;
 }
 .wrapper .fab::before {
-  width: 0.375rem;
-  height: 3.125rem;
+  width: 0.25rem;
+  height: 1.875rem;
 }
 .wrapper .fab::after {
-  width: 3.125rem;
-  height: 0.375rem;
+  width: 1.875rem;
+  height: 0.25rem;
 }
 .wrapper .fac {
   height: 100%;

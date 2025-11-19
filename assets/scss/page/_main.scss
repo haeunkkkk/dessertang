@@ -35,13 +35,13 @@
     }
     
     &::before {
-      width: rem(6);
-      height: rem(50);
+      width: rem(4);
+      height: rem(30);
     }
     
     &::after {
-      width: rem(50);
-      height: rem(6);
+      width: rem(30);
+      height: rem(4);
     }
   }
 
