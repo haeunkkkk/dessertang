@@ -957,9 +957,9 @@ header {
 }
 .wrapper input:checked ~ .fac {
   width: 3.75rem;
-  height: 16.875rem;
+  height: 10.625rem;
   animation: fac-animation 0.4s ease-out forwards 0.2s;
-  top: -18.75rem;
+  top: -11.875rem;
   opacity: 1;
 }
 .wrapper input:not(:checked) ~ .fac {
