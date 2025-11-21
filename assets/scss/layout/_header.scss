@@ -31,13 +31,16 @@ header {
 }
 
 .header__wrapper nav ul{
-    @include flex($justify: center, $align: center, $gap: rem(120));
+    @include flex($justify: center, $align: center);
 }
 
 .header__wrapper nav ul li{
     position: relative;
     @include font-set($size: 20, $weight:600);
     width: 100%;
+}
+.header__wrapper nav ul li a {
+    padding: rem(40);
 }
 .header__wrapper nav ul .nav__link:hover a{
     color: $color-primary;
@@ -46,9 +49,9 @@ header {
     background-color: $color-skyblue;
     padding: rem(10) 0;
     height: auto;
-    min-width: rem(100);
+    min-width: rem(140);
     position: absolute;
-    top: 100%;
+    top: 150%;
     left: 50%;
     transform: translateX(-50%);
     opacity: 0;
@@ -63,7 +66,7 @@ header {
 }
 .header__wrapper nav ul .nav__link .sub__menu ul{
     flex-direction: column;
-    gap: rem(10);
+    gap: 0;
     width: 100%;
     height: 100%;  
 } 
@@ -74,7 +77,8 @@ header {
     padding: 0 rem(10);
     width: 100%;
     transition: 0.3s;
-    font-size: clamp(0.8750rem, calc(0.805556rem + 0.023148vw), 1.2500rem);
+    font-size: clamp(0.75rem, 0.6574rem + 0.4938vw, 1.25rem);
+    padding: 20px;
 }
 .header__wrapper nav ul .nav__link .sub__menu ul li a::after{
     display: none;
@@ -154,15 +158,15 @@ header {
         margin: 0;
     }
     .header__wrapper nav ul li{
-        padding-left: rem(30);
         width: 100%;
     }
     .header__wrapper nav ul .nav__link a::after{
         display: none;
     }
     .header__wrapper nav ul .nav__link a{
-        padding: 0;
+        padding: rem(40) rem(30) ;
     }
+    
     .header__wrapper nav ul li .menu__icon {
         display: block;
     }
@@ -188,6 +192,10 @@ header {
         padding: 0;
         transition: 0.2s all;
     }
+    .header__wrapper nav ul .nav__link .sub__menu ul li a{
+        font-size: rem(20);
+        padding-left: rem(40);
+    }
     .header__wrapper nav ul .nav__link .sub__menu ul li:not(:last-child){
         padding-bottom: rem(15);
     }
@@ -197,14 +205,12 @@ header {
     }
     .header__wrapper nav ul li .menu__icon{
         display: block;
-        height: rem(30);
-        width: rem(30);
         content: "";
         position: absolute;
         top: rem(10);
         transform: translate(-50%, -50%) rotate(90deg);
-        width: rem(2);
-        height: rem(12);
+        width: rem(3);
+        height: rem(30);
         background-color: $color-primary;
         border: none;
         padding: 0;
@@ -216,8 +222,8 @@ header {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%) rotate(90deg);
-        width: rem(2);
-        height: rem(12);
+        width: rem(3);
+        height: rem(30);
         background-color: $color-primary;
         border: none;
         padding: 0;

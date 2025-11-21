@@ -228,7 +228,7 @@ header {
   align-items: center;
   flex-direction: row;
   flex-wrap: nowrap;
-  gap: 7.5rem;
+  gap: 0;
 }
 
 .header__wrapper nav ul li {
@@ -240,6 +240,10 @@ header {
   width: 100%;
 }
 
+.header__wrapper nav ul li a {
+  padding: 2.5rem;
+}
+
 .header__wrapper nav ul .nav__link:hover a {
   color: #3475A8;
 }
@@ -248,9 +252,9 @@ header {
   background-color: #DDEEF5;
   padding: 0.625rem 0;
   height: auto;
-  min-width: 6.25rem;
+  min-width: 8.75rem;
   position: absolute;
-  top: 100%;
+  top: 150%;
   left: 50%;
   transform: translateX(-50%);
   opacity: 0;
@@ -267,7 +271,7 @@ header {
 
 .header__wrapper nav ul .nav__link .sub__menu ul {
   flex-direction: column;
-  gap: 0.625rem;
+  gap: 0;
   width: 100%;
   height: 100%;
 }
@@ -279,7 +283,8 @@ header {
   padding: 0 0.625rem;
   width: 100%;
   transition: 0.3s;
-  font-size: clamp(0.875rem, 0.805556rem + 0.023148vw, 1.25rem);
+  font-size: clamp(0.75rem, 0.6574rem + 0.4938vw, 1.25rem);
+  padding: 20px;
 }
 
 .header__wrapper nav ul .nav__link .sub__menu ul li a::after {
@@ -364,14 +369,13 @@ header {
     margin: 0;
   }
   .header__wrapper nav ul li {
-    padding-left: 1.875rem;
     width: 100%;
   }
   .header__wrapper nav ul .nav__link a::after {
     display: none;
   }
   .header__wrapper nav ul .nav__link a {
-    padding: 0;
+    padding: 2.5rem 1.875rem;
   }
   .header__wrapper nav ul li .menu__icon {
     display: block;
@@ -398,6 +402,10 @@ header {
     padding: 0;
     transition: 0.2s all;
   }
+  .header__wrapper nav ul .nav__link .sub__menu ul li a {
+    font-size: 1.25rem;
+    padding-left: 2.5rem;
+  }
   .header__wrapper nav ul .nav__link .sub__menu ul li:not(:last-child) {
     padding-bottom: 0.9375rem;
   }
@@ -407,14 +415,12 @@ header {
   }
   .header__wrapper nav ul li .menu__icon {
     display: block;
-    height: 1.875rem;
-    width: 1.875rem;
     content: "";
     position: absolute;
     top: 0.625rem;
     transform: translate(-50%, -50%) rotate(90deg);
-    width: 0.125rem;
-    height: 0.75rem;
+    width: 0.1875rem;
+    height: 1.875rem;
     background-color: #3475A8;
     border: none;
     padding: 0;
@@ -426,8 +432,8 @@ header {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(90deg);
-    width: 0.125rem;
-    height: 0.75rem;
+    width: 0.1875rem;
+    height: 1.875rem;
     background-color: #3475A8;
     border: none;
     padding: 0;
@@ -510,25 +516,6 @@ header {
 .footer__logo img {
   width: 10.125rem;
   height: 5.125rem;
-  will-change: transform;
-  animation: wobble 7s ease-in-out infinite;
-}
-@keyframes wobble {
-  0% {
-    transform: translate3d(0, 10px, 0) rotate(0deg);
-  }
-  25% {
-    transform: translate3d(-5px, -10px, 0) rotate(-2deg);
-  }
-  50% {
-    transform: translate3d(0, -20px, 0) rotate(0deg);
-  }
-  75% {
-    transform: translate3d(20px, -10px, 0) rotate(2deg);
-  }
-  100% {
-    transform: translate3d(0, 0, 0) rotate(0deg);
-  }
 }
 .footer__logo img img {
   width: 25rem;
@@ -678,7 +665,7 @@ header {
 }
 @media (max-width: 768px) {
   .footer__inner {
-    padding: 0.75rem 1.25rem;
+    padding: 2.5rem 1.25rem;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -731,7 +718,7 @@ header {
 }
 @media (max-width: 500px) {
   .footer__inner {
-    padding: 0.75rem 0.625rem;
+    padding: 1.875rem 0.625rem;
   }
   .footer__logo img {
     width: 4.375rem;
@@ -1165,12 +1152,6 @@ header {
     gap: 10px;
     text-align: center;
   }
-  .hero__swiper__content__text h2 {
-    font-family: "Paperozi";
-    font-size: 2.25rem;
-    font-weight: 700;
-    line-height: 1.2;
-  }
   .hero__swiper__content__img {
     text-align: center;
   }
@@ -1199,7 +1180,7 @@ header {
 @media (max-width: 768px) {
   .hero__swiper__content__text h2 {
     font-family: "Paperozi";
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: 700;
     line-height: 1.2;
   }
@@ -1214,11 +1195,11 @@ header {
     align-items: center;
     flex-direction: column;
     flex-wrap: nowrap;
-    gap: 6.25rem;
+    gap: 4.375rem;
   }
   .hero__swiper__content__text h2 {
     font-family: "Paperozi";
-    font-size: 1.25rem;
+    font-size: 2rem;
     font-weight: 700;
     line-height: 1.2;
   }
@@ -1239,6 +1220,20 @@ header {
   }
 }
 @media (max-width: 390px) {
+  .hero__swiper__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 3.125rem;
+  }
+  .hero__swiper__content__text h2 {
+    font-family: "Paperozi";
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
   .hero__swiper__content__img img {
     width: 17.5rem;
   }
@@ -1246,14 +1241,14 @@ header {
 
 .point__title {
   font-family: "Paperozi";
-  font-size: 2.5rem;
+  font-size: 2.75rem;
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 0.3125rem;
 }
 .point__subtitle {
   font-family: "Pretendard";
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 500;
   line-height: 1.2;
   color: #3475A8;
@@ -1300,6 +1295,7 @@ header {
 }
 .point__card__text__title p {
   font-size: clamp(0.875rem, 0.8056rem + 0.3704vw, 1.25rem);
+  margin-bottom: 0.625rem;
   word-break: keep-all;
   white-space: normal;
 }
@@ -1321,6 +1317,11 @@ header {
   font-weight: 900;
   line-height: 1.2;
 }
+.point__card__text a:hover {
+  border: 1px solid #E4A9A9;
+  color: #E4A9A9;
+  background-color: #ffffff;
+}
 .point__card__img {
   width: 50%;
 }
@@ -1336,7 +1337,11 @@ header {
   background-color: #FEC66B;
 }
 .point__accessibility__card a {
-  width: 9.375rem;
+  width: 10.1875rem;
+}
+.point__accessibility__card a:hover {
+  border: 1px solid #FEC66B;
+  color: #FEC66B;
 }
 .point__accessibility__card img {
   margin-bottom: -1.25rem;
@@ -1354,8 +1359,12 @@ header {
   padding: 3.375rem 0 0 0;
 }
 .point__taste__card__text {
-  margin-left: clamp(0.75rem, 0.1944rem + 2.963vw, 3.75rem);
-  margin-right: 3.75rem;
+  padding-left: clamp(0.75rem, 0.1944rem + 2.963vw, 3.75rem);
+  padding-right: 3.75rem;
+}
+.point__taste__card a:hover {
+  border: 1px solid #BDCD96;
+  color: #BDCD96;
 }
 .point__taste__img {
   margin-bottom: -0.625rem;
@@ -1363,16 +1372,9 @@ header {
 @media (max-width: 1024px) {
   .point__title {
     font-family: "Paperozi";
-    font-size: 2rem;
+    font-size: 2.375rem;
     font-weight: 700;
     line-height: 1.2;
-  }
-  .point__subtitle {
-    font-family: "Pretendard";
-    font-size: 1.125rem;
-    font-weight: 500;
-    line-height: 1.2;
-    color: #3475A8;
   }
   .point__card {
     padding-top: 1.875rem;
@@ -1411,11 +1413,6 @@ header {
   .point__taste__card {
     padding: 1.875rem 1.875rem 0 0;
   }
-  .point__taste__card__text {
-    padding-right: 1.875rem;
-    margin-left: 1.875rem;
-    margin-right: 1.875rem;
-  }
   .point__taste__img img {
     width: 43.25rem;
     height: 18.75rem;
@@ -1424,7 +1421,7 @@ header {
 @media (max-width: 768px) {
   .point__title {
     font-family: "Paperozi";
-    font-size: 1.75rem;
+    font-size: 2rem;
     font-weight: 700;
     line-height: 1.2;
   }
@@ -1527,20 +1524,20 @@ header {
 @media (max-width: 500px) {
   .point__title {
     font-family: "Paperozi";
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     font-weight: 700;
     line-height: 1.2;
   }
   .point__subtitle {
     font-family: "Pretendard";
-    font-size: 1rem;
+    font-size: 1.25rem;
     font-weight: 500;
     line-height: 1.2;
     color: #3475A8;
   }
   .point__card {
-    padding-top: 1.25rem;
-    height: 11rem;
+    padding: 1.25rem 0 0 1.25rem;
+    height: 12.5rem;
   }
   .point__card__text__title {
     gap: 0.3125rem;
@@ -1565,7 +1562,7 @@ header {
   }
   .point__card__img {
     margin-right: 0;
-    margin-bottom: -1.875rem;
+    margin-bottom: -2.5rem;
   }
   .point__card__img img {
     margin-top: 0;
@@ -1573,7 +1570,13 @@ header {
     height: 8.4375rem;
   }
   .point__accessibility__card {
-    padding: 1.25rem 0.75rem 0 0;
+    padding: 1.25rem 1.25rem 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    gap: 0;
   }
   .point__accessibility__card__text__title {
     gap: 1.25rem;
@@ -1590,7 +1593,10 @@ header {
     height: 9.375rem;
   }
   .point__taste__card {
-    padding: 1.25rem 0.75rem 0 0;
+    padding: 1.25rem 1.25rem 0 0;
+  }
+  .point__taste__card__text {
+    margin-bottom: 0.625rem;
   }
   .point__taste__card__text__title {
     gap: 1.25rem;
@@ -1607,6 +1613,19 @@ header {
   }
 }
 @media (max-width: 390px) {
+  .point__title {
+    font-family: "Paperozi";
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  .point__subtitle {
+    font-family: "Pretendard";
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 1.2;
+    color: #3475A8;
+  }
   .point__card__wrap {
     gap: 0.75rem;
   }
@@ -1637,8 +1656,12 @@ header {
     width: 9.375rem;
     height: 6.25rem;
   }
+  .point__taste__card__text {
+    padding: 0;
+    margin: 0;
+  }
   .point__taste__card__text a {
-    margin-bottom: 0.9375rem;
+    margin-bottom: 0.8125rem;
   }
   .point__taste__img {
     margin-bottom: -0.625rem;
@@ -1795,23 +1818,29 @@ header {
   display: none;
 }
 @media (max-width: 768px) {
+  .growth {
+    padding-bottom: 0;
+  }
   .growth__card__img img {
     width: 12.5rem;
     height: 12.5rem;
   }
+  .growth .growth__swiper {
+    height: 100%;
+  }
   .growth .growth__swiper .swiper-button-next,
   .growth .growth__swiper .swiper-button-prev {
     top: 3.125rem;
-    right: 1.25rem;
+    right: 3.125rem;
     transform: translateX(10%);
   }
   .growth .growth__swiper .swiper-button-next::after,
   .growth .growth__swiper .swiper-button-prev::after {
-    font-size: 32px;
+    font-size: 2.5rem;
   }
   .growth .growth__swiper .swiper-button-prev {
-    left: 90%;
-    transform: translateX(calc(90% - 50px));
+    left: 80%;
+    transform: translateX(calc(80% - 50px));
   }
 }
 @media (max-width: 500px) {
@@ -1876,13 +1905,18 @@ header {
     color: #3475A8;
     border: 1px solid #3475A8;
   }
+  .growth .growth__swiper .swiper-button-next,
+  .growth .growth__swiper .swiper-button-prev {
+    top: 3.125rem;
+    right: 1.875rem;
+    transform: translateX(0);
+  }
   .growth .growth__swiper .swiper-button-next::after,
   .growth .growth__swiper .swiper-button-prev::after {
     font-size: 1.5rem;
   }
   .growth .growth__swiper .swiper-button-prev {
-    left: 85%;
-    transform: translateX(calc(90% - 30px));
+    left: 75%;
   }
 }
 @media (max-width: 390px) {
@@ -1919,13 +1953,15 @@ header {
   }
   .growth .growth__swiper .swiper-button-next,
   .growth .growth__swiper .swiper-button-prev {
-    top: 3.125rem;
-    right: 0rem;
+    right: 1.25rem;
     transform: translateX(0);
   }
   .growth .growth__swiper .swiper-button-next::after,
   .growth .growth__swiper .swiper-button-prev::after {
-    font-size: 16px;
+    font-size: 20px;
+  }
+  .growth .growth__swiper .swiper-button-prev {
+    left: 70%;
   }
 }
 
@@ -1936,6 +1972,10 @@ header {
   flex-direction: column;
   flex-wrap: nowrap;
   gap: 10rem;
+}
+.best__swiper button {
+  font-size: 1.5rem;
+  padding: 0.9375rem 6.625rem;
 }
 .best__slide {
   display: flex;
@@ -2043,6 +2083,9 @@ header {
   }
 }
 @media (max-width: 768px) {
+  .best {
+    padding-top: 5rem;
+  }
   .best__swiper {
     display: flex;
     justify-content: center;
@@ -2070,10 +2113,14 @@ header {
   }
   .best .swiper-button-next::after,
   .best .swiper-button-prev::after {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 }
 @media (max-width: 500px) {
+  .best__swiper button {
+    font-size: 1rem;
+    padding: 0.625rem 4.375rem;
+  }
   .best .swiper-button-next::after,
   .best .swiper-button-prev::after {
     font-size: 1.5rem;
@@ -2113,7 +2160,7 @@ header {
   }
   .best .swiper-button-next::after,
   .best .swiper-button-prev::after {
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
 }
 
@@ -2124,6 +2171,10 @@ header {
   flex-direction: column;
   flex-wrap: nowrap;
   gap: 3.125rem;
+}
+.event__wrapper button {
+  font-size: 1.5rem;
+  padding: 0.9375rem 6.625rem;
 }
 .event__wrap {
   width: 100%;
@@ -2206,6 +2257,10 @@ header {
   }
 }
 @media (max-width: 768px) {
+  .event__wrapper button {
+    font-size: 1rem;
+    padding: 0.625rem 4.375rem;
+  }
   .event__wrap {
     grid-template-columns: repeat(1, 1fr);
     grid-template-areas: "img1" "img2" "img3";
@@ -2245,7 +2300,7 @@ header {
   flex-direction: row;
   flex-wrap: nowrap;
   gap: 0;
-  padding: 3.125rem;
+  padding: 5rem 3.125rem;
 }
 .contact__left {
   display: flex;
@@ -2261,29 +2316,9 @@ header {
   font-weight: 700;
   line-height: 1.4;
 }
-.contact__left .btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #ffffff;
-  color: #3475A8;
-  border-radius: 40px;
-  border: 1px solid #3475A8;
-  padding: 10px 30px;
-  transition: all 0.2 ease-in-out;
-  font-family: "Pretendard";
-  font-size: 1.25rem;
-  font-weight: 500;
-  line-height: 1.4;
-}
-.contact__left .btn:hover {
-  background-color: #ffffff;
-  color: #3475A8;
-  border: 1px solid #3475A8;
-}
-.contact__left .btn:hover {
-  background-color: #3475A8;
-  color: #ffffff;
+.contact__left button {
+  font-size: 1.5rem;
+  padding: 0.9375rem 6.625rem;
 }
 .contact__img {
   will-change: transform;
@@ -2322,13 +2357,17 @@ header {
     flex-direction: row;
     flex-wrap: nowrap;
     gap: 0;
-    padding: 1.875rem;
+    padding: 3.75rem 1.875rem;
   }
   .contact .contact__left h2 {
     font-family: "Paperozi";
     font-size: 1.25rem;
     font-weight: 700;
     line-height: 1.4;
+  }
+  .contact .contact__left button {
+    font-size: 1rem;
+    padding: 0.625rem 3.125rem;
   }
   .contact .contact__img img {
     width: 12.5rem;
@@ -2342,7 +2381,7 @@ header {
     flex-direction: row;
     flex-wrap: nowrap;
     gap: 0;
-    padding: 1.25rem;
+    padding: 3.125rem 1.25rem;
   }
   .contact .contact__left h2 {
     font-family: "Paperozi";
@@ -2350,25 +2389,10 @@ header {
     font-weight: 600;
     line-height: 1.2;
   }
-  .contact .contact__left .btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #ffffff;
-    color: #3475A8;
-    border-radius: 40px;
-    border: 1px solid #3475A8;
-    padding: 10px 25px;
-    transition: all 0.2 ease-in-out;
-    font-family: "Pretendard";
+  .contact .contact__left button {
+    width: 100%;
     font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.2;
-  }
-  .contact .contact__left .btn:hover {
-    background-color: #ffffff;
-    color: #3475A8;
-    border: 1px solid #3475A8;
+    padding: 0.625rem 3.75rem;
   }
   .contact .contact__img img {
     width: 9.375rem;
@@ -2382,23 +2406,10 @@ header {
     flex-direction: row;
     flex-wrap: nowrap;
     gap: 0;
-    padding: 0.75rem;
+    padding: 1.875rem 0.75rem;
   }
-  .contact .contact__left .btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #ffffff;
-    color: #3475A8;
-    border-radius: 40px;
-    border: 1px solid #3475A8;
-    padding: 8px 15px;
-    transition: all 0.2 ease-in-out;
-  }
-  .contact .contact__left .btn:hover {
-    background-color: #ffffff;
-    color: #3475A8;
-    border: 1px solid #3475A8;
+  .contact .contact__left button {
+    padding: 0.625rem 3.125rem;
   }
   .contact .contact__img img {
     width: 6.25rem;
@@ -4236,9 +4247,6 @@ header {
   line-height: 1;
   color: #ffffff;
 }
-.inquiry__tab ul li a:hover {
-  color: #3475A8;
-}
 .inquiry__form {
   width: 100%;
   padding: 0 7.3125rem;
@@ -4271,7 +4279,7 @@ header {
 }
 .inquiry__form input::placeholder {
   font-family: "Pretendard";
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: 400;
   line-height: 1.2;
   color: #666666;
@@ -4312,7 +4320,7 @@ header {
 }
 .inquiry__form__message textarea::placeholder {
   font-family: "Pretendard";
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: 400;
   line-height: 1.2;
   color: #666666;
@@ -4352,7 +4360,7 @@ header {
   padding: 0.6875rem 0.75rem;
   border: 1px solid #ffffff;
   font-family: "Pretendard";
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: 400;
   line-height: 1.2;
   color: #666666;
@@ -4509,12 +4517,6 @@ header {
     flex-wrap: nowrap;
     gap: 1.25rem;
   }
-  .inquiry__form input::placeholder {
-    font-family: "Pretendard";
-    font-size: 0.875rem;
-    font-weight: 400;
-    line-height: 1.2;
-  }
   .inquiry__form__franchise .region {
     display: flex;
     justify-content: center;
@@ -4527,7 +4529,7 @@ header {
     padding: 0.5625rem 0.75rem;
     border: 1px solid #ffffff;
     font-family: "Pretendard";
-    font-size: 0.875rem;
+    font-size: 1rem;
     font-weight: 400;
     line-height: 1.2;
   }
@@ -4542,13 +4544,13 @@ header {
 @media (max-width: 768px) {
   .inquiry__form label {
     font-family: "Pretendard";
-    font-size: 1.125rem;
+    font-size: 1rem;
     font-weight: 400;
     line-height: 1.2;
   }
   .inquiry__form input::placeholder {
     font-family: "Pretendard";
-    font-size: 0.875rem;
+    font-size: 1rem;
     font-weight: 400;
     line-height: 1.2;
   }
@@ -4565,7 +4567,7 @@ header {
   }
   .inquiry__form__message textarea::placeholder {
     font-family: "Pretendard";
-    font-size: 0.875rem;
+    font-size: 1rem;
     font-weight: 400;
     line-height: 1.2;
   }
@@ -4588,7 +4590,7 @@ header {
   }
   .inquiry__form input::placeholder {
     font-family: "Pretendard";
-    font-size: 0.75rem;
+    font-size: 0.875rem;
     font-weight: 400;
     line-height: 1.2;
   }
@@ -4605,13 +4607,13 @@ header {
   }
   .inquiry__form__message textarea::placeholder {
     font-family: "Pretendard";
-    font-size: 0.75rem;
+    font-size: 0.875rem;
     font-weight: 400;
     line-height: 1.2;
   }
   .inquiry__form__franchise .custom__select {
     font-family: "Pretendard";
-    font-size: 0.75rem;
+    font-size: 0.875rem;
     font-weight: 400;
     line-height: 1.2;
   }

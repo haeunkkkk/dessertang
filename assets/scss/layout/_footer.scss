@@ -11,16 +11,7 @@
         img {
             width: rem(162);
             height: rem(82);
-            will-change: transform;
-            animation: wobble 7s ease-in-out infinite;
-            
-            @keyframes wobble {
-            0%   { transform: translate3d(0,10px,0) rotate(0deg); }
-            25%  { transform: translate3d(-5px, -10px, 0) rotate(-2deg); }
-            50%  { transform: translate3d(0, -20px, 0) rotate(0deg); }
-            75%  { transform: translate3d(20px, -10px, 0) rotate(2deg); }
-            100% { transform: translate3d(0,0,0) rotate(0deg); }
-            }
+        
             img {
                 width: rem(400);
             }
@@ -160,7 +151,7 @@
 
     @media (max-width: $bp-tablet) {
        &__inner {
-            padding: rem(12) rem(20);
+            padding: rem(40) rem(20);
             @include flex($justify: flex-start, $align: flex-start, $direction:column, $gap: rem(20));
         }
 
@@ -201,7 +192,7 @@
 
     @media (max-width: $bp-mobile-md) {
         &__inner {
-            padding: rem(12) rem(10);
+            padding: rem(30) rem(10);
         }
         &__logo {
             img {

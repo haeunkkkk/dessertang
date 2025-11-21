@@ -32,9 +32,6 @@
                 a {
                     @include font-set($size: 16, $weight: 700, $line-height: 1, $family: $font-accent);
                     color: $color-bg;
-                    &:hover {
-                        color: $color-primary;
-                    }
                 }
             }
         }
@@ -61,7 +58,7 @@
             padding: rem(11) rem(12);
             width: 100%;
             &::placeholder {
-                @include font-set($size: 16);
+                @include font-set($size: 20);
                 color: $gray-400;
             }
         }
@@ -90,7 +87,7 @@
                 max-width: 100%;
                 height: rem(160);
                 &::placeholder {
-                    @include font-set($size: 16);
+                    @include font-set($size: 20);
                     color: $gray-400;
                 }
             }
@@ -117,7 +114,7 @@
                 @include radius($radius: rem(10));
                 padding: rem(11) rem(12); 
                 border: 1px solid $color-bg;  
-                @include font-set($size: 16);
+                @include font-set($size: 20);
                 color: $gray-400;
                 
                 .arrow {
@@ -246,11 +243,7 @@
             form {
                 @include flex ($justify: flex-start, $align: flex-start, $direction: column, $wrap: nowrap, $gap: rem(20));
             }
-            input {
-                &::placeholder {
-                    @include font-set($size: 14);
-                }
-            }
+            
 
             &__franchise {
                 .region {
@@ -259,7 +252,7 @@
                 .custom__select {
                     padding: rem(9) rem(12);
                     border: 1px solid $color-bg;  
-                    @include font-set($size: 14);
+                    @include font-set($size: 16);
                     .options {
                         top: rem(36);
                     }
@@ -277,11 +270,11 @@
     @media (max-width: $bp-tablet) {
         &__form {
             label {
-                @include font-set($size: 18);
+                @include font-set($size: 16);
             }
             input {
                 &::placeholder {
-                    @include font-set($size: 14);
+                    @include font-set($size: 16);
                 }
             }
             &__group {
@@ -293,7 +286,7 @@
             &__message {
                 textarea {
                     &::placeholder {
-                        @include font-set($size: 14);
+                        @include font-set($size: 16);
                     }
                 }
             }
@@ -318,7 +311,7 @@
             }
             input {
                 &::placeholder {
-                    @include font-set($size: 12);
+                    @include font-set($size: 14);
                 }
             }
             &__group {
@@ -330,14 +323,14 @@
             &__message {
                 textarea {
                     &::placeholder {
-                        @include font-set($size: 12);
+                        @include font-set($size: 14);
                     }
                 }
             }
 
             &__franchise {
                 .custom__select {
-                    @include font-set($size: 12);
+                    @include font-set($size: 14);
                     .options {
                         top: rem(33);
                        

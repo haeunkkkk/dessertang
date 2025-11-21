@@ -235,7 +235,7 @@
                             <h2>차별화 포인트</h2>
                         </div>
                         <div class="point__subtitle">
-                            <p>맛, 가격, 환경, 건강을 생각한 디저트 카페</p>
+                            <p>맛, 가격, 환경, 건강을 생각한 카페</p>
                         </div>
                     </div>
 
@@ -879,19 +879,27 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-        var swiper = new Swiper(".mySwiper", {
-            effect: "fade",
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            autoplay: {
-                delay: 8000,
-            },
-            speed: 1000,
-        });
+    // 첫번째 슬라이드 (인트로)
+    var introSwiper = new Swiper(".mySwiper", {
+        effect: "fade",
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        autoplay: false,
+        speed: 1000,
+    });
+    setTimeout(() => {
+        introSwiper.params.autoplay = {
+            delay: 3000,
+            disableOnInteraction: false,
+        };
+        introSwiper.autoplay.start();
+    }, 8000);
 
-        var swiper = new Swiper(".growth__swiper", {
+
+    // 두번째 슬라이드 (growth)
+    var growthSwiper = new Swiper(".growth__swiper", {
         effect: "coverflow",
         grabCursor: true,
         centeredSlides: true,
@@ -903,52 +911,54 @@
             depth: 90,
             modifier: 1,
             slideShadows: true,
-           
         },
         navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+            500: {
+                slidesPerView: 1,
+                spaceBetween: 0
             },
-            breakpoints: {
-                500: {
-                    slidesPerView: 1,
-                    spaceBetween: 0
-                },
-                1025: {
-                    slidesPerView: 3,
-                    spaceBetween: 0
-                },   
+            1025: {
+                slidesPerView: 3,
+                spaceBetween: 0
             },
-        });
+        },
+    });
 
-        var swiper = new Swiper(".best__swiper", {
-            slidesPerView: 2,
-            spaceBetween: 16,
-            loop: true,
-            breakpoints: {
-                500: {
-                    slidesPerView: 2.5,
-                    spaceBetween: 12,
-                },
-                768: {
-                    slidesPerView: 3,
-                    spaceBetween: 16,
-                },
-                1024: {
-                    slidesPerView: 4,
-                    spaceBetween: 16,
-                },
+
+    // 세번째 슬라이드 (best)
+    var bestSwiper = new Swiper(".best__swiper", {
+        slidesPerView: 2,
+        spaceBetween: 16,
+        loop: true,
+        breakpoints: {
+            500: {
+                slidesPerView: 2.5,
+                spaceBetween: 12,
             },
-            pagination: {
-                el: ".swiper-pagination",
-                type: "progressbar",
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 16,
             },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
+            1024: {
+                slidesPerView: 4,
+                spaceBetween: 16,
             },
-        });
-    </script>
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            type: "progressbar",
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+</script>
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init(

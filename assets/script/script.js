@@ -1,22 +1,35 @@
 // main-intro
 $(function () {
+    const introPlayed = localStorage.getItem("introPlayed");
 
     if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
+
+        if (introPlayed === "true") {
+            $('.main__intro').remove(); 
+            $('.main__content').show();
+            $('body').css('overflow', 'auto');
+            return;
+        }
+
         const $video = $('#main__intro__video');
 
         if ($video.length && $video.is(':visible')) {
-            $('body').css('overflow', 'hidden'); 
+            $('body').css('overflow', 'hidden');
 
             $video.on('ended', function () {
-                $('.main__intro').fadeOut(800, function () {
+
+                localStorage.setItem("introPlayed", "true");
+
+                $('.main__intro').fadeOut(300, function () {
                     $(this).remove();
-                    $('body').css('overflow', 'auto'); 
+                    $('body').css('overflow', 'auto');
                     $('.main__content').fadeIn(300);
                 });
             });
         }
     }
 });
+
 
 
 //header
@@ -27,13 +40,25 @@ $(function() {
 
     $('.header__wrapper nav ul li .menu__icon').click(function(){
         if ($(window).width() <= 1024) {
-            $(this).siblings("div.sub__menu").stop(true, true).slideToggle("slow");
-            $(this).closest("li").siblings().find("div.sub__menu").stop(true, true).slideUp("slow");
+            const $submenu = $(this).siblings("div.sub__menu");
+
+            $submenu.stop(true, true).fadeToggle(200);
+
+            $(this)
+                .closest("li")
+                .siblings()
+                .find("div.sub__menu")
+                .stop(true, true)
+                .fadeOut(200);
+
             $(this).toggleClass("open-menu");
-            $(this).closest("li").siblings().find(".menu__icon").removeClass("open-menu");
+            $(this)
+                .closest("li")
+                .siblings()
+                .find(".menu__icon")
+                .removeClass("open-menu");
         }
     });
-
 });
 
 

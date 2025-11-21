@@ -288,10 +288,6 @@
 
                     @include flex ($direction: column, $wrap: nowrap, $gap: 10px);
                     text-align: center;
-
-                    h2 {
-                        @include font-set ($size: 36, $weight: 700, $line-height: 1.2, $family: $font-accent)
-                    }
                 }
 
                 &__img {
@@ -330,7 +326,7 @@
             &__content {
                 &__text {
                     h2 {
-                        @include font-set ($size: 32, $weight: 700, $line-height: 1.2, $family: $font-accent)
+                        @include font-set ($size: 40, $weight: 700, $line-height: 1.2, $family: $font-accent)
                     }
                 }
             }
@@ -342,11 +338,11 @@
 
         &__swiper {
             &__content {
-                @include flex ($justify: center, $direction: column, $gap: rem(100));
+                @include flex ($justify: center, $direction: column, $gap: rem(70));
 
                 &__text {
                     h2 {
-                        @include font-set ($size: 20, $weight: 700, $line-height: 1.2, $family: $font-accent)
+                        @include font-set ($size: 32, $weight: 700, $line-height: 1.2, $family: $font-accent)
                     }
                 }
 
@@ -373,6 +369,13 @@
     @media (max-width: $bp-mobile-sm) {
         &__swiper {
             &__content {
+                @include flex ($justify: center, $direction: column, $gap: rem(50));
+
+                &__text {
+                    h2 {
+                        @include font-set ($size: 28, $weight: 700, $line-height: 1.2, $family: $font-accent)
+                    }
+                }
                 &__img {
                     img {
                         width: rem(280);
@@ -387,12 +390,12 @@
 //point
 .point {
     &__title {
-        @include title-style(40);
+        @include title-style(44);
         margin-bottom: rem(5);
     }
 
     &__subtitle {
-        @include subtitle-style(20);
+        @include subtitle-style(24);
     }
 
     &__card__wrap {
@@ -429,6 +432,7 @@
 
                 p {
                     font-size: clamp(0.875rem, 0.8056rem + 0.3704vw, 1.25rem);
+                    margin-bottom: rem(10);
                     word-break: keep-all;
                     white-space: normal;
                 }
@@ -449,6 +453,12 @@
                 margin-bottom: rem(54);
                 @include radius(rem(40));
                 @include font-set($size: 16, $weight: 900, $family: $font-accent);
+
+                &:hover {
+                    border: 1px solid $color-pink;
+                    color: $color-pink;
+                    background-color: $color-bg;
+                }
             }
         }
 
@@ -470,7 +480,11 @@
         background-color: $color-orange;
 
         a {
-            width: rem(150);
+            width: rem(163);
+            &:hover {
+                    border: 1px solid $color-orange;
+                    color: $color-orange;
+                }
         }
 
         img {
@@ -485,8 +499,14 @@
         @include flex($justify: space-between, $align: flex-start, $direction: column);
         padding: rem(54) 0 0 0;
         &__text {
-            margin-left: clamp(0.75rem, 0.1944rem + 2.963vw, 3.75rem);
-            margin-right: rem(60);
+            padding-left: clamp(0.75rem, 0.1944rem + 2.963vw, 3.75rem);
+            padding-right: rem(60);
+        }
+        a {
+            &:hover {
+                    border: 1px solid $color-green;
+                    color: $color-green;
+                }
         }
     }
     &__taste__img {
@@ -496,11 +516,7 @@
 
     @media (max-width: $bp-desktop) {
         &__title {
-            @include title-style(32);
-        }
-
-        &__subtitle {
-            @include subtitle-style(18);
+            @include title-style(38);
         }
 
         &__card {
@@ -543,13 +559,6 @@
 
         &__taste__card {
             padding: rem(30) rem(30) 0 0;
-
-            &__text {
-                padding-right: rem(30);
-                margin-left: rem(30);
-                margin-right: rem(30);
-            }
-
         }
 
         &__taste__img {
@@ -562,7 +571,7 @@
 
     @media (max-width: $bp-tablet) {
         &__title {
-            @include title-style(28);
+            @include title-style(32);
         }
 
         &__card__wrap {
@@ -656,16 +665,16 @@
 
     @media (max-width: $bp-mobile-md) {
         &__title {
-            @include title-style(24);
+            @include title-style(28);
         }
 
         &__subtitle {
-            @include subtitle-style(16);
+            @include subtitle-style(20);
         }
 
         &__card {
-            padding-top: rem(20);
-            height: rem(176);
+            padding: rem(20) 0  0 rem(20);
+            height: rem(200);
 
             &__text {
                 &__title {
@@ -689,7 +698,7 @@
 
             &__img {
                 margin-right: 0;
-                margin-bottom: rem(-30);
+                margin-bottom: rem(-40);
 
                 img {
                     margin-top: 0;
@@ -700,7 +709,8 @@
         }
 
         &__accessibility__card {
-            padding: rem(20) rem(12) 0 0;
+            padding: rem(20) rem(20) 0 0;
+            @include flex($justify: space-between, $align: center, $direction: row-reverse);
 
             &__text {
                 &__title {
@@ -723,9 +733,10 @@
         }
 
         &__taste__card {
-            padding: rem(20) rem(12) 0 0;
+            padding: rem(20) rem(20) 0 0;
             
             &__text {
+                margin-bottom: rem(10);
                 &__title {
                     gap: rem(20);
                 }
@@ -746,6 +757,13 @@
     }
 
     @media (max-width: $bp-mobile-sm) {
+        &__title {
+            @include title-style(24);
+        }
+
+        &__subtitle {
+            @include subtitle-style(18);
+        }
         &__card__wrap {
             gap: rem(12);
         }
@@ -790,8 +808,10 @@
 
         &__taste__card {
             &__text {
+                padding: 0;
+                margin: 0;
                 a {
-                    margin-bottom: rem(15);
+                    margin-bottom: rem(13);
                 }
             }
         }
@@ -938,6 +958,7 @@
     }
 
     @media (max-width: $bp-tablet) {
+        padding-bottom: 0;
         &__card__img {
             img {
                 width: rem(200);
@@ -945,18 +966,19 @@
             }
         }
         .growth__swiper {
+            height: 100%;
             .swiper-button-next,
             .swiper-button-prev {
                 top: rem(50);
-                right: rem(20);
+                right: rem(50);
                 transform: translateX(10%); 
                 &::after {
-                    font-size: 32px;
+                    font-size: rem(40);
                 }
             }
             .swiper-button-prev {
-                left: 90%;
-                transform: translateX(calc(90% - 50px)); 
+                left: 80%;
+                transform: translateX(calc(80% - 50px)); 
             }
         }
     }
@@ -1012,14 +1034,16 @@
         .growth__swiper {
             .swiper-button-next,
             .swiper-button-prev {
+                top: rem(50);
+                right: rem(30);
+                transform: translateX(0); 
                 &::after {
-                    font-size:rem(24);
+                    font-size: rem(24);
                 }
             }
             .swiper-button-prev {
-                left: 85%;
-                transform: translateX(calc(90% - 30px)); 
-            }
+                    left: 75%;
+                }
         }
     }
 
@@ -1047,12 +1071,14 @@
        .growth__swiper {
             .swiper-button-next,
             .swiper-button-prev {
-                top: rem(50);
-                right: rem(0);
+                right: rem(20);
                 transform: translateX(0); 
                 &::after {
-                    font-size: 16px;
+                    font-size: 20px;
                 }
+            }
+            .swiper-button-prev {
+                left: 70%;
             }
         }
     }
@@ -1064,6 +1090,10 @@
 .best {
     &__swiper {
         @include flex ($justify: center, $align: center, $direction: column, $wrap: nowrap, $gap: rem(160));
+        button {
+            font-size: rem(24);
+            padding: rem(15) rem(106);
+        }
     }
 
     &__slide {
@@ -1169,6 +1199,7 @@
     }
 
     @media (max-width: $bp-tablet) {
+        padding-top: rem(80);
         &__swiper {
             @include flex ($justify: center, $align: center, $direction: column, $wrap: nowrap, $gap: rem(80))
         }
@@ -1197,14 +1228,19 @@
 
         .swiper-button-next::after,
         .swiper-button-prev::after {
-            font-size: rem(32);
+            font-size: rem(40);
         }
 
 
     }
 
     @media (max-width: $bp-mobile-md) {
-
+        &__swiper {
+            button {
+                font-size: rem(16);
+                padding: rem(10) rem(70);
+            }
+        }
         .swiper-button-next::after,
         .swiper-button-prev::after {
             font-size: rem(24);
@@ -1244,7 +1280,7 @@
 
         .swiper-button-next::after,
         .swiper-button-prev::after {
-            font-size: rem(16);
+            font-size: rem(20);
         }
 
     }
@@ -1254,6 +1290,10 @@
 .event {
     &__wrapper {
         @include flex ($justify: center, $direction: column, $gap: rem(50));
+        button {
+            font-size: rem(24);
+            padding: rem(15) rem(106);
+        }
     }
 
     &__wrap {
@@ -1324,6 +1364,13 @@
     }
 
     @media (max-width: $bp-tablet) {
+        &__wrapper {
+            button {
+                font-size: rem(16);
+                padding: rem(10) rem(70);
+            }
+
+        }
         &__wrap {
             grid-template-columns: repeat(1, 1fr);
             grid-template-areas:
@@ -1365,7 +1412,7 @@
 
     .container {
         @include flex ($justify: space-between);
-        padding: rem(50);
+        padding: rem(80) rem(50);
     }
 
     &__left {
@@ -1375,16 +1422,9 @@
             @include font-set($size: 24, $weight: 700, $line-height: 1.4, $family: $font-accent);
         }
 
-        .btn {
-            @include button-style($bg: $color-bg,
-                $color: $color-primary,
-                $border: 1px solid $color-primary, $padding-y: 10px,
-                $padding-x: 30px);
-            @include font-set($size: 20, $weight: 500, $line-height: 1.4, $family: $font-primary);
-            &:hover {
-                background-color: $color-primary;
-                color: $color-bg;
-            }
+        button {
+            font-size: rem(24);
+            padding: rem(15) rem(106);
         }
     }
 
@@ -1415,12 +1455,16 @@
     @media (max-width: $bp-tablet) {
         .container {
             @include flex ($justify: space-between);
-            padding: rem(30);
+            padding: rem(60) rem(30);
         }
 
         .contact__left {
             h2 {
                 @include font-set($size: 20, $weight: 700, $line-height: 1.4, $family: $font-accent);
+            }
+            button {
+                font-size: rem(16);
+                padding: rem(10) rem(50);
             }
         }
 
@@ -1434,7 +1478,7 @@
     @media (max-width: $bp-mobile-md) {
         .container {
             @include flex ($justify: space-between);
-            padding: rem(20);
+            padding: rem(50) rem(20);
         }
 
         .contact__left {
@@ -1442,14 +1486,10 @@
                 @include font-set($size: 16, $weight: 600, $line-height: 1.2, $family: $font-accent);
             }
 
-            .btn {
-                @include button-style($bg: $color-bg,
-                    $color: $color-primary,
-                    $border: 1px solid $color-primary, $padding-y: 10px,
-                    $padding-x: 25px);
-
-                @include font-set($size: 16, $weight: 400, $line-height: 1.2, $family: $font-primary);
-
+            button {
+                width: 100%;
+                font-size: rem(16);
+                padding: rem(10) rem(60);
             }
         }
 
@@ -1463,15 +1503,12 @@
     @media (max-width: $bp-mobile-sm) {
         .container {
             @include flex ($justify: space-between);
-            padding: rem(12);
+            padding: rem(30) rem(12);
         }
 
         .contact__left {
-            .btn {
-                @include button-style($bg: $color-bg,
-                    $color: $color-primary,
-                    $border: 1px solid $color-primary, $padding-y: 8px,
-                    $padding-x: 15px);
+           button {
+                padding: rem(10) rem(50);
             }
         }
 
