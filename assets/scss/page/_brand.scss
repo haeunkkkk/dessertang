@@ -345,25 +345,25 @@
 .innovation {
     margin-bottom: rem(100);
     overflow-x: hidden;
-    background: 
-    linear-gradient(to bottom, $color-skyblue, $color-bg);
+    background:
+        linear-gradient(to bottom, $color-skyblue, $color-bg);
     @include flex($justify: center, $align: center, $direction: column, $wrap: nowrap, $gap: rem(30));
 
     &__bg {
         position: relative;
         opacity: 0.9;
-        
+
 
         &__cloud__left {
             position: absolute;
-            top: rem(-300);
-            left: rem(-700);
+            top: rem(-100);
+            right: rem(-500);
         }
 
         &__cloud__right {
             position: absolute;
-            top: rem(-300);
-            right: rem(-700);
+            top: rem(-100);
+            left: rem(-250);
         }
     }
 
@@ -458,13 +458,15 @@
 
             @keyframes float {
                 0% {
-                transform: translateY(0); 
+                    transform: translateY(0);
                 }
+
                 50% {
-                transform: translateY(-30px); 
+                    transform: translateY(-30px);
                 }
+
                 100% {
-                transform: translateY(0); 
+                    transform: translateY(0);
                 }
             }
 
@@ -480,7 +482,7 @@
                 width: 100%;
                 height: 100%;
                 opacity: 0;
-                transition: transform 0.6s ease, opacity 0.6s ease;
+                transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
             }
 
             &__text {
@@ -522,6 +524,7 @@
                             height: 100%;
                             padding: rem(30) rem(30);
                             align-self: flex-start;
+                            transition: transform 0.5s ease-in-out;
 
                             .overlay__blur {
                                 mask-image: linear-gradient(to top, lab(32.65% -1.5 -30.07) 70%, transparent 100%);
@@ -560,20 +563,23 @@
                         bottom: 0;
                         left: 0;
                         opacity: 0;
-                        transition: transform 0.6s ease;
+                        transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
                         z-index: 10;
                         width: 100%;
                         height: 100%;
                         @include flex ($justify: center, $align: center, $direction: column);
 
                         &__desc {
+
+
                             p {
                                 padding: rem(20);
                                 text-align: center;
                                 line-height: 1.4;
                                 font-size: clamp(1rem, 0.9074rem + 0.4938vw, 1.5rem);
+
                             }
-                            
+
                         }
 
                     }
@@ -633,6 +639,7 @@
         &__wrap {
             overflow: hidden;
             padding: 0 rem(20);
+
             &__card {
                 &__text {
                     &__inner {
@@ -731,42 +738,45 @@
                         &__back {
                             position: relative;
                             padding: rem(20);
-                            @include flex($justify: flex-end, $align: flex-end, $direction: row, $wrap: nowrap, $gap: 0);
-                            
+
                             br {
                                 display: none;
                             }
 
                             &__desc {
                                 opacity: 1;
-                                
+
                                 @include flex ($justify: flex-start, $align: flex-start, $direction: column);
 
                                 p {
                                     z-index: 100;
+                                    position: absolute;
+                                    bottom: rem(-120);
+                                    left: 0;
                                     text-align: start;
                                     @include font-set ($size: 20, $weight: 400, $line-height: 1.2, $family: $font-primary);
-                                    padding: 0;
+                                    padding: rem(20) rem(20) 0 rem(20);
                                 }
                             }
 
                         }
                     }
                 }
-                
+
             }
+
             .story__wrap__card__overlay__full,
             .story__wrap__card__text__inner__back {
                 opacity: 1 !important;
                 transform: translateY(0) !important;
             }
+
             .story__wrap__card__text__inner__front__bottom {
                 background: none !important;
             }
 
 
             &__card02 {
-                padding-bottom: rem(170);
 
                 .story__wrap__card__text__inner__front {
                     @include flex ($justify: space-between, $align: flex-start, $direction: row, $wrap: nowrap);
@@ -774,7 +784,6 @@
             }
 
             &__card03 {
-                padding-bottom: rem(170);
 
                 .story__wrap__card__text__inner__front {
                     @include flex ($justify: space-between, $align: flex-start, $direction: row, $wrap: nowrap);
@@ -824,7 +833,40 @@
                             &__desc {
                                 p {
                                     @include font-set ($size: 16, $weight: 400, $line-height: 1.2, $family: $font-primary);
-                                    padding: 0;
+                                    padding: rem(12) rem(12) 0 rem(12);
+                                }
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: $bp-mobile-sm) {
+        &__wrap {
+            &__card {
+
+                &__text {
+                    &__inner {
+                        &__front {
+                            @include flex($wrap: wrap, $gap: 0);
+                            text-align: start;
+
+                            &__bottom {
+                                align-items: flex-start;
+                                padding: rem(12);
+                            }
+                        }
+
+                        &__back {
+                            &__desc {
+                                p {
+                                    bottom: rem(-60);
+                                    left: 0;
+                                    @include font-set ($size: 16, $weight: 400, $line-height: 1.2, $family: $font-primary);
+                                    padding: rem(12) rem(12) 0 rem(12);
                                 }
                             }
 
@@ -833,40 +875,15 @@
                 }
             }
 
-            &__card02 {
-                padding-bottom: rem(170);
-            }
-
+            &__card02,
             &__card03 {
-                padding-bottom: rem(190);
-            }
-        }
-    }
-
-    @media (max-width: $bp-mobile-sm) {
-        &__wrap {
-            &__card {
-                padding-bottom: rem(290);
-
-                &__text {
-                    &__inner {
-                        &__front {
-                            &__top {
-                                display: none;
-                            }
-                        }
-
-                    }
+                .story__wrap__card__text__inner__front {
+                    @include flex($wrap: wrap, $gap: 0);
+                    text-align: start;
                 }
+
             }
 
-            &__card02 {
-                padding-bottom: rem(200);
-            }
-
-            &__card03 {
-                padding-bottom: rem(210);
-            }
         }
     }
 }
@@ -875,64 +892,88 @@
 .identity {
     &__wrap {
         @include flex ($justify: center, $align: center, $direction: column, $wrap: nowrap, $gap: rem(50));
+
         &__card {
             width: 100%;
             @include flex ($justify: center, $align: center, $direction: row, $wrap: nowrap);
             text-align: center;
+
             &__icon {
                 margin-bottom: rem(50);
+
+                svg path {
+                    fill: #ccc;
+                    transition: 0.3s;
+                }
             }
+
             &__text {
                 @include flex ($justify: center, $align: center, $direction: column, $wrap: nowrap, $gap: rem(20));
+
                 h3 {
                     @include font-set($size: 32, $weight: 500, $line-height: 1.2, $family: $font-primary)
                 }
+
                 p {
                     @include font-set($size: 20, $weight: 400, $line-height: 1.2, $family: $font-primary)
                 }
             }
 
         }
+
         &__card01, &__card02, &__card03 {
             border-right: 1px solid $gray-200;
             width: 100%;
             padding: rem(50) rem(20);
+
+            &:hover .identity__wrap__card__icon svg path {
+                fill: $color-primary;
+            }
         }
+
         &__card03 {
             border: none;
         }
+
         .btn {
-            font-size: rem(20);
-            @include button-style(); 
+            @include font-set ($size: 24);
+            @include button-style();
+
             &:hover {
                 background-color: $color-bg;
                 color: $color-primary;
                 border: 1px solid $color-primary;
             }
-        }        
+        }
     }
+
     @media (max-width: $bp-desktop) {
         &__wrap {
             &__card {
                 &__icon {
                     margin-bottom: rem(37);
                 }
+
                 &__text {
                     @include flex ($justify: center, $align: center, $direction: column, $wrap: nowrap, $gap: rem(20));
+
                     h3 {
                         @include font-set($size: 28, $weight: 500, $line-height: 1.2, $family: $font-primary)
                     }
+
                     p {
                         @include font-set($size: 20, $weight: 400, $line-height: 1.2, $family: $font-primary)
                     }
                 }
-            } 
+            }
+
             &__card01, &__card02, &__card03 {
                 padding: rem(50) rem(20);
             }
+
             &__card03 {
                 border: none;
-            }     
+            }
         }
     }
 
@@ -946,32 +987,39 @@
                     "card1"
                     "card2"
                     "card3";
+
                 &__icon {
                     margin-bottom: rem(37);
                 }
+
                 &__text {
                     @include flex ($justify: center, $align: center, $direction: column, $wrap: nowrap, $gap: rem(20));
                     width: 100%;
+
                     h3 {
                         @include font-set($size: 24, $weight: 500, $line-height: 1.2, $family: $font-primary)
                     }
+
                     p {
                         @include font-set($size: 20, $weight: 400, $line-height: 1.2, $family: $font-primary)
                     }
                 }
             }
+
             &__card01, &__card02, &__card03 {
                 border-bottom: 1px solid $gray-200;
                 border-right: none;
                 width: 100%;
                 padding: rem(50) rem(20);
+
                 br {
                     display: none;
                 }
             }
+
             &__card03 {
                 border: none;
-            }           
+            }
         }
     }
 
@@ -981,34 +1029,51 @@
                 br {
                     display: block;
                 }
+
                 &__text {
                     h3 {
                         @include font-set($size: 18, $weight: 500, $line-height: 1.2, $family: $font-primary)
                     }
+
                     p {
                         @include font-set($size: 14, $weight: 400, $line-height: 1.2, $family: $font-primary)
                     }
                 }
-            }       
+            }
+
         }
+
         .btn {
             font-size: rem(16);
-        }   
+            @include button-style($bg: $color-primary,
+                $color: $color-bg,
+                $radius: 40px,
+                $border: none,
+                $padding-y: 10px,
+                $padding-x: 70px)
+        }
     }
 
     @media (max-width: $bp-mobile-sm) {
         &__wrap {
             &__card {
-                
+
                 &__text {
                     h3 {
                         @include font-set($size: 16, $weight: 500, $line-height: 1.2, $family: $font-primary)
                     }
                 }
-            }       
+            }
         }
+
         .btn {
-            @include button-style($padding-x: 50px) 
+            @include font-set ($size: 14);
+            @include button-style($bg: $color-primary,
+                $color: $color-bg,
+                $radius: 40px,
+                $border: none,
+                $padding-y: 10px,
+                $padding-x: 50px)
         }
     }
 }

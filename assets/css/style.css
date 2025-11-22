@@ -236,7 +236,7 @@ header {
   font-family: "Pretendard";
   font-size: 1.25rem;
   font-weight: 600;
-  line-height: 1.2;
+  line-height: 1.3;
   width: 100%;
 }
 
@@ -490,7 +490,7 @@ header {
     font-family: "Pretendard";
     font-size: 1.125rem;
     font-weight: 600;
-    line-height: 1.2;
+    line-height: 1.3;
   }
   .header__wrapper nav ul li .menu__icon {
     right: 3.125rem;
@@ -921,14 +921,14 @@ header {
   font-family: "Pretendard";
   font-size: 0.75rem;
   font-weight: 300;
-  line-height: 1.2;
+  line-height: 1.3;
   color: #666666;
 }
 .wrapper .fac a p {
   font-family: "Pretendard";
   font-size: 1rem;
   font-weight: 900;
-  line-height: 1.2;
+  line-height: 1.3;
 }
 .wrapper input {
   height: 100%;
@@ -1315,7 +1315,7 @@ header {
   font-family: "Paperozi";
   font-size: 1rem;
   font-weight: 900;
-  line-height: 1.2;
+  line-height: 1.3;
 }
 .point__card__text a:hover {
   border: 1px solid #E4A9A9;
@@ -1557,12 +1557,12 @@ header {
     font-family: "Paperozi";
     font-size: 0.875rem;
     font-weight: 900;
-    line-height: 1.2;
+    line-height: 1.3;
     margin-bottom: 1.25rem;
   }
   .point__card__img {
     margin-right: 0;
-    margin-bottom: -2.5rem;
+    margin-bottom: -3.125rem;
   }
   .point__card__img img {
     margin-top: 0;
@@ -1640,17 +1640,18 @@ header {
   }
   .point__card__img {
     margin-right: 0.625rem;
-    margin-bottom: -5rem;
+    margin-bottom: -2.5rem;
   }
   .point__card__img img {
     width: 6.25rem;
     height: 6.25rem;
+    border-radius: 0;
   }
   .point__accessibility__card__text a {
     margin-bottom: 0.9375rem;
   }
   .point__accessibility__img {
-    margin-bottom: -0.625rem;
+    margin-bottom: -1.25rem;
   }
   .point__accessibility__img img {
     width: 9.375rem;
@@ -1756,7 +1757,7 @@ header {
   font-family: "Paperozi";
   font-size: 1.25rem;
   font-weight: 300;
-  line-height: 1.2;
+  line-height: 1.3;
   color: #3475A8;
 }
 .growth .growth__card button {
@@ -1764,7 +1765,7 @@ header {
   font-family: "Pretendard";
   font-size: 1.5rem;
   font-weight: 400;
-  line-height: 1.2;
+  line-height: 1.3;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1875,13 +1876,13 @@ header {
     font-family: "Pretendard";
     font-size: 0.75rem;
     font-weight: 300;
-    line-height: 1.2;
+    line-height: 1.3;
   }
   .growth .growth__card__keyword {
     font-family: "Paperozi";
     font-size: 1rem;
     font-weight: 300;
-    line-height: 1.2;
+    line-height: 1.3;
     color: #3475A8;
   }
   .growth .growth__card button {
@@ -1889,7 +1890,7 @@ header {
     font-family: "Pretendard";
     font-size: 1rem;
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1.3;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -1928,14 +1929,14 @@ header {
     font-family: "Paperozi";
     font-size: 0.875rem;
     font-weight: 300;
-    line-height: 1.2;
+    line-height: 1.3;
     gap: 20px;
   }
   .growth .growth__card button {
     font-family: "Pretendard";
     font-size: 0.875rem;
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1.3;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -2005,7 +2006,7 @@ header {
   font-family: "Pretendard";
   font-size: 1.5rem;
   font-weight: 400;
-  line-height: 1.2;
+  line-height: 1.3;
 }
 .best .swiper-horizontal > .swiper-pagination-progressbar,
 .best .swiper-pagination-progressbar.swiper-pagination-horizontal,
@@ -2057,7 +2058,7 @@ header {
     font-family: "Pretendard";
     font-size: 1.25rem;
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1.3;
   }
   .best .swiper-horizontal > .swiper-pagination-progressbar,
   .best .swiper-pagination-progressbar.swiper-pagination-horizontal,
@@ -2147,7 +2148,7 @@ header {
     font-family: "Pretendard";
     font-size: 1rem;
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1.3;
   }
   .best .swiper-horizontal > .swiper-pagination-progressbar,
   .best .swiper-pagination-progressbar.swiper-pagination-horizontal,
@@ -2479,19 +2480,19 @@ header {
   font-family: "Pretendard";
   font-size: 2rem;
   font-weight: 500;
-  line-height: 1.2;
+  line-height: 1.3;
 }
 .about__text p {
   font-family: "Pretendard";
   font-size: 1.5rem;
   font-weight: 400;
-  line-height: 1.2;
+  line-height: 1.3;
 }
 .about__text span {
   font-family: "Paperozi";
   font-size: 1.25rem;
   font-weight: 900;
-  line-height: 1.2;
+  line-height: 1.3;
   color: #3475A8;
 }
 .about__text .none__br {
@@ -2529,19 +2530,19 @@ header {
     font-family: "Pretendard";
     font-size: 1.75rem;
     font-weight: 500;
-    line-height: 1.2;
+    line-height: 1.3;
   }
   .about__text p {
     font-family: "Pretendard";
     font-size: 1.25rem;
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1.3;
   }
   .about__text span {
     font-family: "Paperozi";
     font-size: 1.125rem;
     font-weight: 900;
-    line-height: 1.2;
+    line-height: 1.3;
   }
 }
 @media (max-width: 768px) {
@@ -2598,19 +2599,19 @@ header {
     font-family: "Pretendard";
     font-size: 1.5rem;
     font-weight: 500;
-    line-height: 1.2;
+    line-height: 1.3;
   }
   .about__text p {
     font-family: "Pretendard";
     font-size: 1.25rem;
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1.3;
   }
   .about__text span {
     font-family: "Paperozi";
     font-size: 1.125rem;
     font-weight: 900;
-    line-height: 1.2;
+    line-height: 1.3;
   }
 }
 @media (max-width: 500px) {
@@ -2652,19 +2653,19 @@ header {
     font-family: "Pretendard";
     font-size: 1.125rem;
     font-weight: 500;
-    line-height: 1.2;
+    line-height: 1.3;
   }
   .about__text p {
     font-family: "Pretendard";
     font-size: 0.875rem;
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1.3;
   }
   .about__text span {
     font-family: "Paperozi";
     font-size: 0.75rem;
     font-weight: 900;
-    line-height: 1.2;
+    line-height: 1.3;
   }
 }
 @media (max-width: 390px) {
@@ -2714,20 +2715,20 @@ header {
     font-family: "Pretendard";
     font-size: 1rem;
     font-weight: 500;
-    line-height: 1.2;
+    line-height: 1.3;
   }
   .about__text p {
     font-family: "Pretendard";
     font-size: 0.875rem;
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1.3;
     letter-spacing: 0.00625rem;
   }
   .about__text span {
     font-family: "Paperozi";
     font-size: 0.75rem;
     font-weight: 900;
-    line-height: 1.2;
+    line-height: 1.3;
   }
   .about__text .none__br {
     display: block;
@@ -2751,13 +2752,13 @@ header {
 }
 .innovation__bg__cloud__left {
   position: absolute;
-  top: -18.75rem;
-  left: -43.75rem;
+  top: -6.25rem;
+  right: -31.25rem;
 }
 .innovation__bg__cloud__right {
   position: absolute;
-  top: -18.75rem;
-  right: -43.75rem;
+  top: -6.25rem;
+  left: -15.625rem;
 }
 .innovation__img {
   margin-top: 12.5rem;
@@ -2836,7 +2837,7 @@ header {
   width: 100%;
   height: 100%;
   opacity: 0;
-  transition: transform 0.6s ease, opacity 0.6s ease;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 .story__wrap__card__text {
   height: 100%;
@@ -2895,6 +2896,7 @@ header {
   height: 100%;
   padding: 1.875rem 1.875rem;
   align-self: flex-start;
+  transition: transform 0.5s ease-in-out;
 }
 .story__wrap__card__text__inner__front__bottom .overlay__blur {
   mask-image: linear-gradient(to top, lab(32.65% -1.5 -30.07) 70%, transparent 100%);
@@ -2934,7 +2936,7 @@ header {
   bottom: 0;
   left: 0;
   opacity: 0;
-  transition: transform 0.6s ease;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
   z-index: 10;
   width: 100%;
   height: 100%;
@@ -3118,12 +3120,6 @@ header {
   .story__wrap__card__text__inner__back {
     position: relative;
     padding: 1.25rem;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    gap: 0;
   }
   .story__wrap__card__text__inner__back br {
     display: none;
@@ -3139,12 +3135,15 @@ header {
   }
   .story__wrap__card__text__inner__back__desc p {
     z-index: 100;
+    position: absolute;
+    bottom: -7.5rem;
+    left: 0;
     text-align: start;
     font-family: "Pretendard";
     font-size: 1.25rem;
     font-weight: 400;
     line-height: 1.2;
-    padding: 0;
+    padding: 1.25rem 1.25rem 0 1.25rem;
   }
   .story__wrap .story__wrap__card__overlay__full,
   .story__wrap .story__wrap__card__text__inner__back {
@@ -3154,9 +3153,6 @@ header {
   .story__wrap .story__wrap__card__text__inner__front__bottom {
     background: none !important;
   }
-  .story__wrap__card02 {
-    padding-bottom: 10.625rem;
-  }
   .story__wrap__card02 .story__wrap__card__text__inner__front {
     display: flex;
     justify-content: space-between;
@@ -3164,9 +3160,6 @@ header {
     flex-direction: row;
     flex-wrap: nowrap;
     gap: 0;
-  }
-  .story__wrap__card03 {
-    padding-bottom: 10.625rem;
   }
   .story__wrap__card03 .story__wrap__card__text__inner__front {
     display: flex;
@@ -3214,27 +3207,40 @@ header {
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.2;
-    padding: 0;
-  }
-  .story__wrap__card02 {
-    padding-bottom: 10.625rem;
-  }
-  .story__wrap__card03 {
-    padding-bottom: 11.875rem;
+    padding: 0.75rem 0.75rem 0 0.75rem;
   }
 }
 @media (max-width: 390px) {
-  .story__wrap__card {
-    padding-bottom: 18.125rem;
+  .story__wrap__card__text__inner__front {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0;
+    text-align: start;
   }
-  .story__wrap__card__text__inner__front__top {
-    display: none;
+  .story__wrap__card__text__inner__front__bottom {
+    align-items: flex-start;
+    padding: 0.75rem;
   }
-  .story__wrap__card02 {
-    padding-bottom: 12.5rem;
+  .story__wrap__card__text__inner__back__desc p {
+    bottom: -3.75rem;
+    left: 0;
+    font-family: "Pretendard";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.2;
+    padding: 0.75rem 0.75rem 0 0.75rem;
   }
-  .story__wrap__card03 {
-    padding-bottom: 13.125rem;
+  .story__wrap__card02 .story__wrap__card__text__inner__front, .story__wrap__card03 .story__wrap__card__text__inner__front {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0;
+    text-align: start;
   }
 }
 
@@ -3258,6 +3264,10 @@ header {
 }
 .identity__wrap__card__icon {
   margin-bottom: 3.125rem;
+}
+.identity__wrap__card__icon svg path {
+  fill: #ccc;
+  transition: 0.3s;
 }
 .identity__wrap__card__text {
   display: flex;
@@ -3284,11 +3294,17 @@ header {
   width: 100%;
   padding: 3.125rem 1.25rem;
 }
+.identity__wrap__card01:hover .identity__wrap__card__icon svg path, .identity__wrap__card02:hover .identity__wrap__card__icon svg path, .identity__wrap__card03:hover .identity__wrap__card__icon svg path {
+  fill: #3475A8;
+}
 .identity__wrap__card03 {
   border: none;
 }
 .identity__wrap .btn {
-  font-size: 1.25rem;
+  font-family: "Pretendard";
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.3;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -3402,6 +3418,20 @@ header {
   }
   .identity .btn {
     font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3475A8;
+    color: #ffffff;
+    border-radius: 40px;
+    border: none;
+    padding: 10px 70px;
+    transition: all 0.2 ease-in-out;
+  }
+  .identity .btn:hover {
+    background-color: #ffffff;
+    color: #3475A8;
+    border: 1px solid #3475A8;
   }
 }
 @media (max-width: 390px) {
@@ -3412,14 +3442,18 @@ header {
     line-height: 1.2;
   }
   .identity .btn {
+    font-family: "Pretendard";
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.3;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     background-color: #3475A8;
     color: #ffffff;
     border-radius: 40px;
-    border: 1px solid #3475A8;
-    padding: 15px 50px;
+    border: none;
+    padding: 10px 50px;
     transition: all 0.2 ease-in-out;
   }
   .identity .btn:hover {
@@ -3453,8 +3487,8 @@ header {
 .dessert__list__card p {
   font-family: "Pretendard";
   font-size: 1.25rem;
-  font-weight: 400;
-  line-height: 1.2;
+  font-weight: 200;
+  line-height: 1.3;
   transition: transform 0.2s ease-in-out;
 }
 .dessert__list__card .card__overlay__bg {
@@ -3495,7 +3529,7 @@ header {
   font-family: "Pretendard";
   font-size: 1.25rem;
   font-weight: 600;
-  line-height: 1.2;
+  line-height: 1.3;
   border: 1px solid #ffffff;
   padding: 0.625rem 2.25rem;
 }
@@ -3506,6 +3540,10 @@ header {
   flex-direction: column;
   flex-wrap: nowrap;
   gap: 0.625rem;
+  font-family: "Pretendard";
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.3;
 }
 .dessert__list__card:hover .card__overlay__bg {
   opacity: 0.95;
@@ -3526,44 +3564,43 @@ header {
   .dessert__list .card__overlay__inner {
     opacity: 1;
     padding: 0 1rem;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     transition: transform 1s ease, opacity 1s ease;
   }
   .dessert__list .card__overlay__inner .overlay__close {
     display: block;
     position: absolute;
-    right: 0.625rem;
-    top: -2.8125rem;
+    right: 5%;
+    top: -8.125rem;
     z-index: 10;
   }
   .dessert__list .card__overlay__inner .overlay__close img {
     width: 2.5rem;
   }
-  .dessert__list .card__overlay__inner h3 {
+  .dessert__list .card__overlay__inner__text {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .dessert__list .card__overlay__inner__text h3 {
     border-radius: 1.25rem;
     font-family: "Pretendard";
     font-size: 1rem;
     font-weight: 600;
-    line-height: 1.2;
+    line-height: 1.3;
     border: 1px solid #ffffff;
     padding: 0.625rem 1.25rem;
   }
-  .dessert__list .card__overlay__inner p {
-    font-family: "Pretendard";
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.2;
+  .dessert__list .card__overlay__inner__text p {
     font-size: clamp(0.875rem, 0.8519rem + 0.1235vw, 1rem);
   }
   .dessert__list .card__overlay__inner__span {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    gap: 1.25rem;
+    font-family: "Pretendard";
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.3;
+    gap: 0;
   }
   .dessert:hover .card__overlay__bg {
     opacity: 1 !important;
@@ -3591,25 +3628,26 @@ header {
     gap: 0.625rem;
   }
   .dessert__list .card__overlay__inner .overlay__close {
-    top: -1.75rem;
-    right: 0.3125rem;
-    z-index: 10;
+    top: -6.25rem;
   }
   .dessert__list .card__overlay__inner .overlay__close img {
     width: 2.1875rem;
   }
-  .dessert__list .card__overlay__inner h3 {
+  .dessert__list .card__overlay__inner__text {
+    padding: 0.75rem;
+  }
+  .dessert__list .card__overlay__inner__text h3 {
     font-family: "Pretendard";
-    font-size: 0.875rem;
+    font-size: 1rem;
     font-weight: 600;
-    line-height: 1.2;
+    line-height: 1.3;
     padding: 0.3125rem 0.9375rem;
   }
   .dessert__list .card__overlay__inner__span {
     font-family: "Pretendard";
-    font-size: 0.875rem;
+    font-size: 1rem;
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1.3;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -3622,28 +3660,11 @@ header {
   .dessert__list .card__overlay__inner {
     padding: 0 0.625rem;
   }
-  .dessert__list .card__overlay__inner .overlay__close {
-    top: -0.625rem;
-    right: 0.3125rem;
-    z-index: 10;
-  }
   .dessert__list .card__overlay__inner .overlay__close img {
-    width: 1.5625rem;
+    width: 1.875rem;
   }
   .dessert__list .card__overlay__inner h3 {
     padding: 0.3125rem 0.625rem;
-  }
-  .dessert__list .card__overlay__inner__span {
-    font-family: "Pretendard";
-    font-size: 0.75rem;
-    font-weight: 400;
-    line-height: 1.2;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    gap: 0.3125rem;
   }
 }
 
@@ -3699,13 +3720,13 @@ header {
   font-family: "Pretendard";
   font-size: 1.75rem;
   font-weight: 600;
-  line-height: 1.2;
+  line-height: 1.3;
 }
 .event__container__content__card__desc a .card__text__left p {
   font-family: "Pretendard";
   font-size: 1.25rem;
   font-weight: 400;
-  line-height: 1.2;
+  line-height: 1.3;
 }
 .event__container__content__card__desc a .card__text .href__text {
   display: none;
@@ -3792,13 +3813,13 @@ header {
     font-family: "Pretendard";
     font-size: 1.5rem;
     font-weight: 600;
-    line-height: 1.2;
+    line-height: 1.3;
   }
   .event__container__content__card__desc a .card__text__left p {
     font-family: "Pretendard";
     font-size: 1rem;
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1.3;
   }
 }
 @media (max-width: 768px) {
@@ -3824,13 +3845,13 @@ header {
     font-family: "Pretendard";
     font-size: 1.25rem;
     font-weight: 600;
-    line-height: 1.2;
+    line-height: 1.3;
   }
   .event__container__content__card__desc a .card__text span {
     font-family: "Pretendard";
     font-size: 0.75rem;
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1.3;
     bottom: 1rem;
     right: 1rem;
   }
@@ -3859,7 +3880,7 @@ header {
     font-family: "Pretendard";
     font-size: 1rem;
     font-weight: 600;
-    line-height: 1.2;
+    line-height: 1.3;
   }
   .event__container__content__card__desc a .card__text__left p {
     display: none;
@@ -3873,7 +3894,7 @@ header {
     font-family: "Pretendard";
     font-size: 0.75rem;
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1.3;
     bottom: 1rem;
     right: 1rem;
   }
@@ -3885,7 +3906,7 @@ header {
     font-family: "Pretendard";
     font-size: 0.875rem;
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1.3;
   }
 }
 @media (max-width: 390px) {
@@ -3905,13 +3926,13 @@ header {
     font-family: "Pretendard";
     font-size: 0.875rem;
     font-weight: 600;
-    line-height: 1.2;
+    line-height: 1.3;
   }
   .event__container__content__card__desc a .card__text .href__text {
     font-family: "Pretendard";
     font-size: 0.8125rem;
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1.3;
   }
   .event__container__content__card__desc a .card__text span {
     bottom: 0.75rem;
@@ -3951,13 +3972,13 @@ header {
   font-family: "Pretendard";
   font-size: 1.75rem;
   font-weight: 600;
-  line-height: 1.2;
+  line-height: 1.3;
 }
 .event__sub__content__title p {
   font-family: "Pretendard";
   font-size: 1.25rem;
   font-weight: 600;
-  line-height: 1.2;
+  line-height: 1.3;
 }
 .event__sub__content__desc {
   align-self: end;
@@ -4001,7 +4022,7 @@ header {
   font-family: "Pretendard";
   font-size: 1.5rem;
   font-weight: 400;
-  line-height: 1.2;
+  line-height: 1.3;
   color: #666666;
 }
 .event__sub__nav__prev a {
@@ -4016,14 +4037,14 @@ header {
   font-family: "Pretendard";
   font-size: 1.5rem;
   font-weight: 400;
-  line-height: 1.2;
+  line-height: 1.3;
   color: #666666;
 }
 .event__sub button {
   font-family: "Pretendard";
   font-size: 1.5rem;
   font-weight: 400;
-  line-height: 1.2;
+  line-height: 1.3;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -4052,19 +4073,19 @@ header {
     font-family: "Pretendard";
     font-size: 1.5rem;
     font-weight: 600;
-    line-height: 1.2;
+    line-height: 1.3;
   }
   .event__sub__content__title p {
     font-family: "Pretendard";
     font-size: 1rem;
     font-weight: 600;
-    line-height: 1.2;
+    line-height: 1.3;
   }
   .event__sub button {
     font-family: "Pretendard";
     font-size: 1.25rem;
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1.3;
   }
 }
 @media (max-width: 768px) {
@@ -4089,13 +4110,13 @@ header {
     font-family: "Pretendard";
     font-size: 1rem;
     font-weight: 600;
-    line-height: 1.2;
+    line-height: 1.3;
   }
   .event__sub__content__title p {
     font-family: "Pretendard";
     font-size: 0.875rem;
     font-weight: 600;
-    line-height: 1.2;
+    line-height: 1.3;
   }
   .event__sub__content__desc {
     align-self: start;
@@ -4109,7 +4130,7 @@ header {
     font-family: "Pretendard";
     font-size: 0.75rem;
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1.3;
   }
   .event__sub__nav {
     padding: 1rem 1.4375rem;
@@ -4132,7 +4153,7 @@ header {
     font-family: "Pretendard";
     font-size: 0.875rem;
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1.3;
   }
   .event__sub__nav__prev a {
     display: flex;
@@ -4146,13 +4167,13 @@ header {
     font-family: "Pretendard";
     font-size: 0.875rem;
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1.3;
   }
   .event__sub button {
     font-family: "Pretendard";
     font-size: 1rem;
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1.3;
   }
 }
 @media (max-width: 390px) {
@@ -4168,13 +4189,13 @@ header {
     font-family: "Pretendard";
     font-size: 0.75rem;
     font-weight: 500;
-    line-height: 1.2;
+    line-height: 1.3;
   }
   .event__sub__content__desc {
     font-family: "Pretendard";
     font-size: 0.625rem;
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1.3;
   }
   .event__sub__nav {
     padding: 1rem 1rem;
@@ -4233,7 +4254,7 @@ header {
 }
 .inquiry__tab ul li {
   text-transform: uppercase;
-  padding: 0.875rem 3.125rem;
+  padding: 0.9375rem 4.375rem;
   position: relative;
   z-index: 2;
   display: inline-block;
@@ -4242,7 +4263,7 @@ header {
 }
 .inquiry__tab ul li a {
   font-family: "Paperozi";
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 700;
   line-height: 1;
   color: #ffffff;
@@ -4268,7 +4289,7 @@ header {
   font-family: "Pretendard";
   font-size: 1.25rem;
   font-weight: 400;
-  line-height: 1.2;
+  line-height: 1.3;
 }
 .inquiry__form input {
   border: 1px solid #ffffff;
@@ -4281,7 +4302,7 @@ header {
   font-family: "Pretendard";
   font-size: 1.25rem;
   font-weight: 400;
-  line-height: 1.2;
+  line-height: 1.3;
   color: #666666;
 }
 .inquiry__form .form__group {
@@ -4322,7 +4343,7 @@ header {
   font-family: "Pretendard";
   font-size: 1.25rem;
   font-weight: 400;
-  line-height: 1.2;
+  line-height: 1.3;
   color: #666666;
 }
 .inquiry__form__franchise .region {
@@ -4362,7 +4383,7 @@ header {
   font-family: "Pretendard";
   font-size: 1.25rem;
   font-weight: 400;
-  line-height: 1.2;
+  line-height: 1.3;
   color: #666666;
 }
 .inquiry__form__franchise .custom__select .arrow {
@@ -4390,7 +4411,7 @@ header {
   font-family: "Pretendard";
   font-size: 0.875rem;
   font-weight: 400;
-  line-height: 1.2;
+  line-height: 1.3;
   color: #666666;
   position: absolute;
   top: 2.5625rem;
@@ -4460,7 +4481,7 @@ header {
   font-family: "Pretendard";
   font-size: 1rem;
   font-weight: 400;
-  line-height: 1.2;
+  line-height: 1.3;
   color: #999999;
 }
 .inquiry__form__privacy label:hover {
@@ -4471,7 +4492,7 @@ header {
   font-family: "Pretendard";
   font-size: 1rem;
   font-weight: 400;
-  line-height: 1.2;
+  line-height: 1.3;
   color: #666666;
   text-decoration: underline;
 }
@@ -4481,9 +4502,9 @@ header {
 }
 .inquiry button {
   font-family: "Pretendard";
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 400;
-  line-height: 1.2;
+  line-height: 1.3;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -4491,8 +4512,13 @@ header {
   color: #ffffff;
   border-radius: 40px;
   border: 1px solid #3475A8;
-  padding: 10px 25px;
+  padding: 15px 106px;
   transition: all 0.2 ease-in-out;
+}
+.inquiry button:hover {
+  background-color: #ffffff;
+  color: #3475A8;
+  border: 1px solid #3475A8;
 }
 .inquiry button:hover {
   background-color: #ffffff;
@@ -4531,7 +4557,7 @@ header {
     font-family: "Pretendard";
     font-size: 1rem;
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1.3;
   }
   .inquiry__form__franchise .custom__select .options {
     top: 2.25rem;
@@ -4542,17 +4568,26 @@ header {
   }
 }
 @media (max-width: 768px) {
+  .inquiry__tab ul li {
+    padding: 0.875rem 2.5rem;
+  }
+  .inquiry__tab ul li a {
+    font-family: "Paperozi";
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1;
+  }
   .inquiry__form label {
     font-family: "Pretendard";
     font-size: 1rem;
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1.3;
   }
   .inquiry__form input::placeholder {
     font-family: "Pretendard";
     font-size: 1rem;
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1.3;
   }
   .inquiry__form__group {
     display: flex;
@@ -4569,7 +4604,7 @@ header {
     font-family: "Pretendard";
     font-size: 1rem;
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1.3;
   }
   .inquiry__form__franchise .custom__select .options {
     top: 2.1875rem;
@@ -4578,21 +4613,47 @@ header {
     font-family: "Pretendard";
     font-size: 0.875rem;
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1.3;
+  }
+  .inquiry button {
+    font-family: "Pretendard";
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.3;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3475A8;
+    color: #ffffff;
+    border-radius: 40px;
+    border: none;
+    padding: 10px 90px;
+    transition: all 0.2 ease-in-out;
+  }
+  .inquiry button:hover {
+    background-color: #ffffff;
+    color: #3475A8;
+    border: 1px solid #3475A8;
   }
 }
 @media (max-width: 500px) {
+  .inquiry__tab ul li a {
+    font-family: "Paperozi";
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1;
+  }
   .inquiry__form label {
     font-family: "Pretendard";
     font-size: 1rem;
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1.3;
   }
   .inquiry__form input::placeholder {
     font-family: "Pretendard";
     font-size: 0.875rem;
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1.3;
   }
   .inquiry__form__group {
     display: flex;
@@ -4609,13 +4670,13 @@ header {
     font-family: "Pretendard";
     font-size: 0.875rem;
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1.3;
   }
   .inquiry__form__franchise .custom__select {
     font-family: "Pretendard";
     font-size: 0.875rem;
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1.3;
   }
   .inquiry__form__franchise .custom__select .options {
     top: 2.0625rem;
@@ -4624,7 +4685,7 @@ header {
     font-family: "Pretendard";
     font-size: 0.75rem;
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1.3;
   }
   .inquiry__form__privacy {
     display: flex;
@@ -4637,6 +4698,26 @@ header {
   .inquiry__form__privacy a {
     margin-left: 1.25rem;
   }
+  .inquiry button {
+    font-family: "Pretendard";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.3;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3475A8;
+    color: #ffffff;
+    border-radius: 40px;
+    border: none;
+    padding: 10px 70px;
+    transition: all 0.2 ease-in-out;
+  }
+  .inquiry button:hover {
+    background-color: #ffffff;
+    color: #3475A8;
+    border: 1px solid #3475A8;
+  }
 }
 @media (max-width: 390px) {
   .inquiry__tab ul li {
@@ -4647,9 +4728,23 @@ header {
   }
   .inquiry button {
     font-family: "Pretendard";
-    font-size: 1rem;
+    font-size: 0.875rem;
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1.3;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3475A8;
+    color: #ffffff;
+    border-radius: 40px;
+    border: none;
+    padding: 10px 50px;
+    transition: all 0.2 ease-in-out;
+  }
+  .inquiry button:hover {
+    background-color: #ffffff;
+    color: #3475A8;
+    border: 1px solid #3475A8;
   }
 }
 
@@ -4704,7 +4799,7 @@ header {
   font-family: "Pretendard";
   font-size: 1.25rem;
   font-weight: 400;
-  line-height: 1.2;
+  line-height: 1.3;
   display: inline-block;
   margin-bottom: 0.5rem;
 }
@@ -4712,7 +4807,7 @@ header {
   font-family: "Pretendard";
   font-size: 1.25rem;
   font-weight: 600;
-  line-height: 1.2;
+  line-height: 1.3;
   margin-bottom: 1.25rem;
 }
 .process__card__text p {
@@ -4734,13 +4829,13 @@ header {
     font-family: "Pretendard";
     font-size: 1rem;
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1.3;
   }
   .process__card__text h2 {
     font-family: "Pretendard";
     font-size: 1.125rem;
     font-weight: 600;
-    line-height: 1.2;
+    line-height: 1.3;
   }
 }
 @media (max-width: 500px) {
@@ -4769,7 +4864,7 @@ header {
     font-family: "Pretendard";
     font-size: 1rem;
     font-weight: 600;
-    line-height: 1.2;
+    line-height: 1.3;
   }
 }
 @media (max-width: 390px) {
@@ -4828,19 +4923,19 @@ header {
   font-family: "Pretendard";
   font-size: 1.25rem;
   font-weight: 400;
-  line-height: 1.2;
+  line-height: 1.3;
 }
 .costlist .costlist__card__wrap .costlist__card__text p {
   font-family: "Pretendard";
   font-size: 1.5rem;
   font-weight: 600;
-  line-height: 1.2;
+  line-height: 1.3;
 }
 .costlist .costlist__card__wrap .costlist__card__text span {
   font-family: "Pretendard";
   font-size: 1.25rem;
   font-weight: 400;
-  line-height: 1.2;
+  line-height: 1.3;
 }
 .costlist .costlist__card__wrap .costlist__card01 {
   grid-area: card1;
@@ -4878,13 +4973,13 @@ header {
   font-family: "Pretendard";
   font-size: 1.25rem;
   font-weight: 400;
-  line-height: 1.2;
+  line-height: 1.3;
 }
 .costlist .costlist__text__total {
   font-family: "Pretendard";
   font-size: 2rem;
   font-weight: 600;
-  line-height: 1.2;
+  line-height: 1.3;
 }
 .costlist .costlist__btn {
   display: flex;
@@ -4898,7 +4993,7 @@ header {
   font-family: "Pretendard";
   font-size: 1.25rem;
   font-weight: 400;
-  line-height: 1.2;
+  line-height: 1.3;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -4922,7 +5017,7 @@ header {
   font-family: "Pretendard";
   font-size: 1.25rem;
   font-weight: 400;
-  line-height: 1.2;
+  line-height: 1.3;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -4963,13 +5058,13 @@ header {
     font-family: "Pretendard";
     font-size: 1.25rem;
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1.3;
   }
   .costlist .costlist__text__total {
     font-family: "Pretendard";
     font-size: 1.75rem;
     font-weight: 600;
-    line-height: 1.2;
+    line-height: 1.3;
   }
   .costlist .costlist__btn {
     display: flex;
@@ -5000,19 +5095,19 @@ header {
     font-family: "Pretendard";
     font-size: 1.125rem;
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1.3;
   }
   .costlist .costlist__card__wrap .costlist__card__text p {
     font-family: "Pretendard";
     font-size: 1.25rem;
     font-weight: 600;
-    line-height: 1.2;
+    line-height: 1.3;
   }
   .costlist .costlist__card__wrap .costlist__card__text span {
     font-family: "Pretendard";
     font-size: 1.125rem;
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1.3;
   }
   .costlist .costlist__card__wrap .costlist__card03 img {
     width: 8.125rem;
@@ -5030,13 +5125,13 @@ header {
     font-family: "Pretendard";
     font-size: 1rem;
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1.3;
   }
   .costlist .costlist__text__total {
     font-family: "Pretendard";
     font-size: 1.5rem;
     font-weight: 600;
-    line-height: 1.2;
+    line-height: 1.3;
   }
   .costlist .costlist__btn {
     display: flex;
@@ -5050,7 +5145,7 @@ header {
     font-family: "Pretendard";
     font-size: 1.0625rem;
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1.3;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -5107,19 +5202,19 @@ header {
     font-family: "Pretendard";
     font-size: 1rem;
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1.3;
   }
   .costlist .costlist__card__wrap .costlist__card__text p {
     font-family: "Pretendard";
     font-size: 1rem;
     font-weight: 600;
-    line-height: 1.2;
+    line-height: 1.3;
   }
   .costlist .costlist__card__wrap .costlist__card__text span {
     font-family: "Pretendard";
     font-size: 0.75rem;
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1.3;
   }
   .costlist .costlist__card__wrap .costlist__card03 .costlist__card__text {
     display: flex;
@@ -5152,13 +5247,13 @@ header {
     font-family: "Pretendard";
     font-size: 0.875rem;
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1.3;
   }
   .costlist .costlist__text__total {
     font-family: "Pretendard";
     font-size: 1.25rem;
     font-weight: 600;
-    line-height: 1.2;
+    line-height: 1.3;
   }
   .costlist .costlist__btn {
     display: flex;
@@ -5172,7 +5267,7 @@ header {
     font-family: "Pretendard";
     font-size: 1rem;
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1.3;
   }
 }
 @media (max-width: 390px) {
@@ -5200,19 +5295,19 @@ header {
     font-family: "Pretendard";
     font-size: 0.875rem;
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1.3;
   }
   .costlist .costlist__card__wrap .costlist__card__text p {
     font-family: "Pretendard";
     font-size: 0.875rem;
     font-weight: 600;
-    line-height: 1.2;
+    line-height: 1.3;
   }
   .costlist .costlist__card__wrap .costlist__card__text span {
     font-family: "Pretendard";
     font-size: 0.75rem;
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1.3;
   }
   .costlist .costlist__card__wrap .costlist__card03 .costlist__card__text {
     display: flex;
@@ -5242,13 +5337,13 @@ header {
     font-family: "Pretendard";
     font-size: 0.875rem;
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1.3;
   }
   .costlist .costlist__text__total {
     font-family: "Pretendard";
     font-size: 1.25rem;
     font-weight: 600;
-    line-height: 1.2;
+    line-height: 1.3;
   }
   .costlist .costlist__btn {
     display: flex;
@@ -5262,7 +5357,7 @@ header {
     font-family: "Pretendard";
     font-size: 1rem;
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1.3;
   }
 }
 
@@ -5304,13 +5399,13 @@ header {
   font-family: "Pretendard";
   font-size: 1.25rem;
   font-weight: 600;
-  line-height: 1.2;
+  line-height: 1.3;
 }
 .faq__list__item__title h3 span {
   font-family: "Pretendard";
   font-size: 2rem;
   font-weight: 600;
-  line-height: 1.2;
+  line-height: 1.3;
   margin-right: 1.25rem;
 }
 .faq__list__item__wrapper {
@@ -5331,13 +5426,13 @@ header {
   font-family: "Pretendard";
   font-size: 2rem;
   font-weight: 600;
-  line-height: 1.2;
+  line-height: 1.3;
 }
 .faq__list__item__wrapper__content p {
   font-family: "Pretendard";
   font-size: 1.25rem;
   font-weight: 400;
-  line-height: 1.2;
+  line-height: 1.3;
   padding-bottom: 1.875rem;
 }
 .faq .faq__list__item__trigger:checked + .faq__list__item__title::after {
@@ -5351,13 +5446,13 @@ header {
     font-family: "Pretendard";
     font-size: 2rem;
     font-weight: 600;
-    line-height: 1.2;
+    line-height: 1.3;
   }
   .faq__list__item__wrapper__content p {
     font-family: "Pretendard";
     font-size: 1.25rem;
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1.3;
     padding: 0 1rem 1.875rem 0;
   }
 }
@@ -5378,13 +5473,13 @@ header {
     font-family: "Pretendard";
     font-size: 1rem;
     font-weight: 600;
-    line-height: 1.2;
+    line-height: 1.3;
   }
   .faq__list__item__title h3 span {
     font-family: "Pretendard";
     font-size: 1.75rem;
     font-weight: 600;
-    line-height: 1.2;
+    line-height: 1.3;
     margin-right: 0.75rem;
   }
   .faq__list__item__wrapper__content {
@@ -5400,13 +5495,13 @@ header {
     font-family: "Pretendard";
     font-size: 1.75rem;
     font-weight: 600;
-    line-height: 1.2;
+    line-height: 1.3;
   }
   .faq__list__item__wrapper__content p {
     font-family: "Pretendard";
     font-size: 0.875rem;
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1.3;
   }
 }
 @media (max-width: 390px) {
@@ -5420,13 +5515,13 @@ header {
     font-family: "Pretendard";
     font-size: 0.875rem;
     font-weight: 600;
-    line-height: 1.2;
+    line-height: 1.3;
   }
   .faq__list__item__title h3 span {
     font-family: "Pretendard";
     font-size: 1.5rem;
     font-weight: 600;
-    line-height: 1.2;
+    line-height: 1.3;
     margin-right: 0.3125rem;
   }
   .faq__list__item__wrapper__content {
@@ -5442,7 +5537,7 @@ header {
     font-family: "Pretendard";
     font-size: 1.5rem;
     font-weight: 600;
-    line-height: 1.2;
+    line-height: 1.3;
   }
 }
 
@@ -5509,9 +5604,7 @@ header {
 }
 @media (max-width: 1024px) {
   .card {
-    height: 16.6875rem;
     width: calc((100% - 16px) / 2);
-    padding: 0 0 1.875rem 0;
   }
   .card div {
     display: flex;
@@ -5564,20 +5657,16 @@ header {
 @media (max-width: 500px) {
   .card {
     height: 14.625rem;
+    width: calc(100% - 50px);
     padding: 1rem 0 1rem 0;
   }
   .card img {
     width: 7.5rem;
   }
-  .card p {
-    font-family: "Pretendard";
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.2;
-  }
 }
 @media (max-width: 390px) {
   .card {
+    width: 100%;
     padding: 0.75rem 0 0.75rem 0;
   }
   .card img {
@@ -5630,7 +5719,7 @@ header {
   font-family: "Pretendard";
   font-size: 2rem;
   font-weight: 600;
-  line-height: 1.2;
+  line-height: 1.3;
   margin-bottom: 1.875rem;
   padding-bottom: 1.25rem;
   border-bottom: 1px solid #333333;
@@ -5646,7 +5735,7 @@ header {
   font-family: "Pretendard";
   font-size: 1.5rem;
   font-weight: 400;
-  line-height: 1.2;
+  line-height: 1.3;
   padding-left: 1.875rem;
 }
 .modal .popup__desc {
@@ -5657,7 +5746,7 @@ header {
   font-family: "Pretendard";
   font-size: 1.5rem;
   font-weight: 500;
-  line-height: 1.2;
+  line-height: 1.3;
   padding-left: 1.25rem;
   margin-bottom: 0.625rem;
 }
@@ -5665,7 +5754,7 @@ header {
   font-family: "Pretendard";
   font-size: 1.5rem;
   font-weight: 500;
-  line-height: 1.2;
+  line-height: 1.3;
   padding-left: 1.875rem;
   margin-bottom: 0.3125rem;
 }
@@ -5673,7 +5762,7 @@ header {
   font-family: "Pretendard";
   font-size: 1.5rem;
   font-weight: 400;
-  line-height: 1.2;
+  line-height: 1.3;
   padding-left: 2.5rem;
   margin-bottom: 0.3125rem;
 }
@@ -5685,34 +5774,34 @@ header {
     font-family: "Pretendard";
     font-size: 1.75rem;
     font-weight: 600;
-    line-height: 1.2;
+    line-height: 1.3;
   }
   .modal__scroll p {
     font-family: "Pretendard";
     font-size: 1.25rem;
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1.3;
     padding-left: 1.25rem;
   }
   .modal .popup__desc h3 {
     font-family: "Pretendard";
     font-size: 1.5rem;
     font-weight: 500;
-    line-height: 1.2;
+    line-height: 1.3;
     padding-left: 0.625rem;
   }
   .modal .popup__desc h4 {
     font-family: "Pretendard";
     font-size: 1.375rem;
     font-weight: 500;
-    line-height: 1.2;
+    line-height: 1.3;
     padding-left: 1.25rem;
   }
   .modal .popup__desc p {
     font-family: "Pretendard";
     font-size: 1.125rem;
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1.3;
     padding-left: 1.875rem;
   }
 }
@@ -5727,7 +5816,7 @@ header {
     font-family: "Pretendard";
     font-size: 1.5rem;
     font-weight: 600;
-    line-height: 1.2;
+    line-height: 1.3;
   }
   .modal__content h2 br {
     display: block;
@@ -5736,21 +5825,21 @@ header {
     font-family: "Pretendard";
     font-size: 1.25rem;
     font-weight: 500;
-    line-height: 1.2;
+    line-height: 1.3;
     padding-left: 0.3125rem;
   }
   .modal .popup__desc h4 {
     font-family: "Pretendard";
     font-size: 1.125rem;
     font-weight: 500;
-    line-height: 1.2;
+    line-height: 1.3;
     padding-left: 0.625rem;
   }
   .modal .popup__desc p {
     font-family: "Pretendard";
     font-size: 1rem;
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1.3;
     padding-left: 0.9375rem;
   }
 }
@@ -5763,7 +5852,7 @@ header {
     font-family: "Pretendard";
     font-size: 1.25rem;
     font-weight: 600;
-    line-height: 1.2;
+    line-height: 1.3;
   }
   .modal__scroll {
     max-height: calc(60vh - 100px);
@@ -5772,7 +5861,7 @@ header {
     font-family: "Pretendard";
     font-size: 1rem;
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1.3;
     padding-left: 0.625rem;
   }
   .modal .popup__desc {
@@ -5782,21 +5871,21 @@ header {
     font-family: "Pretendard";
     font-size: 1rem;
     font-weight: 500;
-    line-height: 1.2;
+    line-height: 1.3;
     padding-left: 0;
   }
   .modal .popup__desc h4 {
     font-family: "Pretendard";
     font-size: 1rem;
     font-weight: 500;
-    line-height: 1.2;
+    line-height: 1.3;
     padding-left: 0.3125rem;
   }
   .modal .popup__desc p {
     font-family: "Pretendard";
     font-size: 0.875rem;
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1.3;
     padding-left: 0.625rem;
   }
 }
@@ -5808,7 +5897,7 @@ header {
     font-family: "Pretendard";
     font-size: 1rem;
     font-weight: 600;
-    line-height: 1.2;
+    line-height: 1.3;
     margin-bottom: 1.25rem;
     padding-bottom: 0.625rem;
   }
@@ -5825,21 +5914,21 @@ header {
     font-family: "Pretendard";
     font-size: 0.875rem;
     font-weight: 500;
-    line-height: 1.2;
+    line-height: 1.3;
     padding-left: 0;
   }
   .modal .popup__desc h4 {
     font-family: "Pretendard";
     font-size: 0.875rem;
     font-weight: 500;
-    line-height: 1.2;
+    line-height: 1.3;
     padding-left: 0.3125rem;
   }
   .modal .popup__desc p {
     font-family: "Pretendard";
     font-size: 0.75rem;
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1.3;
     padding-left: 0.625rem;
   }
 }

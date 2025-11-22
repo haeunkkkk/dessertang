@@ -7,164 +7,184 @@
 }
 
 .wrapper {
-  width: $color-bg;
-  height: rem(50);
-  position: relative;
-  @include radius($radius: 100%);
-  @include flex($justify: center, $align: center);
-  margin-top: rem(6);
-  
-  .fab {
-    background: $color-primary;
-    width: rem(80);
-    height: rem(80);
+    width: $color-bg;
+    height: rem(50);
     position: relative;
     @include radius($radius: 100%);
     @include flex($justify: center, $align: center);
-    animation: fab-animation-reverse 0.4s ease-out forwards;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-    z-index: 3;
-    
-    &::before,
-    &::after {
-      content: "";
-      display: block;
-      position: absolute;
-      @include radius($radius: rem(4));
-      background: $color-skyblue;
-    }
-    
-    &::before {
-      width: rem(4);
-      height: rem(30);
-    }
-    
-    &::after {
-      width: rem(30);
-      height: rem(4);
-    }
-  }
+    margin-top: rem(6);
 
-  .fac {
-    height: 100%;
-    position: absolute;
-    z-index: 2;
-    opacity: 0;
-    @include flex($justify: space-around, $align: center, $direction: column);
-    transition: opacity 0.3s ease-in, top 0.3s ease-in, width 0.3s ease-in;
-
-    
-    a {
-        opacity: 0.9;
+    .fab {
+        background: $color-primary;
         width: rem(80);
         height: rem(80);
-        border-radius: 100%;
-        background-color: $color-bg;
-        padding: rem(0.5);
-        margin: rem(5);
+        position: relative;
+        @include radius($radius: 100%);
+        @include flex($justify: center, $align: center);
+        animation: fab-animation-reverse 0.4s ease-out forwards;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-        text-align: center;
-        @include flex($justify: center, $align: center, $direction: column);
-      
-      &:hover {
-        transition: 0.3s;
-        opacity: 1;
-        color: $color-primary;
-      }
+        z-index: 3;
 
-      span {
-        @include font-set($size: 12, $weight: 300);
-        color: $gray-400;
-      }
-      p {
-        @include font-set($size: 16, $weight: 900);
-      }
+        &::before,
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            @include radius($radius: rem(4));
+            background: $color-skyblue;
+        }
+
+        &::before {
+            width: rem(4);
+            height: rem(30);
+        }
+
+        &::after {
+            width: rem(30);
+            height: rem(4);
+        }
     }
-  }
-  
-  
-  input {
-    height: 100%;
-    width: 100%;
-    @include radius($radius: 100%);
-    cursor: pointer;
-    position: absolute;
-    z-index: 5;
-    opacity: 0;
-    
-    &:checked {
-      ~ .fab {
-        animation: fab-animation 0.4s ease-out forwards;
-      }
-      
-      ~ .fac {
-        width: rem(60);
-        height: rem(170);
-        animation: fac-animation 0.4s ease-out forwards 0.2s;
-        top: rem(-190);
-        opacity: 1;
-      }
+
+    .fac {
+        height: 100%;
+        position: absolute;
+        z-index: 2;
+        opacity: 0;
+        @include flex($justify: space-around, $align: center, $direction: column);
+        transition: opacity 0.3s ease-in, top 0.3s ease-in, width 0.3s ease-in;
+
+
+        a {
+            opacity: 0.9;
+            width: rem(80);
+            height: rem(80);
+            border-radius: 100%;
+            background-color: $color-bg;
+            padding: rem(0.5);
+            margin: rem(5);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+            text-align: center;
+            @include flex($justify: center, $align: center, $direction: column);
+
+            &:hover {
+                transition: 0.3s;
+                opacity: 1;
+                color: $color-primary;
+            }
+
+            span {
+                @include font-set($size: 12, $weight: 300);
+                color: $gray-400;
+            }
+
+            p {
+                @include font-set($size: 16, $weight: 900);
+            }
+        }
     }
-    &:not(:checked) ~ .fac {
-        animation: fac-animation-reverse 0.5s ease forwards;
+
+
+    input {
+        height: 100%;
+        width: 100%;
+        @include radius($radius: 100%);
+        cursor: pointer;
+        position: absolute;
+        z-index: 5;
+        opacity: 0;
+
+        &:checked {
+            ~.fab {
+                animation: fab-animation 0.4s ease-out forwards;
+            }
+
+            ~.fac {
+                width: rem(60);
+                height: rem(170);
+                animation: fac-animation 0.4s ease-out forwards 0.2s;
+                top: rem(-190);
+                opacity: 1;
+            }
+        }
+
+        &:not(:checked)~.fac {
+            animation: fac-animation-reverse 0.5s ease forwards;
+        }
     }
-  }
 }
 
 @keyframes fac-animation-reverse {
-  0% { top: rem(-300); opacity: 1; }
-  100% { top: rem(0); opacity: 0; }
+    0% {
+        top: rem(-300);
+        opacity: 1;
+    }
+
+    100% {
+        top: rem(0);
+        opacity: 0;
+    }
 }
 
 @keyframes fab-animation {
-  0% {
-    transform: rotate(0) scale(1);
-  }
-  20% {
-    transform: rotate(60deg) scale(0.93);
-  }
-  55% {
-    transform: rotate(35deg) scale(0.97);
-  }
-  80% {
-    transform: rotate(48deg) scale(0.94);
-  }
-  100% {
-    transform: rotate(45deg) scale(0.95);
-  }
+    0% {
+        transform: rotate(0) scale(1);
+    }
+
+    20% {
+        transform: rotate(60deg) scale(0.93);
+    }
+
+    55% {
+        transform: rotate(35deg) scale(0.97);
+    }
+
+    80% {
+        transform: rotate(48deg) scale(0.94);
+    }
+
+    100% {
+        transform: rotate(45deg) scale(0.95);
+    }
 }
 
 @keyframes fab-animation-reverse {
-  0% {
-    transform: rotate(45deg) scale(0.95);
-  }
-  20% {
-    transform: rotate(-15deg);
-  }
-  55% {
-    transform: rotate(10deg);
-  }
-  80% {
-    transform: rotate(-3deg);
-  }
-  100% {
-    transform: rotate(0) scale(1);
-  }
+    0% {
+        transform: rotate(45deg) scale(0.95);
+    }
+
+    20% {
+        transform: rotate(-15deg);
+    }
+
+    55% {
+        transform: rotate(10deg);
+    }
+
+    80% {
+        transform: rotate(-3deg);
+    }
+
+    100% {
+        transform: rotate(0) scale(1);
+    }
 }
 
 @keyframes fac-animation {
-  0% {
-    transform: scale(1, 1);
-  }
-  33% {
-    transform: scale(0.95, 1.05);
-  }
-  66% {
-    transform: scale(1.05, 0.95);
-  }
-  100% {
-    transform: scale(1, 1);
-  }
+    0% {
+        transform: scale(1, 1);
+    }
+
+    33% {
+        transform: scale(0.95, 1.05);
+    }
+
+    66% {
+        transform: scale(1.05, 0.95);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
 }
 
 
@@ -179,11 +199,12 @@
 
         &__content__img {
             width: 100%;
+
             img {
                 width: 100%;
                 height: 100%;
             }
-       }
+        }
 
         &__slide {
             width: 100%;
@@ -268,9 +289,10 @@
         width: rem(15);
         height: rem(15);
         margin: 0;
+
         &:hover {
             border: rem(2) solid $color-text;
-            background-color: #00000067; 
+            background-color: #00000067;
         }
     }
 
@@ -305,9 +327,11 @@
                 width: rem(12);
                 height: rem(12);
             }
+
             &__slide__06 {
                 .hero__swiper__content__text {
                     color: $color-bg;
+
                     p {
                         color: #dadada;
                     }
@@ -376,6 +400,7 @@
                         @include font-set ($size: 28, $weight: 700, $line-height: 1.2, $family: $font-accent)
                     }
                 }
+
                 &__img {
                     img {
                         width: rem(280);
@@ -424,7 +449,7 @@
 
             &__title {
                 @include flex($align: flex-start, $direction: column, $gap: rem(10));
-                
+
 
                 h2 {
                     @include font-set($size: 32, $weight: 700, $line-height: 1.2);
@@ -464,6 +489,7 @@
 
         &__img {
             width: calc(100% / 2);
+
             img {
                 @include radius(rem(20));
             }
@@ -481,10 +507,11 @@
 
         a {
             width: rem(163);
+
             &:hover {
-                    border: 1px solid $color-orange;
-                    color: $color-orange;
-                }
+                border: 1px solid $color-orange;
+                color: $color-orange;
+            }
         }
 
         img {
@@ -498,17 +525,20 @@
         background-color: $color-green;
         @include flex($justify: space-between, $align: flex-start, $direction: column);
         padding: rem(54) 0 0 0;
+
         &__text {
             padding-left: clamp(0.75rem, 0.1944rem + 2.963vw, 3.75rem);
             padding-right: rem(60);
         }
+
         a {
             &:hover {
-                    border: 1px solid $color-green;
-                    color: $color-green;
-                }
+                border: 1px solid $color-green;
+                color: $color-green;
+            }
         }
     }
+
     &__taste__img {
         margin-bottom: rem(-10);
     }
@@ -673,12 +703,13 @@
         }
 
         &__card {
-            padding: rem(20) 0  0 rem(20);
+            padding: rem(20) 0 0 rem(20);
             height: rem(200);
 
             &__text {
                 &__title {
                     gap: rem(5);
+
                     h2 {
                         @include font-set($size: 16, $weight: 700, $line-height: 1.2);
                     }
@@ -698,7 +729,7 @@
 
             &__img {
                 margin-right: 0;
-                margin-bottom: rem(-40);
+                margin-bottom: rem(-50);
 
                 img {
                     margin-top: 0;
@@ -716,6 +747,7 @@
                 &__title {
                     gap: rem(20);
                 }
+
                 a {
                     width: rem(125);
                     margin-bottom: rem(10);
@@ -734,12 +766,14 @@
 
         &__taste__card {
             padding: rem(20) rem(20) 0 0;
-            
+
             &__text {
                 margin-bottom: rem(10);
+
                 &__title {
                     gap: rem(20);
                 }
+
                 a {
                     margin-bottom: rem(10);
                 }
@@ -764,12 +798,14 @@
         &__subtitle {
             @include subtitle-style(18);
         }
+
         &__card__wrap {
             gap: rem(12);
         }
 
         &__card {
             height: rem(150);
+
             span {
                 display: none;
             }
@@ -780,11 +816,12 @@
 
             &__img {
                 margin-right: rem(10);
-                margin-bottom: rem(-80);
+                margin-bottom: rem(-40);
 
                 img {
                     width: rem(100);
                     height: rem(100);
+                    border-radius: 0;
                 }
             }
         }
@@ -798,7 +835,7 @@
         }
 
         &__accessibility__img {
-            margin-bottom: rem(-10);
+            margin-bottom: rem(-20);
 
             img {
                 width: rem(150);
@@ -810,6 +847,7 @@
             &__text {
                 padding: 0;
                 margin: 0;
+
                 a {
                     margin-bottom: rem(13);
                 }
@@ -831,24 +869,27 @@
 .growth {
     .growth__swiper {
         overflow-x: hidden;
-            .swiper-button-next,
-            .swiper-button-prev {
-                top: 60%;
-                transform: translate(-60%);
-                color: $gray-200;
-                &:hover {
-                    color: $color-primary;
-                }
-            }
-            .swiper-button-prev {
-                left: 50%;
-                transform: translateX(calc(50% - 270px)); 
-            }
 
-            .swiper-button-next {
-                right: 50%;
-                transform: translateX(calc(50% + 245px)); 
-            }    
+        .swiper-button-next,
+        .swiper-button-prev {
+            top: 60%;
+            transform: translate(-60%);
+            color: $gray-200;
+
+            &:hover {
+                color: $color-primary;
+            }
+        }
+
+        .swiper-button-prev {
+            left: 50%;
+            transform: translateX(calc(50% - 270px));
+        }
+
+        .swiper-button-next {
+            right: 50%;
+            transform: translateX(calc(50% + 245px));
+        }
     }
 
     .growth__slide {
@@ -900,12 +941,12 @@
         button {
             margin: rem(20) 0;
             @include font-set ($size: 24);
-            @include button-style(); 
-            
+            @include button-style();
+
             &:hover {
                 background-color: $color-bg;
                 color: $color-primary;
-                border: 1px solid $color-primary;    
+                border: 1px solid $color-primary;
             }
         }
     }
@@ -920,10 +961,12 @@
         .swiper-slide-next {
             .growth__card__img {
                 margin-top: rem(200);
+
                 img {
                     width: rem(150);
                 }
             }
+
             .growth__card {
                 background-color: #f3f3f3;
                 height: 100%;
@@ -938,10 +981,12 @@
         .swiper-slide-prev {
             .growth__card__img {
                 margin-top: rem(200);
+
                 img {
                     width: rem(150);
                 }
             }
+
             .growth__card {
                 background-color: #f3f3f3;
                 height: 100%;
@@ -954,31 +999,35 @@
         }
     }
 
-    @media (max-width: $bp-desktop) {
-    }
+    @media (max-width: $bp-desktop) {}
 
     @media (max-width: $bp-tablet) {
         padding-bottom: 0;
+
         &__card__img {
             img {
                 width: rem(200);
                 height: rem(200);
             }
         }
+
         .growth__swiper {
             height: 100%;
+
             .swiper-button-next,
             .swiper-button-prev {
                 top: rem(50);
                 right: rem(50);
-                transform: translateX(10%); 
+                transform: translateX(10%);
+
                 &::after {
                     font-size: rem(40);
                 }
             }
+
             .swiper-button-prev {
                 left: 80%;
-                transform: translateX(calc(80% - 50px)); 
+                transform: translateX(calc(80% - 50px));
             }
         }
     }
@@ -990,9 +1039,11 @@
                 height: rem(150);
             }
         }
+
         .growth__slide {
             height: 100%;
         }
+
         .growth__card {
             margin-top: rem(-75);
             width: rem(366);
@@ -1032,18 +1083,21 @@
         }
 
         .growth__swiper {
+
             .swiper-button-next,
             .swiper-button-prev {
                 top: rem(50);
                 right: rem(30);
-                transform: translateX(0); 
+                transform: translateX(0);
+
                 &::after {
                     font-size: rem(24);
                 }
             }
+
             .swiper-button-prev {
-                    left: 75%;
-                }
+                left: 75%;
+            }
         }
     }
 
@@ -1068,15 +1122,18 @@
             }
         }
 
-       .growth__swiper {
+        .growth__swiper {
+
             .swiper-button-next,
             .swiper-button-prev {
                 right: rem(20);
-                transform: translateX(0); 
+                transform: translateX(0);
+
                 &::after {
                     font-size: 20px;
                 }
             }
+
             .swiper-button-prev {
                 left: 70%;
             }
@@ -1090,6 +1147,7 @@
 .best {
     &__swiper {
         @include flex ($justify: center, $align: center, $direction: column, $wrap: nowrap, $gap: rem(160));
+
         button {
             font-size: rem(24);
             padding: rem(15) rem(106);
@@ -1101,6 +1159,7 @@
 
         &__content {
             @include flex ($justify: center, $align: center, $direction: column, $wrap: nowrap, $gap: rem(10));
+
             &:hover .best__slide__img {
                 transform: scale(1.05);
             }
@@ -1147,9 +1206,10 @@
     &__prev {
         top: rem(180);
         color: $gray-200;
-            &:hover {
-                color: $color-primary;
-            }
+
+        &:hover {
+            color: $color-primary;
+        }
     }
 
     @media (max-width: $bp-desktop) {
@@ -1200,6 +1260,7 @@
 
     @media (max-width: $bp-tablet) {
         padding-top: rem(80);
+
         &__swiper {
             @include flex ($justify: center, $align: center, $direction: column, $wrap: nowrap, $gap: rem(80))
         }
@@ -1241,6 +1302,7 @@
                 padding: rem(10) rem(70);
             }
         }
+
         .swiper-button-next::after,
         .swiper-button-prev::after {
             font-size: rem(24);
@@ -1290,6 +1352,7 @@
 .event {
     &__wrapper {
         @include flex ($justify: center, $direction: column, $gap: rem(50));
+
         button {
             font-size: rem(24);
             padding: rem(15) rem(106);
@@ -1309,7 +1372,7 @@
             height: rem(466);
             @include flex ($justify: flex-end, $align: flex-end, $direction: column, $gap: rem(50));
             @include radius($radius: rem(20));
-            
+
 
             &__text {
                 width: 100%;
@@ -1371,6 +1434,7 @@
             }
 
         }
+
         &__wrap {
             grid-template-columns: repeat(1, 1fr);
             grid-template-areas:
@@ -1431,14 +1495,29 @@
     &__img {
         will-change: transform;
         animation: wobble 7s ease-in-out infinite;
-        
+
         @keyframes wobble {
-        0%   { transform: translate3d(0,0,0) rotate(0deg); }
-        25%  { transform: translate3d(-12px, -10px, 0) rotate(-2deg); }
-        50%  { transform: translate3d(0, -20px, 0) rotate(0deg); }
-        75%  { transform: translate3d(12px, -10px, 0) rotate(2deg); }
-        100% { transform: translate3d(0,0,0) rotate(0deg); }
+            0% {
+                transform: translate3d(0, 0, 0) rotate(0deg);
+            }
+
+            25% {
+                transform: translate3d(-12px, -10px, 0) rotate(-2deg);
+            }
+
+            50% {
+                transform: translate3d(0, -20px, 0) rotate(0deg);
+            }
+
+            75% {
+                transform: translate3d(12px, -10px, 0) rotate(2deg);
+            }
+
+            100% {
+                transform: translate3d(0, 0, 0) rotate(0deg);
+            }
         }
+
         img {
             width: rem(400);
         }
@@ -1462,6 +1541,7 @@
             h2 {
                 @include font-set($size: 20, $weight: 700, $line-height: 1.4, $family: $font-accent);
             }
+
             button {
                 font-size: rem(16);
                 padding: rem(10) rem(50);
@@ -1507,7 +1587,7 @@
         }
 
         .contact__left {
-           button {
+            button {
                 padding: rem(10) rem(50);
             }
         }
