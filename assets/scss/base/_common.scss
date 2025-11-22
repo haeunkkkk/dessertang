@@ -1,13 +1,15 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     font-family: 'Pretendard';
     color: $color-text;
     background-color: $color-bg;
+    line-height: 1.3;
 }
 
 a {
@@ -15,7 +17,9 @@ a {
     color: inherit;
 }
 
-dl, ul, li {
+dl,
+ul,
+li {
     list-style: none;
 }
 

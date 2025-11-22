@@ -507,11 +507,11 @@
                             @include flex ($justify: flex-end, $align: flex-end, $direction: column, $wrap: nowrap, $gap: rem(5));
 
                             span {
-                                @include font-set ($size: 16, $weight: 500, $line-height: 1.2, $family: $font-primary);
+                                @include font-set ($size: 16, $weight: 500, $family: $font-primary);
                             }
 
                             p {
-                                @include font-set ($size: 60, $weight: 900, $line-height: 1.2, $family: $font-primary);
+                                @include font-set ($size: 60, $weight: 900, $family: $font-primary);
                             }
                         }
 
@@ -552,7 +552,7 @@
                                 @include flex ($justify: flex-start, $align: flex-start, $direction: row, $wrap: nowrap, $gap: rem(15));
 
                                 span {
-                                    @include font-set ($size: 12, $weight: 500, $line-height: 1.2, $family: $font-primary);
+                                    @include font-set ($size: 12, $weight: 500, $family: $font-primary);
                                 }
                             }
                         }
@@ -648,7 +648,7 @@
 
                             &__top {
                                 p {
-                                    @include font-set ($size: 44, $weight: 900, $line-height: 1.2, $family: $font-primary);
+                                    @include font-set ($size: 44, $weight: 900, $family: $font-primary);
                                 }
                             }
 
@@ -711,11 +711,11 @@
 
                                 span {
                                     width: rem(120);
-                                    @include font-set ($size: 12, $weight: 500, $line-height: 1.2, $family: $font-primary);
+                                    @include font-set ($size: 12, $weight: 500, $family: $font-primary);
                                 }
 
                                 p {
-                                    @include font-set ($size: 32, $weight: 900, $line-height: 1.2, $family: $font-primary);
+                                    @include font-set ($size: 32, $weight: 900, $family: $font-primary);
                                 }
                             }
 
@@ -754,7 +754,7 @@
                                     bottom: rem(-120);
                                     left: 0;
                                     text-align: start;
-                                    @include font-set ($size: 20, $weight: 400, $line-height: 1.2, $family: $font-primary);
+                                    @include font-set ($size: 20, $weight: 400, $family: $font-primary);
                                     padding: rem(20) rem(20) 0 rem(20);
                                 }
                             }
@@ -810,11 +810,11 @@
 
                                 span {
                                     width: rem(100);
-                                    @include font-set ($size: 10, $weight: 500, $line-height: 1.2, $family: $font-primary);
+                                    @include font-set ($size: 10, $weight: 500);
                                 }
 
                                 p {
-                                    @include font-set ($size: 24, $weight: 900, $line-height: 1.2, $family: $font-primary);
+                                    @include font-set ($size: 24, $weight: 900);
                                 }
                             }
 
@@ -823,7 +823,7 @@
 
                                 &__key {
                                     span {
-                                        @include font-set ($size: 10, $weight: 500, $line-height: 1.2, $family: $font-primary);
+                                        @include font-set ($size: 10, $weight: 500);
                                     }
                                 }
                             }
@@ -832,7 +832,7 @@
                         &__back {
                             &__desc {
                                 p {
-                                    @include font-set ($size: 16, $weight: 400, $line-height: 1.2, $family: $font-primary);
+                                    @include font-set ($size: 16);
                                     padding: rem(12) rem(12) 0 rem(12);
                                 }
                             }
@@ -865,7 +865,7 @@
                                 p {
                                     bottom: rem(-60);
                                     left: 0;
-                                    @include font-set ($size: 16, $weight: 400, $line-height: 1.2, $family: $font-primary);
+                                    @include font-set ($size: 16);
                                     padding: rem(12) rem(12) 0 rem(12);
                                 }
                             }
@@ -911,11 +911,11 @@
                 @include flex ($justify: center, $align: center, $direction: column, $wrap: nowrap, $gap: rem(20));
 
                 h3 {
-                    @include font-set($size: 32, $weight: 500, $line-height: 1.2, $family: $font-primary)
+                    @include font-set($size: 32, $weight: 500)
                 }
 
                 p {
-                    @include font-set($size: 20, $weight: 400, $line-height: 1.2, $family: $font-primary)
+                    @include font-set($size: 20, $weight: 400, $family: $font-primary)
                 }
             }
 
@@ -935,16 +935,6 @@
             border: none;
         }
 
-        .btn {
-            @include font-set ($size: 24);
-            @include button-style();
-
-            &:hover {
-                background-color: $color-bg;
-                color: $color-primary;
-                border: 1px solid $color-primary;
-            }
-        }
     }
 
     @media (max-width: $bp-desktop) {
@@ -958,11 +948,11 @@
                     @include flex ($justify: center, $align: center, $direction: column, $wrap: nowrap, $gap: rem(20));
 
                     h3 {
-                        @include font-set($size: 28, $weight: 500, $line-height: 1.2, $family: $font-primary)
+                        @include font-set($size: 28, $weight: 500, $family: $font-primary)
                     }
 
                     p {
-                        @include font-set($size: 20, $weight: 400, $line-height: 1.2, $family: $font-primary)
+                        @include font-set($size: 20, $weight: 400, $family: $font-primary)
                     }
                 }
             }
@@ -997,11 +987,11 @@
                     width: 100%;
 
                     h3 {
-                        @include font-set($size: 24, $weight: 500, $line-height: 1.2, $family: $font-primary)
+                        @include font-set($size: 24, $weight: 500, $family: $font-primary)
                     }
 
                     p {
-                        @include font-set($size: 20, $weight: 400, $line-height: 1.2, $family: $font-primary)
+                        @include font-set($size: 20, $weight: 400, $family: $font-primary)
                     }
                 }
             }
@@ -1032,26 +1022,18 @@
 
                 &__text {
                     h3 {
-                        @include font-set($size: 18, $weight: 500, $line-height: 1.2, $family: $font-primary)
+                        @include font-set($size: 18, $weight: 500, $family: $font-primary)
                     }
 
                     p {
-                        @include font-set($size: 14, $weight: 400, $line-height: 1.2, $family: $font-primary)
+                        @include font-set($size: 14, $weight: 400, $family: $font-primary)
                     }
                 }
             }
 
         }
 
-        .btn {
-            font-size: rem(16);
-            @include button-style($bg: $color-primary,
-                $color: $color-bg,
-                $radius: 40px,
-                $border: none,
-                $padding-y: 10px,
-                $padding-x: 70px)
-        }
+
     }
 
     @media (max-width: $bp-mobile-sm) {
@@ -1060,20 +1042,12 @@
 
                 &__text {
                     h3 {
-                        @include font-set($size: 16, $weight: 500, $line-height: 1.2, $family: $font-primary)
+                        @include font-set($size: 16, $weight: 500, $family: $font-primary)
                     }
                 }
             }
         }
 
-        .btn {
-            @include font-set ($size: 14);
-            @include button-style($bg: $color-primary,
-                $color: $color-bg,
-                $radius: 40px,
-                $border: none,
-                $padding-y: 10px,
-                $padding-x: 50px)
-        }
+
     }
 }

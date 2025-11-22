@@ -940,14 +940,6 @@
 
         button {
             margin: rem(20) 0;
-            @include font-set ($size: 24);
-            @include button-style();
-
-            &:hover {
-                background-color: $color-bg;
-                color: $color-primary;
-                border: 1px solid $color-primary;
-            }
         }
     }
 
@@ -1072,13 +1064,6 @@
 
             button {
                 width: 80%;
-                @include font-set ($size: 16);
-                @include button-style($bg: $color-primary,
-                    $color: $color-bg,
-                    $radius: 40px,
-                    $border: none,
-                    $padding-y: 10px,
-                    $padding-x: 70px)
             }
         }
 
@@ -1110,16 +1095,6 @@
                 @include font-set($size: 14, $weight: 300, $family: $font-accent);
                 gap: 20px;
             }
-
-            button {
-                @include font-set ($size: 14);
-                @include button-style($bg: $color-primary,
-                    $color: $color-bg,
-                    $radius: 40px,
-                    $border: none,
-                    $padding-y: 10px,
-                    $padding-x: 50px)
-            }
         }
 
         .growth__swiper {
@@ -1147,11 +1122,6 @@
 .best {
     &__swiper {
         @include flex ($justify: center, $align: center, $direction: column, $wrap: nowrap, $gap: rem(160));
-
-        button {
-            font-size: rem(24);
-            padding: rem(15) rem(106);
-        }
     }
 
     &__slide {
@@ -1296,12 +1266,6 @@
     }
 
     @media (max-width: $bp-mobile-md) {
-        &__swiper {
-            button {
-                font-size: rem(16);
-                padding: rem(10) rem(70);
-            }
-        }
 
         .swiper-button-next::after,
         .swiper-button-prev::after {
@@ -1352,11 +1316,6 @@
 .event {
     &__wrapper {
         @include flex ($justify: center, $direction: column, $gap: rem(50));
-
-        button {
-            font-size: rem(24);
-            padding: rem(15) rem(106);
-        }
     }
 
     &__wrap {
@@ -1427,13 +1386,7 @@
     }
 
     @media (max-width: $bp-tablet) {
-        &__wrapper {
-            button {
-                font-size: rem(16);
-                padding: rem(10) rem(70);
-            }
 
-        }
 
         &__wrap {
             grid-template-columns: repeat(1, 1fr);
@@ -1484,11 +1437,6 @@
 
         h2 {
             @include font-set($size: 24, $weight: 700, $line-height: 1.4, $family: $font-accent);
-        }
-
-        button {
-            font-size: rem(24);
-            padding: rem(15) rem(106);
         }
     }
 
@@ -1542,10 +1490,6 @@
                 @include font-set($size: 20, $weight: 700, $line-height: 1.4, $family: $font-accent);
             }
 
-            button {
-                font-size: rem(16);
-                padding: rem(10) rem(50);
-            }
         }
 
         .contact__img {
@@ -1566,11 +1510,6 @@
                 @include font-set($size: 16, $weight: 600, $line-height: 1.2, $family: $font-accent);
             }
 
-            button {
-                width: 100%;
-                font-size: rem(16);
-                padding: rem(10) rem(60);
-            }
         }
 
         .contact__img {
@@ -1586,11 +1525,6 @@
             padding: rem(30) rem(12);
         }
 
-        .contact__left {
-            button {
-                padding: rem(10) rem(50);
-            }
-        }
 
         .contact__img {
             img {

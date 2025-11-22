@@ -4,10 +4,12 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   font-family: "Pretendard";
   color: #333333;
   background-color: #ffffff;
+  line-height: 1.3;
 }
 
 a {
@@ -15,7 +17,9 @@ a {
   color: inherit;
 }
 
-dl, ul, li {
+dl,
+ul,
+li {
   list-style: none;
 }
 
@@ -277,7 +281,6 @@ header {
 }
 
 .header__wrapper nav ul .nav__link .sub__menu ul li a {
-  line-height: 1.35;
   display: block;
   color: #333333;
   padding: 0 0.625rem;
@@ -1762,29 +1765,6 @@ header {
 }
 .growth .growth__card button {
   margin: 1.25rem 0;
-  font-family: "Pretendard";
-  font-size: 1.5rem;
-  font-weight: 400;
-  line-height: 1.3;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #3475A8;
-  color: #ffffff;
-  border-radius: 40px;
-  border: 1px solid #3475A8;
-  padding: 15px 106px;
-  transition: all 0.2 ease-in-out;
-}
-.growth .growth__card button:hover {
-  background-color: #ffffff;
-  color: #3475A8;
-  border: 1px solid #3475A8;
-}
-.growth .growth__card button:hover {
-  background-color: #ffffff;
-  color: #3475A8;
-  border: 1px solid #3475A8;
 }
 .growth .swiper-3d .swiper-slide-shadow-left,
 .growth .swiper-3d .swiper-slide-shadow-right {
@@ -1887,24 +1867,6 @@ header {
   }
   .growth .growth__card button {
     width: 80%;
-    font-family: "Pretendard";
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.3;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #3475A8;
-    color: #ffffff;
-    border-radius: 40px;
-    border: none;
-    padding: 10px 70px;
-    transition: all 0.2 ease-in-out;
-  }
-  .growth .growth__card button:hover {
-    background-color: #ffffff;
-    color: #3475A8;
-    border: 1px solid #3475A8;
   }
   .growth .growth__swiper .swiper-button-next,
   .growth .growth__swiper .swiper-button-prev {
@@ -1932,26 +1894,6 @@ header {
     line-height: 1.3;
     gap: 20px;
   }
-  .growth .growth__card button {
-    font-family: "Pretendard";
-    font-size: 0.875rem;
-    font-weight: 400;
-    line-height: 1.3;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #3475A8;
-    color: #ffffff;
-    border-radius: 40px;
-    border: none;
-    padding: 10px 50px;
-    transition: all 0.2 ease-in-out;
-  }
-  .growth .growth__card button:hover {
-    background-color: #ffffff;
-    color: #3475A8;
-    border: 1px solid #3475A8;
-  }
   .growth .growth__swiper .swiper-button-next,
   .growth .growth__swiper .swiper-button-prev {
     right: 1.25rem;
@@ -1973,10 +1915,6 @@ header {
   flex-direction: column;
   flex-wrap: nowrap;
   gap: 10rem;
-}
-.best__swiper button {
-  font-size: 1.5rem;
-  padding: 0.9375rem 6.625rem;
 }
 .best__slide {
   display: flex;
@@ -2118,10 +2056,6 @@ header {
   }
 }
 @media (max-width: 500px) {
-  .best__swiper button {
-    font-size: 1rem;
-    padding: 0.625rem 4.375rem;
-  }
   .best .swiper-button-next::after,
   .best .swiper-button-prev::after {
     font-size: 1.5rem;
@@ -2172,10 +2106,6 @@ header {
   flex-direction: column;
   flex-wrap: nowrap;
   gap: 3.125rem;
-}
-.event__wrapper button {
-  font-size: 1.5rem;
-  padding: 0.9375rem 6.625rem;
 }
 .event__wrap {
   width: 100%;
@@ -2258,10 +2188,6 @@ header {
   }
 }
 @media (max-width: 768px) {
-  .event__wrapper button {
-    font-size: 1rem;
-    padding: 0.625rem 4.375rem;
-  }
   .event__wrap {
     grid-template-columns: repeat(1, 1fr);
     grid-template-areas: "img1" "img2" "img3";
@@ -2317,10 +2243,6 @@ header {
   font-weight: 700;
   line-height: 1.4;
 }
-.contact__left button {
-  font-size: 1.5rem;
-  padding: 0.9375rem 6.625rem;
-}
 .contact__img {
   will-change: transform;
   animation: wobble 7s ease-in-out infinite;
@@ -2366,10 +2288,6 @@ header {
     font-weight: 700;
     line-height: 1.4;
   }
-  .contact .contact__left button {
-    font-size: 1rem;
-    padding: 0.625rem 3.125rem;
-  }
   .contact .contact__img img {
     width: 12.5rem;
   }
@@ -2390,11 +2308,6 @@ header {
     font-weight: 600;
     line-height: 1.2;
   }
-  .contact .contact__left button {
-    width: 100%;
-    font-size: 1rem;
-    padding: 0.625rem 3.75rem;
-  }
   .contact .contact__img img {
     width: 9.375rem;
   }
@@ -2408,9 +2321,6 @@ header {
     flex-wrap: nowrap;
     gap: 0;
     padding: 1.875rem 0.75rem;
-  }
-  .contact .contact__left button {
-    padding: 0.625rem 3.125rem;
   }
   .contact .contact__img img {
     width: 6.25rem;
@@ -2874,13 +2784,13 @@ header {
   font-family: "Pretendard";
   font-size: 1rem;
   font-weight: 500;
-  line-height: 1.2;
+  line-height: 1.3;
 }
 .story__wrap__card__text__inner__front__top p {
   font-family: "Pretendard";
   font-size: 3.75rem;
   font-weight: 900;
-  line-height: 1.2;
+  line-height: 1.3;
 }
 .story__wrap__card__text__inner__front__bottom {
   position: relative;
@@ -2929,7 +2839,7 @@ header {
   font-family: "Pretendard";
   font-size: 0.75rem;
   font-weight: 500;
-  line-height: 1.2;
+  line-height: 1.3;
 }
 .story__wrap__card__text__inner__back {
   position: absolute;
@@ -3031,7 +2941,7 @@ header {
     font-family: "Pretendard";
     font-size: 2.75rem;
     font-weight: 900;
-    line-height: 1.2;
+    line-height: 1.3;
   }
   .story__wrap__card__text__inner__front__bottom {
     display: flex;
@@ -3092,13 +3002,13 @@ header {
     font-family: "Pretendard";
     font-size: 0.75rem;
     font-weight: 500;
-    line-height: 1.2;
+    line-height: 1.3;
   }
   .story__wrap__card__text__inner__front__top p {
     font-family: "Pretendard";
     font-size: 2rem;
     font-weight: 900;
-    line-height: 1.2;
+    line-height: 1.3;
   }
   .story__wrap__card__text__inner__front__bottom {
     display: flex;
@@ -3142,7 +3052,7 @@ header {
     font-family: "Pretendard";
     font-size: 1.25rem;
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1.3;
     padding: 1.25rem 1.25rem 0 1.25rem;
   }
   .story__wrap .story__wrap__card__overlay__full,
@@ -3185,13 +3095,13 @@ header {
     font-family: "Pretendard";
     font-size: 0.625rem;
     font-weight: 500;
-    line-height: 1.2;
+    line-height: 1.3;
   }
   .story__wrap__card__text__inner__front__top p {
     font-family: "Pretendard";
     font-size: 1.5rem;
     font-weight: 900;
-    line-height: 1.2;
+    line-height: 1.3;
   }
   .story__wrap__card__text__inner__front__bottom {
     padding: 0.75rem 0.75rem 0 0;
@@ -3200,13 +3110,13 @@ header {
     font-family: "Pretendard";
     font-size: 0.625rem;
     font-weight: 500;
-    line-height: 1.2;
+    line-height: 1.3;
   }
   .story__wrap__card__text__inner__back__desc p {
     font-family: "Pretendard";
     font-size: 1rem;
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1.3;
     padding: 0.75rem 0.75rem 0 0.75rem;
   }
 }
@@ -3230,7 +3140,7 @@ header {
     font-family: "Pretendard";
     font-size: 1rem;
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1.3;
     padding: 0.75rem 0.75rem 0 0.75rem;
   }
   .story__wrap__card02 .story__wrap__card__text__inner__front, .story__wrap__card03 .story__wrap__card__text__inner__front {
@@ -3281,13 +3191,13 @@ header {
   font-family: "Pretendard";
   font-size: 2rem;
   font-weight: 500;
-  line-height: 1.2;
+  line-height: 1.3;
 }
 .identity__wrap__card__text p {
   font-family: "Pretendard";
   font-size: 1.25rem;
   font-weight: 400;
-  line-height: 1.2;
+  line-height: 1.3;
 }
 .identity__wrap__card01, .identity__wrap__card02, .identity__wrap__card03 {
   border-right: 1px solid #cccccc;
@@ -3299,31 +3209,6 @@ header {
 }
 .identity__wrap__card03 {
   border: none;
-}
-.identity__wrap .btn {
-  font-family: "Pretendard";
-  font-size: 1.5rem;
-  font-weight: 400;
-  line-height: 1.3;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #3475A8;
-  color: #ffffff;
-  border-radius: 40px;
-  border: 1px solid #3475A8;
-  padding: 15px 106px;
-  transition: all 0.2 ease-in-out;
-}
-.identity__wrap .btn:hover {
-  background-color: #ffffff;
-  color: #3475A8;
-  border: 1px solid #3475A8;
-}
-.identity__wrap .btn:hover {
-  background-color: #ffffff;
-  color: #3475A8;
-  border: 1px solid #3475A8;
 }
 @media (max-width: 1024px) {
   .identity__wrap__card__icon {
@@ -3341,13 +3226,13 @@ header {
     font-family: "Pretendard";
     font-size: 1.75rem;
     font-weight: 500;
-    line-height: 1.2;
+    line-height: 1.3;
   }
   .identity__wrap__card__text p {
     font-family: "Pretendard";
     font-size: 1.25rem;
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1.3;
   }
   .identity__wrap__card01, .identity__wrap__card02, .identity__wrap__card03 {
     padding: 3.125rem 1.25rem;
@@ -3379,13 +3264,13 @@ header {
     font-family: "Pretendard";
     font-size: 1.5rem;
     font-weight: 500;
-    line-height: 1.2;
+    line-height: 1.3;
   }
   .identity__wrap__card__text p {
     font-family: "Pretendard";
     font-size: 1.25rem;
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1.3;
   }
   .identity__wrap__card01, .identity__wrap__card02, .identity__wrap__card03 {
     border-bottom: 1px solid #cccccc;
@@ -3408,30 +3293,13 @@ header {
     font-family: "Pretendard";
     font-size: 1.125rem;
     font-weight: 500;
-    line-height: 1.2;
+    line-height: 1.3;
   }
   .identity__wrap__card__text p {
     font-family: "Pretendard";
     font-size: 0.875rem;
     font-weight: 400;
-    line-height: 1.2;
-  }
-  .identity .btn {
-    font-size: 1rem;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #3475A8;
-    color: #ffffff;
-    border-radius: 40px;
-    border: none;
-    padding: 10px 70px;
-    transition: all 0.2 ease-in-out;
-  }
-  .identity .btn:hover {
-    background-color: #ffffff;
-    color: #3475A8;
-    border: 1px solid #3475A8;
+    line-height: 1.3;
   }
 }
 @media (max-width: 390px) {
@@ -3439,27 +3307,7 @@ header {
     font-family: "Pretendard";
     font-size: 1rem;
     font-weight: 500;
-    line-height: 1.2;
-  }
-  .identity .btn {
-    font-family: "Pretendard";
-    font-size: 0.875rem;
-    font-weight: 400;
     line-height: 1.3;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #3475A8;
-    color: #ffffff;
-    border-radius: 40px;
-    border: none;
-    padding: 10px 50px;
-    transition: all 0.2 ease-in-out;
-  }
-  .identity .btn:hover {
-    background-color: #ffffff;
-    color: #3475A8;
-    border: 1px solid #3475A8;
   }
 }
 
@@ -4018,7 +3866,8 @@ header {
   flex-wrap: nowrap;
   gap: 2.5rem;
 }
-.event__sub__nav__next a h4, .event__sub__nav__next a p {
+.event__sub__nav__next a h4,
+.event__sub__nav__next a p {
   font-family: "Pretendard";
   font-size: 1.5rem;
   font-weight: 400;
@@ -4033,32 +3882,13 @@ header {
   flex-wrap: nowrap;
   gap: 2.5rem;
 }
-.event__sub__nav__prev a h4, .event__sub__nav__prev a p {
+.event__sub__nav__prev a h4,
+.event__sub__nav__prev a p {
   font-family: "Pretendard";
   font-size: 1.5rem;
   font-weight: 400;
   line-height: 1.3;
   color: #666666;
-}
-.event__sub button {
-  font-family: "Pretendard";
-  font-size: 1.5rem;
-  font-weight: 400;
-  line-height: 1.3;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #3475A8;
-  color: #ffffff;
-  border-radius: 40px;
-  border: 1px solid #3475A8;
-  padding: 10px 27px;
-  transition: all 0.2 ease-in-out;
-}
-.event__sub button:hover {
-  background-color: #ffffff;
-  color: #3475A8;
-  border: 1px solid #3475A8;
 }
 @media (max-width: 1024px) {
   .event__sub__content__title {
@@ -4079,12 +3909,6 @@ header {
     font-family: "Pretendard";
     font-size: 1rem;
     font-weight: 600;
-    line-height: 1.3;
-  }
-  .event__sub button {
-    font-family: "Pretendard";
-    font-size: 1.25rem;
-    font-weight: 400;
     line-height: 1.3;
   }
 }
@@ -4149,7 +3973,8 @@ header {
     flex-wrap: nowrap;
     gap: 2.8125rem;
   }
-  .event__sub__nav__next a h4, .event__sub__nav__next a p {
+  .event__sub__nav__next a h4,
+  .event__sub__nav__next a p {
     font-family: "Pretendard";
     font-size: 0.875rem;
     font-weight: 400;
@@ -4163,15 +3988,10 @@ header {
     flex-wrap: nowrap;
     gap: 2.8125rem;
   }
-  .event__sub__nav__prev a h4, .event__sub__nav__prev a p {
+  .event__sub__nav__prev a h4,
+  .event__sub__nav__prev a p {
     font-family: "Pretendard";
     font-size: 0.875rem;
-    font-weight: 400;
-    line-height: 1.3;
-  }
-  .event__sub button {
-    font-family: "Pretendard";
-    font-size: 1rem;
     font-weight: 400;
     line-height: 1.3;
   }
@@ -4500,31 +4320,6 @@ header {
   font-weight: 600;
   color: #333333;
 }
-.inquiry button {
-  font-family: "Pretendard";
-  font-size: 1.5rem;
-  font-weight: 400;
-  line-height: 1.3;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #3475A8;
-  color: #ffffff;
-  border-radius: 40px;
-  border: 1px solid #3475A8;
-  padding: 15px 106px;
-  transition: all 0.2 ease-in-out;
-}
-.inquiry button:hover {
-  background-color: #ffffff;
-  color: #3475A8;
-  border: 1px solid #3475A8;
-}
-.inquiry button:hover {
-  background-color: #ffffff;
-  color: #3475A8;
-  border: 1px solid #3475A8;
-}
 .inquiry input:focus,
 .inquiry textarea:focus,
 .inquiry select:focus {
@@ -4615,26 +4410,6 @@ header {
     font-weight: 400;
     line-height: 1.3;
   }
-  .inquiry button {
-    font-family: "Pretendard";
-    font-size: 1.25rem;
-    font-weight: 400;
-    line-height: 1.3;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #3475A8;
-    color: #ffffff;
-    border-radius: 40px;
-    border: none;
-    padding: 10px 90px;
-    transition: all 0.2 ease-in-out;
-  }
-  .inquiry button:hover {
-    background-color: #ffffff;
-    color: #3475A8;
-    border: 1px solid #3475A8;
-  }
 }
 @media (max-width: 500px) {
   .inquiry__tab ul li a {
@@ -4698,26 +4473,6 @@ header {
   .inquiry__form__privacy a {
     margin-left: 1.25rem;
   }
-  .inquiry button {
-    font-family: "Pretendard";
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.3;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #3475A8;
-    color: #ffffff;
-    border-radius: 40px;
-    border: none;
-    padding: 10px 70px;
-    transition: all 0.2 ease-in-out;
-  }
-  .inquiry button:hover {
-    background-color: #ffffff;
-    color: #3475A8;
-    border: 1px solid #3475A8;
-  }
 }
 @media (max-width: 390px) {
   .inquiry__tab ul li {
@@ -4725,26 +4480,6 @@ header {
   }
   .inquiry__form .tab-slider--body {
     padding: 1.875rem 1.25rem;
-  }
-  .inquiry button {
-    font-family: "Pretendard";
-    font-size: 0.875rem;
-    font-weight: 400;
-    line-height: 1.3;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #3475A8;
-    color: #ffffff;
-    border-radius: 40px;
-    border: none;
-    padding: 10px 50px;
-    transition: all 0.2 ease-in-out;
-  }
-  .inquiry button:hover {
-    background-color: #ffffff;
-    color: #3475A8;
-    border: 1px solid #3475A8;
   }
 }
 
@@ -4812,6 +4547,7 @@ header {
 }
 .process__card__text p {
   font-size: clamp(0.75rem, 0.7037rem + 0.2469vw, 1rem);
+  line-height: 1.3;
 }
 @media (max-width: 1024px) {
   .process__card {
@@ -4839,6 +4575,9 @@ header {
   }
 }
 @media (max-width: 500px) {
+  .process .progress {
+    gap: 1.875rem;
+  }
   .process .progress .circle {
     width: 5rem;
     height: 5rem;
@@ -4886,7 +4625,7 @@ header {
     align-items: center;
     flex-direction: row;
     flex-wrap: nowrap;
-    gap: 0.75rem;
+    gap: 1.875rem;
     text-align: start;
   }
   .process__card__img img {
@@ -4987,55 +4726,7 @@ header {
   align-items: center;
   flex-direction: row;
   flex-wrap: nowrap;
-  gap: 1.25rem;
-}
-.costlist .costlist__btn .btn {
-  font-family: "Pretendard";
-  font-size: 1.25rem;
-  font-weight: 400;
-  line-height: 1.3;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #3475A8;
-  color: #ffffff;
-  border-radius: 40px;
-  border: 1px solid #3475A8;
-  padding: 13px 40px;
-  transition: all 0.2 ease-in-out;
-}
-.costlist .costlist__btn .btn:hover {
-  background-color: #ffffff;
-  color: #3475A8;
-  border: 1px solid #3475A8;
-}
-.costlist .costlist__btn .btn:hover {
-  background-color: #ffffff;
-  color: #3475A8;
-}
-.costlist .costlist__btn .btn__secondary {
-  font-family: "Pretendard";
-  font-size: 1.25rem;
-  font-weight: 400;
-  line-height: 1.3;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #ffffff;
-  color: #3475A8;
-  border-radius: 40px;
-  border: 1px solid #3475A8;
-  padding: 13px 40px;
-  transition: all 0.2 ease-in-out;
-}
-.costlist .costlist__btn .btn__secondary:hover {
-  background-color: #ffffff;
-  color: #3475A8;
-  border: 1px solid #3475A8;
-}
-.costlist .costlist__btn .btn__secondary:hover {
-  background-color: #3475A8;
-  color: #ffffff;
+  gap: 0;
 }
 @media (max-width: 1024px) {
   .costlist .costlist__card__wrap {
@@ -5072,7 +4763,7 @@ header {
     align-items: center;
     flex-direction: row;
     flex-wrap: nowrap;
-    gap: 1.25rem;
+    gap: 0;
   }
 }
 @media (max-width: 768px) {
@@ -5132,50 +4823,6 @@ header {
     font-size: 1.5rem;
     font-weight: 600;
     line-height: 1.3;
-  }
-  .costlist .costlist__btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    gap: 0.625rem;
-  }
-  .costlist .costlist__btn .btn {
-    font-family: "Pretendard";
-    font-size: 1.0625rem;
-    font-weight: 400;
-    line-height: 1.3;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #3475A8;
-    color: #ffffff;
-    border-radius: 40px;
-    border: 1px solid #3475A8;
-    padding: 10px 30px;
-    transition: all 0.2 ease-in-out;
-  }
-  .costlist .costlist__btn .btn:hover {
-    background-color: #ffffff;
-    color: #3475A8;
-    border: 1px solid #3475A8;
-  }
-  .costlist .costlist__btn .btn__secondary {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #ffffff;
-    color: #3475A8;
-    border-radius: 40px;
-    border: 1px solid #3475A8;
-    padding: 10px 30px;
-    transition: all 0.2 ease-in-out;
-  }
-  .costlist .costlist__btn .btn__secondary:hover {
-    background-color: #ffffff;
-    color: #3475A8;
-    border: 1px solid #3475A8;
   }
 }
 @media (max-width: 500px) {
@@ -5253,20 +4900,6 @@ header {
     font-family: "Pretendard";
     font-size: 1.25rem;
     font-weight: 600;
-    line-height: 1.3;
-  }
-  .costlist .costlist__btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    gap: 1.25rem;
-  }
-  .costlist .costlist__btn .btn {
-    font-family: "Pretendard";
-    font-size: 1rem;
-    font-weight: 400;
     line-height: 1.3;
   }
 }
@@ -5351,13 +4984,7 @@ header {
     align-items: flex-start;
     flex-direction: column;
     flex-wrap: nowrap;
-    gap: 1.25rem;
-  }
-  .costlist .costlist__btn .btn {
-    font-family: "Pretendard";
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.3;
+    gap: 0;
   }
 }
 
@@ -5385,12 +5012,11 @@ header {
   border-width: 0.0625rem 0.0625rem 0 0;
   content: " ";
   display: inline-block;
-  float: right;
   width: 1rem;
   height: 1rem;
-  position: relative;
-  right: 0.625rem;
-  top: -1.875rem;
+  position: absolute;
+  right: 3%;
+  top: 40%;
   transform: rotate(135deg);
   transition: 0.35s ease-in-out;
   vertical-align: top;
@@ -5466,8 +5092,7 @@ header {
   .faq__list__item__title::after {
     width: 0.625rem;
     height: 0.625rem;
-    right: 0;
-    top: -2.5rem;
+    right: 5%;
   }
   .faq__list__item__title h3 {
     font-family: "Pretendard";
@@ -5506,10 +5131,7 @@ header {
 }
 @media (max-width: 390px) {
   .faq__list__item__title {
-    padding: 0.75rem 0.75rem;
-  }
-  .faq__list__item__title::after {
-    top: -1.875rem;
+    padding: 0.75rem 1.875rem 1.25rem 1.25rem;
   }
   .faq__list__item__title h3 {
     font-family: "Pretendard";
@@ -5551,13 +5173,111 @@ header {
   border: 1px solid #3475A8;
   padding: 15px 106px;
   transition: all 0.2 ease-in-out;
+  font-family: "Pretendard";
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.3;
 }
 .btn:hover {
   background-color: #ffffff;
   color: #3475A8;
   border: 1px solid #3475A8;
 }
+.btn:hover {
+  background-color: #ffffff;
+  color: #3475A8;
+  border: 1px solid #3475A8;
+}
+@media (max-width: 1024px) {
+  .btn {
+    font-family: "Pretendard";
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.3;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3475A8;
+    color: #ffffff;
+    border-radius: 40px;
+    border: 1px solid #3475A8;
+    padding: 11px 70px;
+    transition: all 0.2 ease-in-out;
+  }
+  .btn:hover {
+    background-color: #ffffff;
+    color: #3475A8;
+    border: 1px solid #3475A8;
+  }
+}
+@media (max-width: 768px) {
+  .btn {
+    font-family: "Pretendard";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.3;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3475A8;
+    color: #ffffff;
+    border-radius: 40px;
+    border: 1px solid #3475A8;
+    padding: 11px 60px;
+    transition: all 0.2 ease-in-out;
+  }
+  .btn:hover {
+    background-color: #ffffff;
+    color: #3475A8;
+    border: 1px solid #3475A8;
+  }
+}
+@media (max-width: 500px) {
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3475A8;
+    color: #ffffff;
+    border-radius: 40px;
+    border: 1px solid #3475A8;
+    padding: 10px 40px;
+    transition: all 0.2 ease-in-out;
+  }
+  .btn:hover {
+    background-color: #ffffff;
+    color: #3475A8;
+    border: 1px solid #3475A8;
+  }
+}
+@media (max-width: 390px) {
+  .btn {
+    font-family: "Pretendard";
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.3;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3475A8;
+    color: #ffffff;
+    border-radius: 40px;
+    border: 1px solid #3475A8;
+    padding: 10px 30px;
+    transition: all 0.2 ease-in-out;
+  }
+  .btn:hover {
+    background-color: #ffffff;
+    color: #3475A8;
+    border: 1px solid #3475A8;
+  }
+}
+
 .btn__secondary {
+  font-family: "Pretendard";
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.3;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -5565,7 +5285,7 @@ header {
   color: #3475A8;
   border-radius: 40px;
   border: 1px solid #3475A8;
-  padding: 10px 25px;
+  padding: 15px 106px;
   transition: all 0.2 ease-in-out;
 }
 .btn__secondary:hover {
@@ -5573,9 +5293,93 @@ header {
   color: #3475A8;
   border: 1px solid #3475A8;
 }
-.btn:hover {
+.btn__secondary:hover {
   background-color: #3475A8;
   color: #ffffff;
+}
+@media (max-width: 1024px) {
+  .btn__secondary {
+    font-family: "Pretendard";
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.3;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    color: #3475A8;
+    border-radius: 40px;
+    border: 1px solid #3475A8;
+    padding: 11px 70px;
+    transition: all 0.2 ease-in-out;
+  }
+  .btn__secondary:hover {
+    background-color: #ffffff;
+    color: #3475A8;
+    border: 1px solid #3475A8;
+  }
+}
+@media (max-width: 768px) {
+  .btn__secondary {
+    font-family: "Pretendard";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.3;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    color: #3475A8;
+    border-radius: 40px;
+    border: 1px solid #3475A8;
+    padding: 11px 60px;
+    transition: all 0.2 ease-in-out;
+  }
+  .btn__secondary:hover {
+    background-color: #ffffff;
+    color: #3475A8;
+    border: 1px solid #3475A8;
+  }
+}
+@media (max-width: 500px) {
+  .btn__secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    color: #3475A8;
+    border-radius: 40px;
+    border: 1px solid #3475A8;
+    padding: 10px 40px;
+    transition: all 0.2 ease-in-out;
+  }
+  .btn__secondary:hover {
+    background-color: #ffffff;
+    color: #3475A8;
+    border: 1px solid #3475A8;
+  }
+}
+@media (max-width: 390px) {
+  .btn__secondary {
+    font-family: "Pretendard";
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.3;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    color: #3475A8;
+    border-radius: 40px;
+    border: 1px solid #3475A8;
+    padding: 10px 30px;
+    transition: all 0.2 ease-in-out;
+  }
+  .btn__secondary:hover {
+    background-color: #ffffff;
+    color: #3475A8;
+    border: 1px solid #3475A8;
+  }
 }
 
 .card {

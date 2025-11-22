@@ -212,7 +212,7 @@ var interval = setInterval(function () {
     $(circles[i - 1]).removeClass('active').addClass('done');
   }
   i++;
-}, 500);
+}, 2000);
 
 
 // modal

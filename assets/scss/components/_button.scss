@@ -1,15 +1,80 @@
 .btn {
     @include button-style();
+    @include font-set($size: 24);
 
-    &__secondary {
-        @include button-style($bg: $color-bg,
-            $color: $color-primary,
-            $border: 1px solid $color-primary, $padding-y: 10px,
-            $padding-x: 25px);
+    &:hover {
+        background-color: $color-bg;
+        color: $color-primary;
+        border: 1px solid $color-primary;
     }
+
+    @media (max-width: $bp-desktop) {
+        @include font-set ($size: 20);
+        @include button-style($padding-y: 11px,
+            $padding-x: 70px);
+    }
+
+    @media (max-width: $bp-tablet) {
+        @include font-set ($size: 16);
+        @include button-style($padding-y: 11px,
+            $padding-x: 60px);
+    }
+
+    @media (max-width: $bp-mobile-md) {
+        @include button-style($padding-y: 10px,
+            $padding-x: 40px);
+    }
+
+    @media (max-width: $bp-mobile-sm) {
+        @include font-set ($size: 14);
+        @include button-style($padding-y: 10px,
+            $padding-x: 30px);
+    }
+}
+
+.btn__secondary {
+    @include font-set($size: 24);
+    @include button-style($bg: $color-bg,
+        $color: $color-primary,
+        $border: 1px solid $color-primary);
 
     &:hover {
         background-color: $color-primary;
         color: $color-bg;
+    }
+
+    @media (max-width: $bp-desktop) {
+        @include font-set ($size: 20);
+        @include button-style($bg: $color-bg,
+            $color: $color-primary,
+            $border: 1px solid $color-primary,
+            $padding-y: 11px,
+            $padding-x: 70px);
+    }
+
+    @media (max-width: $bp-tablet) {
+        @include font-set ($size: 16);
+        @include button-style($bg: $color-bg,
+            $color: $color-primary,
+            $border: 1px solid $color-primary,
+            $padding-y: 11px,
+            $padding-x: 60px);
+    }
+
+    @media (max-width: $bp-mobile-md) {
+        @include button-style($bg: $color-bg,
+            $color: $color-primary,
+            $border: 1px solid $color-primary,
+            $padding-y: 10px,
+            $padding-x: 40px);
+    }
+
+    @media (max-width: $bp-mobile-sm) {
+        @include font-set ($size: 14);
+        @include button-style($bg: $color-bg,
+            $color: $color-primary,
+            $border: 1px solid $color-primary,
+            $padding-y: 10px,
+            $padding-x: 30px);
     }
 }
