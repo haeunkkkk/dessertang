@@ -376,19 +376,6 @@
     }
 
     @media (max-width: $bp-desktop) {
-        &__bg {
-            &__cloud__left {
-                img {
-                    height: rem(900);
-                }
-            }
-
-            &__cloud__right {
-                img {
-                    height: rem(900);
-                }
-            }
-        }
 
         &__img {
             img {
@@ -400,15 +387,11 @@
     @media (max-width: $bp-tablet) {
         &__bg {
             &__cloud__left {
-                img {
-                    height: rem(700);
-                }
+                right: rem(-130);
             }
 
             &__cloud__right {
-                img {
-                    height: rem(700);
-                }
+                left: rem(-40);
             }
         }
 

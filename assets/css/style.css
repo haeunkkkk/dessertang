@@ -2677,22 +2677,16 @@ header {
   text-align: center;
 }
 @media (max-width: 1024px) {
-  .innovation__bg__cloud__left img {
-    height: 56.25rem;
-  }
-  .innovation__bg__cloud__right img {
-    height: 56.25rem;
-  }
   .innovation__img img {
     width: 40.625rem;
   }
 }
 @media (max-width: 768px) {
-  .innovation__bg__cloud__left img {
-    height: 43.75rem;
+  .innovation__bg__cloud__left {
+    right: -8.125rem;
   }
-  .innovation__bg__cloud__right img {
-    height: 43.75rem;
+  .innovation__bg__cloud__right {
+    left: -2.5rem;
   }
   .innovation__img img {
     width: 31.25rem;
