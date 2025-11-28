@@ -613,7 +613,7 @@
         }
 
         &__card {
-            height: rem(226);
+            height: rem(250);
 
             &__text {
                 &__title {
@@ -628,7 +628,7 @@
                 }
 
                 a {
-                    margin-bottom: rem(30);
+                    margin-bottom: rem(25);
                 }
             }
 
@@ -704,7 +704,7 @@
 
         &__card {
             padding: rem(20) 0 0 rem(20);
-            height: rem(200);
+            height: rem(230);
 
             &__text {
                 &__title {
@@ -729,7 +729,7 @@
 
             &__img {
                 margin-right: 0;
-                margin-bottom: rem(-50);
+                margin-bottom: rem(-82);
 
                 img {
                     margin-top: 0;
@@ -765,7 +765,7 @@
         }
 
         &__taste__card {
-            padding: rem(20) rem(20) 0 0;
+            padding: 0 rem(20) 0 0;
 
             &__text {
                 margin-bottom: rem(10);
@@ -782,6 +782,7 @@
 
         &__taste__img {
             margin-right: 0;
+            margin-bottom: rem(-10);
 
             img {
                 width: rem(400);
@@ -828,6 +829,9 @@
 
         &__accessibility__card {
             &__text {
+                &__title {
+                    gap: rem(5);
+                }
                 a {
                     margin-bottom: rem(15);
                 }
@@ -847,9 +851,13 @@
             &__text {
                 padding: 0;
                 margin: 0;
+                &__title {
+                    gap: rem(5);
+                    width: rem(120);
+                }
 
                 a {
-                    margin-bottom: rem(13);
+                    margin-bottom: rem(23);
                 }
             }
         }

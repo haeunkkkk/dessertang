@@ -157,7 +157,7 @@
                     @include font-set($size: 14);
                     color: $gray-400;
                     position: absolute;
-                    top: rem(41);
+                    top: rem(49);
                     left: 0;
                     width: 100%;
 
@@ -280,7 +280,7 @@
                     @include font-set($size: 16);
 
                     .options {
-                        top: rem(36);
+                        top: rem(40);
                     }
 
                     .arrow {
@@ -338,7 +338,6 @@
             &__franchise {
                 .custom__select {
                     .options {
-                        top: rem(35);
 
                         li {
                             @include font-set($size: 14);
@@ -394,7 +393,7 @@
                     @include font-set($size: 14);
 
                     .options {
-                        top: rem(33);
+                        top: rem(37);
 
                         li {
                             @include font-set($size: 12);

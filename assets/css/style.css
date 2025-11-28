@@ -256,7 +256,7 @@ header {
   background-color: #DDEEF5;
   padding: 0.625rem 0;
   height: auto;
-  min-width: 8.75rem;
+  min-width: 10rem;
   position: absolute;
   top: 150%;
   left: 50%;
@@ -1433,7 +1433,7 @@ header {
     grid-template-areas: "img2" "img1" "img3";
   }
   .point__card {
-    height: 14.125rem;
+    height: 15.625rem;
   }
   .point__card__text__title h2 {
     font-family: "Pretendard";
@@ -1446,7 +1446,7 @@ header {
     margin-bottom: 1.25rem;
   }
   .point__card__text a {
-    margin-bottom: 1.875rem;
+    margin-bottom: 1.5625rem;
   }
   .point__card__img {
     margin-right: 1.875rem;
@@ -1540,7 +1540,7 @@ header {
   }
   .point__card {
     padding: 1.25rem 0 0 1.25rem;
-    height: 12.5rem;
+    height: 14.375rem;
   }
   .point__card__text__title {
     gap: 0.3125rem;
@@ -1565,7 +1565,7 @@ header {
   }
   .point__card__img {
     margin-right: 0;
-    margin-bottom: -3.125rem;
+    margin-bottom: -5.125rem;
   }
   .point__card__img img {
     margin-top: 0;
@@ -1596,7 +1596,7 @@ header {
     height: 9.375rem;
   }
   .point__taste__card {
-    padding: 1.25rem 1.25rem 0 0;
+    padding: 0 1.25rem 0 0;
   }
   .point__taste__card__text {
     margin-bottom: 0.625rem;
@@ -1609,6 +1609,7 @@ header {
   }
   .point__taste__img {
     margin-right: 0;
+    margin-bottom: -0.625rem;
   }
   .point__taste__img img {
     width: 25rem;
@@ -1650,6 +1651,9 @@ header {
     height: 6.25rem;
     border-radius: 0;
   }
+  .point__accessibility__card__text__title {
+    gap: 0.3125rem;
+  }
   .point__accessibility__card__text a {
     margin-bottom: 0.9375rem;
   }
@@ -1664,8 +1668,12 @@ header {
     padding: 0;
     margin: 0;
   }
+  .point__taste__card__text__title {
+    gap: 0.3125rem;
+    width: 7.5rem;
+  }
   .point__taste__card__text a {
-    margin-bottom: 0.8125rem;
+    margin-bottom: 1.4375rem;
   }
   .point__taste__img {
     margin-bottom: -0.625rem;
@@ -4228,7 +4236,7 @@ header {
   line-height: 1.3;
   color: #666666;
   position: absolute;
-  top: 2.5625rem;
+  top: 3.0625rem;
   left: 0;
   width: 100%;
 }
@@ -4349,7 +4357,7 @@ header {
     line-height: 1.3;
   }
   .inquiry__form__franchise .custom__select .options {
-    top: 2.25rem;
+    top: 2.5rem;
   }
   .inquiry__form__franchise .custom__select .arrow img {
     width: 0.9375rem;
@@ -4394,9 +4402,6 @@ header {
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.3;
-  }
-  .inquiry__form__franchise .custom__select .options {
-    top: 2.1875rem;
   }
   .inquiry__form__franchise .custom__select .options li {
     font-family: "Pretendard";
@@ -4448,7 +4453,7 @@ header {
     line-height: 1.3;
   }
   .inquiry__form__franchise .custom__select .options {
-    top: 2.0625rem;
+    top: 2.3125rem;
   }
   .inquiry__form__franchise .custom__select .options li {
     font-family: "Pretendard";
