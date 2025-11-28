@@ -834,6 +834,15 @@ header {
   }
 }
 
+.main__content {
+  display: none;
+}
+@media (max-width: 1024px) {
+  .main__content {
+    display: block;
+  }
+}
+
 .floating-menu {
   position: fixed;
   bottom: 3.125rem;

@@ -1,33 +1,37 @@
-// main-intro
 $(function () {
+  const $video = $('#main__intro__video');
+  const $intro = $('.main__intro');
+  const $content = $('.main__content');
+
   const introPlayed = localStorage.getItem("introPlayed");
 
-  if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
-
-    if (introPlayed === "true") {
-      $('.main__intro').remove();
-      $('.main__content').show();
-      $('body').css('overflow', 'auto');
-      return;
-    }
-
-    const $video = $('#main__intro__video');
-
-    if ($video.length && $video.is(':visible')) {
-      $('body').css('overflow', 'hidden');
-
-      $video.on('ended', function () {
-
-        localStorage.setItem("introPlayed", "true");
-
-        $('.main__intro').fadeOut(300, function () {
-          $(this).remove();
-          $('body').css('overflow', 'auto');
-          $('.main__content').fadeIn(300);
-        });
-      });
-    }
+  if (introPlayed === "true") {
+    $intro.remove();
+    $content.show();
+    $('body').css('overflow', 'auto');
+    return; 
   }
+
+  alert("포트폴리오용입니다! 😎");
+
+  $('body').css('overflow', 'hidden'); 
+  $video.prop('muted', true); 
+  $video[0].play().then(() => {
+    console.log("영상 재생 시작");
+  }).catch(e => console.log("재생 실패:", e));
+
+  $video.on('ended', function () {
+    console.log("영상 끝");
+
+  
+    localStorage.setItem("introPlayed", "true");
+
+    $intro.fadeOut(300, function () {
+      $(this).remove();
+      $('body').css('overflow', 'auto');
+      $content.fadeIn(300);
+    });
+  });
 });
 
 
@@ -183,19 +187,13 @@ $(function () {
   });
 });
 $('.btn').click(function () {
-  // 현재 열려있는 form 찾기
+ 
   const activeForm = $('.tab-slider--body:visible').find('form');
 
-  // 제출시도
+
   activeForm[0].reportValidity();
-  // HTML 기본 validation 실행
+
 });
-
-
-
-
-
-//event
 
 
 
