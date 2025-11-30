@@ -9,13 +9,13 @@ $(function () {
     $intro.remove();
     $content.show();
     $('body').css('overflow', 'auto');
-    return; 
+    return;
   }
 
   alert("포트폴리오용입니다! 😎");
 
-  $('body').css('overflow', 'hidden'); 
-  $video.prop('muted', true); 
+  $('body').css('overflow', 'hidden');
+  $video.prop('muted', true);
   $video[0].play().then(() => {
     console.log("영상 재생 시작");
   }).catch(e => console.log("재생 실패:", e));
@@ -23,7 +23,7 @@ $(function () {
   $video.on('ended', function () {
     console.log("영상 끝");
 
-  
+
     localStorage.setItem("introPlayed", "true");
 
     $intro.fadeOut(300, function () {
@@ -66,22 +66,14 @@ $(function () {
 });
 
 
-
-
-
-
-
-
 //about
 $(window).on('scroll', function () {
   var scrollY = $(this).scrollTop();
 
   $('.about__bg__cloud__left').css('transform', 'translateX(' + (scrollY * 2) + 'px)');
-  $('.about__bg__cloud__left__sub').css('transform', 'translateX(' + (scrollY * 2) + 'px)');
-  $('.about__bg__cloud__right__sub').css('transform', 'translateX(' + (-scrollY * 2) + 'px)');
   $('.about__bg__cloud__right').css('transform', 'translateX(' + (-scrollY * 2) + 'px)');
-  $('.innovation__bg__cloud__left').css('transform', 'translateX(' + (-scrollY * 2) + 'px)');
-  $('.innovation__bg__cloud__right').css('transform', 'translateX(' + (scrollY * 2) + 'px)');
+  $('.innovation__bg__left').css('transform', 'translateX(' + (-scrollY * 2) + 'px)');
+  $('.innovation__bg__right').css('transform', 'translateX(' + (scrollY * 2) + 'px)');
 
   $('.about__bg__balloon__blue').css('transform', 'translateY(-' + (scrollY * 2) + 'px)');
   $('.about__bg__balloon__green').css('transform', 'translateY(-' + (scrollY * 3) + 'px)');
@@ -187,7 +179,7 @@ $(function () {
   });
 });
 $('.btn').click(function () {
- 
+
   const activeForm = $('.tab-slider--body:visible').find('form');
 
 

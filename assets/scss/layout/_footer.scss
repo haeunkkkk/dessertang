@@ -11,7 +11,7 @@
         img {
             width: rem(162);
             height: rem(82);
-        
+
             img {
                 width: rem(400);
             }
@@ -64,6 +64,7 @@
                 &:last-child {
                     border: none;
                 }
+
                 &:hover {
                     color: $color-orange;
                 }
@@ -86,7 +87,7 @@
     @media (max-width: $bp-desktop) {
         &__inner {
             padding: rem(60) rem(10);
-            
+
         }
 
         &__logo {
@@ -97,42 +98,52 @@
 
         &__center {
             @include flex ($justify: flex-start, $align: flex-start, $direction: column, $wrap: nowrap, $gap: rem(15));
+
             &__info {
                 p {
                     padding-right: rem(10);
                     padding-left: rem(10);
+
                     &:first-child {
                         padding-left: 0;
                     }
                 }
             }
+
             &__address {
                 p {
                     padding-right: rem(10);
                     padding-left: rem(10);
+
                     &:last-child {
                         padding-right: 0;
                     }
+
                     &:first-child {
                         padding-left: 0;
                     }
                 }
             }
+
             &__privacy {
                 a {
                     padding-right: rem(10);
                     padding-left: rem(10);
+
                     &:last-child {
                         padding-right: 0;
                     }
+
                     &:first-child {
                         padding-left: 0;
                     }
                 }
             }
+
             &__copyright {
                 p {
                     padding-left: rem(10);
+
                     &:first-child {
                         padding-left: 0;
                     }
@@ -142,6 +153,7 @@
 
         &__sns {
             @include flex ($justify: flex-start, $align: flex-start, $direction: row, $wrap: nowrap, $gap: rem(10));
+
             img {
                 width: rem(30);
                 height: rem(30);
@@ -150,9 +162,9 @@
     }
 
     @media (max-width: $bp-tablet) {
-       &__inner {
+        &__inner {
             padding: rem(40) rem(20);
-            @include flex($justify: flex-start, $align: flex-start, $direction:column, $gap: rem(20));
+            @include flex($justify: flex-start, $align: flex-start, $direction: column, $gap: rem(20));
         }
 
         &__logo {
@@ -164,16 +176,19 @@
 
         &__center {
             @include flex ($justify: flex-start, $align: flex-start, $direction: column, $wrap: nowrap, $gap: rem(10));
+
             &__info {
                 p {
                     @include font-set($size: 12, $weight: 400, $line-height: 1.2, $family: $font-primary);
                 }
             }
+
             &__address {
                 p {
                     @include font-set($size: 12, $weight: 400, $line-height: 1.2, $family: $font-primary);
                 }
             }
+
             &__privacy {
                 a {
                     @include font-set($size: 12, $weight: 400, $line-height: 1.2, $family: $font-primary);
@@ -183,6 +198,7 @@
 
         &__sns {
             @include flex ($justify: flex-start, $align: flex-start, $direction: row, $wrap: nowrap, $gap: rem(20));
+
             img {
                 width: rem(25);
                 height: rem(25);
@@ -194,6 +210,7 @@
         &__inner {
             padding: rem(30) rem(10);
         }
+
         &__logo {
             img {
                 width: rem(70);
@@ -203,6 +220,7 @@
 
         &__center {
             @include flex ($justify: flex-start, $align: flex-start, $direction: column, $wrap: nowrap, $gap: rem(5));
+
             &__info {
                 @include flex ($justify: flex-start, $align: flex-start, $direction: row, $wrap: nowrap, $gap: 0);
 
@@ -218,6 +236,7 @@
 
             &__address {
                 @include flex ($justify: flex-start, $align: flex-start, $direction: column, $wrap: nowrap, $gap: rem(10));
+
                 p {
                     padding-right: rem(12);
                     padding-left: rem(12);
@@ -241,11 +260,12 @@
                     @include font-set($size: 10, $weight: 700, $line-height: 1.2, $family: $font-primary);
                     padding-left: rem(12);
                 }
-            } 
+            }
         }
 
         &__sns {
             @include flex ($justify: flex-start, $align: flex-start, $direction: row, $wrap: nowrap, $gap: rem(10));
+
             img {
                 width: rem(20);
                 height: rem(20);
@@ -255,7 +275,7 @@
 
     @media (max-width: $bp-mobile-sm) {
         &__center {
-            
+
             &__info {
                 @include flex ($justify: flex-start, $align: flex-start, $direction: column, $wrap: nowrap, $gap: rem(5));
 

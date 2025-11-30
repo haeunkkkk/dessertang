@@ -18,15 +18,13 @@
             position: absolute;
             bottom: 0;
 
-            &__left,
-            &__left__sub {
+            &__left {
                 position: absolute;
                 left: rem(-300);
                 bottom: 0;
             }
 
-            &__right,
-            &__right__sub {
+            &__right {
                 position: absolute;
                 right: rem(-500);
                 bottom: 0;
@@ -145,15 +143,13 @@
         &__bg {
             &__cloud {
 
-                &__left,
-                &__left__sub {
+                &__left {
                     position: absolute;
                     left: rem(-100);
                     bottom: 0;
                 }
 
-                &__right,
-                &__right__sub {
+                &__right {
                     position: absolute;
                     right: rem(-100);
                     bottom: 0;
@@ -354,13 +350,13 @@
         opacity: 0.9;
 
 
-        &__cloud__left {
+        &__left {
             position: absolute;
             top: rem(-100);
             right: rem(-500);
         }
 
-        &__cloud__right {
+        &__right {
             position: absolute;
             top: rem(-100);
             left: rem(-250);
@@ -386,11 +382,11 @@
 
     @media (max-width: $bp-tablet) {
         &__bg {
-            &__cloud__left {
+            &__left {
                 right: rem(-130);
             }
 
-            &__cloud__right {
+            &__right {
                 left: rem(-40);
             }
         }
@@ -453,7 +449,7 @@
                 }
             }
 
-            &__overlay__full {
+            .overlay__full {
                 position: absolute;
                 bottom: 0;
                 left: 0;
@@ -472,110 +468,110 @@
                 height: 100%;
                 width: 100%;
                 color: $color-bg;
+            }
 
-                &__inner {
-                    width: 100%;
+            &__inner {
+                width: 100%;
+                height: 100%;
+                position: relative;
+
+                .inner__front {
                     height: 100%;
-                    position: relative;
+                    width: 100%;
+                    @include flex ($justify: flex-start, $align: flex-start, $direction: column, $wrap: nowrap, $gap: rem(555));
 
-                    &__front {
-                        height: 100%;
-                        width: 100%;
-                        @include flex ($justify: flex-start, $align: flex-start, $direction: column, $wrap: nowrap, $gap: rem(555));
+                    &__top {
+                        padding: rem(30) rem(30);
+                        align-self: flex-end;
+                        text-align: end;
+                        @include flex ($justify: flex-end, $align: flex-end, $direction: column, $wrap: nowrap, $gap: rem(5));
 
-                        &__top {
-                            padding: rem(30) rem(30);
-                            align-self: flex-end;
-                            text-align: end;
-                            @include flex ($justify: flex-end, $align: flex-end, $direction: column, $wrap: nowrap, $gap: rem(5));
-
-                            span {
-                                @include font-set ($size: 16, $weight: 500, $family: $font-primary);
-                            }
-
-                            p {
-                                @include font-set ($size: 60, $weight: 900, $family: $font-primary);
-                            }
+                        span {
+                            @include font-set ($size: 16, $weight: 500, $family: $font-primary);
                         }
 
-                        &__bottom {
-                            position: relative;
-                            @include flex ($justify: flex-start, $align: flex-start, $direction: column, $wrap: nowrap, $gap: rem(20));
+                        p {
+                            @include font-set ($size: 60, $weight: 900, $family: $font-primary);
+                        }
+                    }
+
+                    &__bottom {
+                        position: relative;
+                        @include flex ($justify: flex-start, $align: flex-start, $direction: column, $wrap: nowrap, $gap: rem(20));
+                        border-radius: 0 0 rem(20) rem(20);
+                        background: linear-gradient(to top, #3476a8, transparent);
+                        width: 100%;
+                        height: 100%;
+                        padding: rem(30) rem(30);
+                        align-self: flex-start;
+                        transition: transform 0.5s ease-in-out;
+
+                        .overlay__blur {
+                            mask-image: linear-gradient(to top, lab(32.65% -1.5 -30.07) 70%, transparent 100%);
                             border-radius: 0 0 rem(20) rem(20);
-                            background: linear-gradient(to top, #3476a8, transparent);
+                            backdrop-filter: blur(100px);
+                            -webkit-backdrop-filter: blur(45px);
                             width: 100%;
                             height: 100%;
-                            padding: rem(30) rem(30);
-                            align-self: flex-start;
-                            transition: transform 0.5s ease-in-out;
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                        }
 
-                            .overlay__blur {
-                                mask-image: linear-gradient(to top, lab(32.65% -1.5 -30.07) 70%, transparent 100%);
-                                border-radius: 0 0 rem(20) rem(20);
-                                backdrop-filter: blur(100px);
-                                -webkit-backdrop-filter: blur(45px);
-                                width: 100%;
-                                height: 100%;
-                                position: absolute;
-                                bottom: 0;
-                                left: 0;
+                        .bottom__content {
+                            z-index: 2;
+
+                            h3 {
+                                font-size: clamp(1.25rem, 1.0417rem + 1.1111vw, 2.375rem);
+                                font-weight: 800;
                             }
+                        }
 
-                            &__content {
-                                z-index: 2;
+                        .bottom__key {
+                            z-index: 2;
+                            @include flex ($justify: flex-start, $align: flex-start, $direction: row, $wrap: nowrap, $gap: rem(15));
 
-                                h3 {
-                                    font-size: clamp(1.25rem, 1.0417rem + 1.1111vw, 2.375rem);
-                                    font-weight: 800;
-                                }
-                            }
-
-                            &__key {
-                                z-index: 2;
-                                @include flex ($justify: flex-start, $align: flex-start, $direction: row, $wrap: nowrap, $gap: rem(15));
-
-                                span {
-                                    @include font-set ($size: 12, $weight: 500, $family: $font-primary);
-                                }
+                            span {
+                                @include font-set ($size: 12, $weight: 500, $family: $font-primary);
                             }
                         }
                     }
+                }
 
-                    &__back {
-                        position: absolute;
-                        bottom: 0;
-                        left: 0;
-                        opacity: 0;
-                        transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
-                        z-index: 10;
-                        width: 100%;
-                        height: 100%;
-                        @include flex ($justify: center, $align: center, $direction: column);
+                .inner__back {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    opacity: 0;
+                    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+                    z-index: 10;
+                    width: 100%;
+                    height: 100%;
+                    @include flex ($justify: center, $align: center, $direction: column);
 
-                        &__desc {
+                    &__desc {
 
 
-                            p {
-                                padding: rem(20);
-                                text-align: center;
-                                line-height: 1.4;
-                                font-size: clamp(1rem, 0.9074rem + 0.4938vw, 1.5rem);
-
-                            }
+                        p {
+                            padding: rem(20);
+                            text-align: center;
+                            line-height: 1.4;
+                            font-size: clamp(1rem, 0.9074rem + 0.4938vw, 1.5rem);
 
                         }
 
                     }
+
                 }
             }
 
             &:hover {
-                .story__wrap__card__text__inner__front__bottom {
+                .inner__front__bottom {
                     background: none;
                 }
 
-                .story__wrap__card__text__inner__back,
-                .story__wrap__card__overlay__full {
+                .inner__back,
+                .overlay__full {
                     opacity: 1;
                 }
             }
@@ -590,7 +586,7 @@
             grid-area: card2;
             @include bg-cover("/assets/images/story-store02.png");
 
-            .story__wrap__card__text__inner__front {
+            .inner__front {
                 @include flex ($justify: flex-start, $align: flex-start, $direction: column, $wrap: nowrap, $gap: rem(110));
             }
 
@@ -606,7 +602,7 @@
             @include bg-cover("/assets/images/story-store03.png");
             margin-left: rem(120);
 
-            .story__wrap__card__text__inner__front {
+            .inner__front {
                 @include flex ($justify: flex-start, $align: flex-start, $direction: column, $wrap: nowrap, $gap: rem(155));
             }
 
@@ -624,38 +620,46 @@
             padding: 0 rem(20);
 
             &__card {
-                &__text {
-                    &__inner {
-                        &__front {
-                            @include flex ($justify: flex-start, $align: flex-start, $direction: column, $wrap: nowrap, $gap: rem(520));
+                &__inner {
+                    .inner__front {
+                        @include flex ($justify: flex-start, $align: flex-start, $direction: column, $wrap: nowrap, $gap: rem(520));
 
-                            &__top {
-                                p {
-                                    @include font-set ($size: 44, $weight: 900, $family: $font-primary);
-                                }
-                            }
-
-                            &__bottom {
-                                @include flex ($justify: flex-start, $align: flex-start, $direction: column, $wrap: nowrap, $gap: rem(5));
-                                padding: rem(20) rem(20);
+                        &__top {
+                            p {
+                                @include font-set ($size: 44, $weight: 900, $family: $font-primary);
                             }
                         }
 
-                        &__back {
-                            &__desc {
-                                p {
-                                    @include font-set ($size: 20, $weight: 400, $line-height: 1.4, $family: $font-primary);
-                                    padding: rem(16);
-                                }
-                            }
-
+                        &__bottom {
+                            @include flex ($justify: flex-start, $align: flex-start, $direction: column, $wrap: nowrap, $gap: rem(5));
+                            padding: rem(20) rem(20);
                         }
                     }
+
+                    .inner__back {
+                        &__desc {
+                            p {
+                                @include font-set ($size: 20, $weight: 400, $line-height: 1.4, $family: $font-primary);
+                                padding: rem(16);
+                            }
+                        }
+
+                    }
+                }
+            }
+
+            &__card02 {
+                .inner__front {
+                    @include flex ($justify: flex-start, $align: flex-start, $direction: column, $wrap: nowrap, $gap: rem(110));
                 }
             }
 
             &__card03 {
                 margin-left: 0;
+
+                .inner__front {
+                    @include flex ($justify: flex-start, $align: flex-start, $direction: column, $wrap: nowrap, $gap: rem(155));
+                }
             }
         }
     }
@@ -672,7 +676,7 @@
                 padding-bottom: rem(260);
                 overflow: hidden;
 
-                &__overlay__full {
+                .overlay__full {
                     background: linear-gradient(to top,
                             $color-primary 0%,
                             transparent 70%);
@@ -681,94 +685,89 @@
                     mask-image: linear-gradient(to top, lab(32.65% -1.5 -30.07) 10%, transparent 100%);
                 }
 
-                &__text {
-                    &__inner {
-                        &__front {
-                            @include flex ($justify: space-between, $align: flex-start, $direction: row, $wrap: nowrap);
+                &__inner {
+                    .inner__front {
+                        @include flex ($justify: space-between, $align: flex-start, $direction: row, $wrap: nowrap);
 
-                            &__top {
-                                padding: rem(20) 0 0 rem(20);
-                                align-self: auto;
-                                text-align: start;
-                                @include flex ($justify: flex-start, $align: flex-start, $direction: column, $wrap: nowrap, $gap: rem(5));
+                        &__top {
+                            padding: rem(20) 0 0 rem(20);
+                            align-self: auto;
+                            text-align: start;
+                            @include flex ($justify: flex-start, $align: flex-start, $direction: column, $wrap: nowrap, $gap: rem(5));
 
-                                span {
-                                    width: rem(120);
-                                    @include font-set ($size: 12, $weight: 500, $family: $font-primary);
-                                }
-
-                                p {
-                                    @include font-set ($size: 32, $weight: 900, $family: $font-primary);
-                                }
+                            span {
+                                width: rem(120);
+                                @include font-set ($size: 12, $weight: 500, $family: $font-primary);
                             }
 
-                            &__bottom {
-                                @include flex ($justify: flex-start, $align: flex-end, $direction: column, $wrap: nowrap, $gap: rem(5));
-                                background: transparent;
-                                padding: rem(20) rem(20) 0 0;
-                                align-self: flex-end;
-
-                                .overlay__blur {
-                                    display: none;
-                                }
-
-                                &__content {
-                                    z-index: 2;
-                                }
+                            p {
+                                @include font-set ($size: 32, $weight: 900, $family: $font-primary);
                             }
                         }
 
-                        &__back {
-                            position: relative;
-                            padding: rem(20);
+                        &__bottom {
+                            @include flex ($justify: flex-start, $align: flex-end, $direction: column, $wrap: nowrap, $gap: rem(5));
+                            background: transparent;
+                            padding: rem(20) rem(20) 0 0;
+                            align-self: flex-end;
 
-                            br {
+                            .overlay__blur {
                                 display: none;
                             }
 
-                            &__desc {
-                                opacity: 1;
-
-                                @include flex ($justify: flex-start, $align: flex-start, $direction: column);
-
-                                p {
-                                    z-index: 100;
-                                    position: absolute;
-                                    bottom: rem(-120);
-                                    left: 0;
-                                    text-align: start;
-                                    @include font-set ($size: 20, $weight: 400, $family: $font-primary);
-                                    padding: rem(20) rem(20) 0 rem(20);
-                                }
+                            .bottom__content {
+                                z-index: 2;
                             }
-
                         }
                     }
-                }
 
+                    .inner__back {
+                        position: relative;
+                        padding: rem(20);
+
+                        br {
+                            display: none;
+                        }
+
+                        &__desc {
+                            opacity: 1;
+
+                            @include flex ($justify: flex-start, $align: flex-start, $direction: column);
+
+                            p {
+                                z-index: 100;
+                                position: absolute;
+                                bottom: rem(-120);
+                                left: 0;
+                                text-align: start;
+                                @include font-set ($size: 20, $weight: 400, $family: $font-primary);
+                                padding: rem(20) rem(20) 0 rem(20);
+                            }
+                        }
+
+                    }
+                }
             }
 
-            .story__wrap__card__overlay__full,
-            .story__wrap__card__text__inner__back {
+            .overlay__full,
+            .inner__back {
                 opacity: 1 !important;
                 transform: translateY(0) !important;
             }
 
-            .story__wrap__card__text__inner__front__bottom {
+            .inner__front__bottom {
                 background: none !important;
             }
 
 
             &__card02 {
-
-                .story__wrap__card__text__inner__front {
+                .inner__front {
                     @include flex ($justify: space-between, $align: flex-start, $direction: row, $wrap: nowrap);
                 }
             }
 
             &__card03 {
-
-                .story__wrap__card__text__inner__front {
+                .inner__front {
                     @include flex ($justify: space-between, $align: flex-start, $direction: row, $wrap: nowrap);
                 }
             }
@@ -780,47 +779,44 @@
             &__card {
                 padding-bottom: rem(230);
 
-                &__overlay__full {
+                .overlay__full {
                     mask-image: linear-gradient(to top, lab(32.65% -1.5 -30.07) 20%, transparent 100%);
                 }
 
-                &__text {
-                    &__inner {
-                        &__front {
+                &__inner {
+                    .inner__front {
+                        &__top {
+                            padding: rem(12) 0 0 rem(12);
 
-                            &__top {
-                                padding: rem(12) 0 0 rem(12);
+                            span {
+                                width: rem(100);
+                                @include font-set ($size: 10, $weight: 500);
+                            }
 
+                            p {
+                                @include font-set ($size: 24, $weight: 900);
+                            }
+                        }
+
+                        &__bottom {
+                            padding: rem(12) rem(12) 0 0;
+
+                            .bottom__key {
                                 span {
-                                    width: rem(100);
                                     @include font-set ($size: 10, $weight: 500);
                                 }
-
-                                p {
-                                    @include font-set ($size: 24, $weight: 900);
-                                }
                             }
+                        }
+                    }
 
-                            &__bottom {
-                                padding: rem(12) rem(12) 0 0;
-
-                                &__key {
-                                    span {
-                                        @include font-set ($size: 10, $weight: 500);
-                                    }
-                                }
+                    .inner__back {
+                        &__desc {
+                            p {
+                                @include font-set ($size: 16);
+                                padding: rem(12) rem(12) rem(12) rem(12);
                             }
                         }
 
-                        &__back {
-                            &__desc {
-                                p {
-                                    @include font-set ($size: 16);
-                                    padding: rem(12) rem(12) 0 rem(12);
-                                }
-                            }
-
-                        }
                     }
                 }
             }
@@ -830,37 +826,33 @@
     @media (max-width: $bp-mobile-sm) {
         &__wrap {
             &__card {
+                &__inner {
+                    .inner__front {
+                        @include flex($wrap: wrap, $gap: 0);
+                        text-align: start;
 
-                &__text {
-                    &__inner {
-                        &__front {
-                            @include flex($wrap: wrap, $gap: 0);
-                            text-align: start;
+                        &__bottom {
+                            align-items: flex-start;
+                            padding: rem(12);
+                        }
+                    }
 
-                            &__bottom {
-                                align-items: flex-start;
-                                padding: rem(12);
+                    .inner__back {
+                        &__desc {
+                            p {
+                                bottom: rem(-60);
+                                left: 0;
+                                @include font-set ($size: 16);
                             }
                         }
 
-                        &__back {
-                            &__desc {
-                                p {
-                                    bottom: rem(-60);
-                                    left: 0;
-                                    @include font-set ($size: 16);
-                                    padding: rem(12) rem(12) 0 rem(12);
-                                }
-                            }
-
-                        }
                     }
                 }
             }
 
             &__card02,
             &__card03 {
-                .story__wrap__card__text__inner__front {
+                .inner__front {
                     @include flex($wrap: wrap, $gap: 0);
                     text-align: start;
                 }
@@ -881,16 +873,8 @@
             @include flex ($justify: center, $align: center, $direction: row, $wrap: nowrap);
             text-align: center;
 
-            &__icon {
-                margin-bottom: rem(50);
 
-                svg path {
-                    fill: #ccc;
-                    transition: 0.3s;
-                }
-            }
-
-            &__text {
+            .identity__card__text {
                 @include flex ($justify: center, $align: center, $direction: column, $wrap: nowrap, $gap: rem(20));
 
                 h3 {
@@ -909,7 +893,7 @@
             width: 100%;
             padding: rem(50) rem(20);
 
-            &:hover .identity__wrap__card__icon svg path {
+            &:hover .identity__icon svg path {
                 fill: $color-primary;
             }
         }
@@ -920,14 +904,21 @@
 
     }
 
+    &__icon {
+        margin-bottom: rem(50);
+
+        svg path {
+            fill: #ccc;
+            transition: 0.3s;
+        }
+    }
+
     @media (max-width: $bp-desktop) {
+
         &__wrap {
             &__card {
-                &__icon {
-                    margin-bottom: rem(37);
-                }
 
-                &__text {
+                .identity__card__text {
                     @include flex ($justify: center, $align: center, $direction: column, $wrap: nowrap, $gap: rem(20));
 
                     h3 {
@@ -948,6 +939,10 @@
                 border: none;
             }
         }
+
+        &__icon {
+            margin-bottom: rem(37);
+        }
     }
 
     @media (max-width: $bp-tablet) {
@@ -961,11 +956,9 @@
                     "card2"
                     "card3";
 
-                &__icon {
-                    margin-bottom: rem(37);
-                }
 
-                &__text {
+
+                .identity__card__text {
                     @include flex ($justify: center, $align: center, $direction: column, $wrap: nowrap, $gap: rem(20));
                     width: 100%;
 
@@ -994,6 +987,10 @@
                 border: none;
             }
         }
+
+        &__icon {
+            margin-bottom: rem(37);
+        }
     }
 
     @media (max-width: $bp-mobile-md) {
@@ -1003,7 +1000,7 @@
                     display: block;
                 }
 
-                &__text {
+                .identity__card__text {
                     h3 {
                         @include font-set($size: 18, $weight: 500, $family: $font-primary)
                     }
@@ -1023,7 +1020,7 @@
         &__wrap {
             &__card {
 
-                &__text {
+                .identity__card__text {
                     h3 {
                         @include font-set($size: 16, $weight: 500, $family: $font-primary)
                     }

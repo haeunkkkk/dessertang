@@ -814,7 +814,7 @@ header {
   overflow: hidden;
   background: linear-gradient(to bottom, #DDEEF5 40%, #ffffff 100%);
 }
-.main__intro__video__wrap {
+.main__intro__video {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -823,7 +823,7 @@ header {
   height: 100%;
   overflow: hidden;
 }
-.main__intro__video__wrap video {
+.main__intro__video video {
   width: 100%;
   height: 110%;
   object-fit: contain;
@@ -843,186 +843,6 @@ header {
   }
 }
 
-.floating-menu {
-  position: fixed;
-  bottom: 3.125rem;
-  right: 1.25rem;
-  z-index: 20;
-}
-
-.wrapper {
-  width: #ffffff;
-  height: 3.125rem;
-  position: relative;
-  border-radius: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  gap: 0;
-  margin-top: 0.375rem;
-}
-.wrapper .fab {
-  background: #3475A8;
-  width: 5rem;
-  height: 5rem;
-  position: relative;
-  border-radius: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  gap: 0;
-  animation: fab-animation-reverse 0.4s ease-out forwards;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-  z-index: 3;
-}
-.wrapper .fab::before, .wrapper .fab::after {
-  content: "";
-  display: block;
-  position: absolute;
-  border-radius: 0.25rem;
-  background: #DDEEF5;
-}
-.wrapper .fab::before {
-  width: 0.25rem;
-  height: 1.875rem;
-}
-.wrapper .fab::after {
-  width: 1.875rem;
-  height: 0.25rem;
-}
-.wrapper .fac {
-  height: 100%;
-  position: absolute;
-  z-index: 2;
-  opacity: 0;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  gap: 0;
-  transition: opacity 0.3s ease-in, top 0.3s ease-in, width 0.3s ease-in;
-}
-.wrapper .fac a {
-  opacity: 0.9;
-  width: 5rem;
-  height: 5rem;
-  border-radius: 100%;
-  background-color: #ffffff;
-  padding: 0.03125rem;
-  margin: 0.3125rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  gap: 0;
-}
-.wrapper .fac a:hover {
-  transition: 0.3s;
-  opacity: 1;
-  color: #3475A8;
-}
-.wrapper .fac a span {
-  font-family: "Pretendard";
-  font-size: 0.75rem;
-  font-weight: 300;
-  line-height: 1.3;
-  color: #666666;
-}
-.wrapper .fac a p {
-  font-family: "Pretendard";
-  font-size: 1rem;
-  font-weight: 900;
-  line-height: 1.3;
-}
-.wrapper input {
-  height: 100%;
-  width: 100%;
-  border-radius: 100%;
-  cursor: pointer;
-  position: absolute;
-  z-index: 5;
-  opacity: 0;
-}
-.wrapper input:checked ~ .fab {
-  animation: fab-animation 0.4s ease-out forwards;
-}
-.wrapper input:checked ~ .fac {
-  width: 3.75rem;
-  height: 10.625rem;
-  animation: fac-animation 0.4s ease-out forwards 0.2s;
-  top: -11.875rem;
-  opacity: 1;
-}
-.wrapper input:not(:checked) ~ .fac {
-  animation: fac-animation-reverse 0.5s ease forwards;
-}
-
-@keyframes fac-animation-reverse {
-  0% {
-    top: -18.75rem;
-    opacity: 1;
-  }
-  100% {
-    top: 0rem;
-    opacity: 0;
-  }
-}
-@keyframes fab-animation {
-  0% {
-    transform: rotate(0) scale(1);
-  }
-  20% {
-    transform: rotate(60deg) scale(0.93);
-  }
-  55% {
-    transform: rotate(35deg) scale(0.97);
-  }
-  80% {
-    transform: rotate(48deg) scale(0.94);
-  }
-  100% {
-    transform: rotate(45deg) scale(0.95);
-  }
-}
-@keyframes fab-animation-reverse {
-  0% {
-    transform: rotate(45deg) scale(0.95);
-  }
-  20% {
-    transform: rotate(-15deg);
-  }
-  55% {
-    transform: rotate(10deg);
-  }
-  80% {
-    transform: rotate(-3deg);
-  }
-  100% {
-    transform: rotate(0) scale(1);
-  }
-}
-@keyframes fac-animation {
-  0% {
-    transform: scale(1, 1);
-  }
-  33% {
-    transform: scale(0.95, 1.05);
-  }
-  66% {
-    transform: scale(1.05, 0.95);
-  }
-  100% {
-    transform: scale(1, 1);
-  }
-}
 .hero {
   width: 100%;
   height: 50rem;
@@ -1031,37 +851,48 @@ header {
   width: 100%;
   height: 100%;
 }
-.hero__swiper__content__img {
-  width: 100%;
-}
-.hero__swiper__content__img img {
-  width: 100%;
-  height: 100%;
-}
 .hero__swiper__slide {
   width: 100%;
   height: 100%;
 }
-.hero__swiper__slide__01 {
+.hero__swiper__slide01 {
   background-image: url(/assets/images/hero-bg.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
-.hero__swiper__slide__02 {
+.hero__swiper__slide02 {
   background-image: url(/assets/images/hero-bg02.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
-.hero__swiper__slide__03 {
+.hero__swiper__slide03 {
   background-image: url(/assets/images/hero-bg03.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
-.hero__swiper__slide__04 {
+.hero__swiper__slide04 {
   background-image: url(/assets/images/hero-bg04.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.hero__swiper__slide05 {
+  background-image: url(/assets/images/hero-bg05.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.hero__swiper__slide05 .hero__swiper__content__text {
+  color: #ffffff;
+}
+.hero__swiper__slide05 .hero__swiper__content__text p {
+  color: #dadada;
+}
+.hero__swiper__slide06 {
+  background-image: url(/assets/images/hero-bg06.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1077,6 +908,13 @@ header {
   flex-wrap: nowrap;
   gap: 0;
 }
+.hero__swiper__content__img {
+  width: 100%;
+}
+.hero__swiper__content__img img {
+  width: 100%;
+  height: 100%;
+}
 .hero__swiper__content__text {
   width: 100%;
   padding-top: 18.75rem;
@@ -1089,24 +927,6 @@ header {
   font-size: 3.75rem;
   font-weight: 700;
   line-height: 1.2;
-}
-.hero__swiper__slide__05 {
-  background-image: url(/assets/images/hero-bg05.jpg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-.hero__swiper__slide__05 .hero__swiper__content__text {
-  color: #ffffff;
-}
-.hero__swiper__slide__05 .hero__swiper__content__text p {
-  color: #dadada;
-}
-.hero__swiper__slide__06 {
-  background-image: url(/assets/images/hero-bg06.jpg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 .hero__pagination {
   display: flex;
@@ -1144,6 +964,12 @@ header {
   .hero {
     height: 59.375rem;
   }
+  .hero__swiper__slide06 .hero__swiper__content__text {
+    color: #ffffff;
+  }
+  .hero__swiper__slide06 .hero__swiper__content__text p {
+    color: #dadada;
+  }
   .hero__swiper__content {
     display: flex;
     justify-content: center;
@@ -1174,12 +1000,6 @@ header {
     width: 0.75rem;
     height: 0.75rem;
   }
-  .hero__swiper__slide__06 .hero__swiper__content__text {
-    color: #ffffff;
-  }
-  .hero__swiper__slide__06 .hero__swiper__content__text p {
-    color: #dadada;
-  }
   .hero__pagination {
     display: flex;
     justify-content: center;
@@ -1195,6 +1015,9 @@ header {
     font-size: 2.5rem;
     font-weight: 700;
     line-height: 1.2;
+  }
+  .hero__swiper__content__img img {
+    width: 30rem;
   }
 }
 @media (max-width: 500px) {
@@ -1291,26 +1114,6 @@ header {
   position: relative;
   z-index: 10;
 }
-.point__card__text__title {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  gap: 0.625rem;
-}
-.point__card__text__title h2 {
-  font-family: "Pretendard";
-  font-size: 2rem;
-  font-weight: 700;
-  line-height: 1.2;
-}
-.point__card__text__title p {
-  font-size: clamp(0.875rem, 0.8056rem + 0.3704vw, 1.25rem);
-  margin-bottom: 0.625rem;
-  word-break: keep-all;
-  white-space: normal;
-}
 .point__card__text span {
   display: block;
   font-size: clamp(0.875rem, 0.8519rem + 0.1235vw, 1rem);
@@ -1333,6 +1136,26 @@ header {
   border: 1px solid #E4A9A9;
   color: #E4A9A9;
   background-color: #ffffff;
+}
+.point__card__title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 0.625rem;
+}
+.point__card__title h2 {
+  font-family: "Pretendard";
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.point__card__title p {
+  font-size: clamp(0.875rem, 0.8056rem + 0.3704vw, 1.25rem);
+  margin-bottom: 0.625rem;
+  word-break: keep-all;
+  white-space: normal;
 }
 .point__card__img {
   width: 50%;
@@ -1391,7 +1214,13 @@ header {
   .point__card {
     padding-top: 1.875rem;
   }
-  .point__card__text__title {
+  .point__card__text span {
+    margin-bottom: 2.5rem;
+  }
+  .point__card__text a {
+    margin-bottom: 1.875rem;
+  }
+  .point__card__title {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -1399,17 +1228,11 @@ header {
     flex-wrap: nowrap;
     gap: 1.1875rem;
   }
-  .point__card__text__title h2 {
+  .point__card__title h2 {
     font-family: "Pretendard";
     font-size: 1.5rem;
     font-weight: 700;
     line-height: 1.2;
-  }
-  .point__card__text span {
-    margin-bottom: 2.5rem;
-  }
-  .point__card__text a {
-    margin-bottom: 1.875rem;
   }
   .point__card__img {
     margin-bottom: -4.0625rem;
@@ -1444,18 +1267,18 @@ header {
   .point__card {
     height: 15.625rem;
   }
-  .point__card__text__title h2 {
-    font-family: "Pretendard";
-    font-size: 1.25rem;
-    font-weight: 700;
-    line-height: 1.2;
-  }
   .point__card__text span {
     margin-top: 0.3125rem;
     margin-bottom: 1.25rem;
   }
   .point__card__text a {
     margin-bottom: 1.5625rem;
+  }
+  .point__card__title h2 {
+    font-family: "Pretendard";
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.2;
   }
   .point__card__img {
     margin-right: 1.875rem;
@@ -1485,7 +1308,7 @@ header {
     flex-wrap: nowrap;
     gap: 0;
   }
-  .point__accessibility__card__text__title {
+  .point__accessibility__card__title {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
@@ -1517,7 +1340,7 @@ header {
     gap: 0;
     margin: 0;
   }
-  .point__taste__card__text__title {
+  .point__taste__card__title {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
@@ -1551,15 +1374,6 @@ header {
     padding: 1.25rem 0 0 1.25rem;
     height: 14.375rem;
   }
-  .point__card__text__title {
-    gap: 0.3125rem;
-  }
-  .point__card__text__title h2 {
-    font-family: "Pretendard";
-    font-size: 1rem;
-    font-weight: 700;
-    line-height: 1.2;
-  }
   .point__card__text span {
     margin-bottom: 0.625rem;
   }
@@ -1571,6 +1385,15 @@ header {
     font-weight: 900;
     line-height: 1.3;
     margin-bottom: 1.25rem;
+  }
+  .point__card__title {
+    gap: 0.3125rem;
+  }
+  .point__card__title h2 {
+    font-family: "Pretendard";
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.2;
   }
   .point__card__img {
     margin-right: 0;
@@ -1590,12 +1413,12 @@ header {
     flex-wrap: nowrap;
     gap: 0;
   }
-  .point__accessibility__card__text__title {
-    gap: 1.25rem;
-  }
   .point__accessibility__card__text a {
     width: 7.8125rem;
     margin-bottom: 0.625rem;
+  }
+  .point__accessibility__card__title {
+    gap: 1.25rem;
   }
   .point__accessibility__img {
     margin-left: -1.875rem;
@@ -1610,11 +1433,11 @@ header {
   .point__taste__card__text {
     margin-bottom: 0.625rem;
   }
-  .point__taste__card__text__title {
-    gap: 1.25rem;
-  }
   .point__taste__card__text a {
     margin-bottom: 0.625rem;
+  }
+  .point__taste__card__title {
+    gap: 1.25rem;
   }
   .point__taste__img {
     margin-right: 0;
@@ -1660,11 +1483,11 @@ header {
     height: 6.25rem;
     border-radius: 0;
   }
-  .point__accessibility__card__text__title {
-    gap: 0.3125rem;
-  }
   .point__accessibility__card__text a {
     margin-bottom: 0.9375rem;
+  }
+  .point__accessibility__card__title {
+    gap: 0.3125rem;
   }
   .point__accessibility__img {
     margin-bottom: -1.25rem;
@@ -1677,12 +1500,12 @@ header {
     padding: 0;
     margin: 0;
   }
-  .point__taste__card__text__title {
-    gap: 0.3125rem;
-    width: 7.5rem;
-  }
   .point__taste__card__text a {
     margin-bottom: 1.4375rem;
+  }
+  .point__taste__card__title {
+    gap: 0.3125rem;
+    width: 7.5rem;
   }
   .point__taste__img {
     margin-bottom: -0.625rem;
@@ -2142,7 +1965,7 @@ header {
   gap: 3.125rem;
   border-radius: 1.25rem;
 }
-.event__wrap__card__text {
+.event__wrap__text {
   width: 100%;
   border: 1px solid #DEDEDE;
   border-radius: 0 0 1.25rem 1.25rem;
@@ -2155,13 +1978,13 @@ header {
   gap: 0.625rem;
   padding: 1.875rem 0 1.875rem 0;
 }
-.event__wrap__card__text h3 {
+.event__wrap__text h3 {
   font-family: "Pretendard";
   font-size: 1.5rem;
   font-weight: 600;
   line-height: 1.2;
 }
-.event__wrap__card__text p {
+.event__wrap__text p {
   font-family: "Pretendard";
   font-size: 1.25rem;
   font-weight: 400;
@@ -2190,13 +2013,13 @@ header {
   background-repeat: no-repeat;
 }
 @media (max-width: 1024px) {
-  .event__wrap__card__text h3 {
+  .event__wrap__text h3 {
     font-family: "Pretendard";
     font-size: 1.25rem;
     font-weight: 600;
     line-height: 1.2;
   }
-  .event__wrap__card__text p {
+  .event__wrap__text p {
     font-family: "Pretendard";
     font-size: 1.125rem;
     font-weight: 400;
@@ -2218,13 +2041,13 @@ header {
   .event__wrap__card {
     width: 100%;
   }
-  .event__wrap__card__text h3 {
+  .event__wrap__text h3 {
     font-family: "Pretendard";
     font-size: 1.125rem;
     font-weight: 600;
     line-height: 1.2;
   }
-  .event__wrap__card__text p {
+  .event__wrap__text p {
     font-family: "Pretendard";
     font-size: 1rem;
     font-weight: 400;
@@ -2367,12 +2190,12 @@ header {
   position: absolute;
   bottom: 0;
 }
-.about__bg__cloud__left, .about__bg__cloud__left__sub {
+.about__bg__cloud__left {
   position: absolute;
   left: -18.75rem;
   bottom: 0;
 }
-.about__bg__cloud__right, .about__bg__cloud__right__sub {
+.about__bg__cloud__right {
   position: absolute;
   right: -31.25rem;
   bottom: 0;
@@ -2482,12 +2305,12 @@ header {
     flex-wrap: nowrap;
     gap: 4.375rem;
   }
-  .about__bg__cloud__left, .about__bg__cloud__left__sub {
+  .about__bg__cloud__left {
     position: absolute;
     left: -6.25rem;
     bottom: 0;
   }
-  .about__bg__cloud__right, .about__bg__cloud__right__sub {
+  .about__bg__cloud__right {
     position: absolute;
     right: -6.25rem;
     bottom: 0;
@@ -2677,12 +2500,12 @@ header {
   position: relative;
   opacity: 0.9;
 }
-.innovation__bg__cloud__left {
+.innovation__bg__left {
   position: absolute;
   top: -6.25rem;
   right: -31.25rem;
 }
-.innovation__bg__cloud__right {
+.innovation__bg__right {
   position: absolute;
   top: -6.25rem;
   left: -15.625rem;
@@ -2699,10 +2522,10 @@ header {
   }
 }
 @media (max-width: 768px) {
-  .innovation__bg__cloud__left {
+  .innovation__bg__left {
     right: -8.125rem;
   }
-  .innovation__bg__cloud__right {
+  .innovation__bg__right {
     left: -2.5rem;
   }
   .innovation__img img {
@@ -2748,7 +2571,7 @@ header {
     transform: translateY(0);
   }
 }
-.story__wrap__card__overlay__full {
+.story__wrap__card .overlay__full {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -2765,12 +2588,12 @@ header {
   width: 100%;
   color: #ffffff;
 }
-.story__wrap__card__text__inner {
+.story__wrap__card__inner {
   width: 100%;
   height: 100%;
   position: relative;
 }
-.story__wrap__card__text__inner__front {
+.story__wrap__card__inner .inner__front {
   height: 100%;
   width: 100%;
   display: flex;
@@ -2780,7 +2603,7 @@ header {
   flex-wrap: nowrap;
   gap: 34.6875rem;
 }
-.story__wrap__card__text__inner__front__top {
+.story__wrap__card__inner .inner__front__top {
   padding: 1.875rem 1.875rem;
   align-self: flex-end;
   text-align: end;
@@ -2791,19 +2614,19 @@ header {
   flex-wrap: nowrap;
   gap: 0.3125rem;
 }
-.story__wrap__card__text__inner__front__top span {
+.story__wrap__card__inner .inner__front__top span {
   font-family: "Pretendard";
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.3;
 }
-.story__wrap__card__text__inner__front__top p {
+.story__wrap__card__inner .inner__front__top p {
   font-family: "Pretendard";
   font-size: 3.75rem;
   font-weight: 900;
   line-height: 1.3;
 }
-.story__wrap__card__text__inner__front__bottom {
+.story__wrap__card__inner .inner__front__bottom {
   position: relative;
   display: flex;
   justify-content: flex-start;
@@ -2819,7 +2642,7 @@ header {
   align-self: flex-start;
   transition: transform 0.5s ease-in-out;
 }
-.story__wrap__card__text__inner__front__bottom .overlay__blur {
+.story__wrap__card__inner .inner__front__bottom .overlay__blur {
   mask-image: linear-gradient(to top, lab(32.65% -1.5 -30.07) 70%, transparent 100%);
   border-radius: 0 0 1.25rem 1.25rem;
   backdrop-filter: blur(100px);
@@ -2830,14 +2653,14 @@ header {
   bottom: 0;
   left: 0;
 }
-.story__wrap__card__text__inner__front__bottom__content {
+.story__wrap__card__inner .inner__front__bottom .bottom__content {
   z-index: 2;
 }
-.story__wrap__card__text__inner__front__bottom__content h3 {
+.story__wrap__card__inner .inner__front__bottom .bottom__content h3 {
   font-size: clamp(1.25rem, 1.0417rem + 1.1111vw, 2.375rem);
   font-weight: 800;
 }
-.story__wrap__card__text__inner__front__bottom__key {
+.story__wrap__card__inner .inner__front__bottom .bottom__key {
   z-index: 2;
   display: flex;
   justify-content: flex-start;
@@ -2846,13 +2669,13 @@ header {
   flex-wrap: nowrap;
   gap: 0.9375rem;
 }
-.story__wrap__card__text__inner__front__bottom__key span {
+.story__wrap__card__inner .inner__front__bottom .bottom__key span {
   font-family: "Pretendard";
   font-size: 0.75rem;
   font-weight: 500;
   line-height: 1.3;
 }
-.story__wrap__card__text__inner__back {
+.story__wrap__card__inner .inner__back {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -2868,17 +2691,17 @@ header {
   flex-wrap: nowrap;
   gap: 0;
 }
-.story__wrap__card__text__inner__back__desc p {
+.story__wrap__card__inner .inner__back__desc p {
   padding: 1.25rem;
   text-align: center;
   line-height: 1.4;
   font-size: clamp(1rem, 0.9074rem + 0.4938vw, 1.5rem);
 }
-.story__wrap__card:hover .story__wrap__card__text__inner__front__bottom {
+.story__wrap__card:hover .inner__front__bottom {
   background: none;
 }
-.story__wrap__card:hover .story__wrap__card__text__inner__back,
-.story__wrap__card:hover .story__wrap__card__overlay__full {
+.story__wrap__card:hover .inner__back,
+.story__wrap__card:hover .overlay__full {
   opacity: 1;
 }
 .story__wrap__card01 {
@@ -2895,7 +2718,7 @@ header {
   background-size: cover;
   background-repeat: no-repeat;
 }
-.story__wrap__card02 .story__wrap__card__text__inner__front {
+.story__wrap__card02 .inner__front {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -2919,7 +2742,7 @@ header {
   background-repeat: no-repeat;
   margin-left: 7.5rem;
 }
-.story__wrap__card03 .story__wrap__card__text__inner__front {
+.story__wrap__card03 .inner__front {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -2940,7 +2763,7 @@ header {
     overflow: hidden;
     padding: 0 1.25rem;
   }
-  .story__wrap__card__text__inner__front {
+  .story__wrap__card__inner .inner__front {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -2948,13 +2771,13 @@ header {
     flex-wrap: nowrap;
     gap: 32.5rem;
   }
-  .story__wrap__card__text__inner__front__top p {
+  .story__wrap__card__inner .inner__front__top p {
     font-family: "Pretendard";
     font-size: 2.75rem;
     font-weight: 900;
     line-height: 1.3;
   }
-  .story__wrap__card__text__inner__front__bottom {
+  .story__wrap__card__inner .inner__front__bottom {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -2963,15 +2786,31 @@ header {
     gap: 0.3125rem;
     padding: 1.25rem 1.25rem;
   }
-  .story__wrap__card__text__inner__back__desc p {
+  .story__wrap__card__inner .inner__back__desc p {
     font-family: "Pretendard";
     font-size: 1.25rem;
     font-weight: 400;
     line-height: 1.4;
     padding: 1rem;
   }
+  .story__wrap__card02 .inner__front {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 6.875rem;
+  }
   .story__wrap__card03 {
     margin-left: 0;
+  }
+  .story__wrap__card03 .inner__front {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 9.6875rem;
   }
 }
 @media (max-width: 768px) {
@@ -2983,13 +2822,13 @@ header {
     padding-bottom: 16.25rem;
     overflow: hidden;
   }
-  .story__wrap__card__overlay__full {
+  .story__wrap__card .overlay__full {
     background: linear-gradient(to top, #3475A8 0%, transparent 70%);
     backdrop-filter: blur(5px);
     opacity: 1;
     mask-image: linear-gradient(to top, lab(32.65% -1.5 -30.07) 10%, transparent 100%);
   }
-  .story__wrap__card__text__inner__front {
+  .story__wrap__card__inner .inner__front {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -2997,7 +2836,7 @@ header {
     flex-wrap: nowrap;
     gap: 0;
   }
-  .story__wrap__card__text__inner__front__top {
+  .story__wrap__card__inner .inner__front__top {
     padding: 1.25rem 0 0 1.25rem;
     align-self: auto;
     text-align: start;
@@ -3008,20 +2847,20 @@ header {
     flex-wrap: nowrap;
     gap: 0.3125rem;
   }
-  .story__wrap__card__text__inner__front__top span {
+  .story__wrap__card__inner .inner__front__top span {
     width: 7.5rem;
     font-family: "Pretendard";
     font-size: 0.75rem;
     font-weight: 500;
     line-height: 1.3;
   }
-  .story__wrap__card__text__inner__front__top p {
+  .story__wrap__card__inner .inner__front__top p {
     font-family: "Pretendard";
     font-size: 2rem;
     font-weight: 900;
     line-height: 1.3;
   }
-  .story__wrap__card__text__inner__front__bottom {
+  .story__wrap__card__inner .inner__front__bottom {
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
@@ -3032,20 +2871,20 @@ header {
     padding: 1.25rem 1.25rem 0 0;
     align-self: flex-end;
   }
-  .story__wrap__card__text__inner__front__bottom .overlay__blur {
+  .story__wrap__card__inner .inner__front__bottom .overlay__blur {
     display: none;
   }
-  .story__wrap__card__text__inner__front__bottom__content {
+  .story__wrap__card__inner .inner__front__bottom .bottom__content {
     z-index: 2;
   }
-  .story__wrap__card__text__inner__back {
+  .story__wrap__card__inner .inner__back {
     position: relative;
     padding: 1.25rem;
   }
-  .story__wrap__card__text__inner__back br {
+  .story__wrap__card__inner .inner__back br {
     display: none;
   }
-  .story__wrap__card__text__inner__back__desc {
+  .story__wrap__card__inner .inner__back__desc {
     opacity: 1;
     display: flex;
     justify-content: flex-start;
@@ -3054,7 +2893,7 @@ header {
     flex-wrap: nowrap;
     gap: 0;
   }
-  .story__wrap__card__text__inner__back__desc p {
+  .story__wrap__card__inner .inner__back__desc p {
     z-index: 100;
     position: absolute;
     bottom: -7.5rem;
@@ -3066,15 +2905,15 @@ header {
     line-height: 1.3;
     padding: 1.25rem 1.25rem 0 1.25rem;
   }
-  .story__wrap .story__wrap__card__overlay__full,
-  .story__wrap .story__wrap__card__text__inner__back {
+  .story__wrap .overlay__full,
+  .story__wrap .inner__back {
     opacity: 1 !important;
     transform: translateY(0) !important;
   }
-  .story__wrap .story__wrap__card__text__inner__front__bottom {
+  .story__wrap .inner__front__bottom {
     background: none !important;
   }
-  .story__wrap__card02 .story__wrap__card__text__inner__front {
+  .story__wrap__card02 .inner__front {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -3082,7 +2921,7 @@ header {
     flex-wrap: nowrap;
     gap: 0;
   }
-  .story__wrap__card03 .story__wrap__card__text__inner__front {
+  .story__wrap__card03 .inner__front {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -3095,44 +2934,44 @@ header {
   .story__wrap__card {
     padding-bottom: 14.375rem;
   }
-  .story__wrap__card__overlay__full {
+  .story__wrap__card .overlay__full {
     mask-image: linear-gradient(to top, lab(32.65% -1.5 -30.07) 20%, transparent 100%);
   }
-  .story__wrap__card__text__inner__front__top {
+  .story__wrap__card__inner .inner__front__top {
     padding: 0.75rem 0 0 0.75rem;
   }
-  .story__wrap__card__text__inner__front__top span {
+  .story__wrap__card__inner .inner__front__top span {
     width: 6.25rem;
     font-family: "Pretendard";
     font-size: 0.625rem;
     font-weight: 500;
     line-height: 1.3;
   }
-  .story__wrap__card__text__inner__front__top p {
+  .story__wrap__card__inner .inner__front__top p {
     font-family: "Pretendard";
     font-size: 1.5rem;
     font-weight: 900;
     line-height: 1.3;
   }
-  .story__wrap__card__text__inner__front__bottom {
+  .story__wrap__card__inner .inner__front__bottom {
     padding: 0.75rem 0.75rem 0 0;
   }
-  .story__wrap__card__text__inner__front__bottom__key span {
+  .story__wrap__card__inner .inner__front__bottom .bottom__key span {
     font-family: "Pretendard";
     font-size: 0.625rem;
     font-weight: 500;
     line-height: 1.3;
   }
-  .story__wrap__card__text__inner__back__desc p {
+  .story__wrap__card__inner .inner__back__desc p {
     font-family: "Pretendard";
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.3;
-    padding: 0.75rem 0.75rem 0 0.75rem;
+    padding: 0.75rem 0.75rem 0.75rem 0.75rem;
   }
 }
 @media (max-width: 390px) {
-  .story__wrap__card__text__inner__front {
+  .story__wrap__card__inner .inner__front {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -3141,20 +2980,19 @@ header {
     gap: 0;
     text-align: start;
   }
-  .story__wrap__card__text__inner__front__bottom {
+  .story__wrap__card__inner .inner__front__bottom {
     align-items: flex-start;
     padding: 0.75rem;
   }
-  .story__wrap__card__text__inner__back__desc p {
+  .story__wrap__card__inner .inner__back__desc p {
     bottom: -3.75rem;
     left: 0;
     font-family: "Pretendard";
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.3;
-    padding: 0.75rem 0.75rem 0 0.75rem;
   }
-  .story__wrap__card02 .story__wrap__card__text__inner__front, .story__wrap__card03 .story__wrap__card__text__inner__front {
+  .story__wrap__card02 .inner__front, .story__wrap__card03 .inner__front {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -3183,14 +3021,7 @@ header {
   gap: 0;
   text-align: center;
 }
-.identity__wrap__card__icon {
-  margin-bottom: 3.125rem;
-}
-.identity__wrap__card__icon svg path {
-  fill: #ccc;
-  transition: 0.3s;
-}
-.identity__wrap__card__text {
+.identity__wrap__card .identity__card__text {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -3198,13 +3029,13 @@ header {
   flex-wrap: nowrap;
   gap: 1.25rem;
 }
-.identity__wrap__card__text h3 {
+.identity__wrap__card .identity__card__text h3 {
   font-family: "Pretendard";
   font-size: 2rem;
   font-weight: 500;
   line-height: 1.3;
 }
-.identity__wrap__card__text p {
+.identity__wrap__card .identity__card__text p {
   font-family: "Pretendard";
   font-size: 1.25rem;
   font-weight: 400;
@@ -3215,17 +3046,21 @@ header {
   width: 100%;
   padding: 3.125rem 1.25rem;
 }
-.identity__wrap__card01:hover .identity__wrap__card__icon svg path, .identity__wrap__card02:hover .identity__wrap__card__icon svg path, .identity__wrap__card03:hover .identity__wrap__card__icon svg path {
+.identity__wrap__card01:hover .identity__icon svg path, .identity__wrap__card02:hover .identity__icon svg path, .identity__wrap__card03:hover .identity__icon svg path {
   fill: #3475A8;
 }
 .identity__wrap__card03 {
   border: none;
 }
+.identity__icon {
+  margin-bottom: 3.125rem;
+}
+.identity__icon svg path {
+  fill: #ccc;
+  transition: 0.3s;
+}
 @media (max-width: 1024px) {
-  .identity__wrap__card__icon {
-    margin-bottom: 2.3125rem;
-  }
-  .identity__wrap__card__text {
+  .identity__wrap__card .identity__card__text {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -3233,13 +3068,13 @@ header {
     flex-wrap: nowrap;
     gap: 1.25rem;
   }
-  .identity__wrap__card__text h3 {
+  .identity__wrap__card .identity__card__text h3 {
     font-family: "Pretendard";
     font-size: 1.75rem;
     font-weight: 500;
     line-height: 1.3;
   }
-  .identity__wrap__card__text p {
+  .identity__wrap__card .identity__card__text p {
     font-family: "Pretendard";
     font-size: 1.25rem;
     font-weight: 400;
@@ -3251,6 +3086,9 @@ header {
   .identity__wrap__card03 {
     border: none;
   }
+  .identity__icon {
+    margin-bottom: 2.3125rem;
+  }
 }
 @media (max-width: 768px) {
   .identity__wrap__card {
@@ -3259,10 +3097,7 @@ header {
     gap: 1rem;
     grid-template-areas: "card1" "card2" "card3";
   }
-  .identity__wrap__card__icon {
-    margin-bottom: 2.3125rem;
-  }
-  .identity__wrap__card__text {
+  .identity__wrap__card .identity__card__text {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -3271,13 +3106,13 @@ header {
     gap: 1.25rem;
     width: 100%;
   }
-  .identity__wrap__card__text h3 {
+  .identity__wrap__card .identity__card__text h3 {
     font-family: "Pretendard";
     font-size: 1.5rem;
     font-weight: 500;
     line-height: 1.3;
   }
-  .identity__wrap__card__text p {
+  .identity__wrap__card .identity__card__text p {
     font-family: "Pretendard";
     font-size: 1.25rem;
     font-weight: 400;
@@ -3295,18 +3130,21 @@ header {
   .identity__wrap__card03 {
     border: none;
   }
+  .identity__icon {
+    margin-bottom: 2.3125rem;
+  }
 }
 @media (max-width: 500px) {
   .identity__wrap__card br {
     display: block;
   }
-  .identity__wrap__card__text h3 {
+  .identity__wrap__card .identity__card__text h3 {
     font-family: "Pretendard";
     font-size: 1.125rem;
     font-weight: 500;
     line-height: 1.3;
   }
-  .identity__wrap__card__text p {
+  .identity__wrap__card .identity__card__text p {
     font-family: "Pretendard";
     font-size: 0.875rem;
     font-weight: 400;
@@ -3314,7 +3152,7 @@ header {
   }
 }
 @media (max-width: 390px) {
-  .identity__wrap__card__text h3 {
+  .identity__wrap__card .identity__card__text h3 {
     font-family: "Pretendard";
     font-size: 1rem;
     font-weight: 500;
@@ -5753,4 +5591,185 @@ body.no-scroll {
   left: 0;
   right: 0;
   width: 100%;
+}
+
+.floating__menu {
+  position: fixed;
+  bottom: 3.125rem;
+  right: 1.25rem;
+  z-index: 20;
+}
+
+.wrapper {
+  width: #ffffff;
+  height: 3.125rem;
+  position: relative;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0;
+  margin-top: 0.375rem;
+}
+.wrapper .fab {
+  background: #3475A8;
+  width: 5rem;
+  height: 5rem;
+  position: relative;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0;
+  animation: fab-animation-reverse 0.4s ease-out forwards;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  z-index: 3;
+}
+.wrapper .fab::before, .wrapper .fab::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 0.25rem;
+  background: #DDEEF5;
+}
+.wrapper .fab::before {
+  width: 0.25rem;
+  height: 1.875rem;
+}
+.wrapper .fab::after {
+  width: 1.875rem;
+  height: 0.25rem;
+}
+.wrapper .fac {
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+  opacity: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 0;
+  transition: opacity 0.3s ease-in, top 0.3s ease-in, width 0.3s ease-in;
+}
+.wrapper .fac a {
+  opacity: 0.9;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 100%;
+  background-color: #ffffff;
+  padding: 0.03125rem;
+  margin: 0.3125rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 0;
+}
+.wrapper .fac a:hover {
+  transition: 0.3s;
+  opacity: 1;
+  color: #3475A8;
+}
+.wrapper .fac a span {
+  font-family: "Pretendard";
+  font-size: 0.75rem;
+  font-weight: 300;
+  line-height: 1.3;
+  color: #666666;
+}
+.wrapper .fac a p {
+  font-family: "Pretendard";
+  font-size: 1rem;
+  font-weight: 900;
+  line-height: 1.3;
+}
+.wrapper input {
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+  cursor: pointer;
+  position: absolute;
+  z-index: 5;
+  opacity: 0;
+}
+.wrapper input:checked ~ .fab {
+  animation: fab-animation 0.4s ease-out forwards;
+}
+.wrapper input:checked ~ .fac {
+  width: 3.75rem;
+  height: 10.625rem;
+  animation: fac-animation 0.4s ease-out forwards 0.2s;
+  top: -11.875rem;
+  opacity: 1;
+}
+.wrapper input:not(:checked) ~ .fac {
+  animation: fac-animation-reverse 0.5s ease forwards;
+}
+
+@keyframes fac-animation-reverse {
+  0% {
+    top: -18.75rem;
+    opacity: 1;
+  }
+  100% {
+    top: 0rem;
+    opacity: 0;
+  }
+}
+@keyframes fab-animation {
+  0% {
+    transform: rotate(0) scale(1);
+  }
+  20% {
+    transform: rotate(60deg) scale(0.93);
+  }
+  55% {
+    transform: rotate(35deg) scale(0.97);
+  }
+  80% {
+    transform: rotate(48deg) scale(0.94);
+  }
+  100% {
+    transform: rotate(45deg) scale(0.95);
+  }
+}
+@keyframes fab-animation-reverse {
+  0% {
+    transform: rotate(45deg) scale(0.95);
+  }
+  20% {
+    transform: rotate(-15deg);
+  }
+  55% {
+    transform: rotate(10deg);
+  }
+  80% {
+    transform: rotate(-3deg);
+  }
+  100% {
+    transform: rotate(0) scale(1);
+  }
+}
+@keyframes fac-animation {
+  0% {
+    transform: scale(1, 1);
+  }
+  33% {
+    transform: scale(0.95, 1.05);
+  }
+  66% {
+    transform: scale(1.05, 0.95);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
 }
