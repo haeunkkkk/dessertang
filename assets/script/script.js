@@ -66,7 +66,7 @@ $(function () {
 });
 
 
-//about
+//brand
 $(window).on('scroll', function () {
   var scrollY = $(this).scrollTop();
 

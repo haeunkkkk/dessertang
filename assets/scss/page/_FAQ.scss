@@ -50,7 +50,7 @@
                 overflow: hidden;
                 transition: 0.25s ease-in-out;
 
-                &__content {
+                .faq__content {
                     margin-left: rem(40);
                     @include flex ($justify: flex-start, $align: flex-start, $direction: row, $wrap: nowrap, $gap: rem(20));
 
@@ -80,7 +80,7 @@
         &__list {
             &__item {
                 &__wrapper {
-                    &__content {
+                    .faq__content {
                         span {
                             @include font-set ($size: 32, $weight: 600);
                         }
@@ -121,7 +121,7 @@
                 }
 
                 &__wrapper {
-                    &__content {
+                    .faq__content {
                         margin-left: rem(20);
                         @include flex ($justify: flex-start, $align: flex-start, $direction: row, $wrap: nowrap, $gap: rem(12));
 
@@ -156,7 +156,7 @@
                 }
 
                 &__wrapper {
-                    &__content {
+                    .faq__content {
                         margin-left: rem(12);
                         @include flex ($justify: flex-start, $align: flex-start, $direction: row, $wrap: nowrap, $gap: rem(10));
 

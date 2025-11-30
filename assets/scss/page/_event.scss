@@ -1,11 +1,12 @@
 .event {
     &__container {
-        
+
         &__title {
             h2 {
                 @include title-style(40);
                 margin-bottom: rem(5);
             }
+
             p {
                 @include subtitle-style(20);
             }
@@ -15,28 +16,35 @@
             &__card {
                 @include flex ($justify: flex-start, $align: center, $direction: column, $wrap: nowrap, $gap: rem(16));
 
-                &__desc {
+                .event__card__desc {
                     width: 100%;
                     @include radius($radius: rem(20));
                     border: 1px solid $gray-100;
+
                     a {
                         position: relative;
                         padding: rem(28) rem(30);
                         @include flex ($justify: flex-start, $align: center, $direction: row, $wrap: nowrap, $gap: rem(30));
+
                         .card__text {
                             width: 100%;
+
                             &__left {
                                 @include flex ($justify: flex-start, $align: flex-start, $direction: column, $wrap: nowrap, $gap: rem(20));
+
                                 h4 {
                                     @include font-set($size: 28, $weight: 600)
                                 }
+
                                 p {
                                     @include font-set($size: 20)
                                 }
                             }
+
                             .href__text {
                                 display: none;
                             }
+
                             span {
                                 position: absolute;
                                 bottom: rem(30);
@@ -48,18 +56,20 @@
             }
 
         }
-        
-    
+
+
     }
 
 
     .pager {
         margin-top: rem(40);
+
         ul.pagination {
             text-align: center;
             margin: 0;
             padding: 0;
         }
+
         .pagination li {
             display: inline;
             margin: 0 2px;
@@ -70,6 +80,7 @@
             height: rem(30);
             text-align: center;
             position: relative;
+
             a {
                 vertical-align: middle;
                 position: absolute;
@@ -83,12 +94,14 @@
                 border: 1px solid $gray-100;
                 border-radius: rem(5);
                 text-decoration: none;
+
                 span {
                     display: table-cell;
                     vertical-align: middle;
                 }
             }
         }
+
         .pagination li a:hover,
         .pagination li a.active,
         .pagination li.pre a:hover,
@@ -96,40 +109,47 @@
             color: $color-bg;
             background: $color-primary;
         }
+
         .pagination li.pre a {
             color: $color-primary;
             background: $gray-100;
         }
+
         .pagination li.next a {
             color: $color-primary;
             background: $gray-100;
         }
     }
 
-    @media(max-width: $bp-desktop){
+    @media(max-width: $bp-desktop) {
         &__container {
             &__title {
                 h2 {
                     @include title-style(32);
                     margin-bottom: rem(5);
                 }
+
                 p {
                     @include subtitle-style(18);
                 }
             }
+
             &__content {
                 &__card {
-                    &__desc {
+                    .event__card__desc {
                         a {
                             padding: rem(32) rem(30);
+
                             img {
                                 width: rem(180);
                             }
+
                             .card__text {
                                 &__left {
                                     h4 {
                                         @include font-set($size: 24, $weight: 600)
                                     }
+
                                     p {
                                         @include font-set($size: 16)
                                     }
@@ -142,28 +162,33 @@
             }
         }
     }
+
     @media (max-width: $bp-tablet) {
         &__container {
             &__title {
                 h2 {
-                    @include title-style(28);    
+                    @include title-style(28);
                 }
             }
+
             &__content {
                 &__card {
-                    &__desc {
+                    .event__card__desc {
                         a {
                             @include flex ($justify: flex-start, $align: center, $direction: row, $wrap: nowrap, $gap: rem(20));
                             padding: rem(16) rem(16);
+
                             img {
                                 width: rem(150);
                             }
+
                             .card__text {
                                 &__left {
                                     h4 {
                                         @include font-set($size: 20, $weight: 600)
                                     }
                                 }
+
                                 span {
                                     @include font-set($size: 12);
                                     bottom: rem(16);
@@ -176,38 +201,46 @@
             }
         }
     }
+
     @media (max-width: $bp-mobile-md) {
         &__container {
             &__title {
                 h2 {
                     @include title-style(24);
                 }
+
                 p {
                     @include subtitle-style(16);
                 }
             }
+
             &__content {
                 &__card {
-                    &__desc {
+                    .event__card__desc {
                         a {
                             img {
                                 width: rem(120);
                             }
+
                             .card__text {
                                 &__left {
                                     h4 {
                                         @include font-set($size: 16, $weight: 600)
                                     }
+
                                     margin-bottom: rem(10);
+
                                     p {
                                         display: none;
                                     }
                                 }
+
                                 .href__text {
                                     display: block;
                                     color: $gray-300;
                                     text-decoration: underline solid $gray-300;
                                 }
+
                                 span {
                                     @include font-set($size: 12);
                                     bottom: rem(16);
@@ -219,36 +252,43 @@
                 }
             }
         }
+
         .pager {
             .pagination li {
                 width: rem(25);
                 height: rem(25);
+
                 a {
                     @include font-set ($size: 14);
                 }
             }
         }
     }
+
     @media (max-width: $bp-mobile-sm) {
         &__container {
             &__content {
                 &__card {
-                    &__desc {
+                    .event__card__desc {
                         a {
                             @include flex ($justify: flex-start, $align: center, $direction: row, $wrap: nowrap, $gap: rem(12));
                             padding: rem(12) rem(12);
+
                             img {
                                 width: rem(100);
                             }
+
                             .card__text {
                                 &__left {
                                     h4 {
                                         @include font-set($size: 14, $weight: 600);
                                     }
                                 }
+
                                 .href__text {
                                     @include font-set($size: 13)
                                 }
+
                                 span {
                                     bottom: rem(12);
                                     right: rem(12);
@@ -262,4 +302,3 @@
 
     }
 }
-
