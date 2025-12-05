@@ -1,6 +1,13 @@
-body {
-    overflow-x: hidden;
+body.open-menu {
+  overflow: hidden;
 }
+body.scroll-lock {
+  position: fixed;
+  width: 100%;
+  overflow: hidden;
+  touch-action: none;
+}
+
 
 header {
     width: 100%;
@@ -341,9 +348,4 @@ header {
     .header__wrapper nav ul li .menu__icon {
         right: rem(50);
     }
-}
-
-.open-menu {
-    overflow: hidden;
-    height: 100%;
 }

@@ -1167,7 +1167,11 @@
             height: rem(466);
             @include flex ($justify: flex-end, $align: flex-end, $direction: column, $gap: rem(50));
             @include radius($radius: rem(20));
-
+            transition: transform .28s ease; 
+            transform-origin: center;
+            &:hover {
+                opacity: 0.8;
+            }
 
         }
 

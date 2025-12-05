@@ -197,8 +197,15 @@ button {
   margin-bottom: 2.5rem;
 }
 
-body {
-  overflow-x: hidden;
+body.open-menu {
+  overflow: hidden;
+}
+
+body.scroll-lock {
+  position: fixed;
+  width: 100%;
+  overflow: hidden;
+  touch-action: none;
 }
 
 header {
@@ -499,11 +506,6 @@ header {
     right: 3.125rem;
   }
 }
-.open-menu {
-  overflow: hidden;
-  height: 100%;
-}
-
 .footer {
   background-color: #333333;
 }
@@ -1964,6 +1966,11 @@ header {
   flex-wrap: nowrap;
   gap: 3.125rem;
   border-radius: 1.25rem;
+  transition: transform 0.28s ease;
+  transform-origin: center;
+}
+.event__wrap__card:hover {
+  opacity: 0.8;
 }
 .event__wrap__text {
   width: 100%;

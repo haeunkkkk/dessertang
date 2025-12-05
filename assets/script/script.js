@@ -1,45 +1,167 @@
 $(function () {
+
+  if (!location.pathname.endsWith("/") && !location.pathname.endsWith("/index.html")) {
+    return;
+  }
+
   const $video = $('#main__intro__video');
   const $intro = $('.main__intro');
   const $content = $('.main__content');
 
-  const introPlayed = localStorage.getItem("introPlayed");
-
-  if (introPlayed === "true") {
-    $intro.remove();
-    $content.show();
-    $('body').css('overflow', 'auto');
-    return;
-  }
-
-  alert("포트폴리오용입니다! 😎");
-
-  $('body').css('overflow', 'hidden');
-  $video.prop('muted', true);
-  $video[0].play().then(() => {
-    console.log("영상 재생 시작");
-  }).catch(e => console.log("재생 실패:", e));
-
-  $video.on('ended', function () {
-    console.log("영상 끝");
+  const introPlayed = sessionStorage.getItem("introPlayed");
 
 
-    localStorage.setItem("introPlayed", "true");
+  function markPlayed() {
+    console.log("[INT] Intro close triggered");
+
+    sessionStorage.setItem("introPlayed", "true");
 
     $intro.fadeOut(300, function () {
       $(this).remove();
       $('body').css('overflow', 'auto');
-      $content.fadeIn(300);
+
+      $content.fadeIn(300, function () {
+        initSwipers(); 
+        AOS.refresh(); 
+      });
     });
-  });
+  }
+
+
+  function initSwipers() {
+    console.log("[INIT] Swipers initialized");
+
+    // Intro Swiper
+    window.introSwiper = new Swiper(".mySwiper", {
+      effect: "fade",
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      autoplay: false,
+      speed: 1000,
+    });
+
+    setTimeout(() => {
+      introSwiper.params.autoplay = {
+        delay: 2000,
+        disableOnInteraction: false,
+      };
+      introSwiper.autoplay.start();
+    }, 7000);
+
+    // Growth Swiper
+    window.growthSwiper = new Swiper(".growth__swiper", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      loop: true,
+      slidesPerView: 1,
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 90,
+        modifier: 1,
+        slideShadows: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        500: {
+          slidesPerView: 1
+        },
+        1025: {
+          slidesPerView: 3
+        },
+      },
+    });
+
+    // Best Swiper
+    window.bestSwiper = new Swiper(".best__swiper", {
+      slidesPerView: 2,
+      spaceBetween: 16,
+      loop: true,
+      breakpoints: {
+        500: {
+          slidesPerView: 2.5,
+          spaceBetween: 12,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 16,
+        },
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 16,
+        },
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        type: "progressbar",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+
+
+    setTimeout(() => {
+      growthSwiper.update();
+      bestSwiper.update();
+      introSwiper.update();
+    }, 100);
+  }
+
+
+  if (introPlayed === "true") {
+    console.log("[INT] Already played → skip");
+    $intro.remove();
+    $content.show();
+    $('body').css('overflow', 'auto');
+    initSwipers();
+    return;
+  }
+
+  console.log("[INT] First visit → intro play");
+  alert("포트폴리오용입니다! 😎");
+
+  $('body').css('overflow', 'hidden'); 
+
+  if ($video.length) {
+    $video.prop('muted', true);
+    const vid = $video[0];
+
+
+    vid.play().then(() => {
+      console.log("[INT] Video autoplay success");
+    }).catch(e => {
+      console.warn("[INT] Video autoplay failed → close immediately", e);
+      markPlayed();
+    });
+
+
+    $video.on('ended', function () {
+      console.log("[INT] Video ended");
+      markPlayed();
+    });
+
+  } else {
+    console.warn("[INT] Video element missing → skip intro");
+    markPlayed();
+  }
+
 });
+
 
 
 
 //header
 $(function () {
   $(".hamburger__menu").click(function () {
-    $("body, html").toggleClass("open-menu");
+    $("body").toggleClass("open-menu");
   });
 
   $('.header__wrapper nav ul li .menu__icon').click(function () {
@@ -64,6 +186,29 @@ $(function () {
     }
   });
 });
+$(function () {
+  let scrollTop = 0;
+
+  $(".hamburger__menu").click(function () {
+    if (!$("body").hasClass("scroll-lock")) {
+      scrollTop = $(window).scrollTop();
+
+      $("body")
+        .addClass("scroll-lock")
+        .css({
+          top: -scrollTop + "px"
+        });
+    } else {
+  
+      $("body")
+        .removeClass("scroll-lock")
+        .css({ top: "" });
+
+      $(window).scrollTop(scrollTop); 
+    }
+  });
+});
+
 
 
 //brand
@@ -78,7 +223,6 @@ $(window).on('scroll', function () {
   $('.about__bg__balloon__blue').css('transform', 'translateY(-' + (scrollY * 2) + 'px)');
   $('.about__bg__balloon__green').css('transform', 'translateY(-' + (scrollY * 3) + 'px)');
   $('.about__bg__balloon__yellow').css('transform', 'translateY(-' + (scrollY * 3) + 'px)');
-
 
 });
 
